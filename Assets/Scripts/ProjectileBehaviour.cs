@@ -14,4 +14,15 @@ public class ProjectileBehaviour : MonoBehaviour
     {
         transform.position += moveDir * projectileSpeed * Time.deltaTime;    
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        Damageable hit;
+        if (other.gameObject.TryGetComponent<Damageable>(out hit))
+        {
+            hit.TakeDamage(PlayerManager.Instance.GetPlayer().GetDamage());
+        }
+
+        Destroy(gameObject);
+    }
 }
