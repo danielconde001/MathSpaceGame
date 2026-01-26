@@ -25,6 +25,8 @@ public class SpaceshipAttack : MonoBehaviour
 
     private void NormalShootingLogic()
     {
+        
+
         if (Input.GetMouseButton(0) && fireCooldown <= 0f)
         {
             NormalShoot();
