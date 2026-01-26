@@ -1,41 +1,38 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    public enum GameState
-    {
-        Normal,
-        Minigame,
-        UIMinigame,
-        Paused,
-        Count
-    }
-
-    private static GameManager instance;
-    public static GameManager Instance
-    {
-
-        get
-        {
-            if (instance == null)
-            {
-                GameObject newGameObject = new GameObject("GameManager");
-                instance = newGameObject.AddComponent<GameManager>();
-            }
-            return instance;
-        }
-    }
-
-    private GameState state;
-    public GameState State 
-    { 
-        get => state; 
-        set => state = value; 
-    }
+    public static GameManager Instance;
+    public string SelectedTopic;
 
     private void Awake()
     {
-        instance = this;
+        if (Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
 
+    public void SelectTopicAndLoad(string topicName)
+    {
+        SelectedTopic = topicName;
+        PlayerPrefs.SetString("SelectedTopic", topicName); // Save for persistence
+        SceneManager.LoadScene("LoadingScreen"); // Load the loading screen scene first
+    }
+
+    public string GetSelectedTopic()
+    {
+        // Try to get from PlayerPrefs if not set
+        if (string.IsNullOrEmpty(SelectedTopic))
+        {
+            SelectedTopic = PlayerPrefs.GetString("SelectedTopic", "");
+        }
+        return SelectedTopic;
+    }
 }
