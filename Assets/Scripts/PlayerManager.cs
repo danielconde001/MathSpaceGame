@@ -21,6 +21,8 @@ public class PlayerManager : MonoBehaviour
 
     private void Awake()
     {
+        instance = this;
+
         if (m_Player == null)
         {
             m_Player = FindFirstObjectByType<PlayerScript>();

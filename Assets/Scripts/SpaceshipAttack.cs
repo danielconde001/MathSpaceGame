@@ -8,20 +8,35 @@ public class SpaceshipAttack : MonoBehaviour
     [SerializeField] private float fireRate = .12f;
     [SerializeField] private int damage = 10;
     [SerializeField] private LayerMask cursorRayMask;
-
     private float fireCooldown = 0;
+
+    [Header("Minigame Settings")]
+    [SerializeField] private float minigamFireRate = .72f;
+    [SerializeField] private ProjectileBehaviour minigameProjectilePrefab;
+    private float minigameFireCooldown = 0;
 
     private void Update()
     {
         if (fireCooldown >= 0f) fireCooldown -= Time.deltaTime;
 
+        NormalShootingLogic();
+        MinigameShootingLogic();
+    }
+
+    private void NormalShootingLogic()
+    {
         if (Input.GetMouseButton(0) && fireCooldown <= 0f)
         {
-            Shoot();
+            NormalShoot();
         }
     }
 
-    private void Shoot()
+    private void MinigameShootingLogic()
+    {
+        
+    }
+
+    private void NormalShoot()
     {
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         Vector3 aimPoint;
@@ -46,6 +61,11 @@ public class SpaceshipAttack : MonoBehaviour
         projectile.moveDir = projectileDir;
 
         fireCooldown = fireRate;
+    }
+
+    private void MinigameShoot()
+    {
+        
     }
 
     public int GetDamage()
