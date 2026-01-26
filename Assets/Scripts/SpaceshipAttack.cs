@@ -11,22 +11,22 @@ public class SpaceshipAttack : MonoBehaviour
     private float fireCooldown = 0;
 
     [Header("Minigame Settings")]
-    [SerializeField] private float minigamFireRate = .72f;
+    [SerializeField] private float minigameFireRate = .72f;
     [SerializeField] private ProjectileBehaviour minigameProjectilePrefab;
     private float minigameFireCooldown = 0;
 
     private void Update()
     {
-        if (fireCooldown >= 0f) fireCooldown -= Time.deltaTime;
-
         NormalShootingLogic();
         MinigameShootingLogic();
     }
 
     private void NormalShootingLogic()
     {
-        
+        if (MinigameManager.Instance.State != MinigameManager.MinigameState.None) return;
 
+        if (fireCooldown >= 0f) fireCooldown -= Time.deltaTime;
+        
         if (Input.GetMouseButton(0) && fireCooldown <= 0f)
         {
             NormalShoot();
@@ -35,7 +35,14 @@ public class SpaceshipAttack : MonoBehaviour
 
     private void MinigameShootingLogic()
     {
-        
+        if (MinigameManager.Instance.State != MinigameManager.MinigameState.StationaryShooting) return;
+
+        if (minigameFireCooldown >= 0f) minigameFireCooldown -= Time.deltaTime;
+
+        if (Input.GetMouseButtonDown(0) && minigameFireCooldown <= 0f)
+        {
+            MinigameShoot();
+        }
     }
 
     private void NormalShoot()
@@ -67,7 +74,24 @@ public class SpaceshipAttack : MonoBehaviour
 
     private void MinigameShoot()
     {
-        
+        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        AsteroidScript asteroid;
+
+        RaycastHit hit;
+
+        // if ray hits something
+        if (Physics.Raycast(ray, out hit, range))
+        {
+            if (hit.collider.TryGetComponent<AsteroidScript>(out asteroid))
+            {
+                Vector3 projectileDir = (asteroid.transform.position - transform.position).normalized;
+
+                ProjectileBehaviour projectile = Instantiate(minigameProjectilePrefab, bulletSpawn.position, Quaternion.identity);
+                projectile.moveDir = projectileDir;
+
+                minigameFireCooldown = minigameFireRate;
+            }
+        }
     }
 
     public int GetDamage()

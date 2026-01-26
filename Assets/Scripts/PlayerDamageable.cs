@@ -5,8 +5,7 @@ using System.Collections;
 [RequireComponent(typeof(PlayerScript), typeof(PlayerKillable))]
 public class PlayerDamageable : Damageable
 {
-    PlayerScript player;
-    PlayerKillable killable;
+    protected PlayerScript player;
 
     [SerializeField] float invulDuration = 4f;
 

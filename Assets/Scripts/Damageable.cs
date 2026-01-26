@@ -3,8 +3,8 @@ using UnityEngine;
 [RequireComponent(typeof(Health), typeof(Killable))]
 public class Damageable : MonoBehaviour
 {
-    Health health;
-    Killable killable;
+    protected Health health;
+    protected Killable killable;
 
     protected virtual void Awake()
     {
@@ -15,6 +15,7 @@ public class Damageable : MonoBehaviour
     public virtual void TakeDamage(int p_damage)
     {
         health.value -= p_damage;
+
         if (health.value <= 0)
         {
             killable.Kill();

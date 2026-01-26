@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2916994839197049220}
   - component: {fileID: -6240810892892311158}
   m_Layer: 6
-  m_Name: Bullet (placeholder)
+  m_Name: Minigame Bullet (placeholder)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -30,7 +30,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
@@ -125,5 +125,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ProjectileBehaviour
   moveDir: {x: 0, y: 0, z: 0}
-  projectileSpeed: 36
-  selfDestoryTimer: 5
+  projectileSpeed: 48
+  selfDestoryTimer: 1.8

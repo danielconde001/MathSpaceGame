@@ -19,9 +19,9 @@ GameObject:
   - component: {fileID: 2597688840962780607}
   - component: {fileID: 3379152969594318800}
   - component: {fileID: 7974557738586000190}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Player (placeholder)
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -151,6 +151,13 @@ MonoBehaviour:
   projectilePrefab: {fileID: -6240810892892311158, guid: c40e57f208d080a4cb4820179a9bd687,
     type: 3}
   fireRate: 0.12
+  damage: 10
+  cursorRayMask:
+    serializedVersion: 2
+    m_Bits: 55
+  minigameFireRate: 0.06
+  minigameProjectilePrefab: {fileID: -6240810892892311158, guid: fe676289d3aff2940b2087a93d37ee44,
+    type: 3}
 --- !u!114 &658148167345235933
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -209,9 +216,9 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3159284906383523036}
   serializedVersion: 5
-  m_Mass: 1
+  m_Mass: 0.0000001
   m_LinearDamping: 0
-  m_AngularDamping: 0.05
+  m_AngularDamping: 0
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -224,9 +231,9 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 0
-  m_IsKinematic: 1
+  m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!1 &5288160235298964560
 GameObject:
@@ -237,7 +244,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1064731428183509930}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: BulletSpawn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
