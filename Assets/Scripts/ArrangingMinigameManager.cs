@@ -21,7 +21,13 @@ public class ArrangingMinigameManager : MonoBehaviour
 
     void Start()
     {
+        InitializeMinigame();
+    }
+
+    public void InitializeMinigame()
+    {
         GenerateAndShowNumbers();
+        submitButton.onClick.RemoveAllListeners();
         submitButton.onClick.AddListener(OnSubmit);
         GameObject[] images = { numberImage1, numberImage2, numberImage3, numberImage4, numberImage5 };
         foreach (var img in images)
@@ -29,11 +35,18 @@ public class ArrangingMinigameManager : MonoBehaviour
             Button btn = img.GetComponent<Button>();
             if (btn == null)
                 btn = img.AddComponent<Button>();
+            btn.onClick.RemoveAllListeners();
             btn.onClick.AddListener(() => OnImageClicked(img));
             // Add drag event handlers
             var dragHandler = img.GetComponent<ImageDragHandler>();
             if (dragHandler == null)
                 img.AddComponent<ImageDragHandler>().manager = this;
+            else
+                dragHandler.manager = this;
+
+            // Ensure all images have the same z position
+            Vector3 pos = img.transform.localPosition;
+            img.transform.localPosition = new Vector3(pos.x, pos.y, 0f);
         }
     }
 
@@ -108,7 +121,7 @@ public class ArrangingMinigameManager : MonoBehaviour
         }
     }
 
-    System.Collections.IEnumerator SlideUpAndGenerate()
+    public System.Collections.IEnumerator SlideUpAndGenerate()
     {
         GameObject[] images = { numberImage1, numberImage2, numberImage3, numberImage4, numberImage5 };
         foreach (var img in images)
@@ -155,6 +168,15 @@ public class ArrangingMinigameManager : MonoBehaviour
         draggingImage = img;
         dragStartPos = img.transform.position;
         selectedImage = null; // Disable click-to-swap while dragging
+        // Bring dragged image to front (top of hierarchy)
+        img.transform.SetAsLastSibling();
+        // Ensure z is 0 for all images
+        GameObject[] images = { numberImage1, numberImage2, numberImage3, numberImage4, numberImage5 };
+        foreach (var image in images)
+        {
+            Vector3 pos = image.transform.localPosition;
+            image.transform.localPosition = new Vector3(pos.x, pos.y, 0f);
+        }
     }
 
     public void OnDrag(GameObject img, Vector3 pointerPos)
@@ -166,43 +188,62 @@ public class ArrangingMinigameManager : MonoBehaviour
     public void OnEndDrag(GameObject img)
     {
         if (draggingImage == img)
+        {
+            // On drag end, check for overlap with any other image and swap if overlapping
+            GameObject[] images = { numberImage1, numberImage2, numberImage3, numberImage4, numberImage5 };
+            RectTransform draggedRect = img.GetComponent<RectTransform>();
+            foreach (var other in images)
+            {
+                if (other == img) continue;
+                RectTransform otherRect = other.GetComponent<RectTransform>();
+                if (draggedRect != null && otherRect != null)
+                {
+                    Vector3[] draggedCorners = new Vector3[4];
+                    Vector3[] otherCorners = new Vector3[4];
+                    draggedRect.GetWorldCorners(draggedCorners);
+                    otherRect.GetWorldCorners(otherCorners);
+                    Rect draggedWorldRect = new Rect(draggedCorners[0], draggedCorners[2] - draggedCorners[0]);
+                    Rect otherWorldRect = new Rect(otherCorners[0], otherCorners[2] - otherCorners[0]);
+                    if (draggedWorldRect.Overlaps(otherWorldRect))
+                    {
+                        // Swap TMP_Text values
+                        TMP_Text txtA = img.GetComponentInChildren<TMP_Text>();
+                        TMP_Text txtB = other.GetComponentInChildren<TMP_Text>();
+                        string temp = txtA.text;
+                        txtA.text = txtB.text;
+                        txtB.text = temp;
+                        break;
+                    }
+                }
+            }
+            // Return to original position
             img.transform.position = dragStartPos;
-        draggingImage = null;
+            draggingImage = null;
+            // Ensure z is 0 for all images
+            foreach (var image in images)
+            {
+                Vector3 pos = image.transform.localPosition;
+                image.transform.localPosition = new Vector3(pos.x, pos.y, 0f);
+            }
+        }
     }
 
     public void OnDrop(GameObject dropped, GameObject target)
     {
         if (dropped != null && target != null && dropped != target)
         {
-            // Check if at same x or y (rounded to int for tolerance)
-            Vector3 droppedPos = dropped.transform.position;
-            Vector3 targetPos = target.transform.position;
-            bool sameX = Mathf.RoundToInt(droppedPos.x) == Mathf.RoundToInt(targetPos.x);
-            bool sameY = Mathf.RoundToInt(droppedPos.y) == Mathf.RoundToInt(targetPos.y);
-
-            // Check for collision (overlap) using RectTransform if available
-            bool isOverlapping = false;
-            RectTransform droppedRect = dropped.GetComponent<RectTransform>();
-            RectTransform targetRect = target.GetComponent<RectTransform>();
-            if (droppedRect != null && targetRect != null)
-            {
-                Vector3[] droppedCorners = new Vector3[4];
-                Vector3[] targetCorners = new Vector3[4];
-                droppedRect.GetWorldCorners(droppedCorners);
-                targetRect.GetWorldCorners(targetCorners);
-                Rect droppedWorldRect = new Rect(droppedCorners[0], droppedCorners[2] - droppedCorners[0]);
-                Rect targetWorldRect = new Rect(targetCorners[0], targetCorners[2] - targetCorners[0]);
-                isOverlapping = droppedWorldRect.Overlaps(targetWorldRect);
-            }
-
-            if (sameX || sameY || isOverlapping)
-            {
-                TMP_Text txtA = dropped.GetComponentInChildren<TMP_Text>();
-                TMP_Text txtB = target.GetComponentInChildren<TMP_Text>();
-                string temp = txtA.text;
-                txtA.text = txtB.text;
-                txtB.text = temp;
-            }
+            TMP_Text txtA = dropped.GetComponentInChildren<TMP_Text>();
+            TMP_Text txtB = target.GetComponentInChildren<TMP_Text>();
+            string temp = txtA.text;
+            txtA.text = txtB.text;
+            txtB.text = temp;
+        }
+        // Ensure z is 0 for all images
+        GameObject[] images = { numberImage1, numberImage2, numberImage3, numberImage4, numberImage5 };
+        foreach (var image in images)
+        {
+            Vector3 pos = image.transform.localPosition;
+            image.transform.localPosition = new Vector3(pos.x, pos.y, 0f);
         }
     }
 }
@@ -226,7 +267,9 @@ public class ImageDragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, 
     public void OnDrop(PointerEventData eventData)
     {
         var dropped = eventData.pointerDrag;
-        if (dropped != null)
+        if (dropped != null && dropped != gameObject)
+        {
             manager.OnDrop(dropped, gameObject);
+        }
     }
 }
