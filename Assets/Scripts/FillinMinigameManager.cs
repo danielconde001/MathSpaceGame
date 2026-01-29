@@ -21,8 +21,14 @@ public class FillinMinigameManager : MonoBehaviour, IBeginDragHandler, IDragHand
 
     void Start()
     {
+        InitializeMinigame();
+    }
+
+    public void InitializeMinigame()
+    {
         fields = new TMP_InputField[] { inputField1, inputField2, inputField3, inputField4, inputField5 };
         GenerateAndShowNumbers();
+        submitButton.onClick.RemoveAllListeners();
         submitButton.onClick.AddListener(OnSubmit);
     }
 
