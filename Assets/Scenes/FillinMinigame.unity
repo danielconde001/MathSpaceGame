@@ -3232,6 +3232,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37fffeb26fe45a44190dcba3d96467a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FillinMinigameManager
+  minNumber: 10
+  maxNumber: 50
+  minStep: 1
+  maxStep: 10
   inputField1: {fileID: 1178406673}
   inputField2: {fileID: 1825475960}
   inputField3: {fileID: 1807444957}

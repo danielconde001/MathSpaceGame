@@ -4,8 +4,12 @@ using TMPro;
 using DG.Tweening;
 using UnityEngine.EventSystems;
 
-public class FillinMinigameManager : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler, IDropHandler
-{
+public class FillinMinigameManager : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler, IDropHandler{
+    
+    public int minNumber = 10;
+    public int maxNumber = 30;
+    public int minStep = 1;
+    public int maxStep = 2;
     public TMP_InputField inputField1;
     public TMP_InputField inputField2;
     public TMP_InputField inputField3;
@@ -72,8 +76,9 @@ public class FillinMinigameManager : MonoBehaviour, IBeginDragHandler, IDragHand
     public void GenerateAndShowNumbers()
     {
         AnimateFields();
-        int start = Random.Range(10, 26);
-        int step = Random.Range(1, 3);
+        int maxStart = maxNumber - 4 * maxStep; // ensure last number fits in range for max step
+        int start = Random.Range(minNumber, maxStart + 1);
+        int step = Random.Range(minStep, maxStep + 1);
         for (int i = 0; i < 5; i++)
             numbers[i] = start + i * step;
         int blanks = 2;

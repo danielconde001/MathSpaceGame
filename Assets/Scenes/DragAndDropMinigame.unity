@@ -876,6 +876,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37b76ec8f6db67c4db219f8927ddc84a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ArrangingMinigameManager
+  minNumber: 10
+  maxNumber: 99
+  minStep: 1
+  maxStep: 6
   numberImage1: {fileID: 670468161}
   numberImage2: {fileID: 302980360}
   numberImage3: {fileID: 286415967}

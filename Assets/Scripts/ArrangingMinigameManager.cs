@@ -4,8 +4,11 @@ using TMPro;
 using DG.Tweening;
 using UnityEngine.EventSystems;
 
-public class ArrangingMinigameManager : MonoBehaviour
-{
+public class ArrangingMinigameManager : MonoBehaviour{
+    public int minNumber = 10;
+    public int maxNumber = 30;
+    public int minStep = 1;
+    public int maxStep = 2;
     public GameObject numberImage1;
     public GameObject numberImage2;
     public GameObject numberImage3;
@@ -55,8 +58,9 @@ public class ArrangingMinigameManager : MonoBehaviour
         AnimateFields();
 
         // Generate 5 small two-digit numbers with a simple pattern (step 1 or 2)
-        int start = Random.Range(10, 26); // ensures last number is <= 30
-        int step = Random.Range(1, 3); // step of 1 or 2
+        int maxStart = maxNumber - 4 * maxStep; // ensure last number fits in range for max step
+        int start = Random.Range(minNumber, maxStart + 1);
+        int step = Random.Range(minStep, maxStep + 1); // step in [minStep, maxStep]
         for (int i = 0; i < 5; i++)
         {
             numbers[i] = start + i * step;
