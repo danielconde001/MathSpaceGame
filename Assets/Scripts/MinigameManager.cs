@@ -56,9 +56,9 @@ public class MinigameManager : MonoBehaviour
     {
         int rnd = Random.Range(11, 100);
         requiredValue = System.Convert.ToUInt32(rnd);
-        canvas.ShowScreen(requiredValue);
-        tens.Reset();
-        ones.Reset();
+        canvas?.ShowScreen(requiredValue);
+        tens?.Reset();
+        ones?.Reset();
     }
 
     public void CheckValue(uint p_newValue, bool isTens)

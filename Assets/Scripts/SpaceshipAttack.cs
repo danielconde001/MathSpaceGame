@@ -3,7 +3,7 @@ using UnityEngine;
 public class SpaceshipAttack : MonoBehaviour
 {
     [SerializeField] private Transform bulletSpawn;
-    [SerializeField] private float range = 25f;
+    [SerializeField] private float range = 1000f;
     [SerializeField] private ProjectileBehaviour projectilePrefab;
     [SerializeField] private float fireRate = .12f;
     [SerializeField] private int damage = 10;
@@ -55,16 +55,18 @@ public class SpaceshipAttack : MonoBehaviour
         // if ray hits something
         if (Physics.Raycast(ray, out hit, range, cursorRayMask))
         {
+            Debug.Log(hit.collider.name);
             aimPoint = hit.point;
         }
 
         // if ray hits nothing
         else
         {
+            Debug.Log("None.");
             aimPoint = ray.GetPoint(range);
         }
 
-        Vector3 projectileDir = (aimPoint - transform.position).normalized;
+        Vector3 projectileDir = (aimPoint - bulletSpawn.position).normalized;
 
         ProjectileBehaviour projectile = Instantiate(projectilePrefab, bulletSpawn.position, Quaternion.identity);
         projectile.moveDir = projectileDir;

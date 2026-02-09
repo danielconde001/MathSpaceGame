@@ -19,7 +19,7 @@ public class ProjectileBehaviour : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         Damageable hit;
-        if (other.gameObject.TryGetComponent<Damageable>(out hit))
+        if (other.gameObject.TryGetComponent(out hit))
         {
             hit.TakeDamage(PlayerManager.Instance.GetPlayer().GetDamage());
         }
