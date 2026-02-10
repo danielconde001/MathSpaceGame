@@ -6,6 +6,9 @@ public class PlayerScript : MonoBehaviour
     private SpaceshipMovement movement;
     private Collider playerCollider;
 
+    public SpaceshipAttack GetAttackScript() { return attack; }
+    public SpaceshipMovement GetMovementScript() { return movement; }
+
     public Collider PlayerCollider { get => playerCollider; }
 
     private void Awake()

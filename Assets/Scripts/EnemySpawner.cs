@@ -32,6 +32,11 @@ public class EnemySpawner : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        if (other.CompareTag("Player") == false)
+        {
+            return;
+        }
+
         if (spawnHasStarted == false && isTimedTrigger == false)
         {
             Debug.Log("Triggered");

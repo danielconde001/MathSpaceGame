@@ -1,8 +1,6 @@
 using DG.Tweening;
 using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
-using static System.Net.Mime.MediaTypeNames;
 
 public class MinigameCanvas : MonoBehaviour
 {
@@ -15,5 +13,11 @@ public class MinigameCanvas : MonoBehaviour
         text.text = "How do you make " + p_value.ToString() + "?";
         panel.gameObject.transform.DOLocalMoveY(820, 0f, true);
         panel.gameObject.transform.DOLocalMoveY(520, 1f);
+    }
+
+    public void HideScreen()
+    {
+        panel.gameObject.transform.DOLocalMoveY(520, 0f, true);
+        panel.gameObject.transform.DOLocalMoveY(820, 1f);
     }
 }

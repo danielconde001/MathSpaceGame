@@ -4,7 +4,8 @@ using TMPro;
 using DG.Tweening;
 using UnityEngine.EventSystems;
 
-public class ArrangingMinigameManager : MonoBehaviour{
+public class ArrangingMinigameManager : MinigameManager
+{
     public int minNumber = 10;
     public int maxNumber = 30;
     public int minStep = 1;
@@ -27,7 +28,7 @@ public class ArrangingMinigameManager : MonoBehaviour{
         InitializeMinigame();
     }
 
-    public void InitializeMinigame()
+    public override void InitializeMinigame()
     {
         GenerateAndShowNumbers();
         submitButton.onClick.RemoveAllListeners();

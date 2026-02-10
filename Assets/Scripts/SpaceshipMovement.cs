@@ -23,7 +23,5 @@ public class SpaceshipMovement : MonoBehaviour
 
         Vector3 move = Vector3.ClampMagnitude(new Vector3(rightInput, upInput, 0), 1) * moveSpeed * Time.deltaTime;
         transform.localPosition += move;
-        
-        
     }
 }

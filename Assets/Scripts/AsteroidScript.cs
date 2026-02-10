@@ -4,6 +4,7 @@ using TMPro;
 public class AsteroidScript : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI ValueText;
+    [HideInInspector] public TensAndOnesMinigameManager manager;
     public bool isTens;
     private uint Value = 0;
 
@@ -17,7 +18,9 @@ public class AsteroidScript : MonoBehaviour
         Value++;
         ValueText.text = Value.ToString();
 
-        MinigameManager.Instance.CheckValue(Value, isTens);
+        if (manager == null) Debug.LogError("Missing manager for this asteroid!");
+
+        manager?.CheckValue(Value, isTens);
     }
 
     public void Reset()

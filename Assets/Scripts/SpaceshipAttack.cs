@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class SpaceshipAttack : MonoBehaviour
@@ -17,14 +18,23 @@ public class SpaceshipAttack : MonoBehaviour
 
     private void Update()
     {
-        NormalShootingLogic();
-        MinigameShootingLogic();
+        switch (LevelManager.Instance.LevelState)
+        {
+            case 0:
+                NormalShootingLogic();
+                break;
+            case 1:
+                MinigameShootingLogic();
+                break;
+            default:
+                NormalShootingLogic();
+                Debug.LogWarning("No state exists for index: " + LevelManager.Instance.LevelState.ToString());
+                break;
+        }
     }
 
     private void NormalShootingLogic()
     {
-        if (MinigameManager.Instance.State != MinigameManager.MinigameState.None) return;
-
         if (fireCooldown >= 0f) fireCooldown -= Time.deltaTime;
         
         if (Input.GetMouseButton(0) && fireCooldown <= 0f)
@@ -35,8 +45,6 @@ public class SpaceshipAttack : MonoBehaviour
 
     private void MinigameShootingLogic()
     {
-        if (MinigameManager.Instance.State != MinigameManager.MinigameState.StationaryShooting) return;
-
         if (minigameFireCooldown >= 0f) minigameFireCooldown -= Time.deltaTime;
 
         if (Input.GetMouseButtonDown(0) && minigameFireCooldown <= 0f)

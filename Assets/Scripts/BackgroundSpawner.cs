@@ -2,10 +2,7 @@ using UnityEngine;
 
 public class BackgroundSpawner : MonoBehaviour
 {
-    [SerializeField] private GameObject nextAreaPrefab;
-    [SerializeField] private float spawnOffset = 299.5f;
-
-    private float timeElapsed = 0f;
+    [SerializeField] private float ZOffset = 299.5f;
 
     private void OnTriggerEnter(Collider col)
     {
@@ -17,7 +14,6 @@ public class BackgroundSpawner : MonoBehaviour
 
     private void SpawnNextArea()
     {
-        Vector3 nextAreaPosition = (transform.forward * spawnOffset);
-        Instantiate(nextAreaPrefab, nextAreaPosition, Quaternion.identity);
+        LevelManager.Instance.SpawnNextSection(ZOffset);
     }
 }

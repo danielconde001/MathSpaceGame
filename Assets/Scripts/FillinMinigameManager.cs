@@ -4,7 +4,7 @@ using TMPro;
 using DG.Tweening;
 using UnityEngine.EventSystems;
 
-public class FillinMinigameManager : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler, IDropHandler{
+public class FillinMinigameManager : MinigameManager, IBeginDragHandler, IDragHandler, IEndDragHandler, IDropHandler{
     
     public int minNumber = 10;
     public int maxNumber = 30;
@@ -28,7 +28,7 @@ public class FillinMinigameManager : MonoBehaviour, IBeginDragHandler, IDragHand
         InitializeMinigame();
     }
 
-    public void InitializeMinigame()
+    public override void InitializeMinigame()
     {
         fields = new TMP_InputField[] { inputField1, inputField2, inputField3, inputField4, inputField5 };
         GenerateAndShowNumbers();
