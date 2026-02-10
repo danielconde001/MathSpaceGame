@@ -111,6 +111,8 @@ Transform:
   - {fileID: 8241881987697118760}
   - {fileID: 5882753041667863213}
   - {fileID: 5576165754851773712}
+  - {fileID: 7499303015458485325}
+  - {fileID: 6846002074992905971}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &4456740267470767158
@@ -126,6 +128,79 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MoveForward
   speed: -20
+--- !u!1 &5578878008570760571
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7499303015458485325}
+  - component: {fileID: 2852090362962795022}
+  - component: {fileID: 601605090104754366}
+  m_Layer: 2
+  m_Name: EnemySpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7499303015458485325
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5578878008570760571}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 37.5, z: 100.5}
+  m_LocalScale: {x: 100, y: 75, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4645375100092398250}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2852090362962795022
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5578878008570760571}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5fadfd2060f8b244842612372285272, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemySpawner
+  isTimedTrigger: 0
+  spawnPointIndex: 0
+  enemyPrefab: {fileID: -512060980318999583, guid: 41fa7a8f5c2273d4d8030ec2661475a2,
+    type: 3}
+  timeBeforeSpawn: 0
+  spawnRate: 0.3
+  numberOfSpawns: 7
+--- !u!65 &601605090104754366
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5578878008570760571}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 8
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 119
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &5583616248389563271
 GameObject:
   m_ObjectHideFlags: 0
@@ -237,6 +312,79 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &6349001033179425258
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6846002074992905971}
+  - component: {fileID: 3051523041169210513}
+  - component: {fileID: 2020562209892209275}
+  m_Layer: 2
+  m_Name: EnemySpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6846002074992905971
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6349001033179425258}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 37.5, z: 150.5}
+  m_LocalScale: {x: 100, y: 75, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4645375100092398250}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3051523041169210513
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6349001033179425258}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5fadfd2060f8b244842612372285272, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemySpawner
+  isTimedTrigger: 0
+  spawnPointIndex: 1
+  enemyPrefab: {fileID: -512060980318999583, guid: 41fa7a8f5c2273d4d8030ec2661475a2,
+    type: 3}
+  timeBeforeSpawn: 0
+  spawnRate: 0.3
+  numberOfSpawns: 7
+--- !u!65 &2020562209892209275
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6349001033179425258}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 8
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 119
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &174184337590316105
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -249,6 +397,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Spiky Rock 1 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1281262521529729706, guid: 32d5acaa65ee1e944b04696abc042d15,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4273961802523613817, guid: 32d5acaa65ee1e944b04696abc042d15,
         type: 3}
@@ -404,6 +557,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Spiky Rock 3 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 5252033229192526926, guid: a19143c703eb64e4b9b231aff1291cfd,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -492,6 +650,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Spiky Rock 3 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5252033229192526926, guid: a19143c703eb64e4b9b231aff1291cfd,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -582,6 +745,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Spiky Rock 3
       objectReference: {fileID: 0}
+    - target: {fileID: 5252033229192526926, guid: a19143c703eb64e4b9b231aff1291cfd,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -605,6 +773,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Spiky Rock 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3469024016403341089, guid: 95e589be54cf16343b782cb45eb009bf,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6719608873192790267, guid: 95e589be54cf16343b782cb45eb009bf,
         type: 3}
@@ -695,6 +868,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Spiky Rock 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1281262521529729706, guid: 32d5acaa65ee1e944b04696abc042d15,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4273961802523613817, guid: 32d5acaa65ee1e944b04696abc042d15,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -783,6 +961,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Spiky Rock 2 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3469024016403341089, guid: 95e589be54cf16343b782cb45eb009bf,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6719608873192790267, guid: 95e589be54cf16343b782cb45eb009bf,
         type: 3}
@@ -873,6 +1056,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Spiky Rock 1 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 1281262521529729706, guid: 32d5acaa65ee1e944b04696abc042d15,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4273961802523613817, guid: 32d5acaa65ee1e944b04696abc042d15,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -961,6 +1149,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Spiky Rock 1 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1281262521529729706, guid: 32d5acaa65ee1e944b04696abc042d15,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4273961802523613817, guid: 32d5acaa65ee1e944b04696abc042d15,
         type: 3}
@@ -1116,6 +1309,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Spiky Rock 3 (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 5252033229192526926, guid: a19143c703eb64e4b9b231aff1291cfd,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1204,6 +1402,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Spiky Rock 3 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5252033229192526926, guid: a19143c703eb64e4b9b231aff1291cfd,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

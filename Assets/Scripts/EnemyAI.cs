@@ -2,29 +2,82 @@ using UnityEngine;
 
 public class EnemyAI : MonoBehaviour
 {
-    bool wentNearPlayer = false;
-    Transform target;
+    [SerializeField] bool skipFlyingIntro = false;
     [SerializeField] float rotationSpeed;
     [SerializeField] float moveSpeed;
+    [SerializeField] Vector3 introSpotOffset;
+
+    bool isNowFollowingPlayer = false;
+    bool wentNearPlayer = false;
+    bool wentNearIntroSpot = false;
+    Vector3 introSpot;
+    Transform target;
 
     private void Start()
     {
+        if (skipFlyingIntro == false)
+        {
+            introSpot = transform.position + introSpotOffset;
+        }
+
+        else if (skipFlyingIntro == true)
+        {
+            isNowFollowingPlayer = true;
+        }
+
         target = PlayerManager.Instance.GetPlayer().transform;
     }
 
 
     private void Update()
     {
+        if (isNowFollowingPlayer == false)
+        {
+            FlyingIntro();
+        }
+
+        else if (isNowFollowingPlayer == true)
+        { 
+            FollowPlayer(); 
+        }
+    }
+
+    void FlyingIntro()
+    {
+        Debug.Log("Flying Intro");
+
+        float distToIntroSpot = Vector3.Distance(transform.position, introSpot);
+
+        if (distToIntroSpot < .1f && wentNearIntroSpot == false)
+        {
+            wentNearIntroSpot = true;
+        }
+
+        if (wentNearIntroSpot == false)
+        {
+            LookAtTarget(introSpot);
+            MoveStraight();
+        }
+        else
+        {
+            isNowFollowingPlayer = true;
+        }
+    }
+
+    void FollowPlayer()
+    {
+        Debug.Log("Follow Player");
+
         float distToPlayer = Vector3.Distance(transform.position, target.position);
 
-        if (distToPlayer < 5f && wentNearPlayer == false) 
+        if (distToPlayer < 5f && wentNearPlayer == false)
         {
             wentNearPlayer = true;
         }
 
         if (wentNearPlayer == false)
         {
-            LookAtPlayer();
+            LookAtTarget(target.position);
             MoveStraight();
         }
         else
@@ -33,12 +86,12 @@ public class EnemyAI : MonoBehaviour
         }
     }
 
-    void LookAtPlayer()
+    void LookAtTarget(Vector3 p_target)
     {
-        if (target != null)
+        if (p_target != null)
         {
             // Calculate the direction from the current object to the target
-            Vector3 direction = (target.position - transform.position).normalized;
+            Vector3 direction = (p_target - transform.position).normalized;
 
             // Create the rotation needed to look in that direction
             Quaternion lookRotation = Quaternion.LookRotation(direction);

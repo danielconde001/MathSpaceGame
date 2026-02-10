@@ -20,8 +20,6 @@ public class SpaceshipLookAt : MonoBehaviour
 
             // Smoothly rotate the object towards that rotation over time
             transform.localRotation = Quaternion.Slerp(transform.localRotation, lookRotation, Time.deltaTime * rotationSpeed);
-
-            //if (transform.localRotation.
         }
     }
 }
