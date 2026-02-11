@@ -16,6 +16,9 @@ public class SpaceshipAttack : MonoBehaviour
     [SerializeField] private ProjectileBehaviour minigameProjectilePrefab;
     private float minigameFireCooldown = 0;
 
+    [Header("Debug")]
+    [SerializeField] bool useDebug = false;
+
     private void Update()
     {
         switch (LevelManager.Instance.LevelState)
@@ -63,12 +66,14 @@ public class SpaceshipAttack : MonoBehaviour
         // if ray hits something
         if (Physics.Raycast(ray, out hit, range, cursorRayMask))
         {
+            if (useDebug) Debug.Log(hit.collider.name);
             aimPoint = hit.point;
         }
 
         // if ray hits nothing
         else
         {
+            if (useDebug) Debug.Log("None");
             aimPoint = ray.GetPoint(range);
         }
 

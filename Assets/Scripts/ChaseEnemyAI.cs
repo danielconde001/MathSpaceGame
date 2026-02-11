@@ -44,8 +44,6 @@ public class ChaseEnemyAI : MonoBehaviour
 
     void FlyingIntro()
     {
-        Debug.Log("Flying Intro");
-
         float distToIntroSpot = Vector3.Distance(transform.position, introSpot);
 
         if (distToIntroSpot < .1f && wentNearIntroSpot == false)
@@ -66,8 +64,6 @@ public class ChaseEnemyAI : MonoBehaviour
 
     void FollowPlayer()
     {
-        Debug.Log("Follow Player");
-
         float distToPlayer = Vector3.Distance(transform.position, target.position);
 
         if (distToPlayer < 5f && wentNearPlayer == false)

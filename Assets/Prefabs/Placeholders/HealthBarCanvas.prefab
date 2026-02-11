@@ -193,6 +193,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HealthBar
   health: {fileID: 0}
+  backgroundImage: {fileID: 5231803067128750899}
   fillImage: {fileID: 5043517465012729987}
   maxHealth: 100
   offset: {x: 0, y: 2, z: 0}

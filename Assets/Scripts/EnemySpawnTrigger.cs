@@ -1,7 +1,7 @@
 using System.Collections;
 using UnityEngine;
 
-public class EnemySpawner : MonoBehaviour
+public class EnemySpawnTrigger : MonoBehaviour
 {
     [SerializeField] bool isTimedTrigger = false;
     [SerializeField] int spawnPointIndex = -1;
@@ -20,7 +20,7 @@ public class EnemySpawner : MonoBehaviour
     private void Awake()
     {
         // Just log where the coponent is used so i can find it easier in the scene
-        Debug.Log("EnemySpawner active on: " + gameObject.name, gameObject);
+        Debug.Log("EnemySpawnTrigger active on: " + gameObject.name, gameObject);
     }
 
     private void Start()

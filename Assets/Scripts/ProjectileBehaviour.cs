@@ -4,19 +4,19 @@ public class ProjectileBehaviour : MonoBehaviour
 {
     public Vector3 moveDir;
     public float projectileSpeed;
-    [SerializeField] private float selfDestoryTimer = 5f;
+    [SerializeField] protected float selfDestoryTimer = 5f;
 
-    private void Start()
+    protected void Start()
     {
         Destroy(gameObject, selfDestoryTimer);
     }
 
-    void Update()
+    protected void Update()
     {
         transform.position += moveDir * projectileSpeed * Time.deltaTime;    
     }
 
-    private void OnTriggerEnter(Collider other)
+    protected virtual void OnTriggerEnter(Collider other)
     {
         Damageable hit;
         if (other.gameObject.TryGetComponent(out hit))

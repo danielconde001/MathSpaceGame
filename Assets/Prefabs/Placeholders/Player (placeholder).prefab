@@ -97,10 +97,11 @@ MonoBehaviour:
   damage: 15
   cursorRayMask:
     serializedVersion: 2
-    m_Bits: 51
+    m_Bits: 129
   minigameFireRate: 0.06
   minigameProjectilePrefab: {fileID: -6240810892892311158, guid: fe676289d3aff2940b2087a93d37ee44,
     type: 3}
+  useDebug: 0
 --- !u!114 &658148167345235933
 MonoBehaviour:
   m_ObjectHideFlags: 0

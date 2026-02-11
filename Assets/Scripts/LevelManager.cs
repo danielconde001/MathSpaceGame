@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class LevelManager : MonoBehaviour
@@ -29,18 +30,18 @@ public class LevelManager : MonoBehaviour
         return currentSections;
     }
 
-    private uint levelState = 0; // 0 = normal, 1 = minigame 1, 2 = combat
+    private uint levelState = 0; // 0 = normal, 1 = minigame 1
     public uint LevelState
     {
         get => levelState;
         set => levelState = value;
     }
 
-    private uint gemsCollected = 0;
+    //private uint gemsCollected = 0;
     public void CollectGems(uint p_value)
     {
-        gemsCollected += p_value;
-        Debug.Log("Gems collected: " + gemsCollected);
+        //gemsCollected += p_value;
+        ScoreManager.Instance.AddScore((int)p_value);
     }
 
     private void Awake()

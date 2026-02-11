@@ -4,12 +4,15 @@ using UnityEngine.UI;
 public class HealthBar : MonoBehaviour
 {
     [SerializeField] private Health health;
+    [SerializeField] private Image backgroundImage;
     [SerializeField] private Image fillImage;
     [SerializeField] private float maxHealth = 100f;
     [SerializeField] private Vector3 offset = new Vector3(0, 2f, 0);
     [SerializeField] private bool faceCamera = true;
+    [SerializeField] private bool belongsToPlayer = false;
 
     private Camera mainCamera;
+
 
     private void Awake()
     {
@@ -29,6 +32,18 @@ public class HealthBar : MonoBehaviour
 
     private void Update()
     {
+        if (health.value >= maxHealth && belongsToPlayer == false)
+        {
+            fillImage.enabled = false;
+            backgroundImage.enabled = false;
+            return;
+        }
+        else
+        {
+            fillImage.enabled = true;
+            backgroundImage.enabled = true;
+        }
+
         if (health != null && fillImage != null)
         {
             UpdateHealthBar();
