@@ -63,14 +63,12 @@ public class SpaceshipAttack : MonoBehaviour
         // if ray hits something
         if (Physics.Raycast(ray, out hit, range, cursorRayMask))
         {
-            Debug.Log(hit.collider.name);
             aimPoint = hit.point;
         }
 
         // if ray hits nothing
         else
         {
-            Debug.Log("None.");
             aimPoint = ray.GetPoint(range);
         }
 

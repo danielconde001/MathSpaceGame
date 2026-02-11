@@ -29,11 +29,18 @@ public class LevelManager : MonoBehaviour
         return currentSections;
     }
 
-    private uint levelState = 0; // 0 = normal, 1 = minigame 1
+    private uint levelState = 0; // 0 = normal, 1 = minigame 1, 2 = combat
     public uint LevelState
     {
         get => levelState;
         set => levelState = value;
+    }
+
+    private uint gemsCollected = 0;
+    public void CollectGems(uint p_value)
+    {
+        gemsCollected += p_value;
+        Debug.Log("Gems collected: " + gemsCollected);
     }
 
     private void Awake()

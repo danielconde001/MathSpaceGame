@@ -125,5 +125,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ProjectileBehaviour
   moveDir: {x: 0, y: 0, z: 0}
-  projectileSpeed: 36
+  projectileSpeed: 360
   selfDestoryTimer: 5

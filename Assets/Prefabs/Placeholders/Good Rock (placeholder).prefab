@@ -16,9 +16,10 @@ GameObject:
   - component: {fileID: 3866239498434180303}
   - component: {fileID: 7258892103279417007}
   - component: {fileID: 1645524939790875823}
+  - component: {fileID: 523439201114293081}
   - component: {fileID: 7198653176957525201}
   m_Layer: 0
-  m_Name: Good Rocks (placeholder)
+  m_Name: Good Rock (placeholder)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -34,7 +35,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 4, y: 4, z: 4}
+  m_LocalScale: {x: 7.934089, y: 7.934089, z: 7.934089}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
@@ -72,7 +73,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 051fcfb0c25092542a847366334ea018, type: 2}
+  - {fileID: 2100000, guid: ece939f3b587f9a4a8659150221a2173, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -154,6 +155,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce0267ff74dbc6f49830ddc5c7db84fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObstacleKillable
+  OnDeathEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 523439201114293081}
+        m_TargetAssemblyTypeName: OnGoodRockDeath, Assembly-CSharp
+        m_MethodName: OnDeath
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1645524939790875823
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -166,6 +182,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd165a46da58011468b79405705f4adf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Damageable
+--- !u!114 &523439201114293081
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4330854758197314082}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c08da61e288a78d4696af55a890ddcff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::OnGoodRockDeath
+  gemValue: 1
 --- !u!54 &7198653176957525201
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -189,7 +218,7 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 0
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
