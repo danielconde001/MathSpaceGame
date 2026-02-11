@@ -104,6 +104,7 @@ GameObject:
   - component: {fileID: 8330759345114548992}
   - component: {fileID: 7118422116266386654}
   - component: {fileID: 7450140753419297814}
+  - component: {fileID: 8607591313917060630}
   m_Layer: 0
   m_Name: Chase Enemy (placeholder)
   m_TagString: Untagged
@@ -212,6 +213,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbbeb77206e772d499bedf6bcefb2743, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyKillable
+  scorePopupPrefab: {fileID: 5554752485786833717, guid: 4dea4b063998b504d9542259a0c01070,
+    type: 3}
 --- !u!114 &7450140753419297814
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -228,3 +231,16 @@ MonoBehaviour:
   rotationSpeed: 45
   moveSpeed: 20
   introSpotOffset: {x: 0, y: 20, z: 0}
+--- !u!114 &8607591313917060630
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8104590451157559281}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c95a7a2e6084334fb8c2cb2516ccf0c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Score
+  value: 10

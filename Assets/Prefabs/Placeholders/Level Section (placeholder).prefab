@@ -193,6 +193,9 @@ MonoBehaviour:
   timeBeforeSpawn: 0
   spawnRate: 0.3
   numberOfSpawns: 7
+  healthBarPrefab: {fileID: 7973180429188624327, guid: f98cfba594225bb4783772b833e7d784,
+    type: 3}
+  healthBarOffset: {x: 0, y: 2, z: 0}
 --- !u!65 &601605090104754366
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -377,6 +380,9 @@ MonoBehaviour:
   timeBeforeSpawn: 0
   spawnRate: 0.3
   numberOfSpawns: 7
+  healthBarPrefab: {fileID: 7973180429188624327, guid: f98cfba594225bb4783772b833e7d784,
+    type: 3}
+  healthBarOffset: {x: 0, y: 2, z: 0}
 --- !u!65 &2020562209892209275
 BoxCollider:
   m_ObjectHideFlags: 0

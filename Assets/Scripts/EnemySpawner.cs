@@ -10,8 +10,18 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] float spawnRate = 0.3f;
     [SerializeField] int numberOfSpawns = 7;
 
+    [Header("Health Bar")]
+    [SerializeField] GameObject healthBarPrefab;
+    [SerializeField] Vector3 healthBarOffset = new Vector3(0, 2, 0);
+
     bool spawnHasStarted = false;
     float timer;
+
+    private void Awake()
+    {
+        // Just log where the coponent is used so i can find it easier in the scene
+        Debug.Log("EnemySpawner active on: " + gameObject.name, gameObject);
+    }
 
     private void Start()
     {
@@ -58,9 +68,22 @@ public class EnemySpawner : MonoBehaviour
         for (int i = 0; i < numberOfSpawns; i++)
         {
             ChaseEnemyAI eai = Instantiate(enemyPrefab, spawnTransform.position, Quaternion.identity);
+
+            // Spawn and attach health bar
+            if (healthBarPrefab != null)
+            {
+                GameObject hbObj = Instantiate(healthBarPrefab, eai.transform);
+                hbObj.transform.localPosition = healthBarOffset;
+                HealthBar hb = hbObj.GetComponent<HealthBar>();
+                Health enemyHealth = eai.GetComponent<Health>();
+                if (hb != null && enemyHealth != null)
+                {
+                    hb.SetHealth(enemyHealth);
+                }
+            }
+
             eai.transform.SetParent(null);
             yield return new WaitForSeconds(spawnRate);
         }
     }
-    
 }
