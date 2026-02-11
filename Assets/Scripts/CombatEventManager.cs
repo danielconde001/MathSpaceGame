@@ -68,10 +68,18 @@ public class CombatEventManager : MonoBehaviour
     {
         LevelManager.Instance.StopSectionsFromMoving();
 
-        SpawnStationaryEnemy(2, 0);
-        SpawnStationaryEnemy(3, 3);
-
+        StationaryEnemyAI enemy1 = SpawnStationaryEnemy(2, 0);
         yield return new WaitForSeconds(.5f);
+        StationaryEnemyAI enemy2 = SpawnStationaryEnemy(3, 3);
+        yield return new WaitUntil( () => (enemy1 == null && enemy2 == null)); // unitl they are dead
+
+        StationaryEnemyAI enemy3 = SpawnStationaryEnemy(2, 0);
+        yield return new WaitForSeconds(.5f);
+        StationaryEnemyAI enemy4 = SpawnStationaryEnemy(3, 3);
+
+        yield return new WaitUntil(() => (enemy3 == null && enemy4 == null)); // unitl they are dead
+
+        LevelManager.Instance.StartSectionsMovement();
     }
 
     private void CombatEvent1B()
@@ -114,7 +122,7 @@ public class CombatEventManager : MonoBehaviour
 
     }
 
-    private void SpawnStationaryEnemy(int p_spawnPointIndex, int p_enemySpotIndex)
+    private StationaryEnemyAI SpawnStationaryEnemy(int p_spawnPointIndex, int p_enemySpotIndex)
     {
         StationaryEnemyAI stationaryEnemy = null;
 
@@ -127,5 +135,7 @@ public class CombatEventManager : MonoBehaviour
             ).GetComponent<StationaryEnemyAI>();
 
         stationaryEnemy.respectiveSpot = EnemySpotManager.Instance.GetEnemySpots(p_enemySpotIndex);
+
+        return stationaryEnemy;
     }
 }

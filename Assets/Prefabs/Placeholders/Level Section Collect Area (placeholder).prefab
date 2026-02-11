@@ -66,7 +66,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8553446b1eab81c40bdc24b6de9ad7d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BackgroundSpawner
-  ZOffset: 299.5
+  ZOffset: 499.5
 --- !u!1 &4552408384870299060
 GameObject:
   m_ObjectHideFlags: 0

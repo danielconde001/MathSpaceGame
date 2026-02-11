@@ -4,12 +4,14 @@ public class StationaryEnemyAI : MonoBehaviour
 {
     [SerializeField] float rotationSpeed;
     [SerializeField] float moveSpeed;
+    [SerializeField] int damage;
     [HideInInspector] public Transform respectiveSpot;
 
     [SerializeField] float minFireRate;
     [SerializeField] float maxFireRate;
 
-    [SerializeField] Projectile projectilePrefab;
+    [SerializeField] ProjectileBehaviour projectilePrefab;
+    [SerializeField] Transform bulletSpawn;
 
     Transform target;
     float cooldown = 0;
@@ -70,7 +72,15 @@ public class StationaryEnemyAI : MonoBehaviour
     void Shoot()
     {
         cooldown = Random.Range(minFireRate, maxFireRate);
-        //Instantiate(projectilePrefab, );
+
+        EnemyProjectileBehaviour projectile 
+            = (EnemyProjectileBehaviour)Instantiate(projectilePrefab, bulletSpawn.position, Quaternion.identity);
+
+        Vector3 projectileDir 
+            = (PlayerManager.Instance.GetPlayer().transform.position - bulletSpawn.position).normalized;
+
+        projectile.damage = damage;
+        projectile.moveDir = projectileDir;
     }
 
     void MoveStraight()

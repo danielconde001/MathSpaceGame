@@ -4,8 +4,6 @@ public class EnemyKillable : Killable
 {
     [SerializeField] private GameObject scorePopupPrefab;
 
-
-
     public override void Kill()
     {
         base.Kill();

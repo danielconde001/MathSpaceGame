@@ -20,7 +20,7 @@ public class LevelManager : MonoBehaviour
     }
 
     [SerializeField] private LevelSection nextSectionPrefab; // change to list later
-    [SerializeField] private LevelSection minigameSectionPrefab; // change to list later
+    [SerializeField] private LevelSection combatSectionPrefab; // change to list later
 
     uint sectionsSpawned = 1;
 
@@ -56,8 +56,7 @@ public class LevelManager : MonoBehaviour
 
         if (((sectionsSpawned + 1) % 2) == 0)
         {
-            //newObj = Instantiate(minigameSectionPrefab, nextSectionPosition, Quaternion.identity);
-            newObj = Instantiate(nextSectionPrefab, nextSectionPosition, Quaternion.identity);
+            newObj = Instantiate(combatSectionPrefab, nextSectionPosition, Quaternion.identity);
         }
         else
         {

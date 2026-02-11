@@ -4,11 +4,15 @@ public class CombatEventTrigger : MonoBehaviour
 {
     [SerializeField] int CombatEventID = -1;
 
+    bool isTriggered = false;
+
+
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Player"))
+        if (other.gameObject.CompareTag("Player") && isTriggered == false)
         {
             TriggerCombatEvent(CombatEventID);
+            isTriggered = true;
         }
     }
 
