@@ -98,14 +98,14 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3486117988231100224}
-  - component: {fileID: -512060980318999583}
   - component: {fileID: 3621486597614997871}
   - component: {fileID: 7868299391414062235}
   - component: {fileID: 7034097960053531366}
   - component: {fileID: 8330759345114548992}
   - component: {fileID: 7118422116266386654}
+  - component: {fileID: 7450140753419297814}
   m_Layer: 0
-  m_Name: Enemy
+  m_Name: Chase Enemy (placeholder)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -127,22 +127,6 @@ Transform:
   - {fileID: 7074959765501919838}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &-512060980318999583
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8104590451157559281}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f76e51bcb46d1b441bafff01df9d84a5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::EnemyAI
-  skipFlyingIntro: 0
-  rotationSpeed: 45
-  moveSpeed: 25
-  introSpotOffset: {x: 0, y: 37.5, z: 0}
 --- !u!54 &3621486597614997871
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -228,3 +212,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbbeb77206e772d499bedf6bcefb2743, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyKillable
+--- !u!114 &7450140753419297814
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8104590451157559281}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11160ca0eb531104daab3a6c8b0e4608, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ChaseEnemyAI
+  skipFlyingIntro: 0
+  rotationSpeed: 45
+  moveSpeed: 20
+  introSpotOffset: {x: 0, y: 20, z: 0}

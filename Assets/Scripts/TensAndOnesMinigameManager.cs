@@ -27,10 +27,10 @@ public class TensAndOnesMinigameManager : MinigameManager
         tens.manager = this;
         ones.manager = this;
     }
-    public void CheckValue(uint p_newValue, bool isTens)
+    public void CheckValue()
     {
-        if (isTens) currentTensValue = (p_newValue * 10);
-        else currentOnesValue = p_newValue;
+        currentTensValue = tens.GetValue() * 10;
+        currentOnesValue = ones.GetValue();
 
         if ((currentTensValue + currentOnesValue) == requiredValue)
         {

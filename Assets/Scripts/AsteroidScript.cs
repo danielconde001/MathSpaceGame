@@ -16,11 +16,14 @@ public class AsteroidScript : MonoBehaviour
     private void AddValue()
     {
         Value++;
+
+        if (Value > 9) Value = 0;
+
         ValueText.text = Value.ToString();
 
         if (manager == null) Debug.LogError("Missing manager for this asteroid!");
 
-        manager?.CheckValue(Value, isTens);
+        manager?.CheckValue();
     }
 
     public void Reset()

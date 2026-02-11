@@ -48,7 +48,8 @@ public class LevelManager : MonoBehaviour
 
         if (((sectionsSpawned + 1) % 2) == 0)
         {
-            newObj = Instantiate(minigameSectionPrefab, nextSectionPosition, Quaternion.identity);
+            //newObj = Instantiate(minigameSectionPrefab, nextSectionPosition, Quaternion.identity);
+            newObj = Instantiate(nextSectionPrefab, nextSectionPosition, Quaternion.identity);
         }
         else
         {

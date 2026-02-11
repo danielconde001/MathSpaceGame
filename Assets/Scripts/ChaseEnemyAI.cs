@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class EnemyAI : MonoBehaviour
+public class ChaseEnemyAI : MonoBehaviour
 {
     [SerializeField] bool skipFlyingIntro = false;
     [SerializeField] float rotationSpeed;

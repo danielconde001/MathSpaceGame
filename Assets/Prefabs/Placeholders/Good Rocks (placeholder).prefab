@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 1645524939790875823}
   - component: {fileID: 7198653176957525201}
   m_Layer: 0
-  m_Name: Obstacle (placeholder)
+  m_Name: Good Rocks (placeholder)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

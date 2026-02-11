@@ -79,7 +79,7 @@ GameObject:
   - component: {fileID: 4456740267470767158}
   - component: {fileID: 9115993325438427119}
   m_Layer: 0
-  m_Name: Level Section Placeholder
+  m_Name: Level Section (placeholder)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -188,7 +188,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemySpawner
   isTimedTrigger: 0
   spawnPointIndex: 0
-  enemyPrefab: {fileID: -512060980318999583, guid: 41fa7a8f5c2273d4d8030ec2661475a2,
+  enemyPrefab: {fileID: 7450140753419297814, guid: 41fa7a8f5c2273d4d8030ec2661475a2,
     type: 3}
   timeBeforeSpawn: 0
   spawnRate: 0.3
@@ -372,7 +372,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemySpawner
   isTimedTrigger: 0
   spawnPointIndex: 1
-  enemyPrefab: {fileID: -512060980318999583, guid: 41fa7a8f5c2273d4d8030ec2661475a2,
+  enemyPrefab: {fileID: 7450140753419297814, guid: 41fa7a8f5c2273d4d8030ec2661475a2,
     type: 3}
   timeBeforeSpawn: 0
   spawnRate: 0.3

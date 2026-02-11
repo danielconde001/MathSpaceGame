@@ -5,7 +5,7 @@ public class EnemySpawner : MonoBehaviour
 {
     [SerializeField] bool isTimedTrigger = false;
     [SerializeField] int spawnPointIndex = -1;
-    [SerializeField] EnemyAI enemyPrefab;
+    [SerializeField] ChaseEnemyAI enemyPrefab;
     [SerializeField] float timeBeforeSpawn;
     [SerializeField] float spawnRate = 0.3f;
     [SerializeField] int numberOfSpawns = 7;
@@ -57,7 +57,7 @@ public class EnemySpawner : MonoBehaviour
 
         for (int i = 0; i < numberOfSpawns; i++)
         {
-            EnemyAI eai = Instantiate(enemyPrefab, spawnTransform.position, Quaternion.identity);
+            ChaseEnemyAI eai = Instantiate(enemyPrefab, spawnTransform.position, Quaternion.identity);
             eai.transform.SetParent(null);
             yield return new WaitForSeconds(spawnRate);
         }
