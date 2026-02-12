@@ -25,6 +25,11 @@ public class StationaryEnemyAI : MonoBehaviour
 
     void Update()
     {
+        if (PauseManager.Instance.IsPaused == true)
+        {
+            return;
+        }
+
         if (isNowInSpot == false)
         {
             LookAtTarget(respectiveSpot.position);

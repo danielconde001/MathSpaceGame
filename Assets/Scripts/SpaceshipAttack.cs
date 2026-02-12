@@ -21,6 +21,11 @@ public class SpaceshipAttack : MonoBehaviour
 
     private void Update()
     {
+        if (PauseManager.Instance.IsPaused == true)
+        {
+            return;
+        }
+
         switch (LevelManager.Instance.LevelState)
         {
             case 0:

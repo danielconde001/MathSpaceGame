@@ -7,6 +7,11 @@ public class MoveForward : MonoBehaviour
 
     void Update()
     {
+        if (PauseManager.Instance.IsPaused == true)
+        {
+            return;
+        }
+
         if (stopMoving == false)
         {
             transform.position += transform.forward * speed * Time.deltaTime;

@@ -1,6 +1,5 @@
 using System.Collections;
 using UnityEngine;
-using UnityEngine.LightTransport;
 
 public class CombatEventManager : MonoBehaviour
 {
@@ -22,9 +21,24 @@ public class CombatEventManager : MonoBehaviour
     [SerializeField] GameObject stationaryEnemyPrefab;
     [SerializeField] GameObject chaseEnemyPrefab;
 
+    float waitForSeconds = 0f;
+
     private void Awake()
     {
         instance = this;
+    }
+
+    private void Update()
+    {
+        if (PauseManager.Instance.IsPaused == true)
+        {
+            return;
+        }
+
+        if (waitForSeconds > 0f)
+        {
+            waitForSeconds -= Time.deltaTime;
+        }
     }
 
     public void InitializeCombatEvent(int p_eventID = -1)
@@ -69,12 +83,14 @@ public class CombatEventManager : MonoBehaviour
         LevelManager.Instance.StopSectionsFromMoving();
 
         StationaryEnemyAI enemy1 = SpawnStationaryEnemy(2, 0);
-        yield return new WaitForSeconds(.5f);
+        waitForSeconds = 0.5f;
+        yield return new WaitWhile(() => waitForSeconds > 0f);
         StationaryEnemyAI enemy2 = SpawnStationaryEnemy(3, 3);
         yield return new WaitUntil( () => (enemy1 == null && enemy2 == null)); // unitl they are dead
 
         StationaryEnemyAI enemy3 = SpawnStationaryEnemy(2, 0);
-        yield return new WaitForSeconds(.5f);
+        waitForSeconds = 0.5f;
+        yield return new WaitWhile( () => waitForSeconds > 0f);
         StationaryEnemyAI enemy4 = SpawnStationaryEnemy(3, 3);
 
         yield return new WaitUntil(() => (enemy3 == null && enemy4 == null)); // unitl they are dead

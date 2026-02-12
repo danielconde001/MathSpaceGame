@@ -7,6 +7,11 @@ public class SpaceshipLookAt : MonoBehaviour
 
     void Update()
     {
+        if (PauseManager.Instance.IsPaused == true)
+        {
+            return;
+        }
+
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         lookAtPos = ray.GetPoint(100f);
 

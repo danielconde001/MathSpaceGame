@@ -13,6 +13,11 @@ public class ProjectileBehaviour : MonoBehaviour
 
     protected void Update()
     {
+        if (PauseManager.Instance.IsPaused == true)
+        {
+            return;
+        }
+
         transform.position += moveDir * projectileSpeed * Time.deltaTime;    
     }
 
