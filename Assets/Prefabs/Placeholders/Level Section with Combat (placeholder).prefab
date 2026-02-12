@@ -61,7 +61,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 967bf06a400bfcf4b85967f1d460cc22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LevelSection
-  secondsBeforeRemoval: 30
+  zPositionMax: -120
 --- !u!1 &3698474621171296717
 GameObject:
   m_ObjectHideFlags: 0
@@ -129,10 +129,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CombatEventTrigger
   CombatEventID: 0
-  stationaryEnemy: {fileID: 8104590451157559281, guid: 00317f8498ab58342b0b0e560c2c3c4f,
-    type: 3}
-  chaseEnemy: {fileID: 8104590451157559281, guid: 41fa7a8f5c2273d4d8030ec2661475a2,
-    type: 3}
 --- !u!1 &4587012500152633688
 GameObject:
   m_ObjectHideFlags: 0

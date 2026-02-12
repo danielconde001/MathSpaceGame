@@ -3,12 +3,21 @@ using UnityEngine;
 [RequireComponent(typeof(MoveForward))]
 public class LevelSection : MonoBehaviour
 {
-    [SerializeField] float secondsBeforeRemoval = 30f;
+    [SerializeField] private float zPositionMax;
+
     MoveForward moveForward;
 
     private void Awake()
     {
         moveForward = GetComponent<MoveForward>();
+    }
+
+    private void Update()
+    {
+        if (transform.position.z <= zPositionMax)
+        {
+            RemoveFromLevel();
+        }
     }
 
     private void RemoveFromLevel()

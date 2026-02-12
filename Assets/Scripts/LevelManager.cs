@@ -19,10 +19,11 @@ public class LevelManager : MonoBehaviour
         }
     }
 
-    [SerializeField] private LevelSection nextSectionPrefab; // change to list later
+    [SerializeField] private LevelSection collectSectionPrefab; // change to list later
     [SerializeField] private LevelSection combatSectionPrefab; // change to list later
+    [SerializeField] private LevelSection minigameSectionPrefab; // change to list later
 
-    uint sectionsSpawned = 1;
+    uint timing = 1;
 
     [SerializeField] private List<LevelSection> currentSections = new List<LevelSection>();
     [HideInInspector] public List<LevelSection> GetCurrentSections()
@@ -54,18 +55,27 @@ public class LevelManager : MonoBehaviour
         Vector3 nextSectionPosition = (transform.forward * p_offset);
         LevelSection newObj = null;
 
-        if (((sectionsSpawned + 1) % 2) == 0)
+        if (timing == 1)
         {
             newObj = Instantiate(combatSectionPrefab, nextSectionPosition, Quaternion.identity);
         }
+        else if (timing == 2)
+        {
+            newObj = Instantiate(minigameSectionPrefab, nextSectionPosition, Quaternion.identity);
+        }
         else
         {
-            newObj = Instantiate(nextSectionPrefab, nextSectionPosition, Quaternion.identity);
+            newObj = Instantiate(collectSectionPrefab, nextSectionPosition, Quaternion.identity);
         }
 
         currentSections.Add(newObj);
 
-        sectionsSpawned++;
+        timing++;
+
+        if (timing > 2)
+        {
+            timing = 0;
+        }
     }
 
     public void StopSectionsFromMoving()

@@ -300,9 +300,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8cc0877575dc0e64bae7d4fbe7ef92e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LevelManager
-  nextSectionPrefab: {fileID: 9115993325438427119, guid: acf65807081dc4b40b285aeb31718dfd,
+  collectSectionPrefab: {fileID: 9115993325438427119, guid: acf65807081dc4b40b285aeb31718dfd,
     type: 3}
   combatSectionPrefab: {fileID: 3390868856297774706, guid: 51a1370fb9d660f46b462f05dd4e5b13,
+    type: 3}
+  minigameSectionPrefab: {fileID: 5973466272069096603, guid: 1c7779a3a37e7ab4c9148c653d646711,
     type: 3}
   currentSections:
   - {fileID: 1700042998}
@@ -2230,6 +2232,7 @@ MonoBehaviour:
   rectTransform: {fileID: 323716150}
   healthBonus: 25
   upgradedFireRate: 0.12
+  useDebug: 1
 --- !u!114 &983795602
 MonoBehaviour:
   m_ObjectHideFlags: 0

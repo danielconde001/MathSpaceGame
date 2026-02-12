@@ -28,6 +28,8 @@ public class PowerUpManager : MonoBehaviour
     [SerializeField] int healthBonus;
     [SerializeField] float upgradedFireRate;
 
+    [Header("Debug")]
+    [SerializeField] bool useDebug = false;
 
     private void Awake()
     {
@@ -95,11 +97,11 @@ public class PowerUpManager : MonoBehaviour
     {
         if (HasHealthBoost() == true)
         {
-            Debug.Log("Power Up already recieved!");
+            if (useDebug) Debug.Log("Power Up already recieved!");
             return;
         }
 
-        Debug.Log("Recieved Health Boost!");
+        if (useDebug) Debug.Log("Recieved Health Boost!");
         PlayerManager.Instance.GetPlayer().AddMaxHealth(healthBonus);
         powerUpsReceived += p_powerUp;
     }
@@ -107,11 +109,11 @@ public class PowerUpManager : MonoBehaviour
     {
         if (HasDoubleBullets() == true)
         {
-            Debug.Log("Power Up already recieved!");
+            if (useDebug) Debug.Log("Power Up already recieved!");
             return;
         }
 
-        Debug.Log("Recieved Double Bullets!");
+        if (useDebug) Debug.Log("Recieved Double Bullets!");
         powerUpsReceived += p_powerUp;
     }
 
@@ -119,11 +121,11 @@ public class PowerUpManager : MonoBehaviour
     {
         if (HasFasterFireRate() == true)
         {
-            Debug.Log("Power Up already recieved!");
+            if (useDebug) Debug.Log("Power Up already recieved!");
             return;
         }
 
-        Debug.Log("Recieved Faster Fire Rate");
+        if (useDebug) Debug.Log("Recieved Faster Fire Rate");
         PlayerManager.Instance.GetPlayer().GetAttackScript().SetFireRate(upgradedFireRate);
         powerUpsReceived += p_powerUp;
     }
@@ -132,11 +134,11 @@ public class PowerUpManager : MonoBehaviour
     {
         if (HasHealPerHit() == true)
         {
-            Debug.Log("Power Up already recieved!");
+            if (useDebug) Debug.Log("Power Up already recieved!");
             return;
         }
 
-        Debug.Log("Recieved Heal Per Hit!");
+        if (useDebug) Debug.Log("Recieved Heal Per Hit!");
         powerUpsReceived += p_powerUp;
     }
 

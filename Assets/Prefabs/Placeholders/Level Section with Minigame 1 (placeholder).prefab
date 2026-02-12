@@ -198,7 +198,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 967bf06a400bfcf4b85967f1d460cc22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LevelSection
-  secondsBeforeRemoval: 30
+  zPositionMax: -120
 --- !u!1 &7432518619087807046
 GameObject:
   m_ObjectHideFlags: 0
@@ -245,6 +245,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::TensAndOnesMinigameManager
   tens: {fileID: 3352842888707618002}
   ones: {fileID: 1316761778317529949}
+  numberOfQuestions: 7
 --- !u!1 &8639879370173349086
 GameObject:
   m_ObjectHideFlags: 0

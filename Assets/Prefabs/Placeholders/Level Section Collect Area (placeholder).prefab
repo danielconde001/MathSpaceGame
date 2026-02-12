@@ -238,7 +238,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 967bf06a400bfcf4b85967f1d460cc22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LevelSection
-  secondsBeforeRemoval: 50
+  zPositionMax: -620
 --- !u!1 &5583616248389563271
 GameObject:
   m_ObjectHideFlags: 0
