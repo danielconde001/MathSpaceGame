@@ -13,21 +13,26 @@ public class HealthBar : MonoBehaviour
 
     private Camera mainCamera;
 
-
     private void Awake()
     {
         mainCamera = Camera.main;
+    }
 
+    private void Start()
+    {
         if (health == null)
         {
-            health = GetComponentInParent<Health>();
+            if (belongsToPlayer == true)
+            {
+                health = PlayerManager.Instance.GetPlayer().Health;
+            }
+            else
+            {
+                health = GetComponentInParent<Health>();
+            }
         }
 
-        if (fillImage != null && health != null)
-        {
-            maxHealth = health.value;
-            UpdateHealthBar();
-        }
+        maxHealth = health.value;
     }
 
     private void Update()

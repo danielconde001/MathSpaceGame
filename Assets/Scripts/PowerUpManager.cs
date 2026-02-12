@@ -1,5 +1,4 @@
 using DG.Tweening;
-using TMPro;
 using UnityEngine;
 
 public class PowerUpManager : MonoBehaviour
@@ -24,6 +23,11 @@ public class PowerUpManager : MonoBehaviour
 
     [SerializeField] private UnityEngine.UI.Image panel;
     [SerializeField] private RectTransform rectTransform;
+
+    [Header("Power Up values")]
+    [SerializeField] int healthBonus;
+    [SerializeField] float upgradedFireRate;
+
 
     private void Awake()
     {
@@ -65,5 +69,94 @@ public class PowerUpManager : MonoBehaviour
             );
     }
 
-    
+    public void ReceivePowerUp(int p_powerUp)
+    {
+        switch (p_powerUp)
+        {
+            case 1:
+                RecieveHealthBoost();
+                break;
+            case 2:
+                RecieveDoubleBullets();
+                break;
+            case 4:
+                RecieveFasterFireRate();
+                break;
+            case 8:
+                RecieveHealPerHit();
+                break;
+            default:
+                Debug.LogWarning("No power up for that index exists.");
+                return;
+        }
+    }
+
+    void RecieveHealthBoost(int p_powerUp = 1)
+    {
+        if (HasHealthBoost() == true)
+        {
+            Debug.Log("Power Up already recieved!");
+            return;
+        }
+
+        Debug.Log("Recieved Health Boost!");
+        PlayerManager.Instance.GetPlayer().AddMaxHealth(healthBonus);
+        powerUpsReceived += p_powerUp;
+    }
+    void RecieveDoubleBullets(int p_powerUp = 2)
+    {
+        if (HasDoubleBullets() == true)
+        {
+            Debug.Log("Power Up already recieved!");
+            return;
+        }
+
+        Debug.Log("Recieved Double Bullets!");
+        powerUpsReceived += p_powerUp;
+    }
+
+    void RecieveFasterFireRate(int p_powerUp = 4)
+    {
+        if (HasFasterFireRate() == true)
+        {
+            Debug.Log("Power Up already recieved!");
+            return;
+        }
+
+        Debug.Log("Recieved Faster Fire Rate");
+        PlayerManager.Instance.GetPlayer().GetAttackScript().SetFireRate(upgradedFireRate);
+        powerUpsReceived += p_powerUp;
+    }
+
+    void RecieveHealPerHit(int p_powerUp = 8)
+    {
+        if (HasHealPerHit() == true)
+        {
+            Debug.Log("Power Up already recieved!");
+            return;
+        }
+
+        Debug.Log("Recieved Heal Per Hit!");
+        powerUpsReceived += p_powerUp;
+    }
+
+    public bool HasHealthBoost()
+    {
+        return (powerUpsReceived & 1) == 1;
+    }
+
+    public bool HasDoubleBullets()
+    {
+        return (powerUpsReceived & 2) == 2;
+    }
+
+    public bool HasFasterFireRate()
+    {
+        return (powerUpsReceived & 4) == 4;
+    }
+
+    public bool HasHealPerHit()
+    {
+        return (powerUpsReceived & 8) == 8;
+    }
 }

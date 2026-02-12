@@ -9,6 +9,11 @@ public class SpaceshipMovement : MonoBehaviour
 
     void Update()
     {
+        if (PauseManager.Instance.IsPaused == true)
+        {
+            return;
+        }
+
         float rightInput = Input.GetAxis("Horizontal");
         float upInput = Input.GetAxis("Vertical");
 

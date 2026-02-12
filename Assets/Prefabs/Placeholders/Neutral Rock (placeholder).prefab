@@ -13,9 +13,7 @@ GameObject:
   - component: {fileID: 9127939346514291318}
   - component: {fileID: 7062107959768677147}
   - component: {fileID: 5363314580399540496}
-  - component: {fileID: 3504909591447336216}
   - component: {fileID: 1753260288078652706}
-  - component: {fileID: 8265046986960918538}
   m_Layer: 0
   m_Name: Neutral Rock (placeholder)
   m_TagString: Untagged
@@ -128,18 +126,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
   Damage: 50
---- !u!114 &3504909591447336216
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1923482171383341881}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c08da61e288a78d4696af55a890ddcff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::OnGoodRockDeath
+  useDebug: 1
 --- !u!54 &1753260288078652706
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -167,15 +154,3 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &8265046986960918538
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1923482171383341881}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c08da61e288a78d4696af55a890ddcff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::OnGoodRockDeath

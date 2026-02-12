@@ -1,9 +1,10 @@
-using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class SpaceshipAttack : MonoBehaviour
 {
     [SerializeField] private Transform bulletSpawn;
+    [SerializeField] private List<Transform> doubleBulletSpawns;
     [SerializeField] private float range = 1000f;
     [SerializeField] private ProjectileBehaviour projectilePrefab;
     [SerializeField] private float fireRate = .12f;
@@ -82,10 +83,23 @@ public class SpaceshipAttack : MonoBehaviour
             aimPoint = ray.GetPoint(range);
         }
 
-        Vector3 projectileDir = (aimPoint - bulletSpawn.position).normalized;
 
-        ProjectileBehaviour projectile = Instantiate(projectilePrefab, bulletSpawn.position, Quaternion.identity);
-        projectile.moveDir = projectileDir;
+
+        if (PowerUpManager.Instance.HasDoubleBullets() == true)
+        {
+            for (int i = 0; i < doubleBulletSpawns.Count; i++)
+            {
+                Vector3 projectileDir = (aimPoint - doubleBulletSpawns[i].position).normalized;
+                ProjectileBehaviour projectile = Instantiate(projectilePrefab, doubleBulletSpawns[i].position, Quaternion.identity);
+                projectile.moveDir = projectileDir;
+            }
+        }
+        else
+        {
+            Vector3 projectileDir = (aimPoint - bulletSpawn.position).normalized;
+            ProjectileBehaviour projectile = Instantiate(projectilePrefab, bulletSpawn.position, Quaternion.identity);
+            projectile.moveDir = projectileDir;
+        }
 
         fireCooldown = fireRate;
     }
@@ -115,5 +129,10 @@ public class SpaceshipAttack : MonoBehaviour
     public int GetDamage()
     {
         return damage;
+    }
+
+    public void SetFireRate(float p_newFireRate)
+    {
+        fireRate = p_newFireRate;
     }
 }

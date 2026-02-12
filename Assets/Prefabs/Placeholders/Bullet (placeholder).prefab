@@ -127,3 +127,4 @@ MonoBehaviour:
   moveDir: {x: 0, y: 0, z: 0}
   projectileSpeed: 360
   selfDestoryTimer: 5
+  useDebug: 1
