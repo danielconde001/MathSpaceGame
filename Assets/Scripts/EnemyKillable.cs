@@ -4,6 +4,13 @@ public class EnemyKillable : Killable
 {
     [SerializeField] private GameObject scorePopupPrefab;
 
+    SpawnVFXOnDeath SpawnVFXOnDeath;
+
+    private void Awake()
+    {
+        SpawnVFXOnDeath = GetComponent<SpawnVFXOnDeath>();
+    }
+
     public override void Kill()
     {
         base.Kill();
@@ -33,6 +40,11 @@ public class EnemyKillable : Killable
             {
                 ScoreManager.Instance.AddScore(scoreValue);
             }
+        }
+
+        if (SpawnVFXOnDeath != null)
+        {
+            SpawnVFXOnDeath.SpawnVFX();
         }
 
         Destroy(gameObject);

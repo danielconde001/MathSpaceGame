@@ -135,6 +135,7 @@ GameObject:
   - component: {fileID: 8330759345114548992}
   - component: {fileID: 7118422116266386654}
   - component: {fileID: 9147849615278349763}
+  - component: {fileID: -245378134889491287}
   m_Layer: 7
   m_Name: Stationary Enemy (placeholder)
   m_TagString: Enemy
@@ -270,6 +271,19 @@ MonoBehaviour:
   projectilePrefab: {fileID: 6120972467117282982, guid: c68872cde2d38644a9d98b5d1b650906,
     type: 3}
   bulletSpawn: {fileID: 3392212738367453082}
+--- !u!114 &-245378134889491287
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8104590451157559281}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3acd0c8c6967e4c4db87a87ad7bf01f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SpawnVFXOnDeath
+  VisualEffect: {fileID: 0}
 --- !u!1001 &8757463604770022797
 PrefabInstance:
   m_ObjectHideFlags: 0

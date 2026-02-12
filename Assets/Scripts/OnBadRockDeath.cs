@@ -2,9 +2,22 @@ using UnityEngine;
 
 public class OnBadRockDeath : MonoBehaviour
 {
+    [SerializeField] int damageOnDeath;
+
+    SpawnVFXOnDeath SpawnVFXOnDeath;
+
+    private void Awake()
+    {
+        SpawnVFXOnDeath = GetComponent<SpawnVFXOnDeath>();
+    }
+
     public void OnDeath()
     {
-        // deduct Player health
-        Debug.Log("Bad!");
+        PlayerManager.Instance.GetPlayer().Damageable.TakeDamage(damageOnDeath);
+
+        if (SpawnVFXOnDeath != null)
+        {
+            SpawnVFXOnDeath.SpawnVFX();
+        }
     }
 }

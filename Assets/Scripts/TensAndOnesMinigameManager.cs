@@ -64,8 +64,8 @@ public class TensAndOnesMinigameManager : MinigameManager
     {
         LevelManager.Instance.LevelState = 0;
 
-        tens.gameObject.SetActive(false);
-        ones.gameObject.SetActive(false);
+        tens.Kill();
+        ones.Kill();
 
         canvas?.HideScreen();
 

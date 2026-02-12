@@ -6,12 +6,14 @@ public class PlayerScript : MonoBehaviour
     private SpaceshipMovement movement;
     private Collider playerCollider;
     private PlayerHealth health;
+    private PlayerDamageable damageable;
     private int maxHealth;
 
     public SpaceshipAttack GetAttackScript() { return attack; }
     public SpaceshipMovement GetMovementScript() { return movement; }
     public Collider PlayerCollider { get => playerCollider; }
     public PlayerHealth Health { get => health; }
+    public PlayerDamageable Damageable { get => damageable; }
 
     private void Awake()
     {
@@ -20,6 +22,7 @@ public class PlayerScript : MonoBehaviour
         playerCollider = GetComponent<Collider>();
         health = GetComponent<PlayerHealth>();
         maxHealth = Health.value;
+        damageable = GetComponent<PlayerDamageable>();
     }
 
     public int GetDamage()

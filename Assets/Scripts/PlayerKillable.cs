@@ -5,16 +5,23 @@ public class PlayerKillable : Killable
 {
     PlayerScript player;
 
+    SpawnVFXOnDeath SpawnVFXOnDeath;
+
     private void Awake()
     {
         player = GetComponent<PlayerScript>();
+
+        SpawnVFXOnDeath = GetComponent<SpawnVFXOnDeath>();
     }
 
     public override void Kill()
     {
         base.Kill();
 
-        print("You dead boi!");
+        if (SpawnVFXOnDeath != null)
+        {
+            SpawnVFXOnDeath.SpawnVFX();
+        }
 
         // explode player
         // game over screen

@@ -18,6 +18,7 @@ GameObject:
   - component: {fileID: 1645524939790875823}
   - component: {fileID: 899549028520943988}
   - component: {fileID: 7198653176957525201}
+  - component: {fileID: 7997537896220872825}
   m_Layer: 0
   m_Name: Bad Rock (placeholder)
   m_TagString: Untagged
@@ -130,6 +131,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
   Damage: 50
+  useDebug: 0
 --- !u!114 &3866239498434180303
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -194,6 +196,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c446ed870cd15d48a458e6bb6e05f6f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::OnBadRockDeath
+  damageOnDeath: 0
 --- !u!54 &7198653176957525201
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -221,3 +224,16 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &7997537896220872825
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4330854758197314082}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3acd0c8c6967e4c4db87a87ad7bf01f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SpawnVFXOnDeath
+  VisualEffect: {fileID: 0}

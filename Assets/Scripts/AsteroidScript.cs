@@ -8,6 +8,13 @@ public class AsteroidScript : MonoBehaviour
     public bool isTens;
     private uint Value = 0;
 
+    SpawnVFXOnDeath SpawnVFXOnDeath;
+
+    private void Awake()
+    {
+        SpawnVFXOnDeath = GetComponent<SpawnVFXOnDeath>();
+    }
+
     public void OnShot()
     {
         AddValue();
@@ -35,5 +42,15 @@ public class AsteroidScript : MonoBehaviour
     public uint GetValue()
     {
        return Value; 
+    }
+
+    public void Kill()
+    {
+        if (SpawnVFXOnDeath != null)
+        {
+            SpawnVFXOnDeath.SpawnVFX();
+        }
+
+        gameObject.SetActive(false);
     }
 }
