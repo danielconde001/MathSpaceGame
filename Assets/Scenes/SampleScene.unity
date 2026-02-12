@@ -719,6 +719,7 @@ GameObject:
   - component: {fileID: 378922068}
   - component: {fileID: 378922067}
   - component: {fileID: 378922066}
+  - component: {fileID: 378922069}
   m_Layer: 5
   m_Name: PowerUpButton4
   m_TagString: Untagged
@@ -802,6 +803,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 983795601}
+        m_TargetAssemblyTypeName: PowerUpManager, Assembly-CSharp
+        m_MethodName: HideScreen
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &378922067
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -840,6 +853,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 378922064}
   m_CullTransparentMesh: 1
+--- !u!114 &378922069
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 378922064}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34e5c12d0669de244a739011cebaa767, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PowerUpButton
+  Value: 8
 --- !u!1 &400168796
 GameObject:
   m_ObjectHideFlags: 0
@@ -1653,6 +1679,7 @@ GameObject:
   - component: {fileID: 783458309}
   - component: {fileID: 783458308}
   - component: {fileID: 783458307}
+  - component: {fileID: 783458310}
   m_Layer: 5
   m_Name: PowerUpButton1
   m_TagString: Untagged
@@ -1736,6 +1763,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 983795601}
+        m_TargetAssemblyTypeName: PowerUpManager, Assembly-CSharp
+        m_MethodName: HideScreen
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &783458308
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1774,6 +1813,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 783458305}
   m_CullTransparentMesh: 1
+--- !u!114 &783458310
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 783458305}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34e5c12d0669de244a739011cebaa767, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PowerUpButton
+  Value: 1
 --- !u!1 &796889959
 GameObject:
   m_ObjectHideFlags: 0
@@ -1862,6 +1914,7 @@ GameObject:
   - component: {fileID: 829972861}
   - component: {fileID: 829972860}
   - component: {fileID: 829972859}
+  - component: {fileID: 829972862}
   m_Layer: 5
   m_Name: PowerUpButton3
   m_TagString: Untagged
@@ -1945,6 +1998,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 983795601}
+        m_TargetAssemblyTypeName: PowerUpManager, Assembly-CSharp
+        m_MethodName: HideScreen
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &829972860
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1983,6 +2048,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 829972857}
   m_CullTransparentMesh: 1
+--- !u!114 &829972862
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 829972857}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34e5c12d0669de244a739011cebaa767, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PowerUpButton
+  Value: 4
 --- !u!1 &832575517
 GameObject:
   m_ObjectHideFlags: 0
@@ -2230,6 +2308,7 @@ MonoBehaviour:
   powerUpsReceived: 0
   panel: {fileID: 730613911}
   rectTransform: {fileID: 323716150}
+  milestones: 080000001b00000039000000
   healthBonus: 25
   upgradedFireRate: 0.12
   useDebug: 1
@@ -2365,6 +2444,7 @@ GameObject:
   - component: {fileID: 1109787082}
   - component: {fileID: 1109787081}
   - component: {fileID: 1109787080}
+  - component: {fileID: 1109787083}
   m_Layer: 5
   m_Name: PowerUpButton2
   m_TagString: Untagged
@@ -2448,6 +2528,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 983795601}
+        m_TargetAssemblyTypeName: PowerUpManager, Assembly-CSharp
+        m_MethodName: HideScreen
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1109787081
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2486,6 +2578,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1109787078}
   m_CullTransparentMesh: 1
+--- !u!114 &1109787083
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1109787078}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34e5c12d0669de244a739011cebaa767, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PowerUpButton
+  Value: 2
 --- !u!1 &1200526373
 GameObject:
   m_ObjectHideFlags: 3

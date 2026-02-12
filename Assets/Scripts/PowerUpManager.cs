@@ -24,7 +24,11 @@ public class PowerUpManager : MonoBehaviour
     [SerializeField] private UnityEngine.UI.Image panel;
     [SerializeField] private RectTransform rectTransform;
 
-    [Header("Power Up values")]
+    [Header("Milestones")]
+    [SerializeField] int[] milestones = new int[3];
+    uint milestonesReached = 0;
+
+    [Header("Power Up Values")]
     [SerializeField] int healthBonus;
     [SerializeField] float upgradedFireRate;
 
@@ -38,14 +42,37 @@ public class PowerUpManager : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetMouseButtonDown(1))
+        if (useDebug)
+        {
+            if (Input.GetKeyDown(KeyCode.O))
+            {
+                ShowScreen();
+            }
+
+            if (Input.GetKeyDown(KeyCode.P))
+            {
+                HideScreen();
+            }
+        }
+    }
+
+
+    public void CheckMilestone()
+    {
+        if (ScoreManager.Instance.CurrentScore >= milestones[0] && milestonesReached == 0)
         {
             ShowScreen();
+            milestonesReached++;
         }
-
-        if (Input.GetMouseButtonDown(2))
+        else if (ScoreManager.Instance.CurrentScore >= milestones[1] && milestonesReached == 1)
         {
-            HideScreen();
+            ShowScreen();
+            milestonesReached++;
+        }
+        else if (ScoreManager.Instance.CurrentScore >= milestones[2] && milestonesReached == 2)
+        {
+            ShowScreen();
+            milestonesReached++;
         }
     }
 
