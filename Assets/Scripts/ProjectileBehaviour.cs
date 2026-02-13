@@ -46,7 +46,14 @@ public class ProjectileBehaviour : MonoBehaviour
                 }
             }
 
-            hit.TakeDamage(PlayerManager.Instance.GetPlayer().GetDamage());
+            int playerDmg = PlayerManager.Instance.GetPlayer().GetDamage();
+
+            if (PowerUpManager.Instance.HasDoubleBullets() == true)
+            {
+                playerDmg *= 2;
+            }
+        
+            hit.TakeDamage(playerDmg);
         }
         else if (other.gameObject.GetComponent<AsteroidScript>())
         {

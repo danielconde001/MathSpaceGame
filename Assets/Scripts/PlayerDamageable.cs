@@ -7,7 +7,9 @@ public class PlayerDamageable : Damageable
 {
     protected PlayerScript player;
 
-    [SerializeField] float invulDuration = 4f;
+    float invulTimer = 0;
+
+    [SerializeField] bool useDebug = false;
 
     protected override void Awake()
     {
@@ -16,26 +18,54 @@ public class PlayerDamageable : Damageable
         killable = GetComponent<PlayerKillable>();
     }
 
-    public override void TakeDamage(int p_damage)
+    protected void Update()
     {
-        base.TakeDamage(p_damage);
-
-        if (killable.IsKilled() == false)
+        if (invulTimer > 0 && PauseManager.Instance.IsPaused == false)
         {
-            // Shake camera
+            invulTimer -= Time.deltaTime;
 
-            // player becomes in vlunerable for a while
-            StartCoroutine(TemporarilyInvulnerable());
+            if (useDebug == true)
+            {
+                Debug.Log(invulTimer);
+            }
         }
     }
 
-    IEnumerator TemporarilyInvulnerable()
+    public override void TakeDamage(int p_damage)
     {
-        player.PlayerCollider.enabled = false;
-        yield return new WaitForSeconds(invulDuration);
+        if (player.IsVulnerable == true)
+        {
+            return;
+        }
 
-        // Become transparent
+        base.TakeDamage(p_damage);
 
-        player.PlayerCollider.enabled = true;
+        // Shake Camera
+    }
+
+    public virtual void TakeDamageWithInvul(int p_damage, float p_invulDuration = .5f)
+    {
+        if (player.IsVulnerable == true)
+        {
+            return;
+        }
+
+        TakeDamage(p_damage);
+
+        StartCoroutine(TemporarilyInvulnerable(p_invulDuration));
+    }
+
+    IEnumerator TemporarilyInvulnerable(float p_duration)
+    {
+        player.IsVulnerable = true;
+
+        invulTimer = p_duration;
+
+        yield return new WaitUntil
+            ( 
+                () => invulTimer <= 0 
+            );
+
+        player.IsVulnerable = false;
     }
 }

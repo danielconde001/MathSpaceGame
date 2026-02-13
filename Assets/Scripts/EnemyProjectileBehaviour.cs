@@ -9,7 +9,7 @@ public class EnemyProjectileBehaviour : ProjectileBehaviour
         PlayerDamageable hit;
         if (other.gameObject.TryGetComponent(out hit))
         {   
-            hit.TakeDamage(damage);
+            hit.TakeDamageWithInvul(damage);
         }
 
         Destroy(gameObject);

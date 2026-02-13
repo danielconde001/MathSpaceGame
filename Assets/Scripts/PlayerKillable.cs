@@ -23,7 +23,10 @@ public class PlayerKillable : Killable
             SpawnVFXOnDeath.SpawnVFX();
         }
 
+        player.PlayerMesh.SetActive(false);
+
         // explode player
-        // game over screen
+
+        GameOverManager.Instance.ShowScreen();
     }
 }
