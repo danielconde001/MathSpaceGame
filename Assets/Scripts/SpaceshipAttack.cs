@@ -83,23 +83,9 @@ public class SpaceshipAttack : MonoBehaviour
             aimPoint = ray.GetPoint(range);
         }
 
-
-
-        if (PowerUpManager.Instance.HasDoubleBullets() == true)
-        {
-            for (int i = 0; i < doubleBulletSpawns.Count; i++)
-            {
-                Vector3 projectileDir = (aimPoint - doubleBulletSpawns[i].position).normalized;
-                ProjectileBehaviour projectile = Instantiate(projectilePrefab, doubleBulletSpawns[i].position, Quaternion.identity);
-                projectile.moveDir = projectileDir;
-            }
-        }
-        else
-        {
-            Vector3 projectileDir = (aimPoint - bulletSpawn.position).normalized;
-            ProjectileBehaviour projectile = Instantiate(projectilePrefab, bulletSpawn.position, Quaternion.identity);
-            projectile.moveDir = projectileDir;
-        }
+        Vector3 projectileDir = (aimPoint - bulletSpawn.position).normalized;
+        ProjectileBehaviour projectile = Instantiate(projectilePrefab, bulletSpawn.position, Quaternion.identity);
+        projectile.moveDir = projectileDir;
 
         fireCooldown = fireRate;
     }

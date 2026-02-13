@@ -17,6 +17,6 @@ public class Obstacle : MonoBehaviour
             Debug.Log("Player has made contact with Obstacle!");
         }
 
-        col.gameObject.GetComponent<Damageable>().TakeDamage(Damage);
+        col.gameObject.GetComponent<PlayerDamageable>().TakeDamageWithInvul(Damage, 4f);
     }
 }

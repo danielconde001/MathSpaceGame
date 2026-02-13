@@ -13,7 +13,7 @@ public class OnBadRockDeath : MonoBehaviour
 
     public void OnDeath()
     {
-        PlayerManager.Instance.GetPlayer().Damageable.TakeDamage(damageOnDeath);
+        PlayerManager.Instance.GetPlayer().Damageable.TakeDamageWithInvul(damageOnDeath);
 
         if (SpawnVFXOnDeath != null)
         {

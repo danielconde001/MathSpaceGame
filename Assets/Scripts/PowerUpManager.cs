@@ -59,20 +59,18 @@ public class PowerUpManager : MonoBehaviour
 
     public void CheckMilestone()
     {
-        if (ScoreManager.Instance.CurrentScore >= milestones[0] && milestonesReached == 0)
+        uint currentPlayerLevel = PlayerManager.Instance.GetPlayer().PlayerLevel;
+        if (ScoreManager.Instance.CurrentScore == milestones[0] && currentPlayerLevel == 1)
         {
             ShowScreen();
-            milestonesReached++;
         }
-        else if (ScoreManager.Instance.CurrentScore >= milestones[1] && milestonesReached == 1)
+        else if (ScoreManager.Instance.CurrentScore == milestones[1] && currentPlayerLevel == 2)
         {
             ShowScreen();
-            milestonesReached++;
         }
-        else if (ScoreManager.Instance.CurrentScore >= milestones[2] && milestonesReached == 2)
+        else if (ScoreManager.Instance.CurrentScore == milestones[2] && currentPlayerLevel >= 3)
         {
             ShowScreen();
-            milestonesReached++;
         }
     }
 
@@ -104,15 +102,19 @@ public class PowerUpManager : MonoBehaviour
         {
             case 1:
                 RecieveHealthBoost();
+                PlayerManager.Instance.GetPlayer().LevelUpPlayer();
                 break;
             case 2:
                 RecieveDoubleBullets();
+                PlayerManager.Instance.GetPlayer().LevelUpPlayer();
                 break;
             case 4:
                 RecieveFasterFireRate();
+                PlayerManager.Instance.GetPlayer().LevelUpPlayer();
                 break;
             case 8:
                 RecieveHealPerHit();
+                PlayerManager.Instance.GetPlayer().LevelUpPlayer();
                 break;
             default:
                 Debug.LogWarning("No power up for that index exists.");
