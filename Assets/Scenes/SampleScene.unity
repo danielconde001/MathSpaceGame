@@ -169,8 +169,7 @@ MonoBehaviour:
     type: 3}
   minigameSectionPrefab: {fileID: 5973466272069096603, guid: 1c7779a3a37e7ab4c9148c653d646711,
     type: 3}
-  currentSections:
-  - {fileID: 1700042998}
+  currentSections: []
 --- !u!1 &177660668
 GameObject:
   m_ObjectHideFlags: 0
@@ -3361,6 +3360,74 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37b76ec8f6db67c4db219f8927ddc84a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ArrangingMinigameManager
+--- !u!1001 &1466079334
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2246613569045118058, guid: 51a1370fb9d660f46b462f05dd4e5b13,
+        type: 3}
+      propertyPath: m_Name
+      value: Level Section with Combat (placeholder)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8516051087330848937, guid: 51a1370fb9d660f46b462f05dd4e5b13,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8516051087330848937, guid: 51a1370fb9d660f46b462f05dd4e5b13,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8516051087330848937, guid: 51a1370fb9d660f46b462f05dd4e5b13,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8516051087330848937, guid: 51a1370fb9d660f46b462f05dd4e5b13,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8516051087330848937, guid: 51a1370fb9d660f46b462f05dd4e5b13,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8516051087330848937, guid: 51a1370fb9d660f46b462f05dd4e5b13,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8516051087330848937, guid: 51a1370fb9d660f46b462f05dd4e5b13,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8516051087330848937, guid: 51a1370fb9d660f46b462f05dd4e5b13,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8516051087330848937, guid: 51a1370fb9d660f46b462f05dd4e5b13,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8516051087330848937, guid: 51a1370fb9d660f46b462f05dd4e5b13,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 51a1370fb9d660f46b462f05dd4e5b13, type: 3}
 --- !u!1 &1486446598
 GameObject:
   m_ObjectHideFlags: 0
@@ -3852,6 +3919,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Level Section Collect Area (placeholder)
       objectReference: {fileID: 0}
+    - target: {fileID: 4552408384870299060, guid: acf65807081dc4b40b285aeb31718dfd,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4645375100092398250, guid: acf65807081dc4b40b285aeb31718dfd,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3917,18 +3989,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: acf65807081dc4b40b285aeb31718dfd, type: 3}
---- !u!114 &1700042998 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 9115993325438427119, guid: acf65807081dc4b40b285aeb31718dfd,
-    type: 3}
-  m_PrefabInstance: {fileID: 1700042997}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 967bf06a400bfcf4b85967f1d460cc22, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::LevelSection
 --- !u!1 &1741526842
 GameObject:
   m_ObjectHideFlags: 0
@@ -4893,4 +4953,5 @@ SceneRoots:
   - {fileID: 1270100240}
   - {fileID: 400168801}
   - {fileID: 304267572}
+  - {fileID: 1466079334}
   - {fileID: 1700042997}

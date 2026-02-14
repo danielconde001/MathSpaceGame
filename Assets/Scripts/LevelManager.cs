@@ -48,6 +48,12 @@ public class LevelManager : MonoBehaviour
     private void Awake()
     {
         instance = this;
+
+        if (currentSections.Count <= 0)
+        {
+            LevelSection section = FindAnyObjectByType<LevelSection>();
+            currentSections.Add(section);
+        }
     }
 
     public void SpawnNextSection(float p_offset = 0f)

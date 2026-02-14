@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class CombatEventManager : MonoBehaviour
@@ -82,11 +83,15 @@ public class CombatEventManager : MonoBehaviour
     {
         LevelManager.Instance.StopSectionsFromMoving();
 
+        DialogueManager.Instance.StartAutoDialogue("Get ready! Enemies incoming.");
+
         StationaryEnemyAI enemy1 = SpawnStationaryEnemy(2, 0);
         waitForSeconds = 0.5f;
         yield return new WaitWhile(() => waitForSeconds > 0f);
         StationaryEnemyAI enemy2 = SpawnStationaryEnemy(3, 3);
         yield return new WaitUntil( () => (enemy1 == null && enemy2 == null)); // unitl they are dead
+
+        DialogueManager.Instance.StartAutoDialogue("There's more of them! Watch your back.");
 
         StationaryEnemyAI enemy3 = SpawnStationaryEnemy(2, 0);
         waitForSeconds = 0.5f;
@@ -94,6 +99,8 @@ public class CombatEventManager : MonoBehaviour
         StationaryEnemyAI enemy4 = SpawnStationaryEnemy(3, 3);
 
         yield return new WaitUntil(() => (enemy3 == null && enemy4 == null)); // unitl they are dead
+
+        DialogueManager.Instance.StartAutoDialogue("You took 'em down! Well Done.");
 
         LevelManager.Instance.StartSectionsMovement();
     }

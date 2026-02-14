@@ -25,7 +25,7 @@ public class DialogueManager : MonoBehaviour
 
     private Queue<DialogueLine> lines;
     
-    public bool isDialogueActive = false;
+    [HideInInspector] public bool isDialogueActive = false;
 
     public float typingSpeed = 0.2f;
 
@@ -51,6 +51,18 @@ public class DialogueManager : MonoBehaviour
             lines.Enqueue(dialogueLine);
         }
         DisplayNextDialogueLine();
+    }
+
+    public void StartAutoDialogue(string line, float duration = 3f)
+    {
+        Dialogue dialogue = new Dialogue();
+        dialogue.dialogueLines = new List<DialogueLine>();
+        DialogueLine dialogueLine = new DialogueLine();
+        dialogueLine.line = line;
+        dialogue.dialogueLines.Add(dialogueLine);
+        StartDialogue(dialogue);
+
+        Invoke("EndDialogue", duration);
     }
 
     public void DisplayNextDialogueLine()
