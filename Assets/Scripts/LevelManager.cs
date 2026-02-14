@@ -19,11 +19,14 @@ public class LevelManager : MonoBehaviour
         }
     }
 
-    [SerializeField] private LevelSection collectSectionPrefab; // change to list later
-    [SerializeField] private LevelSection combatSectionPrefab; // change to list later
-    [SerializeField] private LevelSection minigameSectionPrefab; // change to list later
+    [SerializeField] private List<LevelSection> collectSectionPrefabs; // change to list later
+    [SerializeField] private List<LevelSection> combatSectionPrefabs; // change to list later
+    [SerializeField] private LevelSection minigameSectionPrefab;
+    [SerializeField] private LevelSection endSectionPrefab; // change to list later
 
+    List<LevelSection> remainingCollectSections = new List<LevelSection>();
     uint timing = 1;
+    uint laps = 0;
 
     [SerializeField] private List<LevelSection> currentSections = new List<LevelSection>();
     [HideInInspector] public List<LevelSection> GetCurrentSections()
@@ -54,6 +57,8 @@ public class LevelManager : MonoBehaviour
             LevelSection section = FindAnyObjectByType<LevelSection>();
             currentSections.Add(section);
         }
+
+        remainingCollectSections = collectSectionPrefabs;
     }
 
     public void SpawnNextSection(float p_offset = 0f)
@@ -63,15 +68,26 @@ public class LevelManager : MonoBehaviour
 
         if (timing == 1)
         {
-            newObj = Instantiate(combatSectionPrefab, nextSectionPosition, Quaternion.identity);
+            newObj = Instantiate(combatSectionPrefabs[(int)laps], nextSectionPosition, Quaternion.identity);
         }
         else if (timing == 2)
         {
             newObj = Instantiate(minigameSectionPrefab, nextSectionPosition, Quaternion.identity);
+            laps++;
         }
         else
         {
-            newObj = Instantiate(collectSectionPrefab, nextSectionPosition, Quaternion.identity);
+            if (laps >= 3)
+            {
+                // spawn last section
+                newObj = Instantiate(endSectionPrefab, nextSectionPosition, Quaternion.identity);
+            }
+            else
+            {
+                int index = Random.Range(0, remainingCollectSections.Count);
+                newObj = Instantiate(remainingCollectSections[index], nextSectionPosition, Quaternion.identity);
+                remainingCollectSections.RemoveAt(index);
+            }
         }
 
         currentSections.Add(newObj);
