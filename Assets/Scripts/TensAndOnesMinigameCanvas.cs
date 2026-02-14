@@ -2,9 +2,9 @@ using DG.Tweening;
 using TMPro;
 using UnityEngine;
 
-public class MinigameCanvas : MonoBehaviour
+public class TensAndOnesMinigameCanvas : MonoBehaviour
 {
-    [Header("Minigame Canvas Settings")]
+    [Header("Canvas Settings")]
     [SerializeField] private UnityEngine.UI.Image panel;
     [SerializeField] private TextMeshProUGUI text;
 

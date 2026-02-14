@@ -1,8 +1,8 @@
-using UnityEngine;
-using UnityEngine.UI;
-using TMPro;
 using DG.Tweening;
+using TMPro;
+using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class FillinMinigameManager : MinigameManager, IBeginDragHandler, IDragHandler, IEndDragHandler, IDropHandler{
     
@@ -15,7 +15,10 @@ public class FillinMinigameManager : MinigameManager, IBeginDragHandler, IDragHa
     public TMP_InputField inputField3;
     public TMP_InputField inputField4;
     public TMP_InputField inputField5;
-    public Button submitButton;
+    public UnityEngine.UI.Button submitButton;
+    public Image panel;
+    public float yOffset = 375f;
+    
 
     private int[] numbers = new int[5];
     private int[] blankIndices;
@@ -23,17 +26,28 @@ public class FillinMinigameManager : MinigameManager, IBeginDragHandler, IDragHa
     private TMP_InputField draggingField;
     private Vector3 dragStartPos;
 
-    void Start()
-    {
-        InitializeMinigame();
-    }
+    private uint rounds = 0;
+    private uint roundsPassed = 0;
 
-    public override void InitializeMinigame()
+    public override void InitializeMinigame(uint p_numberOfRounds = 7)
     {
+        base.InitializeMinigame();
+
+        rounds = p_numberOfRounds;
+        roundsPassed = 0;
+        panel.enabled = true;
+        submitButton.interactable = true;
+
         fields = new TMP_InputField[] { inputField1, inputField2, inputField3, inputField4, inputField5 };
         GenerateAndShowNumbers();
         submitButton.onClick.RemoveAllListeners();
         submitButton.onClick.AddListener(OnSubmit);
+    }
+
+    public override void EndMinigame()
+    {
+        base.EndMinigame();
+        panel.enabled = false;
     }
 
     // Drag and Drop Implementation
@@ -109,9 +123,9 @@ public class FillinMinigameManager : MinigameManager, IBeginDragHandler, IDragHa
     {
         foreach (var field in fields)
         {
-            field.transform.DOMoveY(field.transform.position.y - 500f, 2f);
+            field.transform.DOMoveY(field.transform.position.y - yOffset, 2f);
         }
-        submitButton.transform.DOMoveY(submitButton.transform.position.y - 500f, 2f);
+        submitButton.transform.DOMoveY(submitButton.transform.position.y - yOffset, 2f);
     }
 
     void OnSubmit()
@@ -130,6 +144,7 @@ public class FillinMinigameManager : MinigameManager, IBeginDragHandler, IDragHa
         if (correct)
         {
             Debug.Log("Correct!");
+            roundsPassed++;
             StartCoroutine(SlideUpAndGenerate());
         }
         else
@@ -144,10 +159,18 @@ public class FillinMinigameManager : MinigameManager, IBeginDragHandler, IDragHa
     {
         foreach (var field in fields)
         {
-            field.transform.DOMoveY(field.transform.position.y + 500f, 2f);
+            field.transform.DOMoveY(field.transform.position.y + yOffset, 2f);
         }
-        submitButton.transform.DOMoveY(submitButton.transform.position.y + 500f, 2f);
+        submitButton.transform.DOMoveY(submitButton.transform.position.y + yOffset, 2f);
+
         yield return new WaitForSeconds(2f);
+
+        if (roundsPassed >= rounds)
+        {
+            EndMinigame();
+            yield break;
+        }
+
         GenerateAndShowNumbers();
         submitButton.interactable = true;
     }

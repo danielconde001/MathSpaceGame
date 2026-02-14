@@ -1,25 +1,27 @@
+using Unity.VisualScripting;
 using UnityEngine;
+using static UnityEngine.Rendering.DebugUI;
 
 public class TensAndOnesMinigameManager : MinigameManager
 {
-    private MinigameCanvas canvas;
+    private TensAndOnesMinigameCanvas canvas;
 
     private uint StateID = 1;
 
     [Header("Asteroids")]
     [SerializeField] private AsteroidScript tens;
     [SerializeField] private AsteroidScript ones;
-    [SerializeField] private uint numberOfQuestions = 7;
-
+    
     private uint requiredValue = 0;
     private uint currentTensValue = 0;
     private uint currentOnesValue = 0;
     
-    private uint questionsAnswered = 0;
+    private uint rounds = 7;
+    private uint roundsPassed = 0;
 
     private void Awake()
     {
-        canvas = FindAnyObjectByType<MinigameCanvas>();
+        canvas = FindAnyObjectByType<TensAndOnesMinigameCanvas>();
     }
 
     public void Start()
@@ -34,9 +36,9 @@ public class TensAndOnesMinigameManager : MinigameManager
 
         if ((currentTensValue + currentOnesValue) == requiredValue)
         {
-            questionsAnswered++;
+            roundsPassed++;
 
-            if (questionsAnswered < numberOfQuestions)
+            if (roundsPassed < rounds)
             {
                 // do it again
                 InitializeMinigame();
@@ -48,9 +50,11 @@ public class TensAndOnesMinigameManager : MinigameManager
         }
     }
 
-    public override void InitializeMinigame()
+    public override void InitializeMinigame(uint p_numberOfRounds = 7)
     {
         LevelManager.Instance.LevelState = StateID;
+
+        rounds = p_numberOfRounds;
 
         LevelManager.Instance.StopSectionsFromMoving();
         int rnd = Random.Range(11, 100);

@@ -26,7 +26,6 @@ public class PowerUpManager : MonoBehaviour
 
     [Header("Milestones")]
     [SerializeField] int[] milestones = new int[3];
-    uint milestonesReached = 0;
 
     [Header("Power Up Values")]
     [SerializeField] int healthBonus;

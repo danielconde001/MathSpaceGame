@@ -2,7 +2,15 @@ using UnityEngine;
 
 public class MinigameManager : MonoBehaviour
 {
-    public virtual void InitializeMinigame() { }
+    public bool Initialized { get; protected set; }
 
-    public virtual void EndMinigame() { }
+    public virtual void InitializeMinigame(uint p_numberOfRounds = 7) 
+    {
+        Initialized = true;
+    }
+
+    public virtual void EndMinigame() 
+    {
+        Initialized = false;
+    }
 }

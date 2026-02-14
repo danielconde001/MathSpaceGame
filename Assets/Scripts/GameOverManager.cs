@@ -1,5 +1,7 @@
-using UnityEngine;
 using DG.Tweening;
+using System.Collections;
+using Unity.VisualScripting;
+using UnityEngine;
 
 public class GameOverManager : MonoBehaviour
 {
@@ -20,10 +22,16 @@ public class GameOverManager : MonoBehaviour
 
     [SerializeField] private UnityEngine.UI.Image panel;
     [SerializeField] private GameObject content;
+    [SerializeField] private MinigameSequencer minigameSequencer;
 
     private void Awake()
     {
         instance = this;
+
+        if (minigameSequencer == null)
+        {
+            Debug.LogWarning("Minigame Sequencer has no reference!", this);
+        }
     }
     public void ShowScreen()
     {
@@ -43,10 +51,31 @@ public class GameOverManager : MonoBehaviour
     public void Respawn()
     {
         PlayerManager.Instance.GetPlayer().Revive();
-        HideScreen(PowerUpManager.Instance.ShowScreen, true);
+        HideScreen(PlayMinigameForRespawn);
     }
 
-    public void HideScreen(System.Action p_functionAfterHiding = null, bool p_pauseAfterHiding = false)
+    private void PlayMinigameForRespawn()
+    {
+        StartCoroutine(PlayMinigameCorotuine());
+    }
+
+    IEnumerator PlayMinigameCorotuine()
+    {
+        PauseManager.Instance.IsPaused = true;
+
+        if (minigameSequencer == null)
+        {
+            Debug.LogError("Missing Minigame Sequencer!", this);
+        }
+
+        minigameSequencer?.StartSequence();
+
+        yield return new WaitUntil( () => minigameSequencer?.SequenceIsOngoing == false );
+
+        PowerUpManager.Instance.ShowScreen();
+    }
+
+    public void HideScreen(System.Action p_functionAfterHiding = null)
     {
         content.transform.DOLocalMoveY(0, 0f, true);
         content.transform.DOLocalMoveY(1080, .7f).OnComplete
@@ -54,17 +83,6 @@ public class GameOverManager : MonoBehaviour
                 () => 
                 {
                     panel.gameObject.SetActive(false);
-
-                    if (p_pauseAfterHiding == true)
-                    {
-                        PauseManager.Instance.IsPaused = true;
-                    }
-                    else
-                    {
-                        PauseManager.Instance.IsPaused = false;
-
-                    }
-
                     p_functionAfterHiding?.Invoke();
                 }
             );

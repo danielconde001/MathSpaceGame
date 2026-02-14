@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class SpaceshipAttack : MonoBehaviour
 {
@@ -46,7 +47,9 @@ public class SpaceshipAttack : MonoBehaviour
     {
         if (fireCooldown >= 0f) fireCooldown -= Time.deltaTime;
         
-        if (Input.GetMouseButton(0) && fireCooldown <= 0f)
+        if (Input.GetMouseButton(0) && 
+            fireCooldown <= 0f && 
+            EventSystem.current.IsPointerOverGameObject() == false)
         {
             NormalShoot();
         }
@@ -56,7 +59,8 @@ public class SpaceshipAttack : MonoBehaviour
     {
         if (minigameFireCooldown >= 0f) minigameFireCooldown -= Time.deltaTime;
 
-        if (Input.GetMouseButtonDown(0) && minigameFireCooldown <= 0f)
+        if (Input.GetMouseButtonDown(0) && 
+            minigameFireCooldown <= 0f)
         {
             MinigameShoot();
         }

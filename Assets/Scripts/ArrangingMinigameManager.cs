@@ -1,8 +1,8 @@
-using UnityEngine;
-using UnityEngine.UI;
-using TMPro;
 using DG.Tweening;
+using TMPro;
+using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class ArrangingMinigameManager : MinigameManager
 {
@@ -16,6 +16,8 @@ public class ArrangingMinigameManager : MinigameManager
     public GameObject numberImage4;
     public GameObject numberImage5;
     public Button submitButton;
+    public Image panel;
+    public float yOffset = 250f;
 
     private int[] numbers = new int[5];
     private int[] shuffledIndices = new int[5];
@@ -23,22 +25,28 @@ public class ArrangingMinigameManager : MinigameManager
     private GameObject draggingImage = null;
     private Vector3 dragStartPos;
 
-    void Start()
-    {
-        InitializeMinigame();
-    }
+    private uint rounds = 0;
+    private uint roundsPassed = 0;
 
-    public override void InitializeMinigame()
+    public override void InitializeMinigame(uint p_numberOfRounds = 7)
     {
+        base.InitializeMinigame();
+
         GenerateAndShowNumbers();
+
+        rounds = p_numberOfRounds;
+        roundsPassed = 0;
+        panel.enabled = true;
+        submitButton.interactable = true;
+
         submitButton.onClick.RemoveAllListeners();
         submitButton.onClick.AddListener(OnSubmit);
         GameObject[] images = { numberImage1, numberImage2, numberImage3, numberImage4, numberImage5 };
         foreach (var img in images)
         {
-            Button btn = img.GetComponent<Button>();
+            UnityEngine.UI.Button btn = img.GetComponent<UnityEngine.UI.Button>();
             if (btn == null)
-                btn = img.AddComponent<Button>();
+                btn = img.AddComponent<UnityEngine.UI.Button>();
             btn.onClick.RemoveAllListeners();
             btn.onClick.AddListener(() => OnImageClicked(img));
             // Add drag event handlers
@@ -52,6 +60,12 @@ public class ArrangingMinigameManager : MinigameManager
             Vector3 pos = img.transform.localPosition;
             img.transform.localPosition = new Vector3(pos.x, pos.y, 0f);
         }
+    }
+
+    public override void EndMinigame()
+    {
+        base.EndMinigame();
+        panel.enabled = false;
     }
 
     public void GenerateAndShowNumbers()
@@ -91,9 +105,9 @@ public class ArrangingMinigameManager : MinigameManager
         GameObject[] images = { numberImage1, numberImage2, numberImage3, numberImage4, numberImage5 };
         foreach (var img in images)
         {
-            img.transform.DOMoveY(img.transform.position.y - 500f, 2f);
+            img.transform.DOMoveY(img.transform.position.y - yOffset, 2f);
         }
-        submitButton.transform.DOMoveY(submitButton.transform.position.y - 500f, 2f);
+        submitButton.transform.DOMoveY(submitButton.transform.position.y - yOffset, 2f);
     }
 
     void OnSubmit()
@@ -115,6 +129,7 @@ public class ArrangingMinigameManager : MinigameManager
         if (correct)
         {
             Debug.Log("Correct!");
+            roundsPassed++;
             StartCoroutine(SlideUpAndGenerate());
         }
         else
@@ -131,10 +146,18 @@ public class ArrangingMinigameManager : MinigameManager
         GameObject[] images = { numberImage1, numberImage2, numberImage3, numberImage4, numberImage5 };
         foreach (var img in images)
         {
-            img.transform.DOMoveY(img.transform.position.y + 500f, 2f);
+            img.transform.DOMoveY(img.transform.position.y + yOffset, 2f);
         }
-        submitButton.transform.DOMoveY(submitButton.transform.position.y + 500f, 2f);
+        submitButton.transform.DOMoveY(submitButton.transform.position.y + yOffset, 2f);
+
         yield return new WaitForSeconds(2f);
+
+        if (roundsPassed >= rounds)
+        {
+            EndMinigame();
+            yield break;
+        }
+
         GenerateAndShowNumbers();
         submitButton.interactable = true;
     }
