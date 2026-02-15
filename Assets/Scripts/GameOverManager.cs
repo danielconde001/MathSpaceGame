@@ -56,10 +56,10 @@ public class GameOverManager : MonoBehaviour
 
     private void PlayMinigameForRespawn()
     {
-        StartCoroutine(PlayMinigameCorotuine());
+        StartCoroutine(PlayMinigameCoroutine());
     }
 
-    IEnumerator PlayMinigameCorotuine()
+    IEnumerator PlayMinigameCoroutine()
     {
         PauseManager.Instance.IsPaused = true;
 

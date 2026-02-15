@@ -28,8 +28,8 @@ public class LevelManager : MonoBehaviour
     uint timing = 1;
     uint laps = 0;
 
-    [SerializeField] private List<LevelSection> currentSections = new List<LevelSection>();
-    [HideInInspector] public List<LevelSection> GetCurrentSections()
+    private List<LevelSection> currentSections = new List<LevelSection>();
+    public List<LevelSection> GetCurrentSections()
     {
         return currentSections;
     }
@@ -41,10 +41,8 @@ public class LevelManager : MonoBehaviour
         set => levelState = value;
     }
 
-    //private uint gemsCollected = 0;
     public void CollectGems(uint p_value)
     {
-        //gemsCollected += p_value;
         ScoreManager.Instance.AddScore((int)p_value);
     }
 

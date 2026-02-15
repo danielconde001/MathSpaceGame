@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static UnityEngine.Rendering.DebugUI;
 
 [Serializable]
 public class Minigame
@@ -20,19 +21,23 @@ public enum MinigameType
 
 public class MinigameSequencer : MonoBehaviour
 {
-    [SerializeField] private List<Minigame> minigames;
+    [SerializeField] private List<Minigame> Minigames;
     public bool SequenceIsOngoing { get; private set; }
 
     TensAndOnesMinigameManager tensAndOnesMinigame;
     ArrangingMinigameManager arrangingMinigame;
     FillinMinigameManager fillinMinigame;
 
-
     private void Awake()
     {
-        tensAndOnesMinigame = FindAnyObjectByType<TensAndOnesMinigameManager>();
-        arrangingMinigame = FindAnyObjectByType<ArrangingMinigameManager>();
-        fillinMinigame = FindAnyObjectByType<FillinMinigameManager>();
+        GameObject taoMngGameObj = Resources.Load<GameObject>("Minigames/TensAndOneMinigameCanvas");
+        tensAndOnesMinigame = Instantiate(taoMngGameObj).GetComponent<TensAndOnesMinigameManager>();
+        
+        GameObject arrangingMngGameObj = Resources.Load<GameObject>("Minigames/ArrangingMinigameCanvas");
+        arrangingMinigame = Instantiate(arrangingMngGameObj).GetComponent<ArrangingMinigameManager>();
+
+        GameObject fillinMngGameObj = Resources.Load<GameObject>("Minigames/FillinMinigameCanvas");
+        fillinMinigame = Instantiate(fillinMngGameObj).GetComponent<FillinMinigameManager>();
     }
     public void StartSequence()
     {
@@ -43,26 +48,54 @@ public class MinigameSequencer : MonoBehaviour
     {
         SequenceIsOngoing = true;
 
-        for (int i = 0; i < minigames.Count; ++i)
+        List<MinigameManager> minigamesLocalList = new List<MinigameManager>();
+
+        for (int i = 0; i < Minigames.Count; i++)
         {
-            MinigameManager minigame;
+            switch (Minigames[i].Type)
+            {
+                case MinigameType.TensAndOnes:
+                    {
+                        if (tensAndOnesMinigame == null)
+                        {
+                            tensAndOnesMinigame = FindAnyObjectByType<TensAndOnesMinigameManager>();
+                        }
+                        minigamesLocalList.Add(tensAndOnesMinigame);
+                        break;
+                    }
 
-            if (minigames[i].Type == MinigameType.TensAndOnes)
-            {
-                minigame = tensAndOnesMinigame;
-            }
-            else if (minigames[i].Type == MinigameType.Arranging)
-            {
-                minigame = arrangingMinigame;
-            }
-            else
-            {
-                minigame = fillinMinigame;
-            }
+                case MinigameType.Arranging:
+                    {
+                        if (arrangingMinigame == null)
+                        {
+                            arrangingMinigame = FindAnyObjectByType<ArrangingMinigameManager>();
+                        }
+                        minigamesLocalList.Add(arrangingMinigame);
+                        break;
+                    }
 
-            uint numberOfRounds = minigames[i].Rounds;
-            minigame.InitializeMinigame(numberOfRounds);
-            yield return new WaitUntil(() => minigame.Initialized == false);
+                case MinigameType.FillIn:
+                    {
+                        if (fillinMinigame == null)
+                        {
+                            fillinMinigame = FindAnyObjectByType<FillinMinigameManager>();
+                        }
+                        minigamesLocalList.Add(fillinMinigame);
+                        break;
+                    }
+
+                default:
+                    Debug.LogWarning("No valid Minigame Type assigned to Index: " + i, this);
+                    break;
+            }
+        }
+
+        for (int i = 0; i < minigamesLocalList.Count; i++)
+        {
+            uint numberOfRounds = Minigames[i].Rounds;
+            minigamesLocalList[i].InitializeMinigame(numberOfRounds);
+
+            yield return new WaitUntil(() => minigamesLocalList[i].Initialized == false);
         }
 
         SequenceIsOngoing = false;

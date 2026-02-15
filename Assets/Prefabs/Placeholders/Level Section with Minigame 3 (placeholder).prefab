@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 5615411433738039140}
   - component: {fileID: 4034732118592830410}
-  - component: {fileID: 2108212283572213511}
+  - component: {fileID: 7484351657629740488}
   m_Layer: 2
-  m_Name: MinigameTrigger
+  m_Name: MinigameSequencerTrigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -54,7 +54,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &2108212283572213511
+--- !u!114 &7484351657629740488
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -63,10 +63,59 @@ MonoBehaviour:
   m_GameObject: {fileID: 25084386460922403}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ed1feba2cf9b6d64499ef71acc551d09, type: 3}
+  m_Script: {fileID: 11500000, guid: 6f4fcd233c7bffd48aab18278d2b992c, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MinigameTrigger
-  minigame: {fileID: 3270727394014054123}
+  m_EditorClassIdentifier: Assembly-CSharp::MinigameSequencerTrigger
+  sequencer: {fileID: 7026769259030433942}
+--- !u!1 &1524458914804610872
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2533061993216281302}
+  - component: {fileID: 7026769259030433942}
+  m_Layer: 0
+  m_Name: MinigameSequencer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2533061993216281302
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1524458914804610872}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4645375100092398250}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7026769259030433942
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1524458914804610872}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b59448c2016077944a2041b5395b8f7d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MinigameSequencing
+  Minigames:
+  - Type: 2
+    Rounds: 4
+  - Type: 0
+    Rounds: 4
 --- !u!1 &2941507844268469235
 GameObject:
   m_ObjectHideFlags: 0
@@ -168,6 +217,7 @@ Transform:
   - {fileID: 847072539097215937}
   - {fileID: 5576165754851773712}
   - {fileID: 5615411433738039140}
+  - {fileID: 2533061993216281302}
   - {fileID: 2774007337449013086}
   - {fileID: 6620249919682554463}
   - {fileID: 7430509692097236432}
@@ -245,7 +295,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::TensAndOnesMinigameManager
   tens: {fileID: 3352842888707618002}
   ones: {fileID: 1316761778317529949}
-  numberOfQuestions: 7
 --- !u!1 &8639879370173349086
 GameObject:
   m_ObjectHideFlags: 0

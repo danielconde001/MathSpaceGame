@@ -111,11 +111,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b59448c2016077944a2041b5395b8f7d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MinigameSequencing
-  minigames:
+  Minigames:
   - Type: 1
-    Rounds: 5
+    Rounds: 4
   - Type: 0
-    Rounds: 5
+    Rounds: 4
 --- !u!1 &2941507844268469235
 GameObject:
   m_ObjectHideFlags: 0

@@ -32,12 +32,14 @@ public class ArrangingMinigameManager : MinigameManager
     {
         base.InitializeMinigame();
 
-        GenerateAndShowNumbers();
+        LevelManager.Instance.StopSectionsFromMoving();
 
         rounds = p_numberOfRounds;
         roundsPassed = 0;
         panel.enabled = true;
         submitButton.interactable = true;
+
+        GenerateAndShowNumbers();
 
         submitButton.onClick.RemoveAllListeners();
         submitButton.onClick.AddListener(OnSubmit);
@@ -66,6 +68,7 @@ public class ArrangingMinigameManager : MinigameManager
     {
         base.EndMinigame();
         panel.enabled = false;
+        LevelManager.Instance.StartSectionsMovement();
     }
 
     public void GenerateAndShowNumbers()
