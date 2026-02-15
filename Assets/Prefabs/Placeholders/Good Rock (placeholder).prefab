@@ -131,6 +131,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
   Damage: 50
+  useDebug: 0
 --- !u!114 &3866239498434180303
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -337,6 +338,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6472129589156925952, guid: f98cfba594225bb4783772b833e7d784,
+        type: 3}
+      propertyPath: m_PresetInfoIsWorld
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7973180429188624327, guid: f98cfba594225bb4783772b833e7d784,
         type: 3}
