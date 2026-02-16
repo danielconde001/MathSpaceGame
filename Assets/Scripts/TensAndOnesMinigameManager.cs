@@ -56,7 +56,6 @@ public class TensAndOnesMinigameManager : MinigameManager
 
         rounds = p_numberOfRounds;
 
-        LevelManager.Instance.StopSectionsFromMoving();
         int rnd = Random.Range(11, 100);
         requiredValue = System.Convert.ToUInt32(rnd);
         canvas?.ShowScreen(requiredValue);
@@ -72,8 +71,6 @@ public class TensAndOnesMinigameManager : MinigameManager
         ones.Kill();
 
         canvas?.HideScreen();
-
-        LevelManager.Instance.StartSectionsMovement();
     }
 
 }

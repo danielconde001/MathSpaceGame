@@ -39,6 +39,7 @@ public class MinigameSequencer : MonoBehaviour
         GameObject fillinMngGameObj = Resources.Load<GameObject>("Minigames/FillinMinigameCanvas");
         fillinMinigame = Instantiate(fillinMngGameObj).GetComponent<FillinMinigameManager>();
     }
+
     public void StartSequence()
     {
         StartCoroutine(SequenceCoroutine());

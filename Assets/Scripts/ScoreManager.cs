@@ -7,6 +7,7 @@ public class ScoreManager : MonoBehaviour
     public int CurrentScore { get; private set; }
 
     [SerializeField] private TextMeshProUGUI scoreText; // Assign in Inspector
+    [SerializeField] private XPBar xpBar;
 
     private void Awake()
     {
@@ -16,6 +17,12 @@ public class ScoreManager : MonoBehaviour
             return;
         }
         Instance = this;
+
+        if (xpBar == null)
+        {
+            xpBar = GetComponent<XPBar>();
+        }
+
         DontDestroyOnLoad(gameObject);
     }
 
@@ -30,10 +37,21 @@ public class ScoreManager : MonoBehaviour
         UpdateScoreUI();
     }
 
-    private void UpdateScoreUI()
+    public void UpdateScoreUI()
     {
+        uint currentMilestone = PowerUpManager.Instance.GetCurrentMilestone();
+
         if (scoreText != null)
-            scoreText.text = $"Score: {CurrentScore}";
+        {
+            scoreText.text = $"{CurrentScore}" + "/" + currentMilestone;
+        }
+
+        if (xpBar == null)
+        {
+            Debug.LogWarning("Please attach XPBar component to " + this.gameObject.name, this);
+        }
+
+        xpBar?.UpdateXPBar();
 
         PowerUpManager.Instance.CheckMilestone();
     }

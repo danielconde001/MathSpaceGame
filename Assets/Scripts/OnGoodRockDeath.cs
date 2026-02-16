@@ -16,6 +16,7 @@ public class OnGoodRockDeath : MonoBehaviour
     {
         LevelManager.Instance.CollectGems(gemValue);
 
+        // Pop up command - Starting line
         Vector3 popupOffset = transform.up + -transform.right; // up and to the left
         GameObject popup = Instantiate(scorePopup, transform.position + popupOffset, Quaternion.identity);
         ScorePopup popupScript = popup.GetComponent<ScorePopup>();
@@ -24,6 +25,7 @@ public class OnGoodRockDeath : MonoBehaviour
             popupScript.Setup((int)gemValue);
         }
         Destroy(popup, 0.5f);
+        // Pop up command - Ending line
 
         if (SpawnVFXOnDeath != null)
         {

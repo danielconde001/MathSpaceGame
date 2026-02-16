@@ -54,6 +54,7 @@ public class PlayerScript : MonoBehaviour
     {
         return maxHealth;
     }
+
     public void AddMaxHealth(int p_addedValue)
     {
         maxHealth += p_addedValue;
@@ -73,6 +74,13 @@ public class PlayerScript : MonoBehaviour
         if (playerLevel >= maxLevel)
         {
             return;
+        }
+
+        if (playerLevel <= 0)
+        {
+            Debug.LogWarning("Player's Level is currently valued at 0 or less, which is invalid! Player should be set to 1 by default!");
+            Debug.LogWarning("Player's Level is now set to 1.");
+            playerLevel = 1;
         }
 
         playerLevel++;

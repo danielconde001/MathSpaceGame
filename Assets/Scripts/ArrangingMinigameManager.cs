@@ -32,8 +32,6 @@ public class ArrangingMinigameManager : MinigameManager
     {
         base.InitializeMinigame();
 
-        LevelManager.Instance.StopSectionsFromMoving();
-
         rounds = p_numberOfRounds;
         roundsPassed = 0;
         panel.enabled = true;
@@ -68,7 +66,6 @@ public class ArrangingMinigameManager : MinigameManager
     {
         base.EndMinigame();
         panel.enabled = false;
-        LevelManager.Instance.StartSectionsMovement();
     }
 
     public void GenerateAndShowNumbers()

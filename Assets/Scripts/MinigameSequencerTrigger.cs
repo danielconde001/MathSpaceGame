@@ -20,6 +20,8 @@ public class MinigameSequencerTrigger : MonoBehaviour
 
         isTriggered = true;
 
+        LevelManager.Instance.StopSectionsFromMoving();
+
         sequencer.StartSequence();
     }
 }

@@ -7,6 +7,11 @@ public class MoveForward : MonoBehaviour
 
     void Update()
     {
+        if (stopMoving)
+        Debug.Log("I Stop");
+        else
+        Debug.Log("I Move");
+
         if (PauseManager.Instance.IsPaused == true)
         {
             return;
