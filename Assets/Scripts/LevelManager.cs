@@ -34,7 +34,7 @@ public class LevelManager : MonoBehaviour
         return currentSections;
     }
 
-    private uint levelState = 0; // 0 = normal, 1 = minigame 1
+    private uint levelState = 0; // 0 = Normal, 1 = Doing Minigame 1
     public uint LevelState
     {
         get => levelState;

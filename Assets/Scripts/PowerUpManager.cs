@@ -9,7 +9,6 @@ public class PowerUpManager : MonoBehaviour
     private static PowerUpManager instance;
     public static PowerUpManager Instance
     {
-
         get
         {
             if (instance == null)
@@ -55,7 +54,6 @@ public class PowerUpManager : MonoBehaviour
         }
     }
 
-
     public void CheckMilestone()
     {
         uint currentPlayerLevel = PlayerManager.Instance.GetPlayer().PlayerLevel;
@@ -70,6 +68,26 @@ public class PowerUpManager : MonoBehaviour
         else if (ScoreManager.Instance.CurrentScore == milestones[2] && currentPlayerLevel >= 3)
         {
             ShowScreen();
+        }
+    }
+
+    public uint GetCurrentMilestone()
+    {
+        uint currentPlayerLevel = PlayerManager.Instance.GetPlayer().PlayerLevel;
+        switch (currentPlayerLevel)
+        {
+            case 0:
+                PlayerManager.Instance.GetPlayer().LevelUpPlayer();
+                return (uint)milestones[0];
+            case 1:
+                return (uint)milestones[0];
+            case 2:
+                return (uint)milestones[1];
+            case 3:
+                return (uint)milestones[2];
+            default:
+                // Max level
+                return (uint)milestones[2];
         }
     }
 
@@ -102,18 +120,22 @@ public class PowerUpManager : MonoBehaviour
             case 1:
                 RecieveHealthBoost();
                 PlayerManager.Instance.GetPlayer().LevelUpPlayer();
+                ScoreManager.Instance.UpdateScoreUI();
                 break;
             case 2:
                 RecieveDoubleBullets();
                 PlayerManager.Instance.GetPlayer().LevelUpPlayer();
+                ScoreManager.Instance.UpdateScoreUI();
                 break;
             case 4:
                 RecieveFasterFireRate();
                 PlayerManager.Instance.GetPlayer().LevelUpPlayer();
+                ScoreManager.Instance.UpdateScoreUI();
                 break;
             case 8:
                 RecieveHealPerHit();
                 PlayerManager.Instance.GetPlayer().LevelUpPlayer();
+                ScoreManager.Instance.UpdateScoreUI();
                 break;
             default:
                 Debug.LogWarning("No power up for that index exists.");

@@ -20,6 +20,4 @@ public class CombatEventTrigger : MonoBehaviour
     {
         CombatEventManager.Instance.InitializeCombatEvent(p_eventID);
     }
-
-    
 }
