@@ -29,6 +29,8 @@ public class FillinMinigameManager : MinigameManager, IBeginDragHandler, IDragHa
     private uint rounds = 0;
     private uint roundsPassed = 0;
 
+    [SerializeField] bool useDebug = false;
+
     public override void InitializeMinigame(uint p_numberOfRounds = 7)
     {
         base.InitializeMinigame();
@@ -143,13 +145,13 @@ public class FillinMinigameManager : MinigameManager, IBeginDragHandler, IDragHa
         submitButton.interactable = false;
         if (correct)
         {
-            Debug.Log("Correct!");
+            if (useDebug) Debug.Log("Correct!");
             roundsPassed++;
             StartCoroutine(SlideUpAndGenerate());
         }
         else
         {
-            Debug.Log("Incorrect!");
+            if (useDebug) Debug.Log("Incorrect!");
             // Optionally re-enable if you want to allow retry on failure:
             submitButton.interactable = true;
         }

@@ -52,6 +52,8 @@ public class TensAndOnesMinigameManager : MinigameManager
 
     public override void InitializeMinigame(uint p_numberOfRounds = 7)
     {
+        base.InitializeMinigame(p_numberOfRounds);
+
         LevelManager.Instance.LevelState = StateID;
 
         rounds = p_numberOfRounds;
@@ -65,6 +67,8 @@ public class TensAndOnesMinigameManager : MinigameManager
 
     public override void EndMinigame()
     {
+        base.EndMinigame();
+
         LevelManager.Instance.LevelState = 0;
 
         tens.Kill();
@@ -72,5 +76,4 @@ public class TensAndOnesMinigameManager : MinigameManager
 
         canvas?.HideScreen();
     }
-
 }

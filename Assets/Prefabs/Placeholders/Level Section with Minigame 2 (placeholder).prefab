@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4034732118592830410}
   - component: {fileID: 7076787619510465389}
   m_Layer: 2
-  m_Name: MinigameSequencerTrigger
+  m_Name: MinigameTrigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

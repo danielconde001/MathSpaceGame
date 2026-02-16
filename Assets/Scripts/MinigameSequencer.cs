@@ -28,6 +28,9 @@ public class MinigameSequencer : MonoBehaviour
     ArrangingMinigameManager arrangingMinigame;
     FillinMinigameManager fillinMinigame;
 
+    [SerializeField] bool stopSectionsOnSequenceStart = true;
+    [SerializeField] bool moveSectionsOnSequenceEnd = true;
+
     private void Awake()
     {
         GameObject taoMngGameObj = Resources.Load<GameObject>("Minigames/TensAndOneMinigameCanvas");
@@ -48,6 +51,11 @@ public class MinigameSequencer : MonoBehaviour
     private IEnumerator SequenceCoroutine()
     {
         SequenceIsOngoing = true;
+
+        if (stopSectionsOnSequenceStart == true)
+        {
+            LevelManager.Instance.StopSectionsFromMoving();
+        }
 
         List<MinigameManager> minigamesLocalList = new List<MinigameManager>();
 
@@ -97,6 +105,11 @@ public class MinigameSequencer : MonoBehaviour
             minigamesLocalList[i].InitializeMinigame(numberOfRounds);
 
             yield return new WaitUntil(() => minigamesLocalList[i].Initialized == false);
+        }
+
+        if (moveSectionsOnSequenceEnd)
+        {
+            LevelManager.Instance.StartSectionsMovement();
         }
 
         SequenceIsOngoing = false;

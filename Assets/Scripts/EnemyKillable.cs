@@ -15,8 +15,9 @@ public class EnemyKillable : Killable
     {
         base.Kill();
 
-        // spawn explosion
+        AudioManager.Instance.PlayExplosionSFXAtLocation(transform.position);
 
+        // spawn explosion
 
         // Spawn score popup using Score component
         if (scorePopupPrefab != null)

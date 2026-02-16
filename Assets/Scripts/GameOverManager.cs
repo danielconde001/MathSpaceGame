@@ -72,6 +72,12 @@ public class GameOverManager : MonoBehaviour
 
         yield return new WaitUntil( () => minigameSequencer?.SequenceIsOngoing == false );
 
+        if (PowerUpManager.Instance.HasAllPowerUps() == true)
+        {
+            PauseManager.Instance.IsPaused = false;
+            yield break;
+        }
+
         PowerUpManager.Instance.ShowScreen();
     }
 

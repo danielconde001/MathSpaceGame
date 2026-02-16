@@ -1,6 +1,7 @@
+using System.Collections;
 using UnityEngine;
 
-public class MinigameSequencerTrigger : MonoBehaviour
+public class MinigameTrigger : MonoBehaviour
 {
     [SerializeField] MinigameSequencer sequencer;
 
@@ -19,8 +20,6 @@ public class MinigameSequencerTrigger : MonoBehaviour
         }
 
         isTriggered = true;
-
-        LevelManager.Instance.StopSectionsFromMoving();
 
         sequencer.StartSequence();
     }

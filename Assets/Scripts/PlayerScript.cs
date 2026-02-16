@@ -9,6 +9,7 @@ public class PlayerScript : MonoBehaviour
     private Collider playerCollider;
     private PlayerHealth health;
     private PlayerDamageable damageable;
+    private AudioSource audioSource;
     private int maxHealth;
     private bool isInvulnerable = false;
     private uint playerLevel = 1;
@@ -19,6 +20,7 @@ public class PlayerScript : MonoBehaviour
     public Collider PlayerCollider { get => playerCollider; }
     public PlayerHealth Health { get => health; }
     public PlayerDamageable Damageable { get => damageable; }
+    public AudioSource AudioSource { get => audioSource; }
     public GameObject PlayerMesh { get => playerMesh; }
     public bool IsVulnerable 
     { 
@@ -38,6 +40,7 @@ public class PlayerScript : MonoBehaviour
         health = GetComponent<PlayerHealth>();
         maxHealth = Health.value;
         damageable = GetComponent<PlayerDamageable>();
+        audioSource = GetComponent<AudioSource>();
 
         if (playerMesh == null)
         {

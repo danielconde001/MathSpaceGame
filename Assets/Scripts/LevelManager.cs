@@ -41,7 +41,7 @@ public class LevelManager : MonoBehaviour
         set => levelState = value;
     }
 
-    public void CollectGems(uint p_value)
+    public void CollectPoints(uint p_value)
     {
         ScoreManager.Instance.AddScore((int)p_value);
     }

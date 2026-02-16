@@ -11,7 +11,17 @@ public class XPBar : MonoBehaviour
         uint currentValue = (uint)ScoreManager.Instance.CurrentScore;
         uint maxValue = PowerUpManager.Instance.GetCurrentMilestone();
 
-        float fillAmount = (float)currentValue / maxValue;
+        float fillAmount;
+
+        if (PlayerManager.Instance.GetPlayer().PlayerLevel >= 4) // at max level
+        {
+            fillAmount = maxValue / maxValue;
+        }
+        else
+        {
+            fillAmount = (float)currentValue / maxValue;
+        }
+
         fillImage.fillAmount = Mathf.Clamp01(fillAmount);
     }
 }

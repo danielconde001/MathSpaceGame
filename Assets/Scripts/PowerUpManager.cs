@@ -40,7 +40,7 @@ public class PowerUpManager : MonoBehaviour
 
     private void Update()
     {
-        if (useDebug)
+        if (useDebug == true)
         {
             if (Input.GetKeyDown(KeyCode.O))
             {
@@ -65,7 +65,7 @@ public class PowerUpManager : MonoBehaviour
         {
             ShowScreen();
         }
-        else if (ScoreManager.Instance.CurrentScore == milestones[2] && currentPlayerLevel >= 3)
+        else if (ScoreManager.Instance.CurrentScore == milestones[2] && currentPlayerLevel == 3)
         {
             ShowScreen();
         }
@@ -106,7 +106,8 @@ public class PowerUpManager : MonoBehaviour
         rectTransform.gameObject.transform.DOLocalMoveY(0, 0f, true);
         rectTransform.gameObject.transform.DOLocalMoveY(820, .7f).OnComplete
             (
-                () => {
+                () => 
+                {
                     panel.gameObject.SetActive(false);
                     PauseManager.Instance.IsPaused = false;
                 }   
@@ -210,5 +211,10 @@ public class PowerUpManager : MonoBehaviour
     public bool HasHealPerHit()
     {
         return (powerUpsReceived & 8) == 8;
+    }
+
+    public bool HasAllPowerUps()
+    {
+        return HasHealthBoost() && HasDoubleBullets() && HasFasterFireRate() && HasHealPerHit();
     }
 }

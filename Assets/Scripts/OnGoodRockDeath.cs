@@ -14,7 +14,9 @@ public class OnGoodRockDeath : MonoBehaviour
 
     public void OnDeath()
     {
-        LevelManager.Instance.CollectGems(gemValue);
+        LevelManager.Instance.CollectPoints(gemValue);
+
+        AudioManager.Instance.PlayExplosionSFXAtLocation(transform.position);
 
         // Pop up command - Starting line
         Vector3 popupOffset = transform.up + -transform.right; // up and to the left

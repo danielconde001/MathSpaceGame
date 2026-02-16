@@ -43,7 +43,14 @@ public class ScoreManager : MonoBehaviour
 
         if (scoreText != null)
         {
-            scoreText.text = $"{CurrentScore}" + "/" + currentMilestone;
+            if (PlayerManager.Instance.GetPlayer().PlayerLevel >= 4) // at max level
+            {
+                scoreText.text = "MAX LEVEL REACHED!";
+            }
+            else
+            {
+                scoreText.text = $"{CurrentScore}" + "/" + currentMilestone;
+            }
         }
 
         if (xpBar == null)
