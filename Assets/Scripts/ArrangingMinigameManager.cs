@@ -18,6 +18,9 @@ public class ArrangingMinigameManager : MinigameManager
     public Button submitButton;
     public Image panel;
     public GameObject instructionObject;
+    public GameObject anchorObject;
+    public Transform hideTransform;
+    public Transform showTransform;
     public float yOffset = 250f;
     public float animationDuration = 0.5f;
 
@@ -106,13 +109,15 @@ public class ArrangingMinigameManager : MinigameManager
 
     void AnimateFields()
     {
-        GameObject[] images = { numberImage1, numberImage2, numberImage3, numberImage4, numberImage5 };
-        foreach (var img in images)
-        {
-            img.transform.DOMoveY(img.transform.position.y - yOffset, animationDuration);
-        }
-        submitButton.transform.DOMoveY(submitButton.transform.position.y - yOffset, animationDuration);
-        instructionObject.transform.DOMoveY(instructionObject.transform.position.y - yOffset, animationDuration);
+        //GameObject[] images = { numberImage1, numberImage2, numberImage3, numberImage4, numberImage5 };
+        //foreach (var img in images)
+        //{
+        //    img.transform.DOMoveY(img.transform.position.y - yOffset, animationDuration);
+        //}
+        //submitButton.transform.DOMoveY(submitButton.transform.position.y - yOffset, animationDuration);
+        //instructionObject.transform.DOMoveY(instructionObject.transform.position.y - yOffset, animationDuration);
+        
+        anchorObject.transform.DOMove(showTransform.position, animationDuration);
     }
 
     void OnSubmit()
@@ -148,13 +153,15 @@ public class ArrangingMinigameManager : MinigameManager
 
     public System.Collections.IEnumerator SlideUpAndGenerate()
     {
-        GameObject[] images = { numberImage1, numberImage2, numberImage3, numberImage4, numberImage5 };
-        foreach (var img in images)
-        {
-            img.transform.DOMoveY(img.transform.position.y + yOffset, animationDuration);
-        }
-        submitButton.transform.DOMoveY(submitButton.transform.position.y + yOffset, animationDuration);
-        instructionObject.transform.DOMoveY(instructionObject.transform.position.y + yOffset, animationDuration);
+        //GameObject[] images = { numberImage1, numberImage2, numberImage3, numberImage4, numberImage5 };
+        //foreach (var img in images)
+        //{
+        //    img.transform.DOMoveY(img.transform.position.y + yOffset, animationDuration);
+        //}
+        //submitButton.transform.DOMoveY(submitButton.transform.position.y + yOffset, animationDuration);
+        //instructionObject.transform.DOMoveY(instructionObject.transform.position.y + yOffset, animationDuration);
+
+        anchorObject.transform.DOMove(hideTransform.position, animationDuration);
 
         yield return new WaitForSeconds(animationDuration);
 

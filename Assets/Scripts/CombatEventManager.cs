@@ -83,6 +83,9 @@ public class CombatEventManager : MonoBehaviour
     {
         LevelManager.Instance.StopSectionsFromMoving();
 
+        AudioManager.Instance.PlayEnemyAlarmSFX();
+        AudioManager.Instance.PlayEnemyFlyInSFX();
+
         DialogueManager.Instance.StartAutoDialogue("Get ready! Enemies incoming.");
 
         StationaryEnemyAI enemy1 = SpawnStationaryEnemy(2, 0);
@@ -90,6 +93,8 @@ public class CombatEventManager : MonoBehaviour
         yield return new WaitWhile(() => waitForSeconds > 0f);
         StationaryEnemyAI enemy2 = SpawnStationaryEnemy(3, 3);
         yield return new WaitUntil( () => (enemy1 == null && enemy2 == null)); // unitl they are dead
+
+        AudioManager.Instance.PlayEnemyFlyInSFX();
 
         DialogueManager.Instance.StartAutoDialogue("There's more of them! Watch your back.");
 

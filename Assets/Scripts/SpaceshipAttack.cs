@@ -87,7 +87,7 @@ public class SpaceshipAttack : MonoBehaviour
             aimPoint = ray.GetPoint(range);
         }
 
-        AudioManager.Instance.PlayShootSFX();
+        AudioManager.Instance.PlayPlayerShootSFX();
 
         Vector3 projectileDir = (aimPoint - bulletSpawn.position).normalized;
         ProjectileBehaviour projectile = Instantiate(projectilePrefab, bulletSpawn.position, Quaternion.identity);
@@ -110,7 +110,7 @@ public class SpaceshipAttack : MonoBehaviour
             {
                 Vector3 projectileDir = (asteroid.transform.position - transform.position).normalized;
 
-                AudioManager.Instance.PlayShootSFX();
+                AudioManager.Instance.PlayPlayerShootSFX();
 
                 ProjectileBehaviour projectile = Instantiate(minigameProjectilePrefab, bulletSpawn.position, Quaternion.identity);
                 projectile.moveDir = projectileDir;

@@ -27,6 +27,8 @@ public class PlayerKillable : Killable
 
         // explode player
 
+        AudioManager.Instance.PlayPlayerDeathSFX();
+
         GameOverManager.Instance.ShowScreen();
     }
 }

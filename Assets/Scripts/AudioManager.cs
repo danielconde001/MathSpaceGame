@@ -7,11 +7,16 @@ public class AudioManager : MonoBehaviour
 
     [SerializeField] AudioClip mainMenuBgm;
     [SerializeField] AudioClip inGameBgm;
-    [SerializeField] AudioClip[] shootSFX;
 
+    [SerializeField] AudioClip[] playerShootSFX;
+    [SerializeField] AudioClip enemyShootSFX;
+    [SerializeField] AudioClip enemyAlarmSFX;
+    [SerializeField] AudioClip enemyFlyInSFX;
     [SerializeField] AudioClip levelUpSFX;
     [SerializeField] AudioClip recievePowerupSFX;
     [SerializeField] AudioClip spaceshipAmbienceSFX;
+    [SerializeField] AudioClip playerHitSFX;
+    [SerializeField] AudioClip spaceshipDeathSFX;
 
     private static AudioManager instance;
     public static AudioManager Instance
@@ -58,16 +63,21 @@ public class AudioManager : MonoBehaviour
         }
     }
 
-    public void PlayShootSFX()
+    public void PlayPlayerShootSFX()
     {
-        if (shootSFX.Length > 0)
+        if (playerShootSFX.Length > 0)
         {
-            int rnd = Random.Range(0, shootSFX.Length);
-            PlayerManager.Instance.GetPlayer().ShootAudioSource.PlayOneShot(shootSFX[rnd]);
+            int rnd = Random.Range(0, playerShootSFX.Length);
+            PlayerManager.Instance.GetPlayer().ShootAudioSource.PlayOneShot(playerShootSFX[rnd]);
         }
     }
 
-    public void PlayShipAmbienceSFX()
+    public void PlayEnemyShootSFX(AudioSource p_audioSource)
+    {
+        p_audioSource.PlayOneShot(enemyShootSFX);
+    }
+
+    public void PlaySpaceshipAmbienceSFX()
     {
         if (spaceshipAmbienceSFX != null)
         {
@@ -76,15 +86,40 @@ public class AudioManager : MonoBehaviour
         }
     }
 
-    public void PlayHitSFXAtLocation(Vector3 p_location)
+    public void PlayEnemyAlarmSFX()
+    {
+        sfxSource.PlayOneShot(enemyAlarmSFX);
+    }
+
+    public void PlayEnemyFlyInSFX()
+    {
+        sfxSource.PlayOneShot(enemyFlyInSFX);
+    }
+
+    public void PlayHitSFX(Vector3 p_location)
     {
         GameObject hitSfxObj = Resources.Load<GameObject>("Audio/HitSFX");
         Instantiate(hitSfxObj, p_location, Quaternion.identity);
     }
 
-    public void PlayExplosionSFXAtLocation(Vector3 p_location)
+    public void PlayPlayerHitSFX()
     {
-        GameObject hitSfxObj = Resources.Load<GameObject>("Audio/ExplosionSFX");
+        sfxSource.PlayOneShot(playerHitSFX);
+    }
+
+    public void PlayEnemyDeathSFX()
+    {
+        sfxSource.PlayOneShot(spaceshipDeathSFX);
+    }
+
+    public void PlayPlayerDeathSFX()
+    {
+        sfxSource.PlayOneShot(spaceshipDeathSFX);
+    }
+
+    public void PlaySpaceCrystalDeathSFX(Vector3 p_location)
+    {
+        GameObject hitSfxObj = Resources.Load<GameObject>("Audio/CrystalDeathSFX");
         Instantiate(hitSfxObj, p_location, Quaternion.identity);
     }
 }

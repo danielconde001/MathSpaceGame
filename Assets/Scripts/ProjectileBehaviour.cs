@@ -62,7 +62,7 @@ public class ProjectileBehaviour : MonoBehaviour
             asteroid.OnShot();
         }
 
-        AudioManager.Instance.PlayHitSFXAtLocation(transform.position);
+        AudioManager.Instance.PlayHitSFX(transform.position);
 
         Destroy(gameObject);
     }

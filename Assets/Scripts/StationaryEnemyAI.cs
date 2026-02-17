@@ -13,9 +13,16 @@ public class StationaryEnemyAI : MonoBehaviour
     [SerializeField] ProjectileBehaviour projectilePrefab;
     [SerializeField] Transform bulletSpawn;
 
+    AudioSource audioSource;
+
     Transform target;
     float cooldown = 0;
     bool isNowInSpot = false;
+
+    private void Awake()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
 
     void Start()
     {
@@ -76,6 +83,8 @@ public class StationaryEnemyAI : MonoBehaviour
 
     void Shoot()
     {
+        AudioManager.Instance.PlayEnemyShootSFX(audioSource);
+
         cooldown = Random.Range(minFireRate, maxFireRate);
 
         EnemyProjectileBehaviour projectile 

@@ -34,6 +34,29 @@ public class PlayerDamageable : Damageable
         }
     }
 
+
+    public virtual void TakeDamageWithInvul(int p_damage, float p_invulDuration = 2f)
+    {
+        if (player.IsVulnerable == true)
+        {
+            return;
+        }
+
+        TakeDamage(p_damage);
+
+        if (player?.Health.value > 0)
+        {
+            if (useDebug == true)
+            {
+                Debug.Log("Player is still Alive. Play Player Hit SFX.");
+            }
+
+            AudioManager.Instance.PlayPlayerHitSFX();
+        }
+
+        StartCoroutine(TemporarilyInvulnerable(p_invulDuration));
+    }
+
     public override void TakeDamage(int p_damage)
     {
         if (player.IsVulnerable == true)
@@ -46,23 +69,15 @@ public class PlayerDamageable : Damageable
         camShake.TriggerShake();
     }
 
-    public virtual void TakeDamageWithInvul(int p_damage, float p_invulDuration = 2f)
-    {
-        if (player.IsVulnerable == true)
-        {
-            return;
-        }
-
-        TakeDamage(p_damage);
-
-        StartCoroutine(TemporarilyInvulnerable(p_invulDuration));
-    }
-
-    IEnumerator TemporarilyInvulnerable(float p_duration)
+    public IEnumerator TemporarilyInvulnerable(float p_duration)
     {
         player.IsVulnerable = true;
 
         invulTimer = p_duration;
+
+        // This is to make sure the player doesn't do the flashy thing
+        // during the Game Over Screen.
+        yield return new WaitWhile(() => player.Health.value <= 0);
 
         while (invulTimer > 0)
         {

@@ -15,7 +15,7 @@ public class EnemyKillable : Killable
     {
         base.Kill();
 
-        AudioManager.Instance.PlayExplosionSFXAtLocation(transform.position);
+        AudioManager.Instance.PlayEnemyDeathSFX();
 
         // spawn explosion
 

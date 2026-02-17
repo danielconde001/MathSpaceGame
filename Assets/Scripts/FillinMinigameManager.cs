@@ -18,6 +18,9 @@ public class FillinMinigameManager : MinigameManager, IBeginDragHandler, IDragHa
     public UnityEngine.UI.Button submitButton;
     public Image panel;
     public GameObject instructionObject;
+    public GameObject anchorObject;
+    public Transform hideTransform;
+    public Transform showTransform;
     public float yOffset = 375f;
     public float animationDuration = 2f;
     
@@ -33,11 +36,12 @@ public class FillinMinigameManager : MinigameManager, IBeginDragHandler, IDragHa
 
     [SerializeField] bool useDebug = false;
 
-    // private void Start()
-    // {
-    //     // For testing, start the minigame immediately
-    //     InitializeMinigame(3);
-    // }
+    //private void Start()
+    //{
+    //    // For testing, start the minigame immediately
+    //    InitializeMinigame(3);
+    //}
+
     public override void InitializeMinigame(uint p_numberOfRounds = 7)
     {
         base.InitializeMinigame();
@@ -130,12 +134,14 @@ public class FillinMinigameManager : MinigameManager, IBeginDragHandler, IDragHa
 
     void AnimateFields()
     {
-        foreach (var field in fields)
-        {
-            field.transform.DOMoveY(field.transform.position.y - yOffset, animationDuration);
-        }
-        submitButton.transform.DOMoveY(submitButton.transform.position.y - yOffset, animationDuration);
-        instructionObject.transform.DOMoveY(instructionObject.transform.position.y - yOffset, animationDuration);
+        //foreach (var field in fields)
+        //{
+        //    field.transform.DOMoveY(field.transform.position.y - yOffset, animationDuration);
+        //}
+        //submitButton.transform.DOMoveY(submitButton.transform.position.y - yOffset, animationDuration);
+        //instructionObject.transform.DOMoveY(instructionObject.transform.position.y - yOffset, animationDuration);
+
+        anchorObject.transform.DOMove(showTransform.position, animationDuration);
     }
 
     void OnSubmit()
@@ -167,12 +173,14 @@ public class FillinMinigameManager : MinigameManager, IBeginDragHandler, IDragHa
 
     System.Collections.IEnumerator SlideUpAndGenerate()
     {
-        foreach (var field in fields)
-        {
-            field.transform.DOMoveY(field.transform.position.y + yOffset, animationDuration);
-        }
-        submitButton.transform.DOMoveY(submitButton.transform.position.y + yOffset, animationDuration);
-        instructionObject.transform.DOMoveY(instructionObject.transform.position.y + yOffset, animationDuration);
+        //foreach (var field in fields)
+        //{
+        //    field.transform.DOMoveY(field.transform.position.y + yOffset, animationDuration);
+        //}
+        //submitButton.transform.DOMoveY(submitButton.transform.position.y + yOffset, animationDuration);
+        //instructionObject.transform.DOMoveY(instructionObject.transform.position.y + yOffset, animationDuration);
+
+        anchorObject.transform.DOMove(hideTransform.position, animationDuration);
 
         yield return new WaitForSeconds(animationDuration);
 

@@ -61,7 +61,7 @@ public class PlayerScript : MonoBehaviour
 
     private void Start()
     {
-        AudioManager.Instance.PlayShipAmbienceSFX();
+        AudioManager.Instance.PlaySpaceshipAmbienceSFX();
     }
 
     public int GetDamage()
