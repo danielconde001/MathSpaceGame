@@ -17,7 +17,9 @@ public class ArrangingMinigameManager : MinigameManager
     public GameObject numberImage5;
     public Button submitButton;
     public Image panel;
+    public GameObject instructionObject;
     public float yOffset = 250f;
+    public float animationDuration = 0.5f;
 
     private int[] numbers = new int[5];
     private int[] shuffledIndices = new int[5];
@@ -107,9 +109,10 @@ public class ArrangingMinigameManager : MinigameManager
         GameObject[] images = { numberImage1, numberImage2, numberImage3, numberImage4, numberImage5 };
         foreach (var img in images)
         {
-            img.transform.DOMoveY(img.transform.position.y - yOffset, 2f);
+            img.transform.DOMoveY(img.transform.position.y - yOffset, animationDuration);
         }
-        submitButton.transform.DOMoveY(submitButton.transform.position.y - yOffset, 2f);
+        submitButton.transform.DOMoveY(submitButton.transform.position.y - yOffset, animationDuration);
+        instructionObject.transform.DOMoveY(instructionObject.transform.position.y - yOffset, animationDuration);
     }
 
     void OnSubmit()
@@ -148,11 +151,12 @@ public class ArrangingMinigameManager : MinigameManager
         GameObject[] images = { numberImage1, numberImage2, numberImage3, numberImage4, numberImage5 };
         foreach (var img in images)
         {
-            img.transform.DOMoveY(img.transform.position.y + yOffset, 2f);
+            img.transform.DOMoveY(img.transform.position.y + yOffset, animationDuration);
         }
-        submitButton.transform.DOMoveY(submitButton.transform.position.y + yOffset, 2f);
+        submitButton.transform.DOMoveY(submitButton.transform.position.y + yOffset, animationDuration);
+        instructionObject.transform.DOMoveY(instructionObject.transform.position.y + yOffset, animationDuration);
 
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(animationDuration);
 
         if (roundsPassed >= rounds)
         {

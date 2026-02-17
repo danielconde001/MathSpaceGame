@@ -17,7 +17,9 @@ public class FillinMinigameManager : MinigameManager, IBeginDragHandler, IDragHa
     public TMP_InputField inputField5;
     public UnityEngine.UI.Button submitButton;
     public Image panel;
+    public GameObject instructionObject;
     public float yOffset = 375f;
+    public float animationDuration = 2f;
     
 
     private int[] numbers = new int[5];
@@ -31,6 +33,11 @@ public class FillinMinigameManager : MinigameManager, IBeginDragHandler, IDragHa
 
     [SerializeField] bool useDebug = false;
 
+    // private void Start()
+    // {
+    //     // For testing, start the minigame immediately
+    //     InitializeMinigame(3);
+    // }
     public override void InitializeMinigame(uint p_numberOfRounds = 7)
     {
         base.InitializeMinigame();
@@ -125,9 +132,10 @@ public class FillinMinigameManager : MinigameManager, IBeginDragHandler, IDragHa
     {
         foreach (var field in fields)
         {
-            field.transform.DOMoveY(field.transform.position.y - yOffset, 2f);
+            field.transform.DOMoveY(field.transform.position.y - yOffset, animationDuration);
         }
-        submitButton.transform.DOMoveY(submitButton.transform.position.y - yOffset, 2f);
+        submitButton.transform.DOMoveY(submitButton.transform.position.y - yOffset, animationDuration);
+        instructionObject.transform.DOMoveY(instructionObject.transform.position.y - yOffset, animationDuration);
     }
 
     void OnSubmit()
@@ -161,11 +169,12 @@ public class FillinMinigameManager : MinigameManager, IBeginDragHandler, IDragHa
     {
         foreach (var field in fields)
         {
-            field.transform.DOMoveY(field.transform.position.y + yOffset, 2f);
+            field.transform.DOMoveY(field.transform.position.y + yOffset, animationDuration);
         }
-        submitButton.transform.DOMoveY(submitButton.transform.position.y + yOffset, 2f);
+        submitButton.transform.DOMoveY(submitButton.transform.position.y + yOffset, animationDuration);
+        instructionObject.transform.DOMoveY(instructionObject.transform.position.y + yOffset, animationDuration);
 
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(animationDuration);
 
         if (roundsPassed >= rounds)
         {
