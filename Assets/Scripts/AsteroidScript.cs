@@ -17,6 +17,11 @@ public class AsteroidScript : MonoBehaviour
 
     public void OnShot()
     {
+        if (manager.CanRegisterBullet == false)
+        {
+            return;
+        }
+
         AddValue();
     }
 

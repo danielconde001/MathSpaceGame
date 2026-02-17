@@ -139,12 +139,14 @@ public class ArrangingMinigameManager : MinigameManager
         if (correct)
         {
             if (useDebug) Debug.Log("Correct!");
+            FeedbackCanvas.Instance.ShowCorrect();
             roundsPassed++;
             StartCoroutine(SlideUpAndGenerate());
         }
         else
         {
             if (useDebug) Debug.Log("Incorrect!");
+            FeedbackCanvas.Instance.ShowWrong();
             // Add failure logic here
             // Optionally re-enable if you want to allow retry on failure:
             submitButton.interactable = true;

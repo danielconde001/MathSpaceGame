@@ -160,12 +160,14 @@ public class FillinMinigameManager : MinigameManager, IBeginDragHandler, IDragHa
         if (correct)
         {
             if (useDebug) Debug.Log("Correct!");
+            FeedbackCanvas.Instance.ShowCorrect();
             roundsPassed++;
             StartCoroutine(SlideUpAndGenerate());
         }
         else
         {
             if (useDebug) Debug.Log("Incorrect!");
+            FeedbackCanvas.Instance.ShowWrong();
             // Optionally re-enable if you want to allow retry on failure:
             submitButton.interactable = true;
         }

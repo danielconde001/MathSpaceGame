@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class AudioManager : MonoBehaviour
@@ -17,6 +18,8 @@ public class AudioManager : MonoBehaviour
     [SerializeField] AudioClip spaceshipAmbienceSFX;
     [SerializeField] AudioClip playerHitSFX;
     [SerializeField] AudioClip spaceshipDeathSFX;
+    [SerializeField] AudioClip correctSFX;
+    [SerializeField] AudioClip incorrectSFX;
 
     private static AudioManager instance;
     public static AudioManager Instance
@@ -25,8 +28,8 @@ public class AudioManager : MonoBehaviour
         {
             if (instance == null)
             {
-                GameObject newGameObject = new GameObject("AudioManager");
-                instance = newGameObject.AddComponent<AudioManager>();
+                GameObject newGameObject = Instantiate(Resources.Load<GameObject>("Audio/AudioManager"));
+                instance = newGameObject.GetComponent<AudioManager>();
             }
             return instance;
         }
@@ -34,7 +37,14 @@ public class AudioManager : MonoBehaviour
 
     private void Awake()
     {
-        instance = this;
+        if (instance != null)
+        {
+            Destroy(gameObject);
+        }
+        else
+        {
+            instance = this;
+        }
 
         if (bgmSource == null)
         {
@@ -45,6 +55,8 @@ public class AudioManager : MonoBehaviour
         {
             sfxSource = transform.Find("SFX").GetComponent<AudioSource>();
         }
+
+        DontDestroyOnLoad(this);
     }
 
     public void PlayLevelUpSFX()
@@ -121,5 +133,21 @@ public class AudioManager : MonoBehaviour
     {
         GameObject hitSfxObj = Resources.Load<GameObject>("Audio/CrystalDeathSFX");
         Instantiate(hitSfxObj, p_location, Quaternion.identity);
+    }
+
+    public void PlayCorrectSFX()
+    {
+        sfxSource.PlayOneShot(correctSFX);
+    }
+
+    public void PlayIncorrectSFX()
+    {
+        sfxSource.PlayOneShot(incorrectSFX);
+    }
+
+    public void PlayBGM(AudioClip p_bgmClip)
+    {
+        bgmSource.clip = p_bgmClip;
+        bgmSource.Play();
     }
 }

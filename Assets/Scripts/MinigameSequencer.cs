@@ -33,14 +33,23 @@ public class MinigameSequencer : MonoBehaviour
 
     private void Awake()
     {
-        GameObject taoMngGameObj = Resources.Load<GameObject>("Minigames/TensAndOneMinigameCanvas");
-        tensAndOnesMinigame = Instantiate(taoMngGameObj).GetComponent<TensAndOnesMinigameManager>();
-        
-        GameObject arrangingMngGameObj = Resources.Load<GameObject>("Minigames/ArrangingMinigameCanvas");
-        arrangingMinigame = Instantiate(arrangingMngGameObj).GetComponent<ArrangingMinigameManager>();
+        if (FindAnyObjectByType<TensAndOnesMinigameManager>() == false)
+        {
+            GameObject taoMngGameObj = Resources.Load<GameObject>("Minigames/TensAndOneMinigameCanvas");
+            tensAndOnesMinigame = Instantiate(taoMngGameObj).GetComponent<TensAndOnesMinigameManager>();
+        }
 
-        GameObject fillinMngGameObj = Resources.Load<GameObject>("Minigames/FillinMinigameCanvas");
-        fillinMinigame = Instantiate(fillinMngGameObj).GetComponent<FillinMinigameManager>();
+        if (FindAnyObjectByType<ArrangingMinigameManager>() == false)
+        {
+            GameObject arrangingMngGameObj = Resources.Load<GameObject>("Minigames/ArrangingMinigameCanvas");
+            arrangingMinigame = Instantiate(arrangingMngGameObj).GetComponent<ArrangingMinigameManager>();
+        }
+
+        if (FindAnyObjectByType<FillinMinigameManager>() == false)
+        {
+            GameObject fillinMngGameObj = Resources.Load<GameObject>("Minigames/FillinMinigameCanvas");
+            fillinMinigame = Instantiate(fillinMngGameObj).GetComponent<FillinMinigameManager>();
+        }
     }
 
     public void StartSequence()

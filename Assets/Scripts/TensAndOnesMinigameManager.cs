@@ -1,3 +1,4 @@
+using System.Collections;
 using Unity.VisualScripting;
 using UnityEngine;
 using static UnityEngine.Rendering.DebugUI;
@@ -19,6 +20,9 @@ public class TensAndOnesMinigameManager : MinigameManager
     private uint rounds = 7;
     private uint roundsPassed = 0;
 
+    private bool canRegisterBullet = true;
+    public bool CanRegisterBullet { get => canRegisterBullet; }
+
     private void Awake()
     {
         canvas = FindAnyObjectByType<TensAndOnesMinigameCanvas>();
@@ -36,17 +40,28 @@ public class TensAndOnesMinigameManager : MinigameManager
 
         if ((currentTensValue + currentOnesValue) == requiredValue)
         {
-            roundsPassed++;
+            FeedbackCanvas.Instance.ShowCorrect();
+            StartCoroutine(GoToNextRound());
+        }
+    }
 
-            if (roundsPassed < rounds)
-            {
-                // do it again
-                InitializeMinigame();
-            }
-            else
-            {
-                EndMinigame();
-            }
+    IEnumerator GoToNextRound()
+    {
+        roundsPassed++;
+        canRegisterBullet = false;
+
+        yield return new WaitForSeconds(1f);
+
+        canRegisterBullet = true;
+
+        if (roundsPassed < rounds)
+        {
+            // do it again
+            InitializeMinigame();
+        }
+        else
+        {
+            EndMinigame();
         }
     }
 
