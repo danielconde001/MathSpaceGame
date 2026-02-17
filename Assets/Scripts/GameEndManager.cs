@@ -8,6 +8,26 @@ public class GameEndManager : MonoBehaviour
     public int testScore = 100;
     public float countdownSeconds = 5f;
 
+    private static GameEndManager instance;
+    public static GameEndManager Instance
+    {
+
+        get
+        {
+            if (instance == null)
+            {
+                GameObject newGameObject = new GameObject("GameEndManager");
+                instance = newGameObject.AddComponent<GameEndManager>();
+            }
+            return instance;
+        }
+    }
+
+    private void Awake()
+    {
+        instance = this;
+    }
+
     private void Start()
     {
         StartCoroutine(EndGameCountdown(testScore, countdownSeconds));

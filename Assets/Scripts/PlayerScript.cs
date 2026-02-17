@@ -16,6 +16,7 @@ public class PlayerScript : MonoBehaviour
     private bool isInvulnerable = false;
     private uint playerLevel = 1;
     private uint maxLevel = 4;
+    private uint playerDeaths = 0;
 
     public SpaceshipAttack GetAttackScript() { return attack; }
     public SpaceshipMovement GetMovementScript() { return movement; }
@@ -34,6 +35,11 @@ public class PlayerScript : MonoBehaviour
     public uint PlayerLevel 
     { 
         get => playerLevel; 
+    }
+    public uint PlayerDeaths
+    {
+        get => playerDeaths;
+        set => playerDeaths = value;
     }
 
     private void Awake()

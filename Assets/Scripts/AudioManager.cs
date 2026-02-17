@@ -94,7 +94,10 @@ public class AudioManager : MonoBehaviour
         if (spaceshipAmbienceSFX != null)
         {
             PlayerManager.Instance.GetPlayer().
-                SpaceshipAmbienceAudioSource.PlayOneShot(spaceshipAmbienceSFX);
+                SpaceshipAmbienceAudioSource.clip = spaceshipAmbienceSFX;
+
+            PlayerManager.Instance.GetPlayer().
+                SpaceshipAmbienceAudioSource.Play();
         }
     }
 

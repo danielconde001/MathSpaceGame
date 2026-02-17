@@ -25,6 +25,8 @@ public class PlayerKillable : Killable
 
         player.PlayerMesh.enabled = false;
 
+        player.PlayerDeaths += 1;
+
         // explode player
 
         AudioManager.Instance.PlayPlayerDeathSFX();

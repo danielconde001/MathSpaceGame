@@ -23,6 +23,8 @@ public class DebugTimeElapsed : MonoBehaviour
     private void Awake()
     {
         instance = this;
+
+        DontDestroyOnLoad(gameObject);
     }
 
     void Update()
@@ -57,7 +59,7 @@ public class DebugTimeElapsed : MonoBehaviour
 
     public void showTotalTimeElapsed()
     {
-        Debug.LogWarning(totalTimeElapsed);
+        Debug.Log(totalTimeElapsed);
     }
 
     private void OnTriggerEnter(Collider other)
