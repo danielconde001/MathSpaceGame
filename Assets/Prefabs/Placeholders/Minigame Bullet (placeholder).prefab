@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1725747258048677745}
   - component: {fileID: 2916994839197049220}
   - component: {fileID: -6240810892892311158}
+  - component: {fileID: 4352589356343480393}
   m_Layer: 6
   m_Name: Minigame Bullet (placeholder)
   m_TagString: Untagged
@@ -126,4 +127,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ProjectileBehaviour
   moveDir: {x: 0, y: 0, z: 0}
   projectileSpeed: 48
-  selfDestoryTimer: 1.8
+  useDebug: 0
+--- !u!114 &4352589356343480393
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2101230761300977175}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3acd0c8c6967e4c4db87a87ad7bf01f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SpawnVFXOnDeath
+  VisualEffect: {fileID: 6982263153641847612, guid: b671051e63e5d4d48bdc59c9a867255e,
+    type: 3}
+  offset: {x: 0, y: 0, z: 0}
+  offsetTowardsCamera: 3
+  scaleMultiplier: 1

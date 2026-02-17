@@ -8,7 +8,12 @@ public class EnemyProjectileBehaviour : ProjectileBehaviour
     {
         PlayerDamageable hit;
         if (other.gameObject.TryGetComponent(out hit))
-        {   
+        {
+            if (SpawnVFXOnDeath != null)
+            {
+                SpawnVFXOnDeath.SpawnVFX();
+            }
+
             hit.TakeDamageWithInvul(damage);
         }
 

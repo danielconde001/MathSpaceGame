@@ -10,7 +10,6 @@ public class HealthBar : MonoBehaviour
     [SerializeField] private TMPro.TextMeshProUGUI healthText;
     [SerializeField] private Vector3 offset = new Vector3(0, 2f, 0);
     [SerializeField] private bool faceCamera = true;
-    [SerializeField] private bool belongsToPlayer = false;
 
     private Camera mainCamera;
 

@@ -131,12 +131,12 @@ GameObject:
   - component: {fileID: 3486117988231100224}
   - component: {fileID: 8659101582255052140}
   - component: {fileID: 3621486597614997871}
+  - component: {fileID: 3807635552220221503}
   - component: {fileID: 7034097960053531366}
   - component: {fileID: 8330759345114548992}
   - component: {fileID: 7118422116266386654}
   - component: {fileID: 9147849615278349763}
   - component: {fileID: -245378134889491287}
-  - component: {fileID: 3807635552220221503}
   m_Layer: 7
   m_Name: Stationary Enemy (placeholder)
   m_TagString: Enemy
@@ -212,78 +212,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &7034097960053531366
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8104590451157559281}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6479aab3562bfb84ca2f35309830ae5e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Health
-  value: 500
---- !u!114 &8330759345114548992
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8104590451157559281}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cd165a46da58011468b79405705f4adf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Damageable
---- !u!114 &7118422116266386654
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8104590451157559281}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dbbeb77206e772d499bedf6bcefb2743, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::EnemyKillable
-  scorePopupPrefab: {fileID: 0}
---- !u!114 &9147849615278349763
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8104590451157559281}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 97d7cd3409497524d9e8af4e11510f77, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::StationaryEnemyAI
-  rotationSpeed: 20
-  moveSpeed: 20
-  damage: 25
-  respectiveSpot: {fileID: 0}
-  minFireRate: 1
-  maxFireRate: 1.5
-  projectilePrefab: {fileID: 6120972467117282982, guid: c68872cde2d38644a9d98b5d1b650906,
-    type: 3}
-  bulletSpawn: {fileID: 3392212738367453082}
---- !u!114 &-245378134889491287
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8104590451157559281}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3acd0c8c6967e4c4db87a87ad7bf01f9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::SpawnVFXOnDeath
-  VisualEffect: {fileID: 0}
 --- !u!82 &3807635552220221503
 AudioSource:
   m_ObjectHideFlags: 0
@@ -381,6 +309,82 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &7034097960053531366
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8104590451157559281}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6479aab3562bfb84ca2f35309830ae5e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Health
+  value: 500
+--- !u!114 &8330759345114548992
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8104590451157559281}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd165a46da58011468b79405705f4adf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Damageable
+--- !u!114 &7118422116266386654
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8104590451157559281}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbbeb77206e772d499bedf6bcefb2743, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyKillable
+  scorePopupPrefab: {fileID: 0}
+--- !u!114 &9147849615278349763
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8104590451157559281}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97d7cd3409497524d9e8af4e11510f77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::StationaryEnemyAI
+  rotationSpeed: 20
+  moveSpeed: 20
+  damage: 25
+  respectiveSpot: {fileID: 0}
+  minFireRate: 1
+  maxFireRate: 1.5
+  projectilePrefab: {fileID: 6120972467117282982, guid: c68872cde2d38644a9d98b5d1b650906,
+    type: 3}
+  bulletSpawn: {fileID: 3392212738367453082}
+--- !u!114 &-245378134889491287
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8104590451157559281}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3acd0c8c6967e4c4db87a87ad7bf01f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SpawnVFXOnDeath
+  VisualEffect: {fileID: 8038344524183138613, guid: e06070ba9536dd5439cd1b51ca7769cb,
+    type: 3}
+  offset: {x: 0, y: 0, z: 0}
+  offsetTowardsCamera: 3
+  scaleMultiplier: 8
 --- !u!1001 &8757463604770022797
 PrefabInstance:
   m_ObjectHideFlags: 0

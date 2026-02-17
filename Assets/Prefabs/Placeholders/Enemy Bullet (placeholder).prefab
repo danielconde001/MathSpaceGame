@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 1725747258048677745}
   - component: {fileID: 2916994839197049220}
   - component: {fileID: 6120972467117282982}
+  - component: {fileID: -7223510671294909204}
+  - component: {fileID: 4109324082937303225}
   m_Layer: 6
   m_Name: Enemy Bullet (placeholder)
   m_TagString: Untagged
@@ -126,5 +128,35 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemyProjectileBehaviour
   moveDir: {x: 0, y: 0, z: 0}
   projectileSpeed: 12
-  selfDestoryTimer: 5
+  useDebug: 0
   damage: 20
+--- !u!114 &-7223510671294909204
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2101230761300977175}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3acd0c8c6967e4c4db87a87ad7bf01f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SpawnVFXOnDeath
+  VisualEffect: {fileID: 6982263153641847612, guid: b671051e63e5d4d48bdc59c9a867255e,
+    type: 3}
+  offset: {x: 0, y: 0, z: 0}
+  offsetTowardsCamera: 3
+  scaleMultiplier: 1.1
+--- !u!114 &4109324082937303225
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2101230761300977175}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd7cd8484f94fa34dad19826b3afd5fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SelfDestroy
+  destroyTimer: 2.5

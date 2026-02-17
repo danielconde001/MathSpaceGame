@@ -4,12 +4,13 @@ public class ProjectileBehaviour : MonoBehaviour
 {
     public Vector3 moveDir;
     public float projectileSpeed;
-    [SerializeField] protected float selfDestoryTimer = 5f;
     [SerializeField] protected bool useDebug = false;
 
-    protected void Start()
+    protected SpawnVFXOnDeath SpawnVFXOnDeath;
+    
+    protected void Awake()
     {
-        Destroy(gameObject, selfDestoryTimer);
+        SpawnVFXOnDeath = GetComponent<SpawnVFXOnDeath>();
     }
 
     protected void Update()
@@ -63,6 +64,11 @@ public class ProjectileBehaviour : MonoBehaviour
         }
 
         AudioManager.Instance.PlayHitSFX(transform.position);
+
+        if (SpawnVFXOnDeath != null)
+        {
+            SpawnVFXOnDeath.SpawnVFX();
+        }
 
         Destroy(gameObject);
     }

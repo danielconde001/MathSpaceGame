@@ -84,13 +84,20 @@ public class TensAndOnesMinigameManager : MinigameManager
 
     public override void EndMinigame()
     {
-        base.EndMinigame();
+        StartCoroutine(EndMinigameCoroutine());
+    }
 
+    IEnumerator EndMinigameCoroutine()
+    {
         LevelManager.Instance.LevelState = 0;
 
         tens.Kill();
         ones.Kill();
 
         canvas?.HideScreen();
+
+        yield return new WaitForSeconds(1f);
+
+        base.EndMinigame();
     }
 }

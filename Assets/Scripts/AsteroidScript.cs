@@ -56,6 +56,8 @@ public class AsteroidScript : MonoBehaviour
             SpawnVFXOnDeath.SpawnVFX();
         }
 
+        AudioManager.Instance.PlayEnemyDeathSFX();
+
         gameObject.SetActive(false);
     }
 }

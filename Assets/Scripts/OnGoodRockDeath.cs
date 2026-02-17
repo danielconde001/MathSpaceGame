@@ -31,7 +31,7 @@ public class OnGoodRockDeath : MonoBehaviour
 
         if (SpawnVFXOnDeath != null)
         {
-            SpawnVFXOnDeath.SpawnVFX();
+            SpawnVFXOnDeath.SpawnVFX(transform.parent);
         }
     }
 }

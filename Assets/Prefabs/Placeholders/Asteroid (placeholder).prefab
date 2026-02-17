@@ -308,7 +308,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3acd0c8c6967e4c4db87a87ad7bf01f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SpawnVFXOnDeath
-  VisualEffect: {fileID: 0}
+  VisualEffect: {fileID: 6192724089161036641, guid: 912e8428389637e41a09831d75ed6612,
+    type: 3}
+  offset: {x: 0, y: 9, z: 0}
+  offsetTowardsCamera: 0
+  scaleMultiplier: 5
 --- !u!1 &5493656568835306408
 GameObject:
   m_ObjectHideFlags: 0
