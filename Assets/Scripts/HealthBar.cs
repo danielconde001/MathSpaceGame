@@ -7,6 +7,7 @@ public class HealthBar : MonoBehaviour
     [SerializeField] private Image backgroundImage;
     [SerializeField] private Image fillImage;
     [SerializeField] private float maxHealth = 100f;
+    [SerializeField] private TMPro.TextMeshProUGUI healthText;
     [SerializeField] private Vector3 offset = new Vector3(0, 2f, 0);
     [SerializeField] private bool faceCamera = true;
     [SerializeField] private bool belongsToPlayer = false;
@@ -33,6 +34,8 @@ public class HealthBar : MonoBehaviour
         }
 
         maxHealth = health.value;
+        if (belongsToPlayer)
+            UpdateHealthText();
     }
 
     private void Update()
@@ -52,6 +55,8 @@ public class HealthBar : MonoBehaviour
         if (health != null && fillImage != null)
         {
             UpdateHealthBar();
+            if (belongsToPlayer)
+                UpdateHealthText();
         }
 
         // Make health bar face the camera
@@ -67,6 +72,14 @@ public class HealthBar : MonoBehaviour
         fillImage.fillAmount = Mathf.Clamp01(fillAmount);
     }
 
+    private void UpdateHealthText()
+    {
+        if (healthText != null && health != null)
+        {
+            healthText.text = $"{Mathf.CeilToInt(health.value)}/{Mathf.CeilToInt(maxHealth)}";
+        }
+    }
+
     public void SetHealth(Health newHealth)
     {
         health = newHealth;
@@ -74,6 +87,8 @@ public class HealthBar : MonoBehaviour
         {
             maxHealth = health.value;
             UpdateHealthBar();
+            if (belongsToPlayer)
+                UpdateHealthText();
         }
     }
 }
