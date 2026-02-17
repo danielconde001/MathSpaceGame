@@ -97,6 +97,8 @@ public class PowerUpManager : MonoBehaviour
 
         PauseManager.Instance.IsPaused = true;
 
+        AudioManager.Instance.PlayLevelUpSFX();
+
         rectTransform.DOLocalMoveY(820, 0f, true);
         rectTransform.DOLocalMoveY(0, .7f);
     }
@@ -122,21 +124,25 @@ public class PowerUpManager : MonoBehaviour
                 RecieveHealthBoost();
                 PlayerManager.Instance.GetPlayer().LevelUpPlayer();
                 ScoreManager.Instance.UpdateScoreUI();
+                AudioManager.Instance.PlayReceivePowerUpSFX();
                 break;
             case 2:
                 RecieveDoubleBullets();
                 PlayerManager.Instance.GetPlayer().LevelUpPlayer();
                 ScoreManager.Instance.UpdateScoreUI();
+                AudioManager.Instance.PlayReceivePowerUpSFX();
                 break;
             case 4:
                 RecieveFasterFireRate();
                 PlayerManager.Instance.GetPlayer().LevelUpPlayer();
                 ScoreManager.Instance.UpdateScoreUI();
+                AudioManager.Instance.PlayReceivePowerUpSFX();
                 break;
             case 8:
                 RecieveHealPerHit();
                 PlayerManager.Instance.GetPlayer().LevelUpPlayer();
                 ScoreManager.Instance.UpdateScoreUI();
+                AudioManager.Instance.PlayReceivePowerUpSFX();
                 break;
             default:
                 Debug.LogWarning("No power up for that index exists.");

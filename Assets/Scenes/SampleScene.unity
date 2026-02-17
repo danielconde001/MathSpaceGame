@@ -1203,15 +1203,15 @@ RectTransform:
   m_GameObject: {fileID: 505287757}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 4.16235, y: 5, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 400168801}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 733, y: -484}
-  m_SizeDelta: {x: 100, y: 15}
+  m_AnchoredPosition: {x: 750, y: -485}
+  m_SizeDelta: {x: 400, y: 90}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &505287759
 MonoBehaviour:
@@ -1341,7 +1341,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 1
+      value: 0
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -4373,6 +4373,8 @@ MonoBehaviour:
   - {fileID: 8300000, guid: e5ed7773b83848845b2de157b72c9b59, type: 3}
   - {fileID: 8300000, guid: 216f76966887d0748be4fc67de2d46bf, type: 3}
   - {fileID: 8300000, guid: 18321eedc51532944b398029c36f49b8, type: 3}
+  levelUpSFX: {fileID: 8300000, guid: d016593b6e9c7b4408ec9f9239d1f764, type: 3}
+  recievePowerupSFX: {fileID: 8300000, guid: e97f7ca772d457c46b2ab14a889b3aa4, type: 3}
 --- !u!114 &1808237660 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 658148167345235933, guid: 68d81cd37b97e26429898a65e6c113ff,
@@ -4928,7 +4930,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 5972140380756631857, guid: e3e03ffd6f78164428b893f4ac5c2a03,
+  m_Sprite: {fileID: 5972140380756631857, guid: 2a42ec011f6827f4ea9aafd2e5185482,
     type: 3}
   m_Type: 3
   m_PreserveAspect: 0
@@ -4956,15 +4958,15 @@ RectTransform:
   m_GameObject: {fileID: 2067104567}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 4.16235, y: 5, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 400168801}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 733, y: -484}
-  m_SizeDelta: {x: 100, y: 15}
+  m_AnchoredPosition: {x: 750, y: -485}
+  m_SizeDelta: {x: 400, y: 90}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &2082116621
 GameObject:

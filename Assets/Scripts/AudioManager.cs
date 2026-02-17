@@ -9,6 +9,9 @@ public class AudioManager : MonoBehaviour
     [SerializeField] AudioClip inGameBgm;
     [SerializeField] AudioClip[] shootSFX;
 
+    [SerializeField] AudioClip levelUpSFX;
+    [SerializeField] AudioClip recievePowerupSFX;
+
     private static AudioManager instance;
     public static AudioManager Instance
     {
@@ -35,6 +38,22 @@ public class AudioManager : MonoBehaviour
         if (sfxSource == null)
         {
             sfxSource = transform.Find("SFX").GetComponent<AudioSource>();
+        }
+    }
+
+    public void PlayLevelUpSFX()
+    {
+        if (levelUpSFX != null)
+        {
+            sfxSource.PlayOneShot(levelUpSFX);
+        }
+    }
+
+    public void PlayReceivePowerUpSFX()
+    {
+        if (recievePowerupSFX != null)
+        {
+            sfxSource.PlayOneShot(recievePowerupSFX);
         }
     }
 
