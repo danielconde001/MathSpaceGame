@@ -422,7 +422,7 @@ PrefabInstance:
     - target: {fileID: 462279936690338500, guid: f82b170ea723f6c468a3f9522864a635,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 7
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 462279936690338500, guid: f82b170ea723f6c468a3f9522864a635,
         type: 3}
@@ -469,11 +469,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Asteroid (placeholder)
       objectReference: {fileID: 0}
-    - target: {fileID: 8300754002096137289, guid: f82b170ea723f6c468a3f9522864a635,
-        type: 3}
-      propertyPath: isTens
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -513,7 +508,7 @@ PrefabInstance:
     - target: {fileID: 462279936690338500, guid: f82b170ea723f6c468a3f9522864a635,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 7
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 462279936690338500, guid: f82b170ea723f6c468a3f9522864a635,
         type: 3}

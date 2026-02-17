@@ -20,7 +20,7 @@ public class TensAndOnesMinigameManager : MinigameManager
     private uint rounds = 7;
     private uint roundsPassed = 0;
 
-    private bool canRegisterBullet = true;
+    private bool canRegisterBullet = false;
     public bool CanRegisterBullet { get => canRegisterBullet; }
 
     private void Awake()
@@ -70,6 +70,8 @@ public class TensAndOnesMinigameManager : MinigameManager
         base.InitializeMinigame(p_numberOfRounds);
 
         LevelManager.Instance.LevelState = StateID;
+
+        canRegisterBullet = true;
 
         rounds = p_numberOfRounds;
 

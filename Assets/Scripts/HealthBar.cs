@@ -23,7 +23,7 @@ public class HealthBar : MonoBehaviour
     {
         if (health == null)
         {
-            if (belongsToPlayer == true)
+            if (PlayerManager.Instance.GetPlayer().PlayerHealthBar == this)
             {
                 health = PlayerManager.Instance.GetPlayer().Health;
             }
@@ -34,13 +34,20 @@ public class HealthBar : MonoBehaviour
         }
 
         maxHealth = health.value;
-        if (belongsToPlayer)
+
+        if (PlayerManager.Instance.GetPlayer().PlayerHealthBar == this)
             UpdateHealthText();
     }
 
     private void Update()
     {
-        if (health.value >= maxHealth && belongsToPlayer == false)
+        if (PlayerManager.Instance.GetPlayer().PlayerHealthBar == this)
+        {
+            maxHealth = PlayerManager.Instance.GetPlayer().GetMaxHealth();
+        }
+
+        if (health.value >= maxHealth &&
+            PlayerManager.Instance.GetPlayer().PlayerHealthBar != this)
         {
             fillImage.enabled = false;
             backgroundImage.enabled = false;
@@ -55,7 +62,7 @@ public class HealthBar : MonoBehaviour
         if (health != null && fillImage != null)
         {
             UpdateHealthBar();
-            if (belongsToPlayer)
+            if (PlayerManager.Instance.GetPlayer().PlayerHealthBar == this)
                 UpdateHealthText();
         }
 
@@ -87,7 +94,7 @@ public class HealthBar : MonoBehaviour
         {
             maxHealth = health.value;
             UpdateHealthBar();
-            if (belongsToPlayer)
+            if (PlayerManager.Instance.GetPlayer().PlayerHealthBar == this)
                 UpdateHealthText();
         }
     }

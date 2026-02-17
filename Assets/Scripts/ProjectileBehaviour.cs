@@ -27,7 +27,7 @@ public class ProjectileBehaviour : MonoBehaviour
         Damageable hit;
         if (other.gameObject.TryGetComponent(out hit))
         {
-            if (hit.gameObject.CompareTag("Enemy"))
+            if (hit.gameObject.CompareTag("Enemy") || hit.gameObject.CompareTag("EnergyCrystal"))
             {
                 if (PowerUpManager.Instance.HasHealPerHit())
                 {

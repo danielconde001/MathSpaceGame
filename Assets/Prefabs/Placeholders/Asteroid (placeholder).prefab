@@ -148,9 +148,9 @@ GameObject:
   - component: {fileID: 462279936690338500}
   - component: {fileID: 5816171924037638897}
   - component: {fileID: 8694987623493777767}
-  - component: {fileID: 1842479821962036979}
   - component: {fileID: 8300754002096137289}
   - component: {fileID: 665555193902117350}
+  - component: {fileID: 7996951316544102912}
   - component: {fileID: 474679163459417740}
   m_Layer: 0
   m_Name: Asteroid (placeholder)
@@ -231,27 +231,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!135 &1842479821962036979
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5451000444789475148}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &8300754002096137289
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -266,7 +245,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::AsteroidScript
   ValueText: {fileID: 1003055792731693266}
   manager: {fileID: 0}
-  isTens: 0
+  isTens: 1
 --- !u!54 &665555193902117350
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -294,6 +273,29 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!136 &7996951316544102912
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5451000444789475148}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.81746435
+  m_Height: 2.3437655
+  m_Direction: 1
+  m_Center: {x: -0.000000029802322, y: 1.4540704, z: 0.000000059604645}
 --- !u!114 &474679163459417740
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -334,7 +336,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5493656568835306408}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0.589}
+  m_LocalPosition: {x: 0, y: 0, z: -0.98}
   m_LocalScale: {x: 0.125, y: 0.125, z: 0.125}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -344,7 +346,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 1.4}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &1640571303847443883

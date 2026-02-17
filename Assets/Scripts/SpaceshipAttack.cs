@@ -108,7 +108,8 @@ public class SpaceshipAttack : MonoBehaviour
         {
             if (hit.collider.TryGetComponent<AsteroidScript>(out asteroid))
             {
-                Vector3 projectileDir = (asteroid.transform.position - transform.position).normalized;
+                Vector3 projectileDir = 
+                    (asteroid.transform.position + (transform.up * 7) - transform.position).normalized;
 
                 AudioManager.Instance.PlayPlayerShootSFX();
 

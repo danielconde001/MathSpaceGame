@@ -10,6 +10,7 @@ public class PlayerScript : MonoBehaviour
     private SpaceshipMovement movement;
     private Collider playerCollider;
     private PlayerHealth health;
+    private HealthBar playerHealthBar;
     private PlayerDamageable damageable;
     private int maxHealth;
     private bool isInvulnerable = false;
@@ -20,6 +21,7 @@ public class PlayerScript : MonoBehaviour
     public SpaceshipMovement GetMovementScript() { return movement; }
     public Collider PlayerCollider { get => playerCollider; }
     public PlayerHealth Health { get => health; }
+    public HealthBar PlayerHealthBar { get => playerHealthBar; }
     public PlayerDamageable Damageable { get => damageable; }
     public AudioSource ShootAudioSource { get => shootAudioSource; }
     public AudioSource SpaceshipAmbienceAudioSource { get => spaceshipAmbienceAudioSource; }
@@ -42,20 +44,24 @@ public class PlayerScript : MonoBehaviour
         health = GetComponent<PlayerHealth>();
         maxHealth = Health.value;
         damageable = GetComponent<PlayerDamageable>();
+        playerHealthBar = GetPlayerHealthBar();
 
         if (shootAudioSource == null)
         {
-            shootAudioSource = transform.Find("ShootAudioSource").GetComponent<AudioSource>();
+            shootAudioSource 
+                = transform.Find("ShootAudioSource").GetComponent<AudioSource>();
         }
 
         if (spaceshipAmbienceAudioSource == null)
         {
-            spaceshipAmbienceAudioSource = transform.Find("SpaceshipAmbienceAudioSource").GetComponent<AudioSource>();
+            spaceshipAmbienceAudioSource 
+                = transform.Find("SpaceshipAmbienceAudioSource").GetComponent<AudioSource>();
         }
 
         if (playerMesh == null)
         {
-            playerMesh = transform.Find("MeshParent").GetChild(0).gameObject.GetComponent<MeshRenderer>();
+            playerMesh 
+                = transform.Find("MeshParent").GetChild(0).gameObject.GetComponent<MeshRenderer>();
         }
     }
 
@@ -103,5 +109,19 @@ public class PlayerScript : MonoBehaviour
         }
 
         playerLevel++;
+    }
+
+    private HealthBar GetPlayerHealthBar()
+    {
+        HealthBar healthBar = GameObject.Find("PlayerHealthCanvas")?.GetComponent<HealthBar>();
+        
+        if (healthBar == null)
+        {
+            GameObject playerHealthCanvas 
+                = Instantiate(Resources.Load<GameObject>("PlayerHealthCanvas"));
+            healthBar = playerHealthCanvas.GetComponent<HealthBar>(); 
+        }
+
+        return healthBar;
     }
 }

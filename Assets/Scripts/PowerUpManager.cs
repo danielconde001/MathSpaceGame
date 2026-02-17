@@ -160,6 +160,8 @@ public class PowerUpManager : MonoBehaviour
 
         if (useDebug) Debug.Log("Recieved Health Boost!");
         PlayerManager.Instance.GetPlayer().AddMaxHealth(healthBonus);
+        PlayerManager.Instance.GetPlayer().Health.value
+            = PlayerManager.Instance.GetPlayer().GetMaxHealth();
         powerUpsReceived += p_powerUp;
     }
     void RecieveDoubleBullets(int p_powerUp = 2)

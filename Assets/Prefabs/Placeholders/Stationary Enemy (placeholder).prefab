@@ -249,8 +249,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbbeb77206e772d499bedf6bcefb2743, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyKillable
-  scorePopupPrefab: {fileID: 5554752485786833717, guid: 4dea4b063998b504d9542259a0c01070,
-    type: 3}
+  scorePopupPrefab: {fileID: 0}
 --- !u!114 &9147849615278349763
 MonoBehaviour:
   m_ObjectHideFlags: 0
