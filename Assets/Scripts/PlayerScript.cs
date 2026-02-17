@@ -2,14 +2,15 @@ using UnityEngine;
 
 public class PlayerScript : MonoBehaviour
 {
-    [SerializeField] private GameObject playerMesh;
+    [SerializeField] private MeshRenderer playerMesh;
+    [SerializeField] private AudioSource shootAudioSource;
+    [SerializeField] private AudioSource spaceshipAmbienceAudioSource;
 
     private SpaceshipAttack attack;
     private SpaceshipMovement movement;
     private Collider playerCollider;
     private PlayerHealth health;
     private PlayerDamageable damageable;
-    private AudioSource audioSource;
     private int maxHealth;
     private bool isInvulnerable = false;
     private uint playerLevel = 1;
@@ -20,8 +21,9 @@ public class PlayerScript : MonoBehaviour
     public Collider PlayerCollider { get => playerCollider; }
     public PlayerHealth Health { get => health; }
     public PlayerDamageable Damageable { get => damageable; }
-    public AudioSource AudioSource { get => audioSource; }
-    public GameObject PlayerMesh { get => playerMesh; }
+    public AudioSource ShootAudioSource { get => shootAudioSource; }
+    public AudioSource SpaceshipAmbienceAudioSource { get => spaceshipAmbienceAudioSource; }
+    public MeshRenderer PlayerMesh { get => playerMesh; }
     public bool IsVulnerable 
     { 
         get => isInvulnerable; 
@@ -40,12 +42,26 @@ public class PlayerScript : MonoBehaviour
         health = GetComponent<PlayerHealth>();
         maxHealth = Health.value;
         damageable = GetComponent<PlayerDamageable>();
-        audioSource = GetComponent<AudioSource>();
+
+        if (shootAudioSource == null)
+        {
+            shootAudioSource = transform.Find("ShootAudioSource").GetComponent<AudioSource>();
+        }
+
+        if (spaceshipAmbienceAudioSource == null)
+        {
+            spaceshipAmbienceAudioSource = transform.Find("SpaceshipAmbienceAudioSource").GetComponent<AudioSource>();
+        }
 
         if (playerMesh == null)
         {
-            playerMesh = transform.GetChild(3).GetChild(0).gameObject;
+            playerMesh = transform.Find("MeshParent").GetChild(0).gameObject.GetComponent<MeshRenderer>();
         }
+    }
+
+    private void Start()
+    {
+        AudioManager.Instance.PlayShipAmbienceSFX();
     }
 
     public int GetDamage()
@@ -69,7 +85,7 @@ public class PlayerScript : MonoBehaviour
 
         // Spawn Revive VFX
 
-        PlayerMesh.SetActive(true);
+        PlayerMesh.enabled = true;
     }
 
     public void LevelUpPlayer()

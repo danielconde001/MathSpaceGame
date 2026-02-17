@@ -23,7 +23,7 @@ public class PlayerKillable : Killable
             SpawnVFXOnDeath.SpawnVFX();
         }
 
-        player.PlayerMesh.SetActive(false);
+        player.PlayerMesh.enabled = false;
 
         // explode player
 

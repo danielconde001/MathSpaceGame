@@ -11,11 +11,14 @@ public class PlayerDamageable : Damageable
 
     [SerializeField] bool useDebug = false;
 
+    CameraShake camShake;
+
     protected override void Awake()
     {
         base.Awake();
         player = GetComponent<PlayerScript>();
         killable = GetComponent<PlayerKillable>();
+        camShake = Camera.main.GetComponent<CameraShake>();
     }
 
     protected void Update()
@@ -40,10 +43,10 @@ public class PlayerDamageable : Damageable
 
         base.TakeDamage(p_damage);
 
-        // Shake Camera
+        camShake.TriggerShake();
     }
 
-    public virtual void TakeDamageWithInvul(int p_damage, float p_invulDuration = .5f)
+    public virtual void TakeDamageWithInvul(int p_damage, float p_invulDuration = 2f)
     {
         if (player.IsVulnerable == true)
         {
@@ -61,10 +64,15 @@ public class PlayerDamageable : Damageable
 
         invulTimer = p_duration;
 
-        yield return new WaitUntil
-            ( 
-                () => invulTimer <= 0 
-            );
+        while (invulTimer > 0)
+        {
+            player.PlayerMesh.enabled = true;
+            yield return new WaitForSeconds(0.1f);
+            player.PlayerMesh.enabled = false;
+            yield return new WaitForSeconds(0.1f);
+        }
+
+        player.PlayerMesh.enabled = true;
 
         player.IsVulnerable = false;
     }

@@ -11,6 +11,7 @@ public class AudioManager : MonoBehaviour
 
     [SerializeField] AudioClip levelUpSFX;
     [SerializeField] AudioClip recievePowerupSFX;
+    [SerializeField] AudioClip spaceshipAmbienceSFX;
 
     private static AudioManager instance;
     public static AudioManager Instance
@@ -62,7 +63,16 @@ public class AudioManager : MonoBehaviour
         if (shootSFX.Length > 0)
         {
             int rnd = Random.Range(0, shootSFX.Length);
-            PlayerManager.Instance.GetPlayer().AudioSource.PlayOneShot(shootSFX[rnd]);
+            PlayerManager.Instance.GetPlayer().ShootAudioSource.PlayOneShot(shootSFX[rnd]);
+        }
+    }
+
+    public void PlayShipAmbienceSFX()
+    {
+        if (spaceshipAmbienceSFX != null)
+        {
+            PlayerManager.Instance.GetPlayer().
+                SpaceshipAmbienceAudioSource.PlayOneShot(spaceshipAmbienceSFX);
         }
     }
 

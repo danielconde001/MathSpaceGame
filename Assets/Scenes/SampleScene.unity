@@ -566,8 +566,8 @@ GameObject:
   - component: {fileID: 330585545}
   - component: {fileID: 330585544}
   - component: {fileID: 330585547}
-  - component: {fileID: 330585548}
   - component: {fileID: 330585549}
+  - component: {fileID: 330585550}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -693,40 +693,6 @@ MonoBehaviour:
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
   m_Version: 2
---- !u!114 &330585548
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 330585543}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 72ece51f2901e7445ab60da3685d6b5f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Cinemachine::Cinemachine.CinemachineBrain
-  m_ShowDebugText: 0
-  m_ShowCameraFrustum: 1
-  m_IgnoreTimeScale: 0
-  m_WorldUpOverride: {fileID: 0}
-  m_UpdateMethod: 2
-  m_BlendUpdateMethod: 1
-  m_DefaultBlend:
-    m_Style: 1
-    m_Time: 2
-    m_CustomCurve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-  m_CustomBlends: {fileID: 0}
-  m_CameraCutEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_CameraActivatedEvent:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!45 &330585549
 Skybox:
   m_ObjectHideFlags: 0
@@ -736,6 +702,22 @@ Skybox:
   m_GameObject: {fileID: 330585543}
   m_Enabled: 1
   m_CustomSkybox: {fileID: 2100000, guid: 7ed994c1997814049b44c36a823bba6c, type: 2}
+--- !u!114 &330585550
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 330585543}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 461293bb8b6ccad48a09604cccf329d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CameraShake
+  shakeDuration: 0.4
+  shakeMagnitude: 2
+  dampingSpeed: 1
+  useDebug: 1
 --- !u!1 &353882035
 GameObject:
   m_ObjectHideFlags: 0
@@ -2774,7 +2756,7 @@ MonoBehaviour:
   milestones: 080000001b00000039000000
   healthBonus: 25
   upgradedFireRate: 0.12
-  useDebug: 1
+  useDebug: 0
 --- !u!114 &983795602
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4375,6 +4357,8 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 18321eedc51532944b398029c36f49b8, type: 3}
   levelUpSFX: {fileID: 8300000, guid: d016593b6e9c7b4408ec9f9239d1f764, type: 3}
   recievePowerupSFX: {fileID: 8300000, guid: e97f7ca772d457c46b2ab14a889b3aa4, type: 3}
+  spaceshipAmbienceSFX: {fileID: 8300000, guid: 5ac62aa8c850b324da80f37ced18ad34,
+    type: 3}
 --- !u!114 &1808237660 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 658148167345235933, guid: 68d81cd37b97e26429898a65e6c113ff,
@@ -5159,6 +5143,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5070784973057056840, guid: 68d81cd37b97e26429898a65e6c113ff,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6312545321522172544, guid: 68d81cd37b97e26429898a65e6c113ff,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
