@@ -1,15 +1,15 @@
 fileFormatVersion: 2
-guid: 6562a11bfac412b4c82e8b33545913d0
+guid: 5a1ee82bf1ef21943a2f6669ce81083b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -9129799642924554804
-    second: Space Game Textures 2_0
+      213: 6860239386024309976
+    second: Space Game Textures Vibrant 1_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
     mipMapMode: 0
-    enableMipMap: 1
+    enableMipMap: 0
     sRGBTexture: 1
     linearTexture: 0
     fadeOut: 0
@@ -24,7 +24,7 @@ TextureImporter:
     heightScale: 0.25
     normalMapFilter: 0
     flipGreenChannel: 0
-  isReadable: 1
+  isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
@@ -55,9 +55,9 @@ TextureImporter:
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
-  alphaIsTransparency: 0
+  alphaIsTransparency: 1
   spriteTessellationDetail: -1
-  textureType: 0
+  textureType: 8
   textureShape: 1
   singleChannelComponent: 0
   flipbookRows: 1
@@ -139,7 +139,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Space Game Textures 2_0
+      name: Space Game Textures Vibrant 1_0
       rect:
         serializedVersion: 2
         x: 0
@@ -154,8 +154,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: cc56ef4b89f6c4180800000000000000
-      internalID: -9129799642924554804
+      spriteID: 8d47f1edf57743f50800000000000000
+      internalID: 6860239386024309976
       vertices: []
       indices: 
       edges: []
@@ -174,7 +174,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Space Game Textures 2_0: -9129799642924554804
+      Space Game Textures Vibrant 1_0: 6860239386024309976
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
