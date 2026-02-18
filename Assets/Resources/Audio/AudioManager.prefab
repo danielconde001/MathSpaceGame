@@ -44,7 +44,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: 20956e48faed9774c9385b2c09dcb8d4, type: 3}
-  m_PlayOnAwake: 0
+  m_PlayOnAwake: 1
   m_Volume: 0.6
   m_Pitch: 1
   Loop: 1
@@ -314,6 +314,9 @@ MonoBehaviour:
   - {fileID: 8300000, guid: e5ed7773b83848845b2de157b72c9b59, type: 3}
   - {fileID: 8300000, guid: 216f76966887d0748be4fc67de2d46bf, type: 3}
   - {fileID: 8300000, guid: 18321eedc51532944b398029c36f49b8, type: 3}
+  dDmgShootSFX:
+  - {fileID: 8300000, guid: 176037303ae536544a20b10266a5d455, type: 3}
+  - {fileID: 8300000, guid: 31805e46a18c59748a196b339752b1a4, type: 3}
   enemyShootSFX: {fileID: 8300000, guid: 9390a242ba5336941b805e4a1c414952, type: 3}
   enemyAlarmSFX: {fileID: 8300000, guid: 058a8bc5fa370cf45b0fb7c0f6da017e, type: 3}
   enemyFlyInSFX: {fileID: 8300000, guid: ab1f1555a4766354c86d461b5af7b82c, type: 3}

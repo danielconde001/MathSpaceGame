@@ -10,6 +10,7 @@ public class AudioManager : MonoBehaviour
     [SerializeField] AudioClip inGameBgm;
 
     [SerializeField] AudioClip[] playerShootSFX;
+    [SerializeField] AudioClip[] dDmgShootSFX;
     [SerializeField] AudioClip enemyShootSFX;
     [SerializeField] AudioClip enemyAlarmSFX;
     [SerializeField] AudioClip enemyFlyInSFX;
@@ -81,6 +82,15 @@ public class AudioManager : MonoBehaviour
         {
             int rnd = Random.Range(0, playerShootSFX.Length);
             PlayerManager.Instance.GetPlayer().ShootAudioSource.PlayOneShot(playerShootSFX[rnd]);
+        }
+    }
+
+    public void PlayPlayerDDShootSFX()
+    {
+        if (dDmgShootSFX.Length > 0)
+        {
+            int rnd = Random.Range(0, dDmgShootSFX.Length);
+            PlayerManager.Instance.GetPlayer().ShootAudioSource.PlayOneShot(dDmgShootSFX[rnd]);
         }
     }
 

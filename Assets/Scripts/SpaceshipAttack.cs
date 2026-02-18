@@ -88,17 +88,19 @@ public class SpaceshipAttack : MonoBehaviour
             aimPoint = ray.GetPoint(range);
         }
 
-        AudioManager.Instance.PlayPlayerShootSFX();
+        
 
         Vector3 projectileDir = (aimPoint - bulletSpawn.position).normalized;
         ProjectileBehaviour projectile;
 
         if (PowerUpManager.Instance.HasDoubleBullets())
         {
+            AudioManager.Instance.PlayPlayerDDShootSFX();
             projectile = Instantiate(blueProjectilePrefab, bulletSpawn.position, Quaternion.identity);
         }
         else
         {
+            AudioManager.Instance.PlayPlayerShootSFX();
             projectile = Instantiate(projectilePrefab, bulletSpawn.position, Quaternion.identity);
         }
         projectile.moveDir = projectileDir;
