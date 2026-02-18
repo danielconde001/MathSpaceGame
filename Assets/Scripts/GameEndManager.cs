@@ -54,7 +54,7 @@ public class GameEndManager : MonoBehaviour
         if (!gameEnded)
         {
             gameEnded = true;
-            Debug.Log($"[GameEndManager] Setting PlayerScore: {playerScore}");
+            //Debug.Log($"[GameEndManager] Setting PlayerScore: {playerScore}");
             PlayerPrefs.SetInt("PlayerScore", playerScore);
             SceneManager.LoadScene("EndScreen");
         }

@@ -18,7 +18,7 @@ public class EndScreenManager : MonoBehaviour
     private void Start()
     {
         int score = PlayerPrefs.GetInt("PlayerScore", 0);
-        Debug.Log($"[EndScreenManager] Loaded PlayerScore: {score}");
+        //Debug.Log($"[EndScreenManager] Loaded PlayerScore: {score}");
         SetNewtonText(score);
         SetNewtonImage(score);
         HomeButton.onClick.AddListener(OnHomeButtonPressed);
