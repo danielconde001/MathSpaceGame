@@ -59,6 +59,11 @@ public class LevelManager : MonoBehaviour
         remainingCollectSections = collectSectionPrefabs;
     }
 
+    private void Start()
+    {
+        ScoreManager.Instance.Reset();
+    }
+
     public void SpawnNextSection(float p_offset = 0f)
     {
         Vector3 nextSectionPosition = (transform.forward * p_offset);

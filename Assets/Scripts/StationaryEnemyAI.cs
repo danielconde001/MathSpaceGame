@@ -46,7 +46,12 @@ public class StationaryEnemyAI : MonoBehaviour
         else if (isNowInSpot == true)
         {
             LookAtTarget(target.position);
-            cooldown -= Time.deltaTime;
+
+            if (PauseManager.Instance.IsPaused == false)
+            {
+                cooldown -= Time.deltaTime;
+            }
+
             if (cooldown <= 0)
             {
                 Shoot();

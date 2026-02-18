@@ -31,6 +31,12 @@ public class ScoreManager : MonoBehaviour
         UpdateScoreUI();
     }
 
+    public void Reset()
+    {
+        CurrentScore = 0;
+        UpdateScoreUI();
+    }
+
     public void AddScore(int value)
     {
         CurrentScore += value;
