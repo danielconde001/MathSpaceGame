@@ -8,13 +8,21 @@ using TMPro;
 
 public class LoadingScreenController : MonoBehaviour
 {
-    public string gameSceneName = "SampleScene";
     public float minLoadingTime = 1f; // Minimum time to show loading screen
     public Image loadingBarImage;
     public float maxWidth = 1920f; // Max width when fully loaded
     public TextMeshProUGUI topicText;
 
     private RectTransform barRect;
+    private string gameSceneName = "Level 1";
+
+    // Mapping topics to scene names
+    private readonly System.Collections.Generic.Dictionary<string, string> topicToScene = new System.Collections.Generic.Dictionary<string, string>()
+    {
+        {"Counting up to 100", "Level 1"},
+        {"Number Patterns", "Level 2"},
+        {"Comparing and Ordering Numbers", "Level 3"}
+    };
 
     void Start()
     {
@@ -23,11 +31,21 @@ public class LoadingScreenController : MonoBehaviour
             barRect = loadingBarImage.rectTransform;
             SetBarWidth(0);
         }
-        // Set the topic text if assigned
+        // Set the topic text if assigned and determine scene
+        string topic = PlayerPrefs.GetString("SelectedTopic", "");
         if (topicText != null)
         {
-            string topic = PlayerPrefs.GetString("SelectedTopic", "");
             topicText.text = string.IsNullOrEmpty(topic) ? "" : topic;
+        }
+        // Map topic to scene name, fallback to Level 1 if not found
+        if (!string.IsNullOrEmpty(topic) && topicToScene.ContainsKey(topic))
+        {
+            gameSceneName = topicToScene[topic];
+        }
+        else
+        {
+            Debug.LogWarning($"SelectedTopic '{topic}' not found in topicToScene mapping. Defaulting to 'Level 1'.");
+            gameSceneName = "Level 1";
         }
         StartCoroutine(LoadGameSceneAsync());
     }
@@ -62,6 +80,9 @@ public class LoadingScreenController : MonoBehaviour
 
     void SetBarWidth(float width)
     {
-        barRect.sizeDelta = new Vector2(width, barRect.sizeDelta.y);
+        if (barRect != null)
+        {
+            barRect.sizeDelta = new Vector2(width, barRect.sizeDelta.y);
+        }
     }
 }
