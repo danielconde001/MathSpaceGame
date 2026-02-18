@@ -301,16 +301,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LevelManager
   collectSectionPrefabs:
-  - {fileID: 9115993325438427119, guid: f3d260966e352cc47ac3c7e14b474097, type: 3}
-  - {fileID: 9115993325438427119, guid: adb7eaeb1742be047a6047630e0e9142, type: 3}
-  - {fileID: 9115993325438427119, guid: 135d34da301703841885077356685c2c, type: 3}
+  - {fileID: 9115993325438427119, guid: e6a61301a9a70fd4b98023fef2ced134, type: 3}
+  - {fileID: 9115993325438427119, guid: 2bea52e816452104194bbba43d7edc76, type: 3}
+  - {fileID: 9115993325438427119, guid: 22cef7c13fd92cb4da8c260eeeb60c9f, type: 3}
   combatSectionPrefabs:
-  - {fileID: 3390868856297774706, guid: 51a1370fb9d660f46b462f05dd4e5b13, type: 3}
-  - {fileID: 3390868856297774706, guid: 51a1370fb9d660f46b462f05dd4e5b13, type: 3}
-  - {fileID: 3390868856297774706, guid: 51a1370fb9d660f46b462f05dd4e5b13, type: 3}
+  - {fileID: 3390868856297774706, guid: b452b846af2b796478914d9976d6d307, type: 3}
+  - {fileID: 3390868856297774706, guid: 0903c319881ce2c468a850f64cda4fa3, type: 3}
+  - {fileID: 3390868856297774706, guid: 5a936399171a5b84eb1e52547bdfbefc, type: 3}
   minigameSectionPrefab: {fileID: 5973466272069096603, guid: 47fdbc0136a4cb149aa956bc86424827,
     type: 3}
-  endSectionPrefab: {fileID: 5973466272069096603, guid: 3222eb6f619e3304eb876fd4998d1559,
+  endSectionPrefab: {fileID: 5973466272069096603, guid: 338b4abd20d9b0644a6ab642d154eb7c,
     type: 3}
 --- !u!1 &145524154
 GameObject:
@@ -3077,7 +3077,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1654756627
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3625,7 +3625,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c857612c32f0b3b4e99534eb40b76dff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BGMSignal
-  bgm: {fileID: 8300000, guid: 20956e48faed9774c9385b2c09dcb8d4, type: 3}
+  bgm: {fileID: 8300000, guid: 296ee441bff01bf42bf201b40f94f0eb, type: 3}
 --- !u!4 &1887396539
 Transform:
   m_ObjectHideFlags: 0
@@ -4219,6 +4219,9 @@ SceneRoots:
   - {fileID: 1117223658}
   - {fileID: 6902900190730827621}
   - {fileID: 1558229270}
+  - {fileID: 145524159}
+  - {fileID: 1654756630}
+  - {fileID: 1946689913}
   - {fileID: 1639843633}
   - {fileID: 1866395981}
   - {fileID: 860806269}
@@ -4227,7 +4230,4 @@ SceneRoots:
   - {fileID: 330585546}
   - {fileID: 608802238}
   - {fileID: 1664961750}
-  - {fileID: 145524159}
-  - {fileID: 1946689913}
-  - {fileID: 1654756630}
   - {fileID: 1785316734}

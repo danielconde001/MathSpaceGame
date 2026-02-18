@@ -60,7 +60,7 @@ GameObject:
   - component: {fileID: 9090531982447058927}
   - component: {fileID: 3390868856297774706}
   m_Layer: 0
-  m_Name: Level Section with Combat Theme 2
+  m_Name: Level Section with Combat 1 Theme 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -177,7 +177,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1018295477f659a468eaa9449eb206b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CombatEventTrigger
-  CombatEventID: 0
+  CombatEventID: 3
 --- !u!1 &4482484896186819677
 GameObject:
   m_ObjectHideFlags: 0
@@ -801,6 +801,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Rock Arc 2 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 674953126160927719, guid: 42094ecb54fe86644ab9044dd045a7a7,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7917609454190437098, guid: 42094ecb54fe86644ab9044dd045a7a7,
         type: 3}
