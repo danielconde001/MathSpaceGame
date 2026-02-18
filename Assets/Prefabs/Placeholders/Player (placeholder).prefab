@@ -421,6 +421,8 @@ MonoBehaviour:
   range: 100
   projectilePrefab: {fileID: -6240810892892311158, guid: c40e57f208d080a4cb4820179a9bd687,
     type: 3}
+  blueProjectilePrefab: {fileID: -6240810892892311158, guid: a8fc75da333dce3488c99a93d593e25a,
+    type: 3}
   fireRate: 0.24
   damage: 15
   cursorRayMask:
@@ -526,7 +528,7 @@ MonoBehaviour:
     type: 3}
   offset: {x: 0, y: 0, z: 0}
   offsetTowardsCamera: 3
-  scaleMultiplier: 6
+  scaleMultiplier: 8
 --- !u!1 &5288160235298964560
 GameObject:
   m_ObjectHideFlags: 0

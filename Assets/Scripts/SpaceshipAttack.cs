@@ -8,6 +8,7 @@ public class SpaceshipAttack : MonoBehaviour
     [SerializeField] private List<Transform> doubleBulletSpawns;
     [SerializeField] private float range = 1000f;
     [SerializeField] private ProjectileBehaviour projectilePrefab;
+    [SerializeField] private ProjectileBehaviour blueProjectilePrefab;
     [SerializeField] private float fireRate = .12f;
     [SerializeField] private int damage = 10;
     [SerializeField] private LayerMask cursorRayMask;
@@ -90,7 +91,16 @@ public class SpaceshipAttack : MonoBehaviour
         AudioManager.Instance.PlayPlayerShootSFX();
 
         Vector3 projectileDir = (aimPoint - bulletSpawn.position).normalized;
-        ProjectileBehaviour projectile = Instantiate(projectilePrefab, bulletSpawn.position, Quaternion.identity);
+        ProjectileBehaviour projectile;
+
+        if (PowerUpManager.Instance.HasDoubleBullets())
+        {
+            projectile = Instantiate(blueProjectilePrefab, bulletSpawn.position, Quaternion.identity);
+        }
+        else
+        {
+            projectile = Instantiate(projectilePrefab, bulletSpawn.position, Quaternion.identity);
+        }
         projectile.moveDir = projectileDir;
 
         fireCooldown = fireRate;
