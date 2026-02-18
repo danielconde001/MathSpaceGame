@@ -11,6 +11,7 @@ public class ImageSwitcher : MonoBehaviour
     public GameObject Canvas; // The canvas to disable at the end
     public GameObject playButton;     // The play button to enable at the end
     public GameObject eduGuideButton; // The edu guide button to enable at the end
+    public Button closeButton;        // The close button to close and reset the guide
 
     private int currentIndex = 0;
 
@@ -21,6 +22,17 @@ public class ImageSwitcher : MonoBehaviour
             backButton.onClick.AddListener(ShowPrevious);
         if (nextButton != null)
             nextButton.onClick.AddListener(ShowNext);
+        if (closeButton != null)
+            closeButton.onClick.AddListener(CloseGuide);
+    }
+    public void CloseGuide()
+    {
+        if (Canvas != null)
+            Canvas.SetActive(false);
+        if (eduGuideButton != null)
+            eduGuideButton.SetActive(true);
+        currentIndex = 0;
+        UpdateImage();
     }
 
     public void ShowPrevious()
