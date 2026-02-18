@@ -1,3 +1,4 @@
+using Unity.Collections.LowLevel.Unsafe;
 using UnityEngine;
 
 public class EnemyKillable : Killable
@@ -26,6 +27,8 @@ public class EnemyKillable : Killable
             Score scoreComponent = GetComponent<Score>();
             if (scoreComponent != null)
                 scoreValue = scoreComponent.value;
+
+            LevelManager.Instance.CollectPoints((uint)scoreValue);
 
             Vector3 popupOffset = transform.up + -transform.right; // up and to the left
             GameObject popup = Instantiate(scorePopupPrefab, transform.position + popupOffset, Quaternion.identity);

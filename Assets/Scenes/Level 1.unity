@@ -328,8 +328,8 @@ MonoBehaviour:
   - {fileID: 9115993325438427119, guid: d818af39e7cfd7545ac1b16a24337d5d, type: 3}
   combatSectionPrefabs:
   - {fileID: 3390868856297774706, guid: 51a1370fb9d660f46b462f05dd4e5b13, type: 3}
-  - {fileID: 3390868856297774706, guid: 51a1370fb9d660f46b462f05dd4e5b13, type: 3}
-  - {fileID: 3390868856297774706, guid: 51a1370fb9d660f46b462f05dd4e5b13, type: 3}
+  - {fileID: 3390868856297774706, guid: 6ddf0c530fd34c3499d6a6d1dce7462f, type: 3}
+  - {fileID: 3390868856297774706, guid: 3d0d2bf5b1de0aa4cbff2914bd7d6318, type: 3}
   minigameSectionPrefab: {fileID: 5973466272069096603, guid: 1c7779a3a37e7ab4c9148c653d646711,
     type: 3}
   endSectionPrefab: {fileID: 5973466272069096603, guid: 3222eb6f619e3304eb876fd4998d1559,
@@ -862,7 +862,7 @@ Transform:
   m_GameObject: {fileID: 353882035}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.5, y: 18, z: 12}
+  m_LocalPosition: {x: -7.5, y: 16, z: 12}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1691,7 +1691,7 @@ Transform:
   m_GameObject: {fileID: 839801473}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.5, y: 18, z: 12}
+  m_LocalPosition: {x: 7.5, y: 16, z: 12}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

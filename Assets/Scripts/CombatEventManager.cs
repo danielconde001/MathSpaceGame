@@ -50,10 +50,10 @@ public class CombatEventManager : MonoBehaviour
                 StartCoroutine(CombatEvent1A());
                 break;
             case 1:
-                CombatEvent1B();
+                StartCoroutine(CombatEvent1B());
                 break;
             case 2:
-                CombatEvent1C();
+                StartCoroutine(CombatEvent1C());
                 break;
             case 3:
                 CombatEvent2A();
@@ -86,38 +86,118 @@ public class CombatEventManager : MonoBehaviour
         AudioManager.Instance.PlayEnemyAlarmSFX();
         AudioManager.Instance.PlayEnemyFlyInSFX();
 
-        DialogueManager.Instance.StartAutoDialogue("Get ready! Enemies incoming.");
+        DialogueManager.Instance.StartAutoDialogue("Get ready! Enemy incoming.");
 
         StationaryEnemyAI enemy1 = SpawnStationaryEnemy(2, 0);
-        waitForSeconds = 0.5f;
-        yield return new WaitWhile(() => waitForSeconds > 0f);
-        StationaryEnemyAI enemy2 = SpawnStationaryEnemy(3, 3);
-        yield return new WaitUntil( () => (enemy1 == null && enemy2 == null)); // unitl they are dead
+        yield return new WaitUntil( 
+            () => (
+            enemy1 == null)); // unitl they are dead
 
         AudioManager.Instance.PlayEnemyFlyInSFX();
 
-        DialogueManager.Instance.StartAutoDialogue("There's more of them! Watch your back.");
+        DialogueManager.Instance.StartAutoDialogue("There's two of them! Watch your back.");
 
-        StationaryEnemyAI enemy3 = SpawnStationaryEnemy(2, 0);
+        StationaryEnemyAI enemy2 = SpawnStationaryEnemy(2, 0);
         waitForSeconds = 0.5f;
         yield return new WaitWhile( () => waitForSeconds > 0f);
-        StationaryEnemyAI enemy4 = SpawnStationaryEnemy(3, 3);
+        StationaryEnemyAI enemy3 = SpawnStationaryEnemy(3, 3);
 
-        yield return new WaitUntil(() => (enemy3 == null && enemy4 == null)); // unitl they are dead
+        yield return new WaitUntil(
+            () => (
+            enemy2 == null && 
+            enemy3 == null)); // unitl they are dead
 
         DialogueManager.Instance.StartAutoDialogue("You took 'em down! Well Done.");
 
         LevelManager.Instance.StartSectionsMovement();
     }
 
-    private void CombatEvent1B()
+    private IEnumerator CombatEvent1B()
     {
+        LevelManager.Instance.StopSectionsFromMoving();
 
+        AudioManager.Instance.PlayEnemyAlarmSFX();
+        AudioManager.Instance.PlayEnemyFlyInSFX();
+
+        DialogueManager.Instance.StartAutoDialogue("Here comes more of them!");
+
+        StationaryEnemyAI enemy1 = SpawnStationaryEnemy(2, 0);
+        waitForSeconds = 0.5f;
+        yield return new WaitWhile(() => waitForSeconds > 0f);
+        StationaryEnemyAI enemy2 = SpawnStationaryEnemy(3, 3);
+        yield return new WaitUntil(
+            () => (
+            enemy1 == null && 
+            enemy2 == null)); // unitl they are dead
+
+        AudioManager.Instance.PlayEnemyFlyInSFX();
+
+        DialogueManager.Instance.StartAutoDialogue("There's 3 of them now! Careful.");
+
+        StationaryEnemyAI enemy3 = SpawnStationaryEnemy(2, 0);
+        waitForSeconds = 0.5f;
+        yield return new WaitWhile(() => waitForSeconds > 0f);
+        StationaryEnemyAI enemy4 = SpawnStationaryEnemy(3, 3);
+        waitForSeconds = 0.5f;
+        yield return new WaitWhile(() => waitForSeconds > 0f);
+        StationaryEnemyAI enemy5 = SpawnStationaryEnemy(2, 1);
+
+        yield return new WaitUntil(
+            () => (
+            enemy3 == null && 
+            enemy4 == null && 
+            enemy5 == null)); // unitl they are dead
+
+        DialogueManager.Instance.StartAutoDialogue("Awesome! You're getting the hang of it.");
+
+        LevelManager.Instance.StartSectionsMovement();
     }
 
-    private void CombatEvent1C()
+    private IEnumerator CombatEvent1C()
     {
+        LevelManager.Instance.StopSectionsFromMoving();
 
+        AudioManager.Instance.PlayEnemyAlarmSFX();
+        AudioManager.Instance.PlayEnemyFlyInSFX();
+
+        StationaryEnemyAI enemy1 = SpawnStationaryEnemy(2, 0);
+        waitForSeconds = 0.5f;
+        yield return new WaitWhile(() => waitForSeconds > 0f);
+        StationaryEnemyAI enemy2 = SpawnStationaryEnemy(3, 3);
+        waitForSeconds = 0.5f;
+        yield return new WaitWhile(() => waitForSeconds > 0f);
+        StationaryEnemyAI enemy3 = SpawnStationaryEnemy(2, 1);
+        yield return new WaitUntil(
+            () => (
+            enemy1 == null && 
+            enemy2 == null && 
+            enemy3 == null)); // unitl they are dead
+
+        AudioManager.Instance.PlayEnemyFlyInSFX();
+
+        DialogueManager.Instance.StartAutoDialogue("That's a lot ships...");
+
+        StationaryEnemyAI enemy4 = SpawnStationaryEnemy(2, 0);
+        waitForSeconds = 0.5f;
+        yield return new WaitWhile(() => waitForSeconds > 0f);
+        StationaryEnemyAI enemy5 = SpawnStationaryEnemy(3, 3);
+        waitForSeconds = 0.5f;
+        yield return new WaitWhile(() => waitForSeconds > 0f);
+        StationaryEnemyAI enemy6 = SpawnStationaryEnemy(2, 1);
+        waitForSeconds = 0.5f;
+        yield return new WaitWhile(() => waitForSeconds > 0f);
+        StationaryEnemyAI enemy7 = SpawnStationaryEnemy(2, 2);
+
+        yield return new WaitUntil(
+            () => (
+            enemy4 == null && 
+            enemy5 == null && 
+            enemy6 == null && 
+            enemy7 == null)); // unitl they are dead
+
+        DialogueManager.Instance.StartAutoDialogue("You are awesome! They stood no chance.");
+
+        LevelManager.Instance.StartSectionsMovement();
     }
 
     private void CombatEvent2A()
