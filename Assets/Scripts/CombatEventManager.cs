@@ -56,7 +56,7 @@ public class CombatEventManager : MonoBehaviour
                 StartCoroutine(CombatEvent1C());
                 break;
             case 3:
-                CombatEvent2A();
+                StartCoroutine(CombatEvent2A());
                 break;
             case 4:
                 CombatEvent2B();
@@ -200,9 +200,35 @@ public class CombatEventManager : MonoBehaviour
         LevelManager.Instance.StartSectionsMovement();
     }
 
-    private void CombatEvent2A()
+    private IEnumerator CombatEvent2A()
     {
+        LevelManager.Instance.StopSectionsFromMoving();
 
+        AudioManager.Instance.PlayEnemyAlarmSFX();
+        AudioManager.Instance.PlayEnemyFlyInSFX();
+
+        StationaryEnemyAI enemy1 = SpawnStationaryEnemy(2, 0);
+        yield return new WaitUntil(
+            () => (
+            enemy1 == null)); // unitl they are dead
+
+        AudioManager.Instance.PlayEnemyFlyInSFX();
+
+        DialogueManager.Instance.StartAutoDialogue("There's two of them! Watch your back.");
+
+        StationaryEnemyAI enemy2 = SpawnStationaryEnemy(2, 0);
+        waitForSeconds = 0.5f;
+        yield return new WaitWhile(() => waitForSeconds > 0f);
+        StationaryEnemyAI enemy3 = SpawnStationaryEnemy(3, 3);
+
+        yield return new WaitUntil(
+            () => (
+            enemy2 == null &&
+            enemy3 == null)); // unitl they are dead
+
+        DialogueManager.Instance.StartAutoDialogue("You took 'em down! Well Done.");
+
+        LevelManager.Instance.StartSectionsMovement();
     }
 
     private void CombatEvent2B()
@@ -231,6 +257,23 @@ public class CombatEventManager : MonoBehaviour
     }
 
     private StationaryEnemyAI SpawnStationaryEnemy(int p_spawnPointIndex, int p_enemySpotIndex)
+    {
+        StationaryEnemyAI stationaryEnemy = null;
+
+        stationaryEnemy =
+            Instantiate
+            (
+                stationaryEnemyPrefab,
+                SpawnPointManager.Instance.GetSpawnPoints(p_spawnPointIndex).position,
+                Quaternion.Euler(0, 90, 0)
+            ).GetComponent<StationaryEnemyAI>();
+
+        stationaryEnemy.respectiveSpot = EnemySpotManager.Instance.GetEnemySpots(p_enemySpotIndex);
+
+        return stationaryEnemy;
+    }
+
+    private StationaryEnemyAI SpawnChaseEnemy(int p_spawnPointIndex, int p_enemySpotIndex)
     {
         StationaryEnemyAI stationaryEnemy = null;
 
