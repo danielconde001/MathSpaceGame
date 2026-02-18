@@ -162,7 +162,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 1
+  m_PresetInfoIsWorld: 0
 --- !u!114 &1122882449434038892
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -196,9 +196,9 @@ MonoBehaviour:
   backgroundImage: {fileID: 5231803067128750899}
   fillImage: {fileID: 5043517465012729987}
   maxHealth: 100
+  healthText: {fileID: 0}
   offset: {x: 0, y: 2, z: 0}
   faceCamera: 1
-  belongsToPlayer: 0
 --- !u!1 &8966010229633195295
 GameObject:
   m_ObjectHideFlags: 0
