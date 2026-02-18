@@ -65,6 +65,9 @@ public class ImageSwitcher : MonoBehaviour
                 nextButton.interactable = false;
             // Reset image to index 0
             currentIndex = 0;
+
+            PauseManager.Instance.IsPaused = false;
+
             UpdateImage();
         }
     }
