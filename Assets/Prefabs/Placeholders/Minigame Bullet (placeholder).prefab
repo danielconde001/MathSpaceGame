@@ -127,7 +127,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ProjectileBehaviour
   moveDir: {x: 0, y: 0, z: 0}
-  projectileSpeed: 48
+  projectileSpeed: 100
   useDebug: 0
 --- !u!114 &4352589356343480393
 MonoBehaviour:

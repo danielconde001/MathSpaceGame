@@ -59,10 +59,10 @@ public class CombatEventManager : MonoBehaviour
                 StartCoroutine(CombatEvent2A());
                 break;
             case 4:
-                CombatEvent2B();
+                StartCoroutine(CombatEvent2B());
                 break;
             case 5:
-                CombatEvent2C();
+                StartCoroutine(CombatEvent2C());
                 break;
             case 6:
                 CombatEvent3A();
@@ -205,40 +205,248 @@ public class CombatEventManager : MonoBehaviour
         LevelManager.Instance.StopSectionsFromMoving();
 
         AudioManager.Instance.PlayEnemyAlarmSFX();
+
+        DialogueManager.Instance.StartAutoDialogue("Swarm incoming!");
+
+        float interval = 0.4f;
+        float waveInterval = 0.8f;
+
+        // WAVE 1
         AudioManager.Instance.PlayEnemyFlyInSFX();
 
-        StationaryEnemyAI enemy1 = SpawnStationaryEnemy(2, 0);
-        yield return new WaitUntil(
-            () => (
-            enemy1 == null)); // unitl they are dead
+        for (int i = 0; i < 10; i++)
+        {
+            SpawnChaseEnemy(0);
+            
+            waitForSeconds = interval;
+            yield return new WaitWhile(() => waitForSeconds > 0f);
+        }
+        waitForSeconds = waveInterval;
+        yield return new WaitWhile(() => waitForSeconds > 0f);
 
+        // WAVE 2
         AudioManager.Instance.PlayEnemyFlyInSFX();
 
-        DialogueManager.Instance.StartAutoDialogue("There's two of them! Watch your back.");
+        for (int i = 0; i < 10; i++)
+        {
+            SpawnChaseEnemy(5);
 
-        StationaryEnemyAI enemy2 = SpawnStationaryEnemy(2, 0);
+            waitForSeconds = interval;
+            yield return new WaitWhile(() => waitForSeconds > 0f);
+        }
+        waitForSeconds = waveInterval;
+        yield return new WaitWhile(() => waitForSeconds > 0f);
+
+        // WAVE 3
+        AudioManager.Instance.PlayEnemyFlyInSFX();
+
+        for (int i = 0; i < 10; i++)
+        {
+            SpawnChaseEnemy(4);
+
+            waitForSeconds = interval;
+            yield return new WaitWhile(() => waitForSeconds > 0f);
+        }
+        waitForSeconds = waveInterval;
+        yield return new WaitWhile(() => waitForSeconds > 0f);
+
+        // WAVE 4
+        AudioManager.Instance.PlayEnemyFlyInSFX();
+
+        for (int i = 0; i < 10; i++)
+        {
+            SpawnChaseEnemy(1);
+            waitForSeconds = interval;
+            yield return new WaitWhile(() => waitForSeconds > 0f);
+        }
+        waitForSeconds = waveInterval;
+        yield return new WaitWhile(() => waitForSeconds > 0f);
+
+        StationaryEnemyAI sEnemy1 = SpawnStationaryEnemy(2, 0);
         waitForSeconds = 0.5f;
         yield return new WaitWhile(() => waitForSeconds > 0f);
-        StationaryEnemyAI enemy3 = SpawnStationaryEnemy(3, 3);
+
+        StationaryEnemyAI sEnemy2 = SpawnStationaryEnemy(3, 3);
 
         yield return new WaitUntil(
             () => (
-            enemy2 == null &&
-            enemy3 == null)); // unitl they are dead
-
-        DialogueManager.Instance.StartAutoDialogue("You took 'em down! Well Done.");
+            sEnemy1 == null &&
+            sEnemy2 == null)); // unitl they are dead
 
         LevelManager.Instance.StartSectionsMovement();
     }
 
-    private void CombatEvent2B()
+    private IEnumerator CombatEvent2B()
     {
+        LevelManager.Instance.StopSectionsFromMoving();
 
+        AudioManager.Instance.PlayEnemyAlarmSFX();
+
+        DialogueManager.Instance.StartAutoDialogue("Swarm incoming!");
+
+        float interval = 0.4f;
+        float waveInterval = 0f;
+
+        // WAVE 1
+        AudioManager.Instance.PlayEnemyFlyInSFX();
+
+        for (int i = 0; i < 10; i++)
+        {
+            SpawnChaseEnemy(1);
+
+            waitForSeconds = interval;
+            yield return new WaitWhile(() => waitForSeconds > 0f);
+        }
+        waitForSeconds = waveInterval;
+        yield return new WaitWhile(() => waitForSeconds > 0f);
+
+        // WAVE 2
+        AudioManager.Instance.PlayEnemyFlyInSFX();
+
+        for (int i = 0; i < 10; i++)
+        {
+            SpawnChaseEnemy(4);
+
+            waitForSeconds = interval;
+            yield return new WaitWhile(() => waitForSeconds > 0f);
+        }
+        waitForSeconds = waveInterval;
+        yield return new WaitWhile(() => waitForSeconds > 0f);
+
+        // WAVE 3
+        AudioManager.Instance.PlayEnemyFlyInSFX();
+
+        for (int i = 0; i < 10; i++)
+        {
+            SpawnChaseEnemy(5);
+
+            waitForSeconds = interval;
+            yield return new WaitWhile(() => waitForSeconds > 0f);
+        }
+        waitForSeconds = waveInterval;
+        yield return new WaitWhile(() => waitForSeconds > 0f);
+
+        // WAVE 4
+        AudioManager.Instance.PlayEnemyFlyInSFX();
+
+        for (int i = 0; i < 10; i++)
+        {
+            SpawnChaseEnemy(0);
+            waitForSeconds = interval;
+            yield return new WaitWhile(() => waitForSeconds > 0f);
+        }
+        waitForSeconds = waveInterval;
+        yield return new WaitWhile(() => waitForSeconds > 0f);
+
+        StationaryEnemyAI sEnemy1 = SpawnStationaryEnemy(2, 0);
+        waitForSeconds = 0.5f;
+        yield return new WaitWhile(() => waitForSeconds > 0f);
+
+        StationaryEnemyAI sEnemy2 = SpawnStationaryEnemy(3, 3);
+        waitForSeconds = 0.5f;
+        yield return new WaitWhile(() => waitForSeconds > 0f);
+
+        StationaryEnemyAI sEnemy3 = SpawnStationaryEnemy(2, 1);
+
+        yield return new WaitUntil(
+            () => (
+            sEnemy1 == null &&
+            sEnemy2 == null &&
+            sEnemy3 == null)); // unitl they are dead
+
+        LevelManager.Instance.StartSectionsMovement();
     }
 
-    private void CombatEvent2C()
+    private IEnumerator CombatEvent2C()
     {
+        LevelManager.Instance.StopSectionsFromMoving();
 
+        AudioManager.Instance.PlayEnemyAlarmSFX();
+
+        DialogueManager.Instance.StartAutoDialogue("Swarm incoming!");
+
+        float interval = 0.4f;
+        float waveInterval = 0f;
+
+        // WAVE 1
+        AudioManager.Instance.PlayEnemyFlyInSFX();
+
+        for (int i = 0; i < 10; i++)
+        {
+            SpawnChaseEnemy(0);
+
+            if (i == 9) SpawnChaseEnemy(4);
+
+            waitForSeconds = interval;
+            yield return new WaitWhile(() => waitForSeconds > 0f);
+        }
+        waitForSeconds = waveInterval;
+        yield return new WaitWhile(() => waitForSeconds > 0f);
+
+        // WAVE 2
+        AudioManager.Instance.PlayEnemyFlyInSFX();
+
+        for (int i = 0; i < 9; i++)
+        {
+            SpawnChaseEnemy(4);
+
+            if (i == 8) SpawnChaseEnemy(1);
+
+            waitForSeconds = interval;
+            yield return new WaitWhile(() => waitForSeconds > 0f);
+        }
+        waitForSeconds = waveInterval;
+        yield return new WaitWhile(() => waitForSeconds > 0f);
+
+        // WAVE 3
+        AudioManager.Instance.PlayEnemyFlyInSFX();
+
+        for (int i = 0; i < 9; i++)
+        {
+            SpawnChaseEnemy(1);
+
+            if (i == 8) SpawnChaseEnemy(5);
+
+            waitForSeconds = interval;
+            yield return new WaitWhile(() => waitForSeconds > 0f);
+        }
+        waitForSeconds = waveInterval;
+        yield return new WaitWhile(() => waitForSeconds > 0f);
+
+        // WAVE 4
+        AudioManager.Instance.PlayEnemyFlyInSFX();
+
+        for (int i = 0; i < 9; i++)
+        {
+            SpawnChaseEnemy(5);
+            waitForSeconds = interval;
+            yield return new WaitWhile(() => waitForSeconds > 0f);
+        }
+        waitForSeconds = waveInterval;
+        yield return new WaitWhile(() => waitForSeconds > 0f);
+
+        StationaryEnemyAI sEnemy1 = SpawnStationaryEnemy(2, 0);
+        waitForSeconds = 0.5f;
+        yield return new WaitWhile(() => waitForSeconds > 0f);
+
+        StationaryEnemyAI sEnemy2 = SpawnStationaryEnemy(3, 3);
+        waitForSeconds = 0.5f;
+        yield return new WaitWhile(() => waitForSeconds > 0f);
+
+        StationaryEnemyAI sEnemy3 = SpawnStationaryEnemy(2, 1);
+        waitForSeconds = 0.5f;
+        yield return new WaitWhile(() => waitForSeconds > 0f);
+
+        StationaryEnemyAI sEnemy4 = SpawnStationaryEnemy(3, 2);
+
+        yield return new WaitUntil(
+            () => (
+            sEnemy1 == null &&
+            sEnemy2 == null &&
+            sEnemy3 == null &&
+            sEnemy4 == null)); // unitl they are dead
+
+        LevelManager.Instance.StartSectionsMovement();
     }
 
     private void CombatEvent3A()
@@ -273,20 +481,18 @@ public class CombatEventManager : MonoBehaviour
         return stationaryEnemy;
     }
 
-    private StationaryEnemyAI SpawnChaseEnemy(int p_spawnPointIndex, int p_enemySpotIndex)
+    private ChaseEnemyAI SpawnChaseEnemy(int p_spawnPointIndex)
     {
-        StationaryEnemyAI stationaryEnemy = null;
+        ChaseEnemyAI chaseEnemy = null;
 
-        stationaryEnemy =
+        chaseEnemy =
             Instantiate
             (
-                stationaryEnemyPrefab,
+                chaseEnemyPrefab,
                 SpawnPointManager.Instance.GetSpawnPoints(p_spawnPointIndex).position,
                 Quaternion.Euler(0, 90, 0)
-            ).GetComponent<StationaryEnemyAI>();
+            ).GetComponent<ChaseEnemyAI>();
 
-        stationaryEnemy.respectiveSpot = EnemySpotManager.Instance.GetEnemySpots(p_enemySpotIndex);
-
-        return stationaryEnemy;
+        return chaseEnemy;
     }
 }

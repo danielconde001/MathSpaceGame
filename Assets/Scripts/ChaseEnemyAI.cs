@@ -28,7 +28,6 @@ public class ChaseEnemyAI : MonoBehaviour
         target = PlayerManager.Instance.GetPlayer().transform;
     }
 
-
     private void Update()
     {
         if (isNowFollowingPlayer == false)
@@ -46,7 +45,7 @@ public class ChaseEnemyAI : MonoBehaviour
     {
         float distToIntroSpot = Vector3.Distance(transform.position, introSpot);
 
-        if (distToIntroSpot < .1f && wentNearIntroSpot == false)
+        if (distToIntroSpot < 1f && wentNearIntroSpot == false)
         {
             wentNearIntroSpot = true;
         }
@@ -99,6 +98,9 @@ public class ChaseEnemyAI : MonoBehaviour
 
     void MoveStraight()
     {
-        transform.position += transform.forward * moveSpeed * Time.deltaTime;
+        if (PauseManager.Instance.IsPaused == false)
+        {
+            transform.position += transform.forward * moveSpeed * Time.deltaTime;
+        }
     }
 }

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7074959765501919838}
   - component: {fileID: 5137051283504276719}
   - component: {fileID: 5402293059203533145}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -99,12 +99,13 @@ GameObject:
   m_Component:
   - component: {fileID: 3486117988231100224}
   - component: {fileID: 3621486597614997871}
-  - component: {fileID: 7868299391414062235}
+  - component: {fileID: 811810768877464090}
   - component: {fileID: 7034097960053531366}
   - component: {fileID: 8330759345114548992}
   - component: {fileID: 7118422116266386654}
   - component: {fileID: 7450140753419297814}
-  - component: {fileID: 8607591313917060630}
+  - component: {fileID: 6197115618960565023}
+  - component: {fileID: 3208700567472617364}
   m_Layer: 7
   m_Name: Chase Enemy (placeholder)
   m_TagString: Enemy
@@ -155,8 +156,8 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!65 &7868299391414062235
-BoxCollider:
+--- !u!135 &811810768877464090
+SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -174,8 +175,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1.58, y: 1.21, z: 2.5}
-  m_Center: {x: 0, y: 0.37, z: -0.09}
+  m_Radius: 3
+  m_Center: {x: 0, y: 1, z: 0}
 --- !u!114 &7034097960053531366
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -188,7 +189,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6479aab3562bfb84ca2f35309830ae5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Health
-  value: 35
+  value: 15
 --- !u!114 &8330759345114548992
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -213,8 +214,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbbeb77206e772d499bedf6bcefb2743, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyKillable
-  scorePopupPrefab: {fileID: 5554752485786833717, guid: 4dea4b063998b504d9542259a0c01070,
-    type: 3}
+  scorePopupPrefab: {fileID: 0}
 --- !u!114 &7450140753419297814
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -230,8 +230,8 @@ MonoBehaviour:
   skipFlyingIntro: 0
   rotationSpeed: 45
   moveSpeed: 20
-  introSpotOffset: {x: 0, y: 20, z: 0}
---- !u!114 &8607591313917060630
+  introSpotOffset: {x: 0, y: -20, z: 0}
+--- !u!114 &6197115618960565023
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -240,7 +240,24 @@ MonoBehaviour:
   m_GameObject: {fileID: 8104590451157559281}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1c95a7a2e6084334fb8c2cb2516ccf0c, type: 3}
+  m_Script: {fileID: 11500000, guid: 3acd0c8c6967e4c4db87a87ad7bf01f9, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Score
-  value: 10
+  m_EditorClassIdentifier: Assembly-CSharp::SpawnVFXOnDeath
+  VisualEffect: {fileID: 8038344524183138613, guid: e06070ba9536dd5439cd1b51ca7769cb,
+    type: 3}
+  offset: {x: 0, y: 0, z: 0}
+  offsetTowardsCamera: 1
+  scaleMultiplier: 5
+--- !u!114 &3208700567472617364
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8104590451157559281}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f6549c7a711cb9449c42a1da2cdb925, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ChaseEnemyAttack
+  damage: 45

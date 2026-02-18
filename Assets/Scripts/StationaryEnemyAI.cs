@@ -80,7 +80,7 @@ public class StationaryEnemyAI : MonoBehaviour
 
         MoveStraight();
 
-        if (distToSpot < .15f)
+        if (distToSpot < 1f)
         {
             isNowInSpot = true;
         }

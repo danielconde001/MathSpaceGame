@@ -119,7 +119,7 @@ MonoBehaviour:
   panel: {fileID: 308690713874430070}
   rectTransform: {fileID: 5632886222295132247}
   milestones: 080000001b00000039000000
-  healthBonus: 25
+  healthBonus: 50
   upgradedFireRate: 0.12
   useDebug: 0
 --- !u!1 &1366096949618402490

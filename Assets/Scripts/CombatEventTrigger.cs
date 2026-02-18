@@ -6,7 +6,6 @@ public class CombatEventTrigger : MonoBehaviour
 
     bool isTriggered = false;
 
-
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Player") && isTriggered == false)
