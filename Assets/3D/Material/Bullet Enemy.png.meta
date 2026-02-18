@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 70c878ca0897459448fe4cfc023c8af7
+guid: 0c25601c5c94f5e4a88bd6da2d631e85
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2229560042336593194
-    second: Sand texture_0
+      213: 2208703988740019828
+    second: Bullet_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -72,7 +72,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 4096
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -139,13 +139,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Sand texture_0
+      name: Bullet_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 4500
-        height: 4500
+        width: 1080
+        height: 1080
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -154,8 +154,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a25a0e8bb0df0fe10800000000000000
-      internalID: 2229560042336593194
+      spriteID: 47656d65394e6ae10800000000000000
+      internalID: 2208703988740019828
       vertices: []
       indices: 
       edges: []
@@ -174,7 +174,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Sand texture_0: 2229560042336593194
+      Bullet_0: 2208703988740019828
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

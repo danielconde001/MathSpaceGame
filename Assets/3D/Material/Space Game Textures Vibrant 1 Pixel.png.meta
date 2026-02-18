@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 5a1ee82bf1ef21943a2f6669ce81083b
+guid: 2ccfb5cf0f8b9384497435d6d3253314
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6860239386024309976
-    second: Space Game Textures Vibrant 1_0
+      213: -8711822612954407320
+    second: Space Game Textures Vibrant 1 Pixel_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -98,27 +98,27 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
     buildTarget: Android
-    maxTextureSize: 1024
+    maxTextureSize: 2048
     resizeAlgorithm: 0
-    textureFormat: 50
+    textureFormat: -1
     textureCompression: 1
-    compressionQuality: 0
+    compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
-    overridden: 1
+    overridden: 0
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
     buildTarget: WebGL
-    maxTextureSize: 1024
+    maxTextureSize: 2048
     resizeAlgorithm: 0
-    textureFormat: 68
+    textureFormat: -1
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
-    overridden: 1
+    overridden: 0
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
@@ -139,7 +139,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Space Game Textures Vibrant 1_0
+      name: Space Game Textures Vibrant 1 Pixel_0
       rect:
         serializedVersion: 2
         x: 0
@@ -154,8 +154,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8d47f1edf57743f50800000000000000
-      internalID: 6860239386024309976
+      spriteID: 86e13a0ad73691780800000000000000
+      internalID: -8711822612954407320
       vertices: []
       indices: 
       edges: []
@@ -174,7 +174,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Space Game Textures Vibrant 1_0: 6860239386024309976
+      Space Game Textures Vibrant 1 Pixel_0: -8711822612954407320
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
