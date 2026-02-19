@@ -210,15 +210,13 @@ public class ArrangingMinigameManager : MinigameManager
             if (idxA >= 0 && idxB >= 0)
             {
                 float duration = 0.25f;
-                // Animate both images to their own slot positions (no swap of GameObjects)
+                // Swap GameObjects in images array
+                var tempGO = images[idxA];
+                images[idxA] = images[idxB];
+                images[idxB] = tempGO;
+                // Animate both images to their new slot positions
                 images[idxA].GetComponent<RectTransform>().DOAnchorPos(defaultAnchoredPositions[idxA], duration);
                 images[idxB].GetComponent<RectTransform>().DOAnchorPos(defaultAnchoredPositions[idxB], duration);
-                // Swap TMP_Text values only
-                TMP_Text txtA = images[idxA].GetComponentInChildren<TMP_Text>();
-                TMP_Text txtB = images[idxB].GetComponentInChildren<TMP_Text>();
-                string temp = txtA.text;
-                txtA.text = txtB.text;
-                txtB.text = temp;
             }
             selectedImage = null;
         }
@@ -278,15 +276,13 @@ public class ArrangingMinigameManager : MinigameManager
                     {
                         int idxB = i;
                         float duration = 0.25f;
-                        // Animate both images to their own slot positions (no swap of GameObjects)
+                        // Swap GameObjects in images array
+                        var tempGO = images[idxA];
+                        images[idxA] = images[idxB];
+                        images[idxB] = tempGO;
+                        // Animate both images to their new slot positions
                         images[idxA].GetComponent<RectTransform>().DOAnchorPos(defaultAnchoredPositions[idxA], duration);
                         images[idxB].GetComponent<RectTransform>().DOAnchorPos(defaultAnchoredPositions[idxB], duration);
-                        // Swap TMP_Text values only
-                        TMP_Text txtA = images[idxA].GetComponentInChildren<TMP_Text>();
-                        TMP_Text txtB = images[idxB].GetComponentInChildren<TMP_Text>();
-                        string temp = txtA.text;
-                        txtA.text = txtB.text;
-                        txtB.text = temp;
                         swapped = true;
                         break;
                     }
@@ -316,15 +312,13 @@ public class ArrangingMinigameManager : MinigameManager
             if (idxA >= 0 && idxB >= 0)
             {
                 float duration = 0.25f;
-                // Animate both images to their own slot positions (no swap of GameObjects)
+                // Swap GameObjects in images array
+                var tempGO = images[idxA];
+                images[idxA] = images[idxB];
+                images[idxB] = tempGO;
+                // Animate both images to their new slot positions
                 images[idxA].GetComponent<RectTransform>().DOAnchorPos(defaultAnchoredPositions[idxA], duration);
                 images[idxB].GetComponent<RectTransform>().DOAnchorPos(defaultAnchoredPositions[idxB], duration);
-                // Swap TMP_Text values only
-                TMP_Text txtA = images[idxA].GetComponentInChildren<TMP_Text>();
-                TMP_Text txtB = images[idxB].GetComponentInChildren<TMP_Text>();
-                string temp = txtA.text;
-                txtA.text = txtB.text;
-                txtB.text = temp;
             }
         }
         // Ensure z is 0 for all images
