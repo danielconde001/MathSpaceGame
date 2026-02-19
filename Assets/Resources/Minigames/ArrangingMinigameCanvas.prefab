@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5529470309617229153}
   - component: {fileID: 3339810408379303607}
   - component: {fileID: 4067454497079321834}
+  - component: {fileID: 7960233717039967984}
   m_Layer: 5
   m_Name: Image5
   m_TagString: Untagged
@@ -76,6 +77,26 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &7960233717039967984
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2511201458063255149}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2771422af91f1049b08feb9061b3ed0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NumberImageAnimator
+  hoverScale: 1.1
+  clickScale: 0.95
+  dragScale: 1.15
+  animDuration: 0.15
+  animEase: 27
+  hoverColor: {r: 1, g: 0.95, b: 0.7, a: 1}
+  dragColor: {r: 0.8, g: 0.9, b: 1, a: 1}
+  clickColor: {r: 0.9, g: 0.9, b: 0.9, a: 1}
 --- !u!1 &2808102532866524754
 GameObject:
   m_ObjectHideFlags: 0
@@ -162,6 +183,7 @@ GameObject:
   - component: {fileID: 4673640981788990972}
   - component: {fileID: 1326379351182875587}
   - component: {fileID: 3497796971040277056}
+  - component: {fileID: 6935865808807314529}
   m_Layer: 5
   m_Name: Image1
   m_TagString: Untagged
@@ -227,6 +249,26 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &6935865808807314529
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3556590679120496134}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2771422af91f1049b08feb9061b3ed0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NumberImageAnimator
+  hoverScale: 1.1
+  clickScale: 0.95
+  dragScale: 1.15
+  animDuration: 0.15
+  animEase: 27
+  hoverColor: {r: 1, g: 0.95, b: 0.7, a: 1}
+  dragColor: {r: 0.8, g: 0.9, b: 1, a: 1}
+  clickColor: {r: 0.9, g: 0.9, b: 0.9, a: 1}
 --- !u!1 &3878886931459329467
 GameObject:
   m_ObjectHideFlags: 0
@@ -238,6 +280,7 @@ GameObject:
   - component: {fileID: 3363208741169852041}
   - component: {fileID: 7149411338835735155}
   - component: {fileID: 1024039803895490351}
+  - component: {fileID: 602857961181100455}
   m_Layer: 5
   m_Name: Image4
   m_TagString: Untagged
@@ -303,6 +346,26 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &602857961181100455
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3878886931459329467}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2771422af91f1049b08feb9061b3ed0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NumberImageAnimator
+  hoverScale: 1.1
+  clickScale: 0.95
+  dragScale: 1.15
+  animDuration: 0.15
+  animEase: 27
+  hoverColor: {r: 1, g: 0.95, b: 0.7, a: 1}
+  dragColor: {r: 0.8, g: 0.9, b: 1, a: 1}
+  clickColor: {r: 0.9, g: 0.9, b: 0.9, a: 1}
 --- !u!1 &3937772791452025232
 GameObject:
   m_ObjectHideFlags: 0
@@ -314,6 +377,7 @@ GameObject:
   - component: {fileID: 7477040329983668762}
   - component: {fileID: 4608475127540150041}
   - component: {fileID: 5493870832053305110}
+  - component: {fileID: 5080412578525940527}
   m_Layer: 5
   m_Name: Image3
   m_TagString: Untagged
@@ -379,6 +443,26 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &5080412578525940527
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3937772791452025232}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2771422af91f1049b08feb9061b3ed0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NumberImageAnimator
+  hoverScale: 1.1
+  clickScale: 0.95
+  dragScale: 1.15
+  animDuration: 0.15
+  animEase: 27
+  hoverColor: {r: 1, g: 0.95, b: 0.7, a: 1}
+  dragColor: {r: 0.8, g: 0.9, b: 1, a: 1}
+  clickColor: {r: 0.9, g: 0.9, b: 0.9, a: 1}
 --- !u!1 &4601384530826677385
 GameObject:
   m_ObjectHideFlags: 0
@@ -1220,6 +1304,7 @@ GameObject:
   - component: {fileID: 7540029490472823742}
   - component: {fileID: 3106907321402556204}
   - component: {fileID: 2203174818737172580}
+  - component: {fileID: 3175446228129327107}
   m_Layer: 5
   m_Name: Image2
   m_TagString: Untagged
@@ -1285,6 +1370,26 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &3175446228129327107
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7310528449828204391}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2771422af91f1049b08feb9061b3ed0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NumberImageAnimator
+  hoverScale: 1.1
+  clickScale: 0.95
+  dragScale: 1.15
+  animDuration: 0.15
+  animEase: 27
+  hoverColor: {r: 1, g: 0.95, b: 0.7, a: 1}
+  dragColor: {r: 0.8, g: 0.9, b: 1, a: 1}
+  clickColor: {r: 0.9, g: 0.9, b: 0.9, a: 1}
 --- !u!1 &7386776413594506210
 GameObject:
   m_ObjectHideFlags: 0
@@ -1297,6 +1402,7 @@ GameObject:
   - component: {fileID: 5858000613823808141}
   - component: {fileID: 7122008187798586629}
   - component: {fileID: 8541148442598694007}
+  - component: {fileID: 166986657905675209}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -1406,6 +1512,26 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &166986657905675209
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7386776413594506210}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2771422af91f1049b08feb9061b3ed0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NumberImageAnimator
+  hoverScale: 1.1
+  clickScale: 0.95
+  dragScale: 1.15
+  animDuration: 0.15
+  animEase: 27
+  hoverColor: {r: 1, g: 0.95, b: 0.7, a: 1}
+  dragColor: {r: 0.8, g: 0.9, b: 1, a: 1}
+  clickColor: {r: 0.9, g: 0.9, b: 0.9, a: 1}
 --- !u!1 &8072516625061527513
 GameObject:
   m_ObjectHideFlags: 0

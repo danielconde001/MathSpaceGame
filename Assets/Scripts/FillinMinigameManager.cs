@@ -36,11 +36,11 @@ public class FillinMinigameManager : MinigameManager, IBeginDragHandler, IDragHa
 
     [SerializeField] bool useDebug = false;
 
-    //private void Start()
-    //{
+    // private void Start()
+    // {
     //    // For testing, start the minigame immediately
     //    InitializeMinigame(3);
-    //}
+    // }
 
     public override void InitializeMinigame(uint p_numberOfRounds = 7)
     {
