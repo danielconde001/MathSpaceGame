@@ -151,7 +151,7 @@ public class SpaceshipAttack : MonoBehaviour
     public void AutoShoot()
     {
         if ((PlayerVicinity.Instance.GetNearestTransform() == null ||
-            PlayerVicinity.Instance.GetNearestDistance() > 50f))
+            PlayerVicinity.Instance.GetNearestDistance() > 100f))
         {
             return;
         }
