@@ -135,11 +135,14 @@ public class ArrangingMinigameManager : MinigameManager
     {
         // Check if the images are arranged in ascending order by their child text
         bool correct = true;
+        // Get the sorted numbers for correct order
+        int[] sortedNumbers = (int[])numbers.Clone();
+        System.Array.Sort(sortedNumbers);
         for (int i = 0; i < 5; i++)
         {
             TMP_Text txt = images[i].GetComponentInChildren<TMP_Text>();
             int val;
-            if (!int.TryParse(txt.text, out val) || val != numbers[i])
+            if (!int.TryParse(txt.text, out val) || val != sortedNumbers[i])
             {
                 correct = false;
                 break;
