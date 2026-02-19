@@ -6,7 +6,6 @@ public class CombatEventManager : MonoBehaviour
     private static CombatEventManager instance;
     public static CombatEventManager Instance
     {
-
         get
         {
             if (instance == null)

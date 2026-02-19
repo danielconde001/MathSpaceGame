@@ -8,11 +8,13 @@ public class EnemyKillable : Killable
 
     SpawnVFXOnDeath SpawnVFXOnDeath;
     CameraShake camShake;
+    DistanceToPlayer distanceToPlayer;
 
     private void Awake()
     {
         SpawnVFXOnDeath = GetComponent<SpawnVFXOnDeath>();
         camShake = Camera.main.GetComponent<CameraShake>();
+        distanceToPlayer = GetComponent<DistanceToPlayer>();
     }
 
     public override void Kill()
@@ -56,6 +58,8 @@ public class EnemyKillable : Killable
         {
             camShake.TriggerShake(false);
         }
+
+        PlayerVicinity.Instance.DistancesToPlayer.Remove(distanceToPlayer);
 
         Destroy(gameObject);
     }

@@ -13,6 +13,7 @@ public class SpaceshipAttack : MonoBehaviour
     [SerializeField] private int damage = 10;
     [SerializeField] private LayerMask cursorRayMask;
     private float fireCooldown = 0;
+    private SpaceshipLookAt spaceshipLookAt;
 
     [Header("Minigame Settings")]
     [SerializeField] private float minigameFireRate = .72f;
@@ -21,6 +22,11 @@ public class SpaceshipAttack : MonoBehaviour
 
     [Header("Debug")]
     [SerializeField] bool useDebug = false;
+
+    private void Awake()
+    {
+        spaceshipLookAt = GetComponentInChildren<SpaceshipLookAt>();
+    }
 
     private void Update()
     {
@@ -114,7 +120,6 @@ public class SpaceshipAttack : MonoBehaviour
         }
 
         projectile.moveDir = projectileDir;
-
         fireCooldown = fireRate;
     }
 
@@ -141,6 +146,36 @@ public class SpaceshipAttack : MonoBehaviour
                 minigameFireCooldown = minigameFireRate;
             }
         }
+    }
+
+    public void AutoShoot()
+    {
+        if ((PlayerVicinity.Instance.GetNearestTransform() == null && PlayerVicinity.Instance.GetNearestDistance() > 50f) || fireCooldown > 0f)
+        {
+            return;
+        }
+
+        // Look at target instantly
+        spaceshipLookAt.LookAtPositionFast(PlayerVicinity.Instance.GetNearestTransform().position);
+        
+        // Set target
+        Transform target = PlayerVicinity.Instance.GetNearestTransform();
+
+        ProjectileBehaviour projectile;
+
+        if (PowerUpManager.Instance.HasDoubleBullets())
+        {
+            AudioManager.Instance.PlayPlayerDDShootSFX();
+            projectile = Instantiate(blueProjectilePrefab, bulletSpawn.position, Quaternion.identity);
+        }
+        else
+        {
+            AudioManager.Instance.PlayPlayerShootSFX();
+            projectile = Instantiate(projectilePrefab, bulletSpawn.position, Quaternion.identity);
+        }
+
+        projectile.target = target;
+        fireCooldown = fireRate;
     }
 
     public int GetDamage()

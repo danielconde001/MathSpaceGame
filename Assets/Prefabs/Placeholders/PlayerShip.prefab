@@ -10070,6 +10070,7 @@ Transform:
   - {fileID: 1064731428183509930}
   - {fileID: 215385491505946545}
   - {fileID: 4542245512292214998}
+  - {fileID: 1146253977735218018}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &8564678402892078586
@@ -10356,6 +10357,51 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6312545321522172544}
   m_Mesh: {fileID: -7224540018777488489, guid: 8f9b3887f9228cb49b83b26fe7517fa8, type: 3}
+--- !u!1 &6704929694250402090
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1146253977735218018}
+  - component: {fileID: 6191640457872028023}
+  m_Layer: 3
+  m_Name: PlayerVicinity
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1146253977735218018
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6704929694250402090}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4152572908595174799}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6191640457872028023
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6704929694250402090}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03d18c75fdd614a40b2c242600c72540, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerVicinity
+  DistancesToPlayer: []
 --- !u!1 &7802084187537108127
 GameObject:
   m_ObjectHideFlags: 0
@@ -10402,6 +10448,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SpaceshipLookAt
   rotationSpeed: 45
+  lookAtPos: {x: 0, y: 0, z: 0}
 --- !u!1 &7873728331992660911
 GameObject:
   m_ObjectHideFlags: 0

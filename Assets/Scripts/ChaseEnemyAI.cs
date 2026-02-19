@@ -6,12 +6,14 @@ public class ChaseEnemyAI : MonoBehaviour
     [SerializeField] float rotationSpeed;
     [SerializeField] float moveSpeed;
     [SerializeField] Vector3 introSpotOffset;
+    [SerializeField] float timeBeforeKilled = 8f;
 
     bool isNowFollowingPlayer = false;
     bool wentNearPlayer = false;
     bool wentNearIntroSpot = false;
     Vector3 introSpot;
     Transform target;
+    EnemyKillable enemyKillable;
 
     private void Start()
     {
@@ -26,6 +28,8 @@ public class ChaseEnemyAI : MonoBehaviour
         }
 
         target = PlayerManager.Instance.GetPlayer().transform;
+
+        Invoke("Kill", timeBeforeKilled);
     }
 
     private void Update()
@@ -102,5 +106,10 @@ public class ChaseEnemyAI : MonoBehaviour
         {
             transform.position += transform.forward * moveSpeed * Time.deltaTime;
         }
+    }
+
+    void Kill()
+    {
+        enemyKillable.Kill();
     }
 }

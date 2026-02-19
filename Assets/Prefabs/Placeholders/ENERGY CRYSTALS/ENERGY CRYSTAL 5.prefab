@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 7198653176957525201}
   - component: {fileID: 5022764562651072304}
   - component: {fileID: 4021116322688889471}
+  - component: {fileID: 2241573713416736927}
   m_Layer: 0
   m_Name: ENERGY CRYSTAL 5
   m_TagString: EnergyCrystal
@@ -184,7 +185,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SpawnVFXOnDeath
   VisualEffect: {fileID: 6192724089161036641, guid: 912e8428389637e41a09831d75ed6612,
     type: 3}
-  offsetMultiplier: 0
+  offset: {x: 0, y: 0, z: 0}
+  offsetTowardsCamera: 3
+  scaleMultiplier: 2
+--- !u!114 &2241573713416736927
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4330854758197314082}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0820542c67901d24ca91f33cffc6b070, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DistanceToPlayer
 --- !u!1001 &977269809739046167
 PrefabInstance:
   m_ObjectHideFlags: 0

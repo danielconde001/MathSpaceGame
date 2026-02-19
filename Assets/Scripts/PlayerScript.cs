@@ -5,8 +5,6 @@ public class PlayerScript : MonoBehaviour
     [SerializeField] private MeshRenderer playerMesh;
     [SerializeField] private AudioSource shootAudioSource;
     [SerializeField] private AudioSource spaceshipAmbienceAudioSource;
-    
-    [SerializeField] private GameObject test;
 
     private SpaceshipAttack attack;
     private SpaceshipMovement movement;
@@ -76,10 +74,6 @@ public class PlayerScript : MonoBehaviour
     private void Start()
     {
         AudioManager.Instance.PlaySpaceshipAmbienceSFX();
-        if (Application.isMobilePlatform)
-        {
-            test.SetActive(true);
-        }
     }
 
     public int GetDamage()

@@ -24,6 +24,11 @@ public class ProjectileBehaviour : MonoBehaviour
 
         if (target == null)
         {
+            if (moveDir == Vector3.zero) // to fix that bug where the bullet freezes mid air
+            {
+                Destroy(gameObject);
+            }
+
             transform.position += moveDir * projectileSpeed * Time.deltaTime;
         }
         else

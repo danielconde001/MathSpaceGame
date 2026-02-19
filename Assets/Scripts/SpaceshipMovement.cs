@@ -1,3 +1,4 @@
+using Terresquall;
 using UnityEngine;
 
 public class SpaceshipMovement : MonoBehaviour
@@ -14,9 +15,20 @@ public class SpaceshipMovement : MonoBehaviour
             return;
         }
 
-        float rightInput = Input.GetAxis("Horizontal");
-        float upInput = Input.GetAxis("Vertical");
+        float rightInput;
+        float upInput;
 
+        if (Application.isMobilePlatform == true)
+        {
+            rightInput = VirtualJoystick.GetAxis("Horizontal");
+            upInput = VirtualJoystick.GetAxis("Vertical");
+        }
+        else
+        {
+            rightInput = Input.GetAxis("Horizontal");
+            upInput = Input.GetAxis("Vertical");
+        }
+            
         if (transform.localPosition.x <= -xLimit) 
             transform.localPosition = new Vector3(-xLimit, transform.localPosition.y, transform.localPosition.z);
         if (transform.localPosition.x >= xLimit)

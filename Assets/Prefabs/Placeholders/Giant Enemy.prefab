@@ -5037,6 +5037,7 @@ GameObject:
   - component: {fileID: -245378134889491287}
   - component: {fileID: 1633600171946902515}
   - component: {fileID: 4320634566242969266}
+  - component: {fileID: -3035767402179051616}
   m_Layer: 7
   m_Name: Giant Enemy
   m_TagString: Enemy
@@ -5305,6 +5306,19 @@ MonoBehaviour:
   longCooldown: 4
   fireRate: 1
   health: {fileID: 0}
+--- !u!114 &-3035767402179051616
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8104590451157559281}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0820542c67901d24ca91f33cffc6b070, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DistanceToPlayer
+  distanceToPlayer: 0
 --- !u!1001 &8757463604770022797
 PrefabInstance:
   m_ObjectHideFlags: 0
