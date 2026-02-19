@@ -1918,6 +1918,7 @@ MonoBehaviour:
     type: 3}
   chaseEnemyPrefab: {fileID: 8104590451157559281, guid: 41fa7a8f5c2273d4d8030ec2661475a2,
     type: 3}
+  giantEnemyPrefab: {fileID: 0}
 --- !u!4 &962647491
 Transform:
   m_ObjectHideFlags: 0
@@ -3874,7 +3875,7 @@ PrefabInstance:
     - target: {fileID: 3159284906383523036, guid: 68d81cd37b97e26429898a65e6c113ff,
         type: 3}
       propertyPath: m_Name
-      value: Player (placeholder)
+      value: PlayerShip
       objectReference: {fileID: 0}
     - target: {fileID: 4152572908595174799, guid: 68d81cd37b97e26429898a65e6c113ff,
         type: 3}

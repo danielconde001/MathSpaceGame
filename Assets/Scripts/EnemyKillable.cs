@@ -4,12 +4,15 @@ using UnityEngine;
 public class EnemyKillable : Killable
 {
     [SerializeField] private GameObject scorePopupPrefab;
+    [SerializeField] private bool includeCamShake = false;
 
     SpawnVFXOnDeath SpawnVFXOnDeath;
+    CameraShake camShake;
 
     private void Awake()
     {
         SpawnVFXOnDeath = GetComponent<SpawnVFXOnDeath>();
+        camShake = Camera.main.GetComponent<CameraShake>();
     }
 
     public override void Kill()
@@ -47,6 +50,11 @@ public class EnemyKillable : Killable
         if (SpawnVFXOnDeath != null)
         {
             SpawnVFXOnDeath.SpawnVFX();
+        }
+
+        if (includeCamShake == true)
+        {
+            camShake.TriggerShake(false);
         }
 
         Destroy(gameObject);

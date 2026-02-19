@@ -20,17 +20,17 @@ public class CameraShake : MonoBehaviour
         }
     }
 
-    public void TriggerShake()
+    public void TriggerShake(bool p_includeTimeStop = true)
     {
-        StartCoroutine(Shake());
+        StartCoroutine(Shake(p_includeTimeStop));
     }
 
-    IEnumerator Shake()
+    IEnumerator Shake(bool p_includeTimeStop = true)
     {
         float elapsedTime = 0f;
         Vector3 initialPosition = transform.localPosition;
 
-        Time.timeScale = 0;
+        if (p_includeTimeStop) Time.timeScale = 0;
 
         while (elapsedTime < shakeDuration)
         {

@@ -9,10 +9,12 @@ public class AsteroidScript : MonoBehaviour
     private uint Value = 0;
 
     SpawnVFXOnDeath SpawnVFXOnDeath;
+    CameraShake camShake;
 
     private void Awake()
     {
         SpawnVFXOnDeath = GetComponent<SpawnVFXOnDeath>();
+        camShake = Camera.main.GetComponent<CameraShake>();
     }
 
     public void OnShot()
@@ -57,6 +59,8 @@ public class AsteroidScript : MonoBehaviour
         }
 
         AudioManager.Instance.PlayEnemyDeathSFX();
+
+        camShake.TriggerShake(false);
 
         gameObject.SetActive(false);
     }

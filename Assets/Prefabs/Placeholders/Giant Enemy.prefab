@@ -5248,6 +5248,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemyKillable
   scorePopupPrefab: {fileID: 5554752485786833717, guid: 4dea4b063998b504d9542259a0c01070,
     type: 3}
+  includeCamShake: 1
 --- !u!114 &-245378134889491287
 MonoBehaviour:
   m_ObjectHideFlags: 0

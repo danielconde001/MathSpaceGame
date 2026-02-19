@@ -66,10 +66,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Enter \nanswer..."
+  m_text: "Tap to \nanswer..."
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 059c0fa269be14f49ae83b0c8de6dd70, type: 2}
-  m_sharedMaterial: {fileID: -4786096985389832055, guid: 059c0fa269be14f49ae83b0c8de6dd70,
+  m_fontAsset: {fileID: 11400000, guid: 8db2a60537c5e6e4aadf168fd42535c2, type: 2}
+  m_sharedMaterial: {fileID: 1528939938913604749, guid: 8db2a60537c5e6e4aadf168fd42535c2,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -94,7 +94,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 18
+  m_fontSize: 18.85
   m_fontSizeBase: 14
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -261,7 +261,7 @@ MonoBehaviour:
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 1, g: 1, b: 1, a: 1}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -867,7 +867,7 @@ MonoBehaviour:
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 1, g: 1, b: 1, a: 1}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -1477,7 +1477,7 @@ MonoBehaviour:
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 1, g: 1, b: 1, a: 1}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -1728,7 +1728,7 @@ MonoBehaviour:
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 1, g: 1, b: 1, a: 1}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -2250,10 +2250,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Enter \nanswer..."
+  m_text: "Tap to \nanswer..."
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 059c0fa269be14f49ae83b0c8de6dd70, type: 2}
-  m_sharedMaterial: {fileID: -4786096985389832055, guid: 059c0fa269be14f49ae83b0c8de6dd70,
+  m_fontAsset: {fileID: 11400000, guid: 8db2a60537c5e6e4aadf168fd42535c2, type: 2}
+  m_sharedMaterial: {fileID: 1528939938913604749, guid: 8db2a60537c5e6e4aadf168fd42535c2,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -2278,7 +2278,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 18
+  m_fontSize: 18.85
   m_fontSizeBase: 14
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -2445,7 +2445,7 @@ MonoBehaviour:
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 1, g: 1, b: 1, a: 1}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -2948,10 +2948,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Enter \nanswer..."
+  m_text: "Tap to \nanswer..."
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 059c0fa269be14f49ae83b0c8de6dd70, type: 2}
-  m_sharedMaterial: {fileID: -4786096985389832055, guid: 059c0fa269be14f49ae83b0c8de6dd70,
+  m_fontAsset: {fileID: 11400000, guid: 8db2a60537c5e6e4aadf168fd42535c2, type: 2}
+  m_sharedMaterial: {fileID: 1528939938913604749, guid: 8db2a60537c5e6e4aadf168fd42535c2,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -2976,7 +2976,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 18
+  m_fontSize: 18.85
   m_fontSizeBase: 14
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -3295,10 +3295,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Enter \nanswer..."
+  m_text: "Tap to \nanswer..."
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 059c0fa269be14f49ae83b0c8de6dd70, type: 2}
-  m_sharedMaterial: {fileID: -4786096985389832055, guid: 059c0fa269be14f49ae83b0c8de6dd70,
+  m_fontAsset: {fileID: 11400000, guid: 8db2a60537c5e6e4aadf168fd42535c2, type: 2}
+  m_sharedMaterial: {fileID: 1528939938913604749, guid: 8db2a60537c5e6e4aadf168fd42535c2,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -3323,7 +3323,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 18
+  m_fontSize: 18.85
   m_fontSizeBase: 14
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -3453,10 +3453,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Enter \nanswer..."
+  m_text: "Tap to \nanswer..."
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 059c0fa269be14f49ae83b0c8de6dd70, type: 2}
-  m_sharedMaterial: {fileID: -4786096985389832055, guid: 059c0fa269be14f49ae83b0c8de6dd70,
+  m_fontAsset: {fileID: 11400000, guid: 8db2a60537c5e6e4aadf168fd42535c2, type: 2}
+  m_sharedMaterial: {fileID: 1528939938913604749, guid: 8db2a60537c5e6e4aadf168fd42535c2,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -3481,7 +3481,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 18
+  m_fontSize: 18.85
   m_fontSizeBase: 14
   m_fontWeight: 400
   m_enableAutoSizing: 1

@@ -195,7 +195,7 @@ GameObject:
   - component: {fileID: 4456740267470767158}
   - component: {fileID: 5973466272069096603}
   m_Layer: 0
-  m_Name: Level Section with Minigame 1 (placeholder)
+  m_Name: Level Section with Minigame (placeholder)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

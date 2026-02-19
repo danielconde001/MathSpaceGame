@@ -31,6 +31,7 @@ public class CombatEventManager : MonoBehaviour
 
     private void Update()
     {
+
         if (PauseManager.Instance.IsPaused == true)
         {
             return;

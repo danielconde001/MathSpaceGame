@@ -3052,6 +3052,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Level Section Collect Area 2-3
       objectReference: {fileID: 0}
+    - target: {fileID: 4552408384870299060, guid: 135d34da301703841885077356685c2c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4645375100092398250, guid: 135d34da301703841885077356685c2c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3971,7 +3976,7 @@ PrefabInstance:
     - target: {fileID: 3159284906383523036, guid: 68d81cd37b97e26429898a65e6c113ff,
         type: 3}
       propertyPath: m_Name
-      value: Player (placeholder)
+      value: PlayerShip
       objectReference: {fileID: 0}
     - target: {fileID: 4152572908595174799, guid: 68d81cd37b97e26429898a65e6c113ff,
         type: 3}
