@@ -1,7 +1,9 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
 using DG.Tweening;
+using UnityEngine.UI;
 
+[RequireComponent(typeof(Button))]
 public class PowerUpButtonAnimator : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerDownHandler, IPointerUpHandler
 {
     [Header("Animation Settings")]
@@ -13,9 +15,12 @@ public class PowerUpButtonAnimator : MonoBehaviour, IPointerEnterHandler, IPoint
     private Vector3 originalScale;
     private bool isPointerDown = false;
 
+    PowerUpButton powerUpButton;
+
     void Awake()
     {
         originalScale = transform.localScale;
+        powerUpButton = GetComponent<PowerUpButton>();
     }
 
     public void OnPointerEnter(PointerEventData eventData)
@@ -23,7 +28,7 @@ public class PowerUpButtonAnimator : MonoBehaviour, IPointerEnterHandler, IPoint
         if (!isPointerDown)
         {
             transform.DOScale(originalScale * hoverScale, animDuration).SetEase(animEase);
-                AudioManager.Instance.PlayPlayerShootSFX();
+                AudioManager.Instance.PlayUIHoverSFX();
         }
     }
 
@@ -43,5 +48,9 @@ public class PowerUpButtonAnimator : MonoBehaviour, IPointerEnterHandler, IPoint
     {
         isPointerDown = false;
         transform.DOScale(originalScale * hoverScale, animDuration).SetEase(animEase);
+        if (powerUpButton.Button.interactable == false)
+        {
+            AudioManager.Instance.PlayUIInactiveButtonSFX();
+        }
     }
 }
