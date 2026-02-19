@@ -10,9 +10,10 @@ public class GiantEnemyAI : MonoBehaviour
 
     [SerializeField] MissileBehaviour missilePrefab;
     [SerializeField] Transform[] bulletSpawns;
-    [SerializeField] uint consecutiveFires;
-    [SerializeField] float longCooldown;
-    [SerializeField] float fireRate;
+    public uint consecutiveFires;
+    public float longCooldown;
+    public float fireRate;
+    public Health health;
 
     AudioSource audioSource;
 
@@ -24,6 +25,7 @@ public class GiantEnemyAI : MonoBehaviour
     private void Awake()
     {
         audioSource = GetComponent<AudioSource>();
+        health = GetComponent<Health>();
     }
 
     void Start()
@@ -78,7 +80,7 @@ public class GiantEnemyAI : MonoBehaviour
 
         if (currentFires >= consecutiveFires)
         {
-            consecutiveFires = 0;
+            currentFires = 0;
             cooldown = longCooldown;
         }
         else

@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class CombatEventManager : MonoBehaviour
@@ -69,10 +68,10 @@ public class CombatEventManager : MonoBehaviour
                 StartCoroutine(CombatEvent3A());
                 break;
             case 7:
-                CombatEvent3B();
+                StartCoroutine(CombatEvent3B());
                 break;
             case 8:
-                CombatEvent3C();
+                StartCoroutine(CombatEvent3C());
                 break;
             default:
                 Debug.LogWarning("No Combat Event was triggered. No existing ID was set.");
@@ -339,6 +338,8 @@ public class CombatEventManager : MonoBehaviour
         waitForSeconds = waveInterval;
         yield return new WaitWhile(() => waitForSeconds > 0f);
 
+        AudioManager.Instance.PlayEnemyFlyInSFX();
+
         StationaryEnemyAI sEnemy1 = SpawnStationaryEnemy(2, 0);
         waitForSeconds = 0.5f;
         yield return new WaitWhile(() => waitForSeconds > 0f);
@@ -455,10 +456,9 @@ public class CombatEventManager : MonoBehaviour
         LevelManager.Instance.StopSectionsFromMoving();
 
         AudioManager.Instance.PlayEnemyAlarmSFX();
-
-        DialogueManager.Instance.StartAutoDialogue("That's a big one!");
-
         AudioManager.Instance.PlayEnemyFlyInSFX();
+
+        DialogueManager.Instance.StartAutoDialogue("That's a BIG one!");
 
         GiantEnemyAI enemy = SpawnGiantEnemy(6);
 
@@ -469,14 +469,80 @@ public class CombatEventManager : MonoBehaviour
         LevelManager.Instance.StartSectionsMovement();
     }
 
-    private void CombatEvent3B()
+    private IEnumerator CombatEvent3B()
     {
+        LevelManager.Instance.StopSectionsFromMoving();
 
+        AudioManager.Instance.PlayEnemyAlarmSFX();
+        AudioManager.Instance.PlayEnemyFlyInSFX();
+
+        StationaryEnemyAI enemy1 = SpawnStationaryEnemy(2, 0);
+        waitForSeconds = 0.5f;
+        yield return new WaitWhile(() => waitForSeconds > 0f);
+        StationaryEnemyAI enemy2 = SpawnStationaryEnemy(3, 3);
+        waitForSeconds = 0.5f;
+        yield return new WaitWhile(() => waitForSeconds > 0f);
+        StationaryEnemyAI enemy3 = SpawnStationaryEnemy(2, 1);
+        yield return new WaitUntil(
+            () => (
+            enemy1 == null &&
+            enemy2 == null &&
+            enemy3 == null)); // unitl they are dead
+
+        AudioManager.Instance.PlayEnemyFlyInSFX();
+
+        StationaryEnemyAI enemy4 = SpawnStationaryEnemy(2, 0);
+        waitForSeconds = 0.5f;
+        yield return new WaitWhile(() => waitForSeconds > 0f);
+        StationaryEnemyAI enemy5 = SpawnStationaryEnemy(3, 3);
+        waitForSeconds = 0.5f;
+        yield return new WaitWhile(() => waitForSeconds > 0f);
+        StationaryEnemyAI enemy6 = SpawnStationaryEnemy(2, 2);
+        yield return new WaitUntil(
+            () => (
+            enemy4 == null &&
+            enemy5 == null &&
+            enemy6 == null));
+
+        DialogueManager.Instance.StartAutoDialogue("We're almost to the end!");
+
+        LevelManager.Instance.StartSectionsMovement();
     }
 
-    private void CombatEvent3C()
+    private IEnumerator CombatEvent3C()
     {
+        LevelManager.Instance.StopSectionsFromMoving();
 
+        AudioManager.Instance.PlayEnemyAlarmSFX();
+        AudioManager.Instance.PlayEnemyFlyInSFX();
+
+        StationaryEnemyAI enemy1 = SpawnStationaryEnemy(2, 0);
+        waitForSeconds = 0.5f;
+        yield return new WaitWhile(() => waitForSeconds > 0f);
+        StationaryEnemyAI enemy2 = SpawnStationaryEnemy(3, 3);
+
+        waitForSeconds = 3f;
+        yield return new WaitWhile(() => waitForSeconds > 0f);
+
+        AudioManager.Instance.PlayEnemyAlarmSFX();
+        AudioManager.Instance.PlayEnemyFlyInSFX();
+
+        GiantEnemyAI enemy3 = SpawnGiantEnemy(6);
+        enemy3.health.value = 4000;
+        enemy3.consecutiveFires = 12;
+        enemy3.longCooldown = 4f;
+        enemy3.fireRate = .1f;
+
+        yield return new WaitUntil(() => 
+        (
+            enemy1 == null && 
+            enemy2 == null && 
+            enemy3 == null)
+        );
+
+        DialogueManager.Instance.StartAutoDialogue("WOOHOO! Nothing can stop you.");
+
+        LevelManager.Instance.StartSectionsMovement();
     }
 
     private StationaryEnemyAI SpawnStationaryEnemy(int p_spawnPointIndex, int p_enemySpotIndex)

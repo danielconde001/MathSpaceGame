@@ -57,15 +57,20 @@ public class PowerUpManager : MonoBehaviour
     public void CheckMilestone()
     {
         uint currentPlayerLevel = PlayerManager.Instance.GetPlayer().PlayerLevel;
-        if (ScoreManager.Instance.CurrentScore == milestones[0] && currentPlayerLevel == 1)
+        if (ScoreManager.Instance.CurrentScore >= milestones[0] &&
+            ScoreManager.Instance.CurrentScore < milestones[1] &&
+            currentPlayerLevel == 1)
         {
             ShowScreen();
         }
-        else if (ScoreManager.Instance.CurrentScore == milestones[1] && currentPlayerLevel == 2)
+        else if (ScoreManager.Instance.CurrentScore >= milestones[1] &&
+            ScoreManager.Instance.CurrentScore < milestones[2] &&
+            currentPlayerLevel == 2)
         {
             ShowScreen();
         }
-        else if (ScoreManager.Instance.CurrentScore == milestones[2] && currentPlayerLevel == 3)
+        else if (ScoreManager.Instance.CurrentScore >= milestones[2] &&
+            currentPlayerLevel == 3)
         {
             ShowScreen();
         }
