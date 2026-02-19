@@ -11,7 +11,7 @@ public class NumberImageAnimator : MonoBehaviour, IPointerEnterHandler, IPointer
     public float dragScale = 1.15f;
     public float animDuration = 0.15f;
     public Ease animEase = Ease.OutBack;
-    public Color hoverColor = new Color(1f, 0.95f, 0.7f, 1f);
+    public Color hoverColor = Color.black;
     public Color dragColor = new Color(0.8f, 0.9f, 1f, 1f);
     public Color clickColor = new Color(0.9f, 0.9f, 0.9f, 1f);
 
