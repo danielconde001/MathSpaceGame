@@ -37,6 +37,7 @@ public class NumberImageAnimator : MonoBehaviour, IPointerEnterHandler, IPointer
             transform.DOScale(originalScale * hoverScale, animDuration).SetEase(animEase);
             if (image != null)
                 image.DOColor(hoverColor, animDuration);
+            AudioManager.Instance.PlayUIHoverSFX();
         }
     }
 
@@ -57,7 +58,7 @@ public class NumberImageAnimator : MonoBehaviour, IPointerEnterHandler, IPointer
         transform.DOScale(originalScale * clickScale, animDuration * 0.7f).SetEase(Ease.InOutQuad);
         if (image != null)
             image.DOColor(clickColor, animDuration * 0.7f);
-            AudioManager.Instance.PlayPlayerShootSFX();
+            AudioManager.Instance.PlayUIClickButtonSFX();
     }
 
     public void OnPointerUp(PointerEventData eventData)
@@ -85,6 +86,6 @@ public class NumberImageAnimator : MonoBehaviour, IPointerEnterHandler, IPointer
         transform.DOScale(originalScale, animDuration).SetEase(animEase);
         if (image != null)
             image.DOColor(originalColor, animDuration);
-            AudioManager.Instance.PlayPlayerShootSFX();
+        AudioManager.Instance.PlayUIDropButtonSFX();
     }
 }

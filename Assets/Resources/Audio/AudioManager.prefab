@@ -330,3 +330,5 @@ MonoBehaviour:
   incorrectSFX: {fileID: 8300000, guid: 0ecad716d75198840863149e5598fdde, type: 3}
   uiHoverSFX: {fileID: 8300000, guid: be85c48c9dec5ef418538194328f7d64, type: 3}
   uiInactiveButtonSFX: {fileID: 8300000, guid: 7e40c2706b06e55448e7b7c0654f17eb, type: 3}
+  uiClickButtonSFX: {fileID: 8300000, guid: f393a91f34e31e84a8e276e4f86f60c1, type: 3}
+  uiDropButtonSFX: {fileID: 8300000, guid: b7c6f6c47b653a942aa165b47b1acdf2, type: 3}
