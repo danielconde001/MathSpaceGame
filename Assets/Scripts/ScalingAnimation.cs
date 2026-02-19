@@ -7,7 +7,16 @@ public class ScalingAnimation : MonoBehaviour
     [Tooltip("Duration for scaling up or down (seconds)")]
     public float scaleDuration = 2f;
 
+    [Tooltip("The scale to start from (scaled up)")]
+    public float startScale = 1.5f;
+
     private Tweener scaleTween;
+
+    void Awake()
+    {
+        // Set the initial scale to the scaled-up value
+        transform.localScale = Vector3.one * startScale;
+    }
 
     void Start()
     {
@@ -19,8 +28,9 @@ public class ScalingAnimation : MonoBehaviour
         // Kill any previous tween
         if (scaleTween != null && scaleTween.IsActive())
             scaleTween.Kill();
-        // Use DOTween to scale to 1.5 and back to 1 non-stop
-        scaleTween = transform.DOScale(1.5f, scaleDuration)
+        // Use DOTween to scale from startScale to 1 and back, non-stop
+        scaleTween = transform.DOScale(Vector3.one, scaleDuration)
+            .From(Vector3.one * startScale)
             .SetLoops(-1, LoopType.Yoyo);
     }
 
