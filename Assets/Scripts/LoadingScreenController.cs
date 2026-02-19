@@ -11,17 +11,18 @@ public class LoadingScreenController : MonoBehaviour
     public float minLoadingTime = 1f; // Minimum time to show loading screen
     public Image loadingBarImage;
     public float maxWidth = 1920f; // Max width when fully loaded
-    public TextMeshProUGUI topicText;
+    public Image topicImage;
+    public Sprite[] topicImages; // Assign 3 images in Inspector
 
     private RectTransform barRect;
     private string gameSceneName = "Level 1";
 
-    // Mapping topics to scene names
-    private readonly System.Collections.Generic.Dictionary<string, string> topicToScene = new System.Collections.Generic.Dictionary<string, string>()
+    // Mapping topics to scene names and image indices
+    private readonly System.Collections.Generic.Dictionary<string, (string scene, int imageIndex)> topicToScene = new System.Collections.Generic.Dictionary<string, (string, int)>()
     {
-        {"Counting up to 100", "Level 1"},
-        {"Number Patterns", "Level 2"},
-        {"Comparing and Ordering Numbers", "Level 3"}
+        {"Counting up to 100", ("Level 1", 0)},
+        {"Number Patterns", ("Level 2", 1)},
+        {"Comparing and Ordering Numbers", ("Level 3", 2)}
     };
 
     void Start()
@@ -31,21 +32,24 @@ public class LoadingScreenController : MonoBehaviour
             barRect = loadingBarImage.rectTransform;
             SetBarWidth(0);
         }
-        // Set the topic text if assigned and determine scene
+        // Set the topic image if assigned and determine scene
         string topic = PlayerPrefs.GetString("SelectedTopic", "");
-        if (topicText != null)
-        {
-            topicText.text = string.IsNullOrEmpty(topic) ? "" : topic;
-        }
-        // Map topic to scene name, fallback to Level 1 if not found
+        int topicImageIndex = 0;
         if (!string.IsNullOrEmpty(topic) && topicToScene.ContainsKey(topic))
         {
-            gameSceneName = topicToScene[topic];
+            var mapping = topicToScene[topic];
+            gameSceneName = mapping.scene;
+            topicImageIndex = mapping.imageIndex;
         }
         else
         {
             Debug.LogWarning($"SelectedTopic '{topic}' not found in topicToScene mapping. Defaulting to 'Level 1'.");
             gameSceneName = "Level 1";
+            topicImageIndex = 0;
+        }
+        if (topicImage != null && topicImages != null && topicImages.Length > topicImageIndex)
+        {
+            topicImage.sprite = topicImages[topicImageIndex];
         }
         StartCoroutine(LoadGameSceneAsync());
     }
