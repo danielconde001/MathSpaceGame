@@ -19,6 +19,7 @@ public class GiantEnemyAI : MonoBehaviour
     uint currentFires = 0;
     float cooldown = 0;
     bool isNowInSpot = false;
+    int spawnIndex = 0;
 
     private void Awake()
     {
@@ -62,13 +63,17 @@ public class GiantEnemyAI : MonoBehaviour
             });
     }
 
-    void Shoot(int p_index = 0)
+    void Shoot()
     {
         AudioManager.Instance.PlayMissileLaunchSFX(audioSource);
 
         MissileBehaviour launchedMissile
-            = Instantiate(missilePrefab, bulletSpawns[p_index].position, transform.rotation);
+            = Instantiate(missilePrefab, bulletSpawns[spawnIndex].position, transform.rotation);
 
+        spawnIndex++;
+
+        if (spawnIndex >= bulletSpawns.Length) spawnIndex = 0;
+        
         currentFires++;
 
         if (currentFires >= consecutiveFires)

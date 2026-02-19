@@ -5110,7 +5110,7 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 7
+  m_Radius: 5
   m_Center: {x: 0, y: 5, z: 0}
 --- !u!82 &3807635552220221503
 AudioSource:
@@ -5262,9 +5262,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SpawnVFXOnDeath
   VisualEffect: {fileID: 8038344524183138613, guid: e06070ba9536dd5439cd1b51ca7769cb,
     type: 3}
-  offset: {x: 0, y: 0, z: 0}
-  offsetTowardsCamera: 3
-  scaleMultiplier: 8
+  offset: {x: 0, y: 5, z: 0}
+  offsetTowardsCamera: 0
+  scaleMultiplier: 16
 --- !u!114 &1633600171946902515
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5277,7 +5277,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c95a7a2e6084334fb8c2cb2516ccf0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Score
-  value: 1
+  value: 10
 --- !u!114 &4320634566242969266
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5300,9 +5300,9 @@ MonoBehaviour:
   - {fileID: 3392212738367453082}
   - {fileID: 8715448868803448293}
   - {fileID: 12051046075477692}
-  consecutiveFires: 4
+  consecutiveFires: 5
   longCooldown: 4
-  fireRate: 2
+  fireRate: 1.5
 --- !u!1001 &8757463604770022797
 PrefabInstance:
   m_ObjectHideFlags: 0

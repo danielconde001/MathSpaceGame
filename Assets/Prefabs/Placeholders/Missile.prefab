@@ -15,7 +15,6 @@ GameObject:
   - component: {fileID: 1939067576508253881}
   - component: {fileID: 2423441851039531467}
   - component: {fileID: 5898580216994341107}
-  - component: {fileID: 4158350768336071237}
   - component: {fileID: 1526388615376207814}
   - component: {fileID: 7895856343794238102}
   m_Layer: 7
@@ -35,7 +34,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
+  m_LocalScale: {x: 2.5, y: 2.5, z: 2.5}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8106246843220018509}
@@ -98,7 +97,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6479aab3562bfb84ca2f35309830ae5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Health
-  value: 100
+  value: 90
 --- !u!114 &1939067576508253881
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -111,8 +110,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbbeb77206e772d499bedf6bcefb2743, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyKillable
-  scorePopupPrefab: {fileID: 5554752485786833717, guid: 4dea4b063998b504d9542259a0c01070,
-    type: 3}
+  scorePopupPrefab: {fileID: 0}
 --- !u!114 &2423441851039531467
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -142,19 +140,6 @@ MonoBehaviour:
   offset: {x: 0, y: 0, z: 0}
   offsetTowardsCamera: 1
   scaleMultiplier: 2
---- !u!114 &4158350768336071237
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6778629682480858526}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1c95a7a2e6084334fb8c2cb2516ccf0c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Score
-  value: 1
 --- !u!114 &1526388615376207814
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -187,7 +172,7 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 1
+  m_Radius: 1.2
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &3431368743575508716
 PrefabInstance:
