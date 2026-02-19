@@ -1,4 +1,5 @@
 using DG.Tweening;
+using System.Drawing;
 using TMPro;
 using UnityEngine;
 
@@ -10,7 +11,7 @@ public class TensAndOnesMinigameCanvas : MonoBehaviour
 
     public void ShowScreen(uint p_value = 0)
     {
-        text.text = "How do you make " + p_value.ToString() + "?";
+        text.text = "How do you make <color=#00FFFF>" +  p_value.ToString() + "</color>?";
         panel.gameObject.transform.DOLocalMoveY(820, 0f, true);
         panel.gameObject.transform.DOLocalMoveY(520, 1f);
     }
