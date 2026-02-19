@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class MobileOnlyEnabled : MonoBehaviour
 {
-    void Awake()
+    void Start()
     {
         if (Application.isMobilePlatform == false)
         {

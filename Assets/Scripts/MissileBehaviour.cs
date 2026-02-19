@@ -18,6 +18,8 @@ public class MissileBehaviour : MonoBehaviour
     private void Awake()
     {
         killable = GetComponent<EnemyKillable>();
+
+        Invoke("Kill", 10f);
     }
 
     private void Start()
@@ -109,6 +111,11 @@ public class MissileBehaviour : MonoBehaviour
         {
             transform.position += transform.forward * moveSpeed * Time.deltaTime;
         }
+    }
+
+    private void Kill()
+    {
+        killable.Kill();
     }
 
     private void OnCollisionEnter(Collision other)

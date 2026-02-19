@@ -150,14 +150,20 @@ public class SpaceshipAttack : MonoBehaviour
 
     public void AutoShoot()
     {
-        if ((PlayerVicinity.Instance.GetNearestTransform() == null && PlayerVicinity.Instance.GetNearestDistance() > 50f) || fireCooldown > 0f)
+        if ((PlayerVicinity.Instance.GetNearestTransform() == null ||
+            PlayerVicinity.Instance.GetNearestDistance() > 50f))
         {
             return;
         }
 
         // Look at target instantly
-        spaceshipLookAt.LookAtPositionFast(PlayerVicinity.Instance.GetNearestTransform().position);
-        
+        spaceshipLookAt.LookAtPosition(PlayerVicinity.Instance.GetNearestTransform().position);
+
+        if (fireCooldown > 0f)
+        {
+            return;
+        }
+
         // Set target
         Transform target = PlayerVicinity.Instance.GetNearestTransform();
 
