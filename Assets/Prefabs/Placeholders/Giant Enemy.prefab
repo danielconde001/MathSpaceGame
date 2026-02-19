@@ -5304,7 +5304,7 @@ MonoBehaviour:
   - {fileID: 12051046075477692}
   consecutiveFires: 8
   longCooldown: 4
-  fireRate: 1
+  fireRate: 2
   health: {fileID: 0}
 --- !u!114 &-3035767402179051616
 MonoBehaviour:
@@ -5318,7 +5318,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0820542c67901d24ca91f33cffc6b070, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DistanceToPlayer
-  distanceToPlayer: 0
 --- !u!1001 &8757463604770022797
 PrefabInstance:
   m_ObjectHideFlags: 0

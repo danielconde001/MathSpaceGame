@@ -21,10 +21,10 @@ public class SpaceshipLookAt : MonoBehaviour
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         lookAtPos = ray.GetPoint(100f);
 
-        LookAtPositionSlerp(lookAtPos);
+        LookAtPosition(lookAtPos);
     }
 
-    private void LookAtPositionSlerp(Vector3 p_lookAtPos)
+    public void LookAtPosition(Vector3 p_lookAtPos)
     {
         if (p_lookAtPos != null)
         {
@@ -36,16 +36,6 @@ public class SpaceshipLookAt : MonoBehaviour
 
             // Smoothly rotate the object towards that rotation over time
             transform.localRotation = Quaternion.Slerp(transform.localRotation, lookRotation, Time.deltaTime * rotationSpeed);
-        }
-    }
-
-    public void LookAtPositionFast(Vector3 p_lookAtPos)
-    {
-        if (p_lookAtPos != null)
-        {
-            Vector3 direction = (p_lookAtPos - transform.position).normalized;
-            Quaternion lookRotation = Quaternion.LookRotation(direction);
-            transform.localRotation = Quaternion.Slerp(transform.localRotation, lookRotation, Time.deltaTime * rotationSpeed*3);
         }
     }
 }

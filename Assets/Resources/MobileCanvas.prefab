@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1665266575050859151}
   - component: {fileID: 4503587325046538533}
   - component: {fileID: 5947645120806645757}
-  - component: {fileID: 4353774540132558261}
+  - component: {fileID: 5424178529985908295}
   m_Layer: 5
   m_Name: MobileCanvas
   m_TagString: Untagged
@@ -104,7 +104,7 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &4353774540132558261
+--- !u!114 &5424178529985908295
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -174,7 +174,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.39215687}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -204,6 +204,7 @@ GameObject:
   - component: {fileID: 4356605375055555712}
   - component: {fileID: 4251650136573998405}
   - component: {fileID: 8210200103437718956}
+  - component: {fileID: 1854297236203563436}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -220,15 +221,15 @@ RectTransform:
   m_GameObject: {fileID: 9142454065380693976}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.67, y: 0.67, z: 0.67}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 7932382942873861785}
   m_Father: {fileID: 4147865262374901419}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -100, y: -85}
+  m_AnchoredPosition: {x: -165, y: -140}
   m_SizeDelta: {x: 128, y: 128}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4356605375055555712
@@ -252,7 +253,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.39215687}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -313,6 +314,19 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1854297236203563436
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9142454065380693976}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fb9eef70422da04b96ee3ba7b661dff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AutoShootButton
+  isPressed: 0
 --- !u!1001 &3984585649039383286
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -419,12 +433,12 @@ PrefabInstance:
     - target: {fileID: 7046771356405687525, guid: 9f2495481d879914697f485d546c8d07,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 150
+      value: 165
       objectReference: {fileID: 0}
     - target: {fileID: 7046771356405687525, guid: 9f2495481d879914697f485d546c8d07,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -50.3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7046771356405687525, guid: 9f2495481d879914697f485d546c8d07,
         type: 3}
@@ -449,7 +463,7 @@ PrefabInstance:
     - target: {fileID: 7046771356405687526, guid: 9f2495481d879914697f485d546c8d07,
         type: 3}
       propertyPath: radius
-      value: 1.513
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7046771356405687526, guid: 9f2495481d879914697f485d546c8d07,
         type: 3}
