@@ -29,6 +29,9 @@ public class ArrangingMinigameManager : MinigameManager
     private GameObject selectedImage = null;
     private GameObject draggingImage = null;
     private Vector3 dragStartPos;
+    private Vector3 selectedImageStartPos;
+    private GameObject[] images;
+    private Vector2[] defaultAnchoredPositions = new Vector2[5];
 
     private uint rounds = 0;
     private uint roundsPassed = 0;
@@ -44,11 +47,17 @@ public class ArrangingMinigameManager : MinigameManager
         panel.enabled = true;
         submitButton.interactable = true;
 
+        images = new GameObject[] { numberImage1, numberImage2, numberImage3, numberImage4, numberImage5 };
+        for (int i = 0; i < images.Length; i++)
+        {
+            RectTransform rt = images[i].GetComponent<RectTransform>();
+            defaultAnchoredPositions[i] = rt.anchoredPosition;
+        }
+
         GenerateAndShowNumbers();
 
         submitButton.onClick.RemoveAllListeners();
         submitButton.onClick.AddListener(OnSubmit);
-        GameObject[] images = { numberImage1, numberImage2, numberImage3, numberImage4, numberImage5 };
         foreach (var img in images)
         {
             UnityEngine.UI.Button btn = img.GetComponent<UnityEngine.UI.Button>();
@@ -99,11 +108,12 @@ public class ArrangingMinigameManager : MinigameManager
         }
 
         // Set the numbers to the child TMP_Text of each image
-        GameObject[] images = { numberImage1, numberImage2, numberImage3, numberImage4, numberImage5 };
         for (int i = 0; i < 5; i++)
         {
             TMP_Text txt = images[i].GetComponentInChildren<TMP_Text>();
             txt.text = numbers[shuffledIndices[i]].ToString();
+            // Reset position to slot
+            images[i].GetComponent<RectTransform>().anchoredPosition = defaultAnchoredPositions[i];
         }
     }
 
@@ -124,7 +134,6 @@ public class ArrangingMinigameManager : MinigameManager
     {
         // Check if the images are arranged in ascending order by their child text
         bool correct = true;
-        GameObject[] images = { numberImage1, numberImage2, numberImage3, numberImage4, numberImage5 };
         for (int i = 0; i < 5; i++)
         {
             TMP_Text txt = images[i].GetComponentInChildren<TMP_Text>();
@@ -180,9 +189,12 @@ public class ArrangingMinigameManager : MinigameManager
     private void OnImageClicked(GameObject img)
     {
         if (draggingImage != null) return; // Prevent click-to-swap if dragging
+        int idxA = System.Array.IndexOf(images, selectedImage);
+        int idxB = System.Array.IndexOf(images, img);
         if (selectedImage == null)
         {
             selectedImage = img;
+            selectedImageStartPos = img.GetComponent<RectTransform>().anchoredPosition;
             // Optionally highlight selected image
             // img.GetComponent<Image>().color = Color.yellow;
         }
@@ -194,14 +206,19 @@ public class ArrangingMinigameManager : MinigameManager
         }
         else
         {
-            // Swap TMP_Text values
-            TMP_Text txtA = selectedImage.GetComponentInChildren<TMP_Text>();
-            TMP_Text txtB = img.GetComponentInChildren<TMP_Text>();
-            string temp = txtA.text;
-            txtA.text = txtB.text;
-            txtB.text = temp;
-            // Optionally reset highlight
-            // selectedImage.GetComponent<Image>().color = Color.white;
+            if (idxA >= 0 && idxB >= 0)
+            {
+                float duration = 0.25f;
+                // Animate both images to their own slot positions (no swap of GameObjects)
+                images[idxA].GetComponent<RectTransform>().DOAnchorPos(defaultAnchoredPositions[idxA], duration);
+                images[idxB].GetComponent<RectTransform>().DOAnchorPos(defaultAnchoredPositions[idxB], duration);
+                // Swap TMP_Text values only
+                TMP_Text txtA = images[idxA].GetComponentInChildren<TMP_Text>();
+                TMP_Text txtB = images[idxB].GetComponentInChildren<TMP_Text>();
+                string temp = txtA.text;
+                txtA.text = txtB.text;
+                txtB.text = temp;
+            }
             selectedImage = null;
         }
     }
@@ -209,12 +226,11 @@ public class ArrangingMinigameManager : MinigameManager
     public void OnBeginDrag(GameObject img)
     {
         draggingImage = img;
-        dragStartPos = img.transform.position;
+        dragStartPos = img.GetComponent<RectTransform>().anchoredPosition;
         selectedImage = null; // Disable click-to-swap while dragging
         // Bring dragged image to front (top of hierarchy)
         img.transform.SetAsLastSibling();
         // Ensure z is 0 for all images
-        GameObject[] images = { numberImage1, numberImage2, numberImage3, numberImage4, numberImage5 };
         foreach (var image in images)
         {
             Vector3 pos = image.transform.localPosition;
@@ -225,7 +241,15 @@ public class ArrangingMinigameManager : MinigameManager
     public void OnDrag(GameObject img, Vector3 pointerPos)
     {
         if (draggingImage == img)
-            img.transform.position = pointerPos;
+        {
+            // Convert screen position to local anchored position
+            RectTransformUtility.ScreenPointToLocalPointInRectangle(
+                img.transform.parent as RectTransform,
+                pointerPos,
+                null,
+                out Vector2 localPoint);
+            img.GetComponent<RectTransform>().anchoredPosition = localPoint;
+        }
     }
 
     public void OnEndDrag(GameObject img)
@@ -233,10 +257,12 @@ public class ArrangingMinigameManager : MinigameManager
         if (draggingImage == img)
         {
             // On drag end, check for overlap with any other image and swap if overlapping
-            GameObject[] images = { numberImage1, numberImage2, numberImage3, numberImage4, numberImage5 };
             RectTransform draggedRect = img.GetComponent<RectTransform>();
-            foreach (var other in images)
+            bool swapped = false;
+            int idxA = System.Array.IndexOf(images, img);
+            for (int i = 0; i < images.Length; i++)
             {
+                var other = images[i];
                 if (other == img) continue;
                 RectTransform otherRect = other.GetComponent<RectTransform>();
                 if (draggedRect != null && otherRect != null)
@@ -249,18 +275,27 @@ public class ArrangingMinigameManager : MinigameManager
                     Rect otherWorldRect = new Rect(otherCorners[0], otherCorners[2] - otherCorners[0]);
                     if (draggedWorldRect.Overlaps(otherWorldRect))
                     {
-                        // Swap TMP_Text values
-                        TMP_Text txtA = img.GetComponentInChildren<TMP_Text>();
-                        TMP_Text txtB = other.GetComponentInChildren<TMP_Text>();
+                        int idxB = i;
+                        float duration = 0.25f;
+                        // Animate both images to their own slot positions (no swap of GameObjects)
+                        images[idxA].GetComponent<RectTransform>().DOAnchorPos(defaultAnchoredPositions[idxA], duration);
+                        images[idxB].GetComponent<RectTransform>().DOAnchorPos(defaultAnchoredPositions[idxB], duration);
+                        // Swap TMP_Text values only
+                        TMP_Text txtA = images[idxA].GetComponentInChildren<TMP_Text>();
+                        TMP_Text txtB = images[idxB].GetComponentInChildren<TMP_Text>();
                         string temp = txtA.text;
                         txtA.text = txtB.text;
                         txtB.text = temp;
+                        swapped = true;
                         break;
                     }
                 }
             }
-            // Return to original position
-            img.transform.position = dragStartPos;
+            if (!swapped)
+            {
+                // Return to original position with animation
+                img.GetComponent<RectTransform>().DOAnchorPos(defaultAnchoredPositions[idxA], 0.25f);
+            }
             draggingImage = null;
             // Ensure z is 0 for all images
             foreach (var image in images)
@@ -275,14 +310,23 @@ public class ArrangingMinigameManager : MinigameManager
     {
         if (dropped != null && target != null && dropped != target)
         {
-            TMP_Text txtA = dropped.GetComponentInChildren<TMP_Text>();
-            TMP_Text txtB = target.GetComponentInChildren<TMP_Text>();
-            string temp = txtA.text;
-            txtA.text = txtB.text;
-            txtB.text = temp;
+            int idxA = System.Array.IndexOf(images, dropped);
+            int idxB = System.Array.IndexOf(images, target);
+            if (idxA >= 0 && idxB >= 0)
+            {
+                float duration = 0.25f;
+                // Animate both images to their own slot positions (no swap of GameObjects)
+                images[idxA].GetComponent<RectTransform>().DOAnchorPos(defaultAnchoredPositions[idxA], duration);
+                images[idxB].GetComponent<RectTransform>().DOAnchorPos(defaultAnchoredPositions[idxB], duration);
+                // Swap TMP_Text values only
+                TMP_Text txtA = images[idxA].GetComponentInChildren<TMP_Text>();
+                TMP_Text txtB = images[idxB].GetComponentInChildren<TMP_Text>();
+                string temp = txtA.text;
+                txtA.text = txtB.text;
+                txtB.text = temp;
+            }
         }
         // Ensure z is 0 for all images
-        GameObject[] images = { numberImage1, numberImage2, numberImage3, numberImage4, numberImage5 };
         foreach (var image in images)
         {
             Vector3 pos = image.transform.localPosition;
