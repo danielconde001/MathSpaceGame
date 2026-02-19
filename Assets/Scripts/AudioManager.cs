@@ -19,6 +19,7 @@ public class AudioManager : MonoBehaviour
     [SerializeField] AudioClip spaceshipAmbienceSFX;
     [SerializeField] AudioClip playerHitSFX;
     [SerializeField] AudioClip spaceshipDeathSFX;
+    [SerializeField] AudioClip missileLaunchSFX;
     [SerializeField] AudioClip correctSFX;
     [SerializeField] AudioClip incorrectSFX;
     [SerializeField] AudioClip uiHoverSFX;
@@ -101,6 +102,11 @@ public class AudioManager : MonoBehaviour
     public void PlayEnemyShootSFX(AudioSource p_audioSource)
     {
         p_audioSource.PlayOneShot(enemyShootSFX);
+    }
+
+    public void PlayMissileLaunchSFX(AudioSource p_audioSource)
+    {
+        p_audioSource.PlayOneShot(missileLaunchSFX);
     }
 
     public void PlaySpaceshipAmbienceSFX()

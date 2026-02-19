@@ -6,6 +6,8 @@ public class ProjectileBehaviour : MonoBehaviour
     public float projectileSpeed;
     [SerializeField] protected bool useDebug = false;
 
+    public Transform target;
+
     protected SpawnVFXOnDeath SpawnVFXOnDeath;
     
     protected void Awake()
@@ -20,7 +22,15 @@ public class ProjectileBehaviour : MonoBehaviour
             return;
         }
 
-        transform.position += moveDir * projectileSpeed * Time.deltaTime;    
+        if (target == null)
+        {
+            transform.position += moveDir * projectileSpeed * Time.deltaTime;
+        }
+        else
+        {
+            transform.position += 
+                (target.position - transform.position).normalized * projectileSpeed * Time.deltaTime;
+        }
     }
 
     protected virtual void OnTriggerEnter(Collider other)

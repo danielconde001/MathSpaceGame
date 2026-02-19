@@ -18,8 +18,6 @@ public class EnemyKillable : Killable
 
         AudioManager.Instance.PlayEnemyDeathSFX();
 
-        // spawn explosion
-
         // Spawn score popup using Score component
         if (scorePopupPrefab != null)
         {

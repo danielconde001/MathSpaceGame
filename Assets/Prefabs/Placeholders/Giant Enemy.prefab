@@ -4836,6 +4836,37 @@ ParticleSystemRenderer:
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
   m_MaskInteraction: 0
+--- !u!1 &3700963138797874546
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8715448868803448293}
+  m_Layer: 7
+  m_Name: BulletSpawn 1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8715448868803448293
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3700963138797874546}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 9, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3486117988231100224}
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!1 &3967333940067946317
 GameObject:
   m_ObjectHideFlags: 0
@@ -4925,7 +4956,38 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3967333940067946317}
-  m_Mesh: {fileID: -5825276596619063499, guid: 84b16956b9479c14d9fb78be5ed2e88c, type: 3}
+  m_Mesh: {fileID: 4178851830742145269, guid: b0bf1d5ef7011074aa1f869c21d706fc, type: 3}
+--- !u!1 &5856591973341567123
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 12051046075477692}
+  m_Layer: 7
+  m_Name: BulletSpawn 2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &12051046075477692
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5856591973341567123}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.66446304, y: -0.24184482, z: 0.24184482, w: 0.66446304}
+  m_LocalPosition: {x: -4.5, y: 6, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3486117988231100224}
+  m_LocalEulerAnglesHint: {x: -130, y: 90, z: -90}
 --- !u!1 &6406471172433919739
 GameObject:
   m_ObjectHideFlags: 0
@@ -4936,7 +4998,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3392212738367453082}
   m_Layer: 7
-  m_Name: BulletSpawn
+  m_Name: BulletSpawn 0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4950,13 +5012,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6406471172433919739}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.74, z: 3.49}
+  m_LocalRotation: {x: -0.6408564, y: 0.29883626, z: -0.29883626, w: 0.6408564}
+  m_LocalPosition: {x: 4.5, y: 6, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3486117988231100224}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -40, y: 90, z: -90}
 --- !u!1 &8104590451157559281
 GameObject:
   m_ObjectHideFlags: 0
@@ -4967,16 +5029,16 @@ GameObject:
   m_Component:
   - component: {fileID: 3486117988231100224}
   - component: {fileID: 3621486597614997871}
-  - component: {fileID: 7241354121240704710}
+  - component: {fileID: 3101546244175042224}
   - component: {fileID: 3807635552220221503}
   - component: {fileID: 7034097960053531366}
   - component: {fileID: 8330759345114548992}
   - component: {fileID: 7118422116266386654}
-  - component: {fileID: 9147849615278349763}
   - component: {fileID: -245378134889491287}
   - component: {fileID: 1633600171946902515}
+  - component: {fileID: 4320634566242969266}
   m_Layer: 7
-  m_Name: Stationary Enemy (placeholder)
+  m_Name: Giant Enemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4998,6 +5060,8 @@ Transform:
   - {fileID: 7074959765501919838}
   - {fileID: 3720992715906330776}
   - {fileID: 3392212738367453082}
+  - {fileID: 8715448868803448293}
+  - {fileID: 12051046075477692}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!54 &3621486597614997871
@@ -5027,8 +5091,8 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!136 &7241354121240704710
-CapsuleCollider:
+--- !u!135 &3101546244175042224
+SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -5045,11 +5109,9 @@ CapsuleCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 2.75
-  m_Height: 9.5
-  m_Direction: 2
-  m_Center: {x: 0, y: 2, z: -0.5}
+  serializedVersion: 3
+  m_Radius: 7
+  m_Center: {x: 0, y: 5, z: 0}
 --- !u!82 &3807635552220221503
 AudioSource:
   m_ObjectHideFlags: 0
@@ -5159,7 +5221,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6479aab3562bfb84ca2f35309830ae5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Health
-  value: 500
+  value: 2000
 --- !u!114 &8330759345114548992
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5186,27 +5248,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemyKillable
   scorePopupPrefab: {fileID: 5554752485786833717, guid: 4dea4b063998b504d9542259a0c01070,
     type: 3}
---- !u!114 &9147849615278349763
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8104590451157559281}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 97d7cd3409497524d9e8af4e11510f77, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::StationaryEnemyAI
-  rotationSpeed: 20
-  moveSpeed: 20
-  damage: 45
-  respectiveSpot: {fileID: 0}
-  minFireRate: 1
-  maxFireRate: 1.5
-  projectilePrefab: {fileID: 6120972467117282982, guid: c68872cde2d38644a9d98b5d1b650906,
-    type: 3}
-  bulletSpawn: {fileID: 3392212738367453082}
 --- !u!114 &-245378134889491287
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5237,6 +5278,31 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Score
   value: 1
+--- !u!114 &4320634566242969266
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8104590451157559281}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3759ff9c0e820c4885dc40945dbeafb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GiantEnemyAI
+  rotationSpeed: 0
+  moveSpeed: 20
+  damage: 100
+  respectiveSpot: {fileID: 0}
+  missilePrefab: {fileID: 7972665032160713288, guid: aa218580c8a88fb4ab90fe652a1a4111,
+    type: 3}
+  bulletSpawns:
+  - {fileID: 3392212738367453082}
+  - {fileID: 8715448868803448293}
+  - {fileID: 12051046075477692}
+  consecutiveFires: 4
+  longCooldown: 4
+  fireRate: 2
 --- !u!1001 &8757463604770022797
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5255,6 +5321,11 @@ PrefabInstance:
       propertyPath: health
       value: 
       objectReference: {fileID: 7034097960053531366}
+    - target: {fileID: 2806163201268405788, guid: f98cfba594225bb4783772b833e7d784,
+        type: 3}
+      propertyPath: maxHealth
+      value: 2000
+      objectReference: {fileID: 0}
     - target: {fileID: 3190058739740244101, guid: f98cfba594225bb4783772b833e7d784,
         type: 3}
       propertyPath: m_SizeDelta.x
@@ -5302,6 +5373,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5344468285068088597, guid: f98cfba594225bb4783772b833e7d784,
         type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.002
+      objectReference: {fileID: 0}
+    - target: {fileID: 5344468285068088597, guid: f98cfba594225bb4783772b833e7d784,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.002
+      objectReference: {fileID: 0}
+    - target: {fileID: 5344468285068088597, guid: f98cfba594225bb4783772b833e7d784,
+        type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -5343,7 +5424,7 @@ PrefabInstance:
     - target: {fileID: 5344468285068088597, guid: f98cfba594225bb4783772b833e7d784,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 3.5
+      value: 9.5
       objectReference: {fileID: 0}
     - target: {fileID: 5344468285068088597, guid: f98cfba594225bb4783772b833e7d784,
         type: 3}

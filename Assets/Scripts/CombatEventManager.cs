@@ -21,6 +21,7 @@ public class CombatEventManager : MonoBehaviour
 
     [SerializeField] GameObject stationaryEnemyPrefab;
     [SerializeField] GameObject chaseEnemyPrefab;
+    [SerializeField] GameObject giantEnemyPrefab;
 
     float waitForSeconds = 0f;
 
@@ -65,7 +66,7 @@ public class CombatEventManager : MonoBehaviour
                 StartCoroutine(CombatEvent2C());
                 break;
             case 6:
-                CombatEvent3A();
+                StartCoroutine(CombatEvent3A());
                 break;
             case 7:
                 CombatEvent3B();
@@ -449,9 +450,23 @@ public class CombatEventManager : MonoBehaviour
         LevelManager.Instance.StartSectionsMovement();
     }
 
-    private void CombatEvent3A()
+    private IEnumerator CombatEvent3A()
     {
+        LevelManager.Instance.StopSectionsFromMoving();
 
+        AudioManager.Instance.PlayEnemyAlarmSFX();
+
+        DialogueManager.Instance.StartAutoDialogue("That's a big one!");
+
+        AudioManager.Instance.PlayEnemyFlyInSFX();
+
+        GiantEnemyAI enemy = SpawnGiantEnemy(6);
+
+        yield return new WaitUntil(() => (enemy == null));
+
+        DialogueManager.Instance.StartAutoDialogue("Something tells me that's not the last one..");
+
+        LevelManager.Instance.StartSectionsMovement();
     }
 
     private void CombatEvent3B()
@@ -494,5 +509,20 @@ public class CombatEventManager : MonoBehaviour
             ).GetComponent<ChaseEnemyAI>();
 
         return chaseEnemy;
+    }
+
+    private GiantEnemyAI SpawnGiantEnemy(int p_spawnPointIndex)
+    {
+        GiantEnemyAI giantEnemy = null;
+
+        giantEnemy =
+            Instantiate
+            (
+                giantEnemyPrefab,
+                SpawnPointManager.Instance.GetSpawnPoints(p_spawnPointIndex).position,
+                Quaternion.Euler(0, 180, 0)
+            ).GetComponent<GiantEnemyAI>();
+
+        return giantEnemy;
     }
 }

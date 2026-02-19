@@ -73,22 +73,23 @@ public class SpaceshipAttack : MonoBehaviour
         Vector3 aimPoint;
 
         RaycastHit hit;
+        bool hitSomething = false;
 
         // if ray hits something
         if (Physics.Raycast(ray, out hit, range, cursorRayMask))
         {
-            if (useDebug) Debug.Log(hit.collider.name);
+            hitSomething = true;
             aimPoint = hit.point;
+            if (useDebug) Debug.Log(hit.collider.name + ", " + aimPoint + ", " + hit.collider.gameObject);
         }
 
         // if ray hits nothing
         else
         {
-            if (useDebug) Debug.Log("None");
+            hitSomething = false;
             aimPoint = ray.GetPoint(range);
+            if (useDebug) Debug.Log("None");
         }
-
-        
 
         Vector3 projectileDir = (aimPoint - bulletSpawn.position).normalized;
         ProjectileBehaviour projectile;
@@ -103,6 +104,15 @@ public class SpaceshipAttack : MonoBehaviour
             AudioManager.Instance.PlayPlayerShootSFX();
             projectile = Instantiate(projectilePrefab, bulletSpawn.position, Quaternion.identity);
         }
+
+        if (hitSomething == true)
+        {
+            if (hit.collider.name != "Ground")
+            {
+                projectile.target = hit.transform;
+            }
+        }
+
         projectile.moveDir = projectileDir;
 
         fireCooldown = fireRate;

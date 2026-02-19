@@ -326,6 +326,7 @@ MonoBehaviour:
     type: 3}
   playerHitSFX: {fileID: 8300000, guid: 64651ed9e62720d459cd94f8d7d37317, type: 3}
   spaceshipDeathSFX: {fileID: 8300000, guid: a1109d401dfd4d74f86fb0211b099fb3, type: 3}
+  missileLaunchSFX: {fileID: 8300000, guid: 2579faad27daf2647b17315e84485caa, type: 3}
   correctSFX: {fileID: 8300000, guid: bca94035aeecf294aafa9150a7983591, type: 3}
   incorrectSFX: {fileID: 8300000, guid: 0ecad716d75198840863149e5598fdde, type: 3}
   uiHoverSFX: {fileID: 8300000, guid: be85c48c9dec5ef418538194328f7d64, type: 3}
