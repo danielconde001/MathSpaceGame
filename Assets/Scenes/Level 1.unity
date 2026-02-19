@@ -766,7 +766,7 @@ Camera:
     height: 1
   near clip plane: 0.1
   far clip plane: 5000
-  field of view: 90
+  field of view: 89.5
   orthographic: 0
   orthographic size: 10
   m_Depth: -1
@@ -1228,7 +1228,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &610421865
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3095,8 +3095,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 0/0
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 059c0fa269be14f49ae83b0c8de6dd70, type: 2}
-  m_sharedMaterial: {fileID: -4786096985389832055, guid: 059c0fa269be14f49ae83b0c8de6dd70,
+  m_fontAsset: {fileID: 11400000, guid: 8db2a60537c5e6e4aadf168fd42535c2, type: 2}
+  m_sharedMaterial: {fileID: 1528939938913604749, guid: 8db2a60537c5e6e4aadf168fd42535c2,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -4140,26 +4140,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7972105564099657871, guid: 68d81cd37b97e26429898a65e6c113ff,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1.4
-      objectReference: {fileID: 0}
-    - target: {fileID: 7972105564099657871, guid: 68d81cd37b97e26429898a65e6c113ff,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1.4
-      objectReference: {fileID: 0}
-    - target: {fileID: 7972105564099657871, guid: 68d81cd37b97e26429898a65e6c113ff,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1.4
-      objectReference: {fileID: 0}
-    - target: {fileID: 7972105564099657871, guid: 68d81cd37b97e26429898a65e6c113ff,
-        type: 3}
-      propertyPath: m_ConstrainProportionsScale
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

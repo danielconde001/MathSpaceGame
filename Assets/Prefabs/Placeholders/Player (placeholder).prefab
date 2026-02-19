@@ -10061,7 +10061,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.4, y: 1.4, z: 1.4}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 5892567062643518894}
@@ -10107,7 +10107,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SpaceshipMovement
   moveSpeed: 25
   xLimit: 10
-  yLimit: 4.75
+  yLimit: 6
 --- !u!114 &5550212184723110633
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10295,7 +10295,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 4609981440934108171}
   m_Father: {fileID: 5892567062643518894}
