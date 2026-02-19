@@ -5,6 +5,8 @@ public class PowerUpButton : MonoBehaviour
     [SerializeField] int Value; 
     UnityEngine.UI.Button button;
 
+    public UnityEngine.UI.Button Button { get => button; }
+
     private void Awake()
     {
         button = GetComponent<UnityEngine.UI.Button>();

@@ -21,6 +21,8 @@ public class AudioManager : MonoBehaviour
     [SerializeField] AudioClip spaceshipDeathSFX;
     [SerializeField] AudioClip correctSFX;
     [SerializeField] AudioClip incorrectSFX;
+    [SerializeField] AudioClip uiHoverSFX;
+    [SerializeField] AudioClip uiInactiveButtonSFX;
 
     private static AudioManager instance;
     public static AudioManager Instance
@@ -158,9 +160,20 @@ public class AudioManager : MonoBehaviour
         sfxSource.PlayOneShot(incorrectSFX);
     }
 
-    public void PlayBGM(AudioClip p_bgmClip)
+    public void PlayBGM(AudioClip p_bgmClip, float p_volume = 0.6f)
     {
         bgmSource.clip = p_bgmClip;
+        bgmSource.volume = p_volume;
         bgmSource.Play();
+    }
+
+    public void PlayUIHoverSFX()
+    {
+        sfxSource.PlayOneShot(uiHoverSFX);
+    }
+
+    public void PlayUIInactiveButtonSFX()
+    {
+        sfxSource.PlayOneShot(uiInactiveButtonSFX);
     }
 }
