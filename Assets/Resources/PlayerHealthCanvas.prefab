@@ -27,14 +27,14 @@ RectTransform:
   m_GameObject: {fileID: 1883028800563293430}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.5184145, y: 0.6068, z: 1}
+  m_LocalScale: {x: 0.3846913, y: 0.45027804, z: 0.74205345}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7602708968437541498}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 428.80383, y: -264.66733}
+  m_AnchoredPosition: {x: 360.2, y: -264.66733}
   m_SizeDelta: {x: 291.2818, y: 45.5128}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6603107205425718426
@@ -67,8 +67,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 100/100
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8db2a60537c5e6e4aadf168fd42535c2, type: 2}
-  m_sharedMaterial: {fileID: 1528939938913604749, guid: 8db2a60537c5e6e4aadf168fd42535c2,
+  m_fontAsset: {fileID: 11400000, guid: 01808f3c487cd4143bb78b3a781c710f, type: 2}
+  m_sharedMaterial: {fileID: -4113259312002451568, guid: 01808f3c487cd4143bb78b3a781c710f,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -93,7 +93,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 37.6
+  m_fontSize: 30.3
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -295,7 +295,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 401.9999, y: -260}
+  m_AnchoredPosition: {x: 400, y: -260}
   m_SizeDelta: {x: 364.1021, y: 81.923}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6846966504253022349
@@ -371,7 +371,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 402, y: -260}
+  m_AnchoredPosition: {x: 400, y: -260}
   m_SizeDelta: {x: 364.1021, y: 81.923}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7528195014091230022
