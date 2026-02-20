@@ -729,6 +729,9 @@ MonoBehaviour:
   clickScale: 0.95
   animDuration: 0.15
   animEase: 27
+  targetImage: {fileID: 403613801}
+  hoverSprite: {fileID: -3807787845710022794, guid: 369c0ded728cf51439a959dac514151c,
+    type: 3}
 --- !u!1 &410680923
 GameObject:
   m_ObjectHideFlags: 0
@@ -879,6 +882,9 @@ MonoBehaviour:
   clickScale: 0.95
   animDuration: 0.15
   animEase: 27
+  targetImage: {fileID: 410680926}
+  hoverSprite: {fileID: -3350871527402598170, guid: 8f12634fd891c3e4ca17811e3cc3da2a,
+    type: 3}
 --- !u!1 &465757709
 GameObject:
   m_ObjectHideFlags: 0
@@ -1054,6 +1060,8 @@ MonoBehaviour:
   clickScale: 0.95
   animDuration: 0.15
   animEase: 27
+  targetImage: {fileID: 0}
+  hoverSprite: {fileID: 0}
 --- !u!114 &465757716
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1498,6 +1506,9 @@ MonoBehaviour:
   clickScale: 0.95
   animDuration: 0.15
   animEase: 27
+  targetImage: {fileID: 732176870}
+  hoverSprite: {fileID: -5226558463742003663, guid: c8ff7f3f9d0c5a6408cd3d89e9e5cda5,
+    type: 3}
 --- !u!1 &734300660
 GameObject:
   m_ObjectHideFlags: 0
@@ -2310,6 +2321,8 @@ MonoBehaviour:
   clickScale: 0.95
   animDuration: 0.15
   animEase: 27
+  targetImage: {fileID: 0}
+  hoverSprite: {fileID: 0}
 --- !u!1 &1299462775
 GameObject:
   m_ObjectHideFlags: 0
@@ -2728,6 +2741,8 @@ MonoBehaviour:
   clickScale: 0.95
   animDuration: 0.15
   animEase: 27
+  targetImage: {fileID: 0}
+  hoverSprite: {fileID: 0}
 --- !u!1 &1429956646
 GameObject:
   m_ObjectHideFlags: 0
@@ -2999,6 +3014,8 @@ MonoBehaviour:
   clickScale: 0.95
   animDuration: 0.15
   animEase: 27
+  targetImage: {fileID: 0}
+  hoverSprite: {fileID: 0}
 --- !u!114 &1429956652
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3688,6 +3705,8 @@ MonoBehaviour:
   clickScale: 0.95
   animDuration: 0.15
   animEase: 27
+  targetImage: {fileID: 0}
+  hoverSprite: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
