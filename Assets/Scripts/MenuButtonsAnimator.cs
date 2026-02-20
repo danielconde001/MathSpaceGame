@@ -12,6 +12,11 @@ public class MenuButtonsAnimator : MonoBehaviour, IPointerEnterHandler, IPointer
     public float animDuration = 0.15f;
     public Ease animEase = Ease.OutBack;
 
+    [Header("Image Swap Settings")]
+    public Image targetImage; // Optional reference, auto-assigned if not set
+    public Sprite hoverSprite; // Sprite to use on hover
+    private Sprite originalSprite;
+
     private Vector3 originalScale;
     private bool isPointerDown = false;
 
@@ -20,6 +25,14 @@ public class MenuButtonsAnimator : MonoBehaviour, IPointerEnterHandler, IPointer
     void Awake()
     {
         powerUpButton = GetComponent<PowerUpButton>();
+        if (targetImage == null)
+        {
+            targetImage = GetComponent<Image>();
+        }
+        if (targetImage != null)
+        {
+            originalSprite = targetImage.sprite;
+        }
     }
 
     void Start()
@@ -40,7 +53,14 @@ public class MenuButtonsAnimator : MonoBehaviour, IPointerEnterHandler, IPointer
     {
         if (!isPointerDown)
         {
-            transform.DOScale(originalScale * hoverScale, animDuration).SetEase(animEase);
+            if (targetImage != null && hoverSprite != null && targetImage.sprite != null)
+            {
+                targetImage.sprite = hoverSprite;
+            }
+            else
+            {
+                transform.DOScale(originalScale * hoverScale, animDuration).SetEase(animEase);
+            }
             AudioManager.Instance.PlayUIHoverSFX();
         }
     }
@@ -48,7 +68,16 @@ public class MenuButtonsAnimator : MonoBehaviour, IPointerEnterHandler, IPointer
     public void OnPointerExit(PointerEventData eventData)
     {
         if (!isPointerDown)
-            transform.DOScale(originalScale, animDuration).SetEase(animEase);
+        {
+            if (targetImage != null && hoverSprite != null && targetImage.sprite == hoverSprite)
+            {
+                targetImage.sprite = originalSprite;
+            }
+            else
+            {
+                transform.DOScale(originalScale, animDuration).SetEase(animEase);
+            }
+        }
     }
 
     public void OnPointerDown(PointerEventData eventData)
