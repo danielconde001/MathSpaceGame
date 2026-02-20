@@ -20,6 +20,16 @@ public class PlayerVicinity : MonoBehaviour
 
     public List<DistanceToPlayer> DistancesToPlayer = new List<DistanceToPlayer>();
 
+    public bool ContainsTransform(Transform p_transform)
+    {
+        for (int i = 0; i < DistancesToPlayer.Count; i++)
+        {
+            if (DistancesToPlayer[i].transform == p_transform) return true;
+        }
+
+        return false;
+    }
+
     public Transform GetNearestTransform()
     {
         if (DistancesToPlayer.Count > 0)

@@ -23,6 +23,8 @@ public class SpaceshipAttack : MonoBehaviour
     [Header("Debug")]
     [SerializeField] bool useDebug = false;
 
+    Transform autoTarget = null;
+
     private void Awake()
     {
         spaceshipLookAt = GetComponentInChildren<SpaceshipLookAt>();
@@ -150,14 +152,31 @@ public class SpaceshipAttack : MonoBehaviour
 
     public void AutoShoot()
     {
-        if ((PlayerVicinity.Instance.GetNearestTransform() == null ||
-            PlayerVicinity.Instance.GetNearestDistance() > 100f))
+        if (PlayerVicinity.Instance.GetNearestTransform() == null)
         {
             return;
         }
 
+        if (autoTarget == null)
+        {
+            autoTarget = PlayerVicinity.Instance.GetNearestTransform();
+        }
+        else
+        {
+            if (Vector3.Distance(autoTarget.position, transform.position) > 75)
+            {
+                autoTarget = null;
+                return;
+            }
+            if (PlayerVicinity.Instance.ContainsTransform(autoTarget) == false)
+            {
+                autoTarget = null;
+                return;
+            }
+        }
+
         // Look at target instantly
-        spaceshipLookAt.LookAtPosition(PlayerVicinity.Instance.GetNearestTransform().position);
+        spaceshipLookAt.LookAtPosition(autoTarget.position);
 
         if (fireCooldown > 0f)
         {
@@ -165,7 +184,6 @@ public class SpaceshipAttack : MonoBehaviour
         }
 
         // Set target
-        Transform target = PlayerVicinity.Instance.GetNearestTransform();
 
         ProjectileBehaviour projectile;
 
@@ -180,7 +198,7 @@ public class SpaceshipAttack : MonoBehaviour
             projectile = Instantiate(projectilePrefab, bulletSpawn.position, Quaternion.identity);
         }
 
-        projectile.target = target;
+        projectile.target = autoTarget;
         fireCooldown = fireRate;
     }
 

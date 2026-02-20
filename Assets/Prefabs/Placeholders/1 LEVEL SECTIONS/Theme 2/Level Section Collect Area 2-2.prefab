@@ -14,7 +14,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &3325683047732798042
 Transform:
@@ -74,7 +74,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &8760503391116846078
 Transform:
@@ -151,7 +151,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &5576165754851773712
 Transform:
@@ -216,7 +216,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &5811292734078919144
 Transform:
@@ -282,7 +282,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &4645375100092398250
 Transform:
@@ -349,7 +349,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &5882753041667863213
 Transform:
@@ -457,7 +457,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1755911423311357456
 Transform:
@@ -493,7 +493,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 0
 --- !u!4 &3442709060207891490
 Transform:
@@ -557,7 +557,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1233868212364562689
 Transform:
@@ -629,7 +629,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &6185825477036547724
 Transform:
@@ -660,6 +660,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Mushroom 6 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2174458879660219080, guid: d0d19161c040a004cb2e34631ac10f66,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 4083229220498394806, guid: d0d19161c040a004cb2e34631ac10f66,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 5548069134290755638, guid: d0d19161c040a004cb2e34631ac10f66,
         type: 3}
@@ -810,10 +820,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5783458631199708386, guid: 00266bfc94f88ac42b4c09f7c3fffce2,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 6415769066077037902, guid: 00266bfc94f88ac42b4c09f7c3fffce2,
         type: 3}
       propertyPath: m_Name
       value: Mushroom 8 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6415769066077037902, guid: 00266bfc94f88ac42b4c09f7c3fffce2,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -838,6 +858,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Rock Base 6 (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5509437723594153752, guid: 71ac8d1595f107b4c8a8e8adc919ff0d,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 6273697801557575716, guid: 71ac8d1595f107b4c8a8e8adc919ff0d,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 6476746267254586637, guid: 71ac8d1595f107b4c8a8e8adc919ff0d,
         type: 3}
@@ -923,10 +953,25 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 8760503391116846078}
     m_Modifications:
+    - target: {fileID: 2985359813257958693, guid: ff222c80a2d707042b921c2d5f9565b0,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 4298095927712540669, guid: ff222c80a2d707042b921c2d5f9565b0,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4330854758197314082, guid: ff222c80a2d707042b921c2d5f9565b0,
         type: 3}
       propertyPath: m_Name
       value: ENERGY CRYSTAL 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4330854758197314082, guid: ff222c80a2d707042b921c2d5f9565b0,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 5049763147314345885, guid: ff222c80a2d707042b921c2d5f9565b0,
         type: 3}
@@ -993,6 +1038,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5261437712620233629, guid: ff222c80a2d707042b921c2d5f9565b0,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 6975245712324643169, guid: ff222c80a2d707042b921c2d5f9565b0,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 9203433578832857373, guid: ff222c80a2d707042b921c2d5f9565b0,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1012,6 +1072,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 3325683047732798042}
     m_Modifications:
+    - target: {fileID: 382419678967422873, guid: 2737c62290e11dc45b4952b390ffbd41,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8185614619543315086, guid: 2737c62290e11dc45b4952b390ffbd41,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -1082,6 +1147,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Mushroom 4 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 8853375944778349915, guid: 2737c62290e11dc45b4952b390ffbd41,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1105,6 +1175,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Obstacle 2-2 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1923482171383341881, guid: 6680d8c4b0ad2274d9a366395f068b03,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 8962964263881040615, guid: 6680d8c4b0ad2274d9a366395f068b03,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 9002232299753001050, guid: 6680d8c4b0ad2274d9a366395f068b03,
         type: 3}
@@ -1170,6 +1250,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: -5.209
+      objectReference: {fileID: 0}
+    - target: {fileID: 9073904252613727180, guid: 6680d8c4b0ad2274d9a366395f068b03,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1255,10 +1340,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1579303176465036675, guid: 13689af594ce0d54282d436dd1f5ea9f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 5073961403010060529, guid: 13689af594ce0d54282d436dd1f5ea9f,
         type: 3}
       propertyPath: m_Name
       value: Rock Base 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 5073961403010060529, guid: 13689af594ce0d54282d436dd1f5ea9f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1283,6 +1378,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Flat Rock 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7375003003565193294, guid: c3debb115e4c4254dad636da90208142,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8061777128693374086, guid: c3debb115e4c4254dad636da90208142,
         type: 3}
@@ -1348,6 +1448,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8649423742655370112, guid: c3debb115e4c4254dad636da90208142,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1438,6 +1543,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock Base 10 (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 4805214118281490554, guid: 6a9011ca2ebf0b147acb86156a776321,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 8106547949055322309, guid: 6a9011ca2ebf0b147acb86156a776321,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1457,10 +1572,25 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 8760503391116846078}
     m_Modifications:
+    - target: {fileID: 2985359813257958693, guid: ff222c80a2d707042b921c2d5f9565b0,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 4298095927712540669, guid: ff222c80a2d707042b921c2d5f9565b0,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4330854758197314082, guid: ff222c80a2d707042b921c2d5f9565b0,
         type: 3}
       propertyPath: m_Name
       value: ENERGY CRYSTAL 3 (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4330854758197314082, guid: ff222c80a2d707042b921c2d5f9565b0,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 5049763147314345885, guid: ff222c80a2d707042b921c2d5f9565b0,
         type: 3}
@@ -1527,6 +1657,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5261437712620233629, guid: ff222c80a2d707042b921c2d5f9565b0,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 6975245712324643169, guid: ff222c80a2d707042b921c2d5f9565b0,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 9203433578832857373, guid: ff222c80a2d707042b921c2d5f9565b0,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1550,6 +1695,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Rock Base 6 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5509437723594153752, guid: 71ac8d1595f107b4c8a8e8adc919ff0d,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 6273697801557575716, guid: 71ac8d1595f107b4c8a8e8adc919ff0d,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 6476746267254586637, guid: 71ac8d1595f107b4c8a8e8adc919ff0d,
         type: 3}
@@ -1640,6 +1795,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: Obstacle 2-8 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1923482171383341881, guid: dcbda6d876d117b4f8918dc129d751c4,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 3801441329976302360, guid: dcbda6d876d117b4f8918dc129d751c4,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 7852748326233140280, guid: dcbda6d876d117b4f8918dc129d751c4,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 9002232299753001050, guid: dcbda6d876d117b4f8918dc129d751c4,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -1724,10 +1894,25 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 8760503391116846078}
     m_Modifications:
+    - target: {fileID: 2985359813257958693, guid: 130fc58d62f552846adba477ada218af,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 4298095927712540669, guid: 130fc58d62f552846adba477ada218af,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4330854758197314082, guid: 130fc58d62f552846adba477ada218af,
         type: 3}
       propertyPath: m_Name
       value: ENERGY CRYSTAL 5 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4330854758197314082, guid: 130fc58d62f552846adba477ada218af,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 5049763147314345885, guid: 130fc58d62f552846adba477ada218af,
         type: 3}
@@ -1794,6 +1979,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5261437712620233629, guid: 130fc58d62f552846adba477ada218af,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 5746201539103871667, guid: 130fc58d62f552846adba477ada218af,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 7131546825150320866, guid: 130fc58d62f552846adba477ada218af,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1813,10 +2013,30 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 8760503391116846078}
     m_Modifications:
+    - target: {fileID: 2985359813257958693, guid: 7e918bc0449947c4ba1c14b52deb4ac7,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 4298095927712540669, guid: 7e918bc0449947c4ba1c14b52deb4ac7,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4330854758197314082, guid: 7e918bc0449947c4ba1c14b52deb4ac7,
         type: 3}
       propertyPath: m_Name
       value: ENERGY CRYSTAL 1 (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4330854758197314082, guid: 7e918bc0449947c4ba1c14b52deb4ac7,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 4699278566491505073, guid: 7e918bc0449947c4ba1c14b52deb4ac7,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 5049763147314345885, guid: 7e918bc0449947c4ba1c14b52deb4ac7,
         type: 3}
@@ -1883,10 +2103,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5261437712620233629, guid: 7e918bc0449947c4ba1c14b52deb4ac7,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 7198653176957525201, guid: 7e918bc0449947c4ba1c14b52deb4ac7,
         type: 3}
       propertyPath: m_IsKinematic
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7873604768916350932, guid: 7e918bc0449947c4ba1c14b52deb4ac7,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 7236729420166691809, guid: 7e918bc0449947c4ba1c14b52deb4ac7, type: 3}
@@ -1908,10 +2138,25 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 8760503391116846078}
     m_Modifications:
+    - target: {fileID: 2985359813257958693, guid: ff222c80a2d707042b921c2d5f9565b0,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 4298095927712540669, guid: ff222c80a2d707042b921c2d5f9565b0,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4330854758197314082, guid: ff222c80a2d707042b921c2d5f9565b0,
         type: 3}
       propertyPath: m_Name
       value: ENERGY CRYSTAL 3 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4330854758197314082, guid: ff222c80a2d707042b921c2d5f9565b0,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 5049763147314345885, guid: ff222c80a2d707042b921c2d5f9565b0,
         type: 3}
@@ -1978,6 +2223,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5261437712620233629, guid: ff222c80a2d707042b921c2d5f9565b0,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 6975245712324643169, guid: ff222c80a2d707042b921c2d5f9565b0,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 9203433578832857373, guid: ff222c80a2d707042b921c2d5f9565b0,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2001,6 +2261,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Rock Arc 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 674953126160927719, guid: 42094ecb54fe86644ab9044dd045a7a7,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 2531694605458545285, guid: 42094ecb54fe86644ab9044dd045a7a7,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 7917609454190437098, guid: 42094ecb54fe86644ab9044dd045a7a7,
         type: 3}
@@ -2086,10 +2356,25 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 8760503391116846078}
     m_Modifications:
+    - target: {fileID: 2985359813257958693, guid: ff222c80a2d707042b921c2d5f9565b0,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 4298095927712540669, guid: ff222c80a2d707042b921c2d5f9565b0,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4330854758197314082, guid: ff222c80a2d707042b921c2d5f9565b0,
         type: 3}
       propertyPath: m_Name
       value: ENERGY CRYSTAL 3 (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4330854758197314082, guid: ff222c80a2d707042b921c2d5f9565b0,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 5049763147314345885, guid: ff222c80a2d707042b921c2d5f9565b0,
         type: 3}
@@ -2156,6 +2441,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5261437712620233629, guid: ff222c80a2d707042b921c2d5f9565b0,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 6975245712324643169, guid: ff222c80a2d707042b921c2d5f9565b0,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 9203433578832857373, guid: ff222c80a2d707042b921c2d5f9565b0,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2179,6 +2479,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Mushroom 6 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2174458879660219080, guid: d0d19161c040a004cb2e34631ac10f66,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 4083229220498394806, guid: d0d19161c040a004cb2e34631ac10f66,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 5548069134290755638, guid: d0d19161c040a004cb2e34631ac10f66,
         type: 3}
@@ -2269,6 +2579,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Flat Rock 2 (16)
       objectReference: {fileID: 0}
+    - target: {fileID: 7375003003565193294, guid: c3debb115e4c4254dad636da90208142,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8061777128693374086, guid: c3debb115e4c4254dad636da90208142,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -2334,6 +2649,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8649423742655370112, guid: c3debb115e4c4254dad636da90208142,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2353,10 +2673,30 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 8760503391116846078}
     m_Modifications:
+    - target: {fileID: 2985359813257958693, guid: 7e918bc0449947c4ba1c14b52deb4ac7,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 4298095927712540669, guid: 7e918bc0449947c4ba1c14b52deb4ac7,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4330854758197314082, guid: 7e918bc0449947c4ba1c14b52deb4ac7,
         type: 3}
       propertyPath: m_Name
       value: ENERGY CRYSTAL 1 (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4330854758197314082, guid: 7e918bc0449947c4ba1c14b52deb4ac7,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 4699278566491505073, guid: 7e918bc0449947c4ba1c14b52deb4ac7,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 5049763147314345885, guid: 7e918bc0449947c4ba1c14b52deb4ac7,
         type: 3}
@@ -2423,10 +2763,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5261437712620233629, guid: 7e918bc0449947c4ba1c14b52deb4ac7,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 7198653176957525201, guid: 7e918bc0449947c4ba1c14b52deb4ac7,
         type: 3}
       propertyPath: m_IsKinematic
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7873604768916350932, guid: 7e918bc0449947c4ba1c14b52deb4ac7,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 7236729420166691809, guid: 7e918bc0449947c4ba1c14b52deb4ac7, type: 3}
@@ -2452,6 +2802,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Mushroom 6 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2174458879660219080, guid: d0d19161c040a004cb2e34631ac10f66,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 4083229220498394806, guid: d0d19161c040a004cb2e34631ac10f66,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 5548069134290755638, guid: d0d19161c040a004cb2e34631ac10f66,
         type: 3}
@@ -2537,10 +2897,30 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 8760503391116846078}
     m_Modifications:
+    - target: {fileID: 2985359813257958693, guid: 7e918bc0449947c4ba1c14b52deb4ac7,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 4298095927712540669, guid: 7e918bc0449947c4ba1c14b52deb4ac7,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4330854758197314082, guid: 7e918bc0449947c4ba1c14b52deb4ac7,
         type: 3}
       propertyPath: m_Name
       value: ENERGY CRYSTAL 1 (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4330854758197314082, guid: 7e918bc0449947c4ba1c14b52deb4ac7,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 4699278566491505073, guid: 7e918bc0449947c4ba1c14b52deb4ac7,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 5049763147314345885, guid: 7e918bc0449947c4ba1c14b52deb4ac7,
         type: 3}
@@ -2607,10 +2987,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5261437712620233629, guid: 7e918bc0449947c4ba1c14b52deb4ac7,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 7198653176957525201, guid: 7e918bc0449947c4ba1c14b52deb4ac7,
         type: 3}
       propertyPath: m_IsKinematic
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7873604768916350932, guid: 7e918bc0449947c4ba1c14b52deb4ac7,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 7236729420166691809, guid: 7e918bc0449947c4ba1c14b52deb4ac7, type: 3}
@@ -2632,10 +3022,30 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 8760503391116846078}
     m_Modifications:
+    - target: {fileID: 2343630780166331512, guid: 71c01080d5e3bfe44bfc618cbd4ab594,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 2985359813257958693, guid: 71c01080d5e3bfe44bfc618cbd4ab594,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 4298095927712540669, guid: 71c01080d5e3bfe44bfc618cbd4ab594,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4330854758197314082, guid: 71c01080d5e3bfe44bfc618cbd4ab594,
         type: 3}
       propertyPath: m_Name
       value: ENERGY CRYSTAL 2 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4330854758197314082, guid: 71c01080d5e3bfe44bfc618cbd4ab594,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 5049763147314345885, guid: 71c01080d5e3bfe44bfc618cbd4ab594,
         type: 3}
@@ -2702,6 +3112,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5261437712620233629, guid: 71c01080d5e3bfe44bfc618cbd4ab594,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 7995955994360634480, guid: 71c01080d5e3bfe44bfc618cbd4ab594,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2725,6 +3145,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Mushroom 6 (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2174458879660219080, guid: d0d19161c040a004cb2e34631ac10f66,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 4083229220498394806, guid: d0d19161c040a004cb2e34631ac10f66,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 5548069134290755638, guid: d0d19161c040a004cb2e34631ac10f66,
         type: 3}
@@ -2815,6 +3245,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Flat Rock 2 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 7375003003565193294, guid: c3debb115e4c4254dad636da90208142,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8061777128693374086, guid: c3debb115e4c4254dad636da90208142,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -2879,6 +3314,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8649423742655370112, guid: c3debb115e4c4254dad636da90208142,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2969,6 +3409,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock Base 10 (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 4805214118281490554, guid: 6a9011ca2ebf0b147acb86156a776321,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 8106547949055322309, guid: 6a9011ca2ebf0b147acb86156a776321,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2988,10 +3438,30 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 8760503391116846078}
     m_Modifications:
+    - target: {fileID: 2343630780166331512, guid: 71c01080d5e3bfe44bfc618cbd4ab594,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 2985359813257958693, guid: 71c01080d5e3bfe44bfc618cbd4ab594,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 4298095927712540669, guid: 71c01080d5e3bfe44bfc618cbd4ab594,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4330854758197314082, guid: 71c01080d5e3bfe44bfc618cbd4ab594,
         type: 3}
       propertyPath: m_Name
       value: ENERGY CRYSTAL 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4330854758197314082, guid: 71c01080d5e3bfe44bfc618cbd4ab594,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 5049763147314345885, guid: 71c01080d5e3bfe44bfc618cbd4ab594,
         type: 3}
@@ -3058,6 +3528,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5261437712620233629, guid: 71c01080d5e3bfe44bfc618cbd4ab594,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 7995955994360634480, guid: 71c01080d5e3bfe44bfc618cbd4ab594,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3081,6 +3561,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Obstacle 2-6 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1923482171383341881, guid: a7eaa9285a5be194a833977e589b6633,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 5767870674096983056, guid: a7eaa9285a5be194a833977e589b6633,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 8542244729451681902, guid: a7eaa9285a5be194a833977e589b6633,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 9002232299753001050, guid: a7eaa9285a5be194a833977e589b6633,
         type: 3}
@@ -3221,6 +3716,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock Base 10 (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 4805214118281490554, guid: 6a9011ca2ebf0b147acb86156a776321,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 8106547949055322309, guid: 6a9011ca2ebf0b147acb86156a776321,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3240,6 +3745,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 3325683047732798042}
     m_Modifications:
+    - target: {fileID: 382419678967422873, guid: 2737c62290e11dc45b4952b390ffbd41,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8185614619543315086, guid: 2737c62290e11dc45b4952b390ffbd41,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -3310,6 +3820,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Mushroom 4 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 8853375944778349915, guid: 2737c62290e11dc45b4952b390ffbd41,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3333,6 +3848,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Dust Particles
+      objectReference: {fileID: 0}
+    - target: {fileID: 2227616552606174078, guid: 1f27bb806d57e8749a16701906ed4321,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 2616301716348451184, guid: 1f27bb806d57e8749a16701906ed4321,
         type: 3}
@@ -3443,6 +3963,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: Obstacle 2-5 (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 1923482171383341881, guid: 1727e29579361644b97ee9cc3ad57d08,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 3578250088051042280, guid: 1727e29579361644b97ee9cc3ad57d08,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 4099371314352985668, guid: 1727e29579361644b97ee9cc3ad57d08,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 9002232299753001050, guid: 1727e29579361644b97ee9cc3ad57d08,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -3527,10 +4062,25 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 8760503391116846078}
     m_Modifications:
+    - target: {fileID: 2985359813257958693, guid: a26a2c77a9ab12a4199636df7fe96d3c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 4298095927712540669, guid: a26a2c77a9ab12a4199636df7fe96d3c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4330854758197314082, guid: a26a2c77a9ab12a4199636df7fe96d3c,
         type: 3}
       propertyPath: m_Name
       value: ENERGY CRYSTAL 4 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4330854758197314082, guid: a26a2c77a9ab12a4199636df7fe96d3c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 5049763147314345885, guid: a26a2c77a9ab12a4199636df7fe96d3c,
         type: 3}
@@ -3597,6 +4147,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5261437712620233629, guid: a26a2c77a9ab12a4199636df7fe96d3c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 6379554985375907232, guid: a26a2c77a9ab12a4199636df7fe96d3c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 6789222593289545971, guid: a26a2c77a9ab12a4199636df7fe96d3c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3616,10 +4181,25 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 8760503391116846078}
     m_Modifications:
+    - target: {fileID: 2985359813257958693, guid: ff222c80a2d707042b921c2d5f9565b0,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 4298095927712540669, guid: ff222c80a2d707042b921c2d5f9565b0,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4330854758197314082, guid: ff222c80a2d707042b921c2d5f9565b0,
         type: 3}
       propertyPath: m_Name
       value: ENERGY CRYSTAL 3 (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4330854758197314082, guid: ff222c80a2d707042b921c2d5f9565b0,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 5049763147314345885, guid: ff222c80a2d707042b921c2d5f9565b0,
         type: 3}
@@ -3686,6 +4266,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5261437712620233629, guid: ff222c80a2d707042b921c2d5f9565b0,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 6975245712324643169, guid: ff222c80a2d707042b921c2d5f9565b0,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 9203433578832857373, guid: ff222c80a2d707042b921c2d5f9565b0,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3709,6 +4304,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Rock Base 6 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5509437723594153752, guid: 71ac8d1595f107b4c8a8e8adc919ff0d,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 6273697801557575716, guid: 71ac8d1595f107b4c8a8e8adc919ff0d,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 6476746267254586637, guid: 71ac8d1595f107b4c8a8e8adc919ff0d,
         type: 3}
@@ -3794,10 +4399,30 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 8760503391116846078}
     m_Modifications:
+    - target: {fileID: 2985359813257958693, guid: 7e918bc0449947c4ba1c14b52deb4ac7,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 4298095927712540669, guid: 7e918bc0449947c4ba1c14b52deb4ac7,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4330854758197314082, guid: 7e918bc0449947c4ba1c14b52deb4ac7,
         type: 3}
       propertyPath: m_Name
       value: ENERGY CRYSTAL 1 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4330854758197314082, guid: 7e918bc0449947c4ba1c14b52deb4ac7,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 4699278566491505073, guid: 7e918bc0449947c4ba1c14b52deb4ac7,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 5049763147314345885, guid: 7e918bc0449947c4ba1c14b52deb4ac7,
         type: 3}
@@ -3864,10 +4489,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5261437712620233629, guid: 7e918bc0449947c4ba1c14b52deb4ac7,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 7198653176957525201, guid: 7e918bc0449947c4ba1c14b52deb4ac7,
         type: 3}
       propertyPath: m_IsKinematic
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7873604768916350932, guid: 7e918bc0449947c4ba1c14b52deb4ac7,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 7236729420166691809, guid: 7e918bc0449947c4ba1c14b52deb4ac7, type: 3}
@@ -3893,6 +4528,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Obstacle 2-1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1923482171383341881, guid: 840a2a650e3bb904ab906d5270117f7a,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 2313381097825967600, guid: 840a2a650e3bb904ab906d5270117f7a,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 4461319529430916241, guid: 840a2a650e3bb904ab906d5270117f7a,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 9002232299753001050, guid: 840a2a650e3bb904ab906d5270117f7a,
         type: 3}
@@ -3978,10 +4628,25 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 8760503391116846078}
     m_Modifications:
+    - target: {fileID: 2985359813257958693, guid: ff222c80a2d707042b921c2d5f9565b0,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 4298095927712540669, guid: ff222c80a2d707042b921c2d5f9565b0,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4330854758197314082, guid: ff222c80a2d707042b921c2d5f9565b0,
         type: 3}
       propertyPath: m_Name
       value: ENERGY CRYSTAL 3 (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4330854758197314082, guid: ff222c80a2d707042b921c2d5f9565b0,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 5049763147314345885, guid: ff222c80a2d707042b921c2d5f9565b0,
         type: 3}
@@ -4048,6 +4713,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5261437712620233629, guid: ff222c80a2d707042b921c2d5f9565b0,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 6975245712324643169, guid: ff222c80a2d707042b921c2d5f9565b0,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 9203433578832857373, guid: ff222c80a2d707042b921c2d5f9565b0,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4071,6 +4751,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Obstacle 2-7 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1923482171383341881, guid: 9dc4fc4a79094264e9b3a123317d4d01,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 5590683324050113787, guid: 9dc4fc4a79094264e9b3a123317d4d01,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 6553436804286819088, guid: 9dc4fc4a79094264e9b3a123317d4d01,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 9002232299753001050, guid: 9dc4fc4a79094264e9b3a123317d4d01,
         type: 3}
@@ -4160,6 +4855,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Mushroom 2 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1496255025034993729, guid: d78a90563c7722f4082597f077c994a0,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1535137385250967914, guid: d78a90563c7722f4082597f077c994a0,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 9183505082963973792, guid: d78a90563c7722f4082597f077c994a0,
         type: 3}
@@ -4310,10 +5015,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2681616891374061149, guid: 615d6fd7ff8d00a4bb66c65b126280f3,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 3626348276669770166, guid: 615d6fd7ff8d00a4bb66c65b126280f3,
         type: 3}
       propertyPath: m_Name
       value: Mushroom 7 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3626348276669770166, guid: 615d6fd7ff8d00a4bb66c65b126280f3,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4334,10 +5049,25 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 8760503391116846078}
     m_Modifications:
+    - target: {fileID: 2985359813257958693, guid: 130fc58d62f552846adba477ada218af,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 4298095927712540669, guid: 130fc58d62f552846adba477ada218af,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4330854758197314082, guid: 130fc58d62f552846adba477ada218af,
         type: 3}
       propertyPath: m_Name
       value: ENERGY CRYSTAL 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4330854758197314082, guid: 130fc58d62f552846adba477ada218af,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 5049763147314345885, guid: 130fc58d62f552846adba477ada218af,
         type: 3}
@@ -4404,6 +5134,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5261437712620233629, guid: 130fc58d62f552846adba477ada218af,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 5746201539103871667, guid: 130fc58d62f552846adba477ada218af,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 7131546825150320866, guid: 130fc58d62f552846adba477ada218af,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4427,6 +5172,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Obstacle 2-8 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1923482171383341881, guid: dcbda6d876d117b4f8918dc129d751c4,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 3801441329976302360, guid: dcbda6d876d117b4f8918dc129d751c4,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 7852748326233140280, guid: dcbda6d876d117b4f8918dc129d751c4,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 9002232299753001050, guid: dcbda6d876d117b4f8918dc129d751c4,
         type: 3}
@@ -4517,6 +5277,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Flat Rock 2 (15)
       objectReference: {fileID: 0}
+    - target: {fileID: 7375003003565193294, guid: c3debb115e4c4254dad636da90208142,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8061777128693374086, guid: c3debb115e4c4254dad636da90208142,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -4581,6 +5346,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8649423742655370112, guid: c3debb115e4c4254dad636da90208142,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4666,10 +5436,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1579303176465036675, guid: 13689af594ce0d54282d436dd1f5ea9f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 5073961403010060529, guid: 13689af594ce0d54282d436dd1f5ea9f,
         type: 3}
       propertyPath: m_Name
       value: Rock Base 7 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5073961403010060529, guid: 13689af594ce0d54282d436dd1f5ea9f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4690,10 +5470,25 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 8760503391116846078}
     m_Modifications:
+    - target: {fileID: 2985359813257958693, guid: 130fc58d62f552846adba477ada218af,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 4298095927712540669, guid: 130fc58d62f552846adba477ada218af,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4330854758197314082, guid: 130fc58d62f552846adba477ada218af,
         type: 3}
       propertyPath: m_Name
       value: ENERGY CRYSTAL 5 (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4330854758197314082, guid: 130fc58d62f552846adba477ada218af,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 5049763147314345885, guid: 130fc58d62f552846adba477ada218af,
         type: 3}
@@ -4760,6 +5555,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5261437712620233629, guid: 130fc58d62f552846adba477ada218af,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 5746201539103871667, guid: 130fc58d62f552846adba477ada218af,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 7131546825150320866, guid: 130fc58d62f552846adba477ada218af,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4779,10 +5589,20 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 3325683047732798042}
     m_Modifications:
+    - target: {fileID: 2632341078540794288, guid: d685a50f4563a80449cb5d5e339cfafd,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 2842922812207352285, guid: d685a50f4563a80449cb5d5e339cfafd,
         type: 3}
       propertyPath: m_Name
       value: Mushroom 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2842922812207352285, guid: d685a50f4563a80449cb5d5e339cfafd,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 6072540472463910576, guid: d685a50f4563a80449cb5d5e339cfafd,
         type: 3}
@@ -4873,6 +5693,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: Obstacle 2-1 (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 1923482171383341881, guid: 840a2a650e3bb904ab906d5270117f7a,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 2313381097825967600, guid: 840a2a650e3bb904ab906d5270117f7a,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 4461319529430916241, guid: 840a2a650e3bb904ab906d5270117f7a,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 9002232299753001050, guid: 840a2a650e3bb904ab906d5270117f7a,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -4962,6 +5797,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock Base 6 (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 5509437723594153752, guid: 71ac8d1595f107b4c8a8e8adc919ff0d,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 6273697801557575716, guid: 71ac8d1595f107b4c8a8e8adc919ff0d,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 6476746267254586637, guid: 71ac8d1595f107b4c8a8e8adc919ff0d,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -5046,10 +5891,25 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 8760503391116846078}
     m_Modifications:
+    - target: {fileID: 2985359813257958693, guid: 130fc58d62f552846adba477ada218af,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 4298095927712540669, guid: 130fc58d62f552846adba477ada218af,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4330854758197314082, guid: 130fc58d62f552846adba477ada218af,
         type: 3}
       propertyPath: m_Name
       value: ENERGY CRYSTAL 5 (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4330854758197314082, guid: 130fc58d62f552846adba477ada218af,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 5049763147314345885, guid: 130fc58d62f552846adba477ada218af,
         type: 3}
@@ -5116,6 +5976,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5261437712620233629, guid: 130fc58d62f552846adba477ada218af,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 5746201539103871667, guid: 130fc58d62f552846adba477ada218af,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 7131546825150320866, guid: 130fc58d62f552846adba477ada218af,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5139,6 +6014,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Rock Base 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2479629998033413369, guid: 6f84d31e89ccac54e886ce866f18a6b0,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4136045405493259923, guid: 6f84d31e89ccac54e886ce866f18a6b0,
         type: 3}
@@ -5205,6 +6085,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7290705013604338899, guid: 6f84d31e89ccac54e886ce866f18a6b0,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5228,6 +6113,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Mushroom 5 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 313999051023953566, guid: 5a992d4504af5964aacb4f99473b7cca,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4275514653536494785, guid: 5a992d4504af5964aacb4f99473b7cca,
         type: 3}
@@ -5294,6 +6184,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6656445841546746302, guid: 5a992d4504af5964aacb4f99473b7cca,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5317,6 +6212,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Obstacle 2-4 (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1923482171383341881, guid: b9609b77a4ae7ed4dad07a51ceeefa10,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 5487329131851643670, guid: b9609b77a4ae7ed4dad07a51ceeefa10,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 5752516993312197499, guid: b9609b77a4ae7ed4dad07a51ceeefa10,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 9002232299753001050, guid: b9609b77a4ae7ed4dad07a51ceeefa10,
         type: 3}
@@ -5407,6 +6317,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: Obstacle 2-5 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 1923482171383341881, guid: 1727e29579361644b97ee9cc3ad57d08,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 3578250088051042280, guid: 1727e29579361644b97ee9cc3ad57d08,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 4099371314352985668, guid: 1727e29579361644b97ee9cc3ad57d08,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 9002232299753001050, guid: 1727e29579361644b97ee9cc3ad57d08,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -5491,10 +6416,25 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 8760503391116846078}
     m_Modifications:
+    - target: {fileID: 2985359813257958693, guid: ff222c80a2d707042b921c2d5f9565b0,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 4298095927712540669, guid: ff222c80a2d707042b921c2d5f9565b0,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4330854758197314082, guid: ff222c80a2d707042b921c2d5f9565b0,
         type: 3}
       propertyPath: m_Name
       value: ENERGY CRYSTAL 3 (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4330854758197314082, guid: ff222c80a2d707042b921c2d5f9565b0,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 5049763147314345885, guid: ff222c80a2d707042b921c2d5f9565b0,
         type: 3}
@@ -5561,6 +6501,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5261437712620233629, guid: ff222c80a2d707042b921c2d5f9565b0,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 6975245712324643169, guid: ff222c80a2d707042b921c2d5f9565b0,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 9203433578832857373, guid: ff222c80a2d707042b921c2d5f9565b0,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5580,10 +6535,30 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 8760503391116846078}
     m_Modifications:
+    - target: {fileID: 2343630780166331512, guid: 71c01080d5e3bfe44bfc618cbd4ab594,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 2985359813257958693, guid: 71c01080d5e3bfe44bfc618cbd4ab594,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 4298095927712540669, guid: 71c01080d5e3bfe44bfc618cbd4ab594,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4330854758197314082, guid: 71c01080d5e3bfe44bfc618cbd4ab594,
         type: 3}
       propertyPath: m_Name
       value: ENERGY CRYSTAL 2 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4330854758197314082, guid: 71c01080d5e3bfe44bfc618cbd4ab594,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 5049763147314345885, guid: 71c01080d5e3bfe44bfc618cbd4ab594,
         type: 3}
@@ -5650,6 +6625,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5261437712620233629, guid: 71c01080d5e3bfe44bfc618cbd4ab594,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 7995955994360634480, guid: 71c01080d5e3bfe44bfc618cbd4ab594,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5673,6 +6658,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Obstacle 2-7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1923482171383341881, guid: 9dc4fc4a79094264e9b3a123317d4d01,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 5590683324050113787, guid: 9dc4fc4a79094264e9b3a123317d4d01,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 6553436804286819088, guid: 9dc4fc4a79094264e9b3a123317d4d01,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 9002232299753001050, guid: 9dc4fc4a79094264e9b3a123317d4d01,
         type: 3}
@@ -5813,6 +6813,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock Base 10 (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 4805214118281490554, guid: 6a9011ca2ebf0b147acb86156a776321,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 8106547949055322309, guid: 6a9011ca2ebf0b147acb86156a776321,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5832,10 +6842,25 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 8760503391116846078}
     m_Modifications:
+    - target: {fileID: 2985359813257958693, guid: ff222c80a2d707042b921c2d5f9565b0,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 4298095927712540669, guid: ff222c80a2d707042b921c2d5f9565b0,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4330854758197314082, guid: ff222c80a2d707042b921c2d5f9565b0,
         type: 3}
       propertyPath: m_Name
       value: ENERGY CRYSTAL 3 (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4330854758197314082, guid: ff222c80a2d707042b921c2d5f9565b0,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 5049763147314345885, guid: ff222c80a2d707042b921c2d5f9565b0,
         type: 3}
@@ -5902,6 +6927,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5261437712620233629, guid: ff222c80a2d707042b921c2d5f9565b0,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 6975245712324643169, guid: ff222c80a2d707042b921c2d5f9565b0,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 9203433578832857373, guid: ff222c80a2d707042b921c2d5f9565b0,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5921,10 +6961,25 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 8760503391116846078}
     m_Modifications:
+    - target: {fileID: 2985359813257958693, guid: ff222c80a2d707042b921c2d5f9565b0,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 4298095927712540669, guid: ff222c80a2d707042b921c2d5f9565b0,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4330854758197314082, guid: ff222c80a2d707042b921c2d5f9565b0,
         type: 3}
       propertyPath: m_Name
       value: ENERGY CRYSTAL 3 (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4330854758197314082, guid: ff222c80a2d707042b921c2d5f9565b0,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 5049763147314345885, guid: ff222c80a2d707042b921c2d5f9565b0,
         type: 3}
@@ -5990,6 +7045,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5261437712620233629, guid: ff222c80a2d707042b921c2d5f9565b0,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 6975245712324643169, guid: ff222c80a2d707042b921c2d5f9565b0,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 9203433578832857373, guid: ff222c80a2d707042b921c2d5f9565b0,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6075,10 +7145,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2681616891374061149, guid: 615d6fd7ff8d00a4bb66c65b126280f3,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 3626348276669770166, guid: 615d6fd7ff8d00a4bb66c65b126280f3,
         type: 3}
       propertyPath: m_Name
       value: Mushroom 7 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3626348276669770166, guid: 615d6fd7ff8d00a4bb66c65b126280f3,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6099,10 +7179,25 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 8760503391116846078}
     m_Modifications:
+    - target: {fileID: 2985359813257958693, guid: 130fc58d62f552846adba477ada218af,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 4298095927712540669, guid: 130fc58d62f552846adba477ada218af,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4330854758197314082, guid: 130fc58d62f552846adba477ada218af,
         type: 3}
       propertyPath: m_Name
       value: ENERGY CRYSTAL 5 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4330854758197314082, guid: 130fc58d62f552846adba477ada218af,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 5049763147314345885, guid: 130fc58d62f552846adba477ada218af,
         type: 3}
@@ -6169,6 +7264,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5261437712620233629, guid: 130fc58d62f552846adba477ada218af,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 5746201539103871667, guid: 130fc58d62f552846adba477ada218af,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 7131546825150320866, guid: 130fc58d62f552846adba477ada218af,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6188,10 +7298,30 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 8760503391116846078}
     m_Modifications:
+    - target: {fileID: 2343630780166331512, guid: 71c01080d5e3bfe44bfc618cbd4ab594,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 2985359813257958693, guid: 71c01080d5e3bfe44bfc618cbd4ab594,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 4298095927712540669, guid: 71c01080d5e3bfe44bfc618cbd4ab594,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4330854758197314082, guid: 71c01080d5e3bfe44bfc618cbd4ab594,
         type: 3}
       propertyPath: m_Name
       value: ENERGY CRYSTAL 2 (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4330854758197314082, guid: 71c01080d5e3bfe44bfc618cbd4ab594,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 5049763147314345885, guid: 71c01080d5e3bfe44bfc618cbd4ab594,
         type: 3}
@@ -6258,6 +7388,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5261437712620233629, guid: 71c01080d5e3bfe44bfc618cbd4ab594,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 7995955994360634480, guid: 71c01080d5e3bfe44bfc618cbd4ab594,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6281,6 +7421,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Flat Rock 2 (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7375003003565193294, guid: c3debb115e4c4254dad636da90208142,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8061777128693374086, guid: c3debb115e4c4254dad636da90208142,
         type: 3}
@@ -6347,6 +7492,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8649423742655370112, guid: c3debb115e4c4254dad636da90208142,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6370,6 +7520,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Obstacle 2-5 (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1923482171383341881, guid: 1727e29579361644b97ee9cc3ad57d08,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 3578250088051042280, guid: 1727e29579361644b97ee9cc3ad57d08,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 4099371314352985668, guid: 1727e29579361644b97ee9cc3ad57d08,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 9002232299753001050, guid: 1727e29579361644b97ee9cc3ad57d08,
         type: 3}
@@ -6460,6 +7625,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Flat Rock 2 (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 7375003003565193294, guid: c3debb115e4c4254dad636da90208142,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8061777128693374086, guid: c3debb115e4c4254dad636da90208142,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -6525,6 +7695,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8649423742655370112, guid: c3debb115e4c4254dad636da90208142,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6548,6 +7723,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Mushroom 5 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 313999051023953566, guid: 5a992d4504af5964aacb4f99473b7cca,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4275514653536494785, guid: 5a992d4504af5964aacb4f99473b7cca,
         type: 3}
@@ -6614,6 +7794,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6656445841546746302, guid: 5a992d4504af5964aacb4f99473b7cca,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6633,10 +7818,30 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 8760503391116846078}
     m_Modifications:
+    - target: {fileID: 2985359813257958693, guid: 7e918bc0449947c4ba1c14b52deb4ac7,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 4298095927712540669, guid: 7e918bc0449947c4ba1c14b52deb4ac7,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4330854758197314082, guid: 7e918bc0449947c4ba1c14b52deb4ac7,
         type: 3}
       propertyPath: m_Name
       value: ENERGY CRYSTAL 1 (14)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4330854758197314082, guid: 7e918bc0449947c4ba1c14b52deb4ac7,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 4699278566491505073, guid: 7e918bc0449947c4ba1c14b52deb4ac7,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 5049763147314345885, guid: 7e918bc0449947c4ba1c14b52deb4ac7,
         type: 3}
@@ -6703,10 +7908,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5261437712620233629, guid: 7e918bc0449947c4ba1c14b52deb4ac7,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 7198653176957525201, guid: 7e918bc0449947c4ba1c14b52deb4ac7,
         type: 3}
       propertyPath: m_IsKinematic
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7873604768916350932, guid: 7e918bc0449947c4ba1c14b52deb4ac7,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 7236729420166691809, guid: 7e918bc0449947c4ba1c14b52deb4ac7, type: 3}
@@ -6728,6 +7943,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1233868212364562689}
     m_Modifications:
+    - target: {fileID: 643260832498457751, guid: e2af9c9b505ccc94e97e605f64692afd,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 3830431677887703885, guid: e2af9c9b505ccc94e97e605f64692afd,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -6798,6 +8018,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock Base 9 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 4675131790479150250, guid: e2af9c9b505ccc94e97e605f64692afd,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6821,6 +8046,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Obstacle 2-4 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1923482171383341881, guid: b9609b77a4ae7ed4dad07a51ceeefa10,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 5487329131851643670, guid: b9609b77a4ae7ed4dad07a51ceeefa10,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 5752516993312197499, guid: b9609b77a4ae7ed4dad07a51ceeefa10,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 9002232299753001050, guid: b9609b77a4ae7ed4dad07a51ceeefa10,
         type: 3}
@@ -6976,6 +8216,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock Base 10 (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 4805214118281490554, guid: 6a9011ca2ebf0b147acb86156a776321,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 8106547949055322309, guid: 6a9011ca2ebf0b147acb86156a776321,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6999,6 +8249,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Rock Base 6 (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5509437723594153752, guid: 71ac8d1595f107b4c8a8e8adc919ff0d,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 6273697801557575716, guid: 71ac8d1595f107b4c8a8e8adc919ff0d,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 6476746267254586637, guid: 71ac8d1595f107b4c8a8e8adc919ff0d,
         type: 3}
@@ -7089,6 +8349,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: Obstacle 2-5 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1923482171383341881, guid: 1727e29579361644b97ee9cc3ad57d08,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 3578250088051042280, guid: 1727e29579361644b97ee9cc3ad57d08,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 4099371314352985668, guid: 1727e29579361644b97ee9cc3ad57d08,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 9002232299753001050, guid: 1727e29579361644b97ee9cc3ad57d08,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -7178,6 +8453,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Mushroom 5 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 313999051023953566, guid: 5a992d4504af5964aacb4f99473b7cca,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4275514653536494785, guid: 5a992d4504af5964aacb4f99473b7cca,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -7243,6 +8523,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6656445841546746302, guid: 5a992d4504af5964aacb4f99473b7cca,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7266,6 +8551,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Flat Rock 2 (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7375003003565193294, guid: c3debb115e4c4254dad636da90208142,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8061777128693374086, guid: c3debb115e4c4254dad636da90208142,
         type: 3}
@@ -7332,6 +8622,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8649423742655370112, guid: c3debb115e4c4254dad636da90208142,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7351,6 +8646,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 3325683047732798042}
     m_Modifications:
+    - target: {fileID: 382419678967422873, guid: 2737c62290e11dc45b4952b390ffbd41,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8185614619543315086, guid: 2737c62290e11dc45b4952b390ffbd41,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -7421,6 +8721,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Mushroom 4
       objectReference: {fileID: 0}
+    - target: {fileID: 8853375944778349915, guid: 2737c62290e11dc45b4952b390ffbd41,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7444,6 +8749,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Obstacle 2-2 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1923482171383341881, guid: 6680d8c4b0ad2274d9a366395f068b03,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 8962964263881040615, guid: 6680d8c4b0ad2274d9a366395f068b03,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 9002232299753001050, guid: 6680d8c4b0ad2274d9a366395f068b03,
         type: 3}
@@ -7510,6 +8825,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9073904252613727180, guid: 6680d8c4b0ad2274d9a366395f068b03,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7529,10 +8849,25 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 8760503391116846078}
     m_Modifications:
+    - target: {fileID: 2985359813257958693, guid: a26a2c77a9ab12a4199636df7fe96d3c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 4298095927712540669, guid: a26a2c77a9ab12a4199636df7fe96d3c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4330854758197314082, guid: a26a2c77a9ab12a4199636df7fe96d3c,
         type: 3}
       propertyPath: m_Name
       value: ENERGY CRYSTAL 4 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4330854758197314082, guid: a26a2c77a9ab12a4199636df7fe96d3c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 5049763147314345885, guid: a26a2c77a9ab12a4199636df7fe96d3c,
         type: 3}
@@ -7599,6 +8934,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5261437712620233629, guid: a26a2c77a9ab12a4199636df7fe96d3c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 6379554985375907232, guid: a26a2c77a9ab12a4199636df7fe96d3c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 6789222593289545971, guid: a26a2c77a9ab12a4199636df7fe96d3c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7618,10 +8968,30 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 8760503391116846078}
     m_Modifications:
+    - target: {fileID: 2985359813257958693, guid: 7e918bc0449947c4ba1c14b52deb4ac7,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 4298095927712540669, guid: 7e918bc0449947c4ba1c14b52deb4ac7,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4330854758197314082, guid: 7e918bc0449947c4ba1c14b52deb4ac7,
         type: 3}
       propertyPath: m_Name
       value: ENERGY CRYSTAL 1 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4330854758197314082, guid: 7e918bc0449947c4ba1c14b52deb4ac7,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 4699278566491505073, guid: 7e918bc0449947c4ba1c14b52deb4ac7,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 5049763147314345885, guid: 7e918bc0449947c4ba1c14b52deb4ac7,
         type: 3}
@@ -7688,10 +9058,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5261437712620233629, guid: 7e918bc0449947c4ba1c14b52deb4ac7,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 7198653176957525201, guid: 7e918bc0449947c4ba1c14b52deb4ac7,
         type: 3}
       propertyPath: m_IsKinematic
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7873604768916350932, guid: 7e918bc0449947c4ba1c14b52deb4ac7,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 7236729420166691809, guid: 7e918bc0449947c4ba1c14b52deb4ac7, type: 3}
@@ -7713,6 +9093,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 3325683047732798042}
     m_Modifications:
+    - target: {fileID: 382419678967422873, guid: 2737c62290e11dc45b4952b390ffbd41,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8185614619543315086, guid: 2737c62290e11dc45b4952b390ffbd41,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -7783,6 +9168,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Mushroom 4 (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 8853375944778349915, guid: 2737c62290e11dc45b4952b390ffbd41,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7806,6 +9196,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Obstacle 2-5 (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1923482171383341881, guid: 1727e29579361644b97ee9cc3ad57d08,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 3578250088051042280, guid: 1727e29579361644b97ee9cc3ad57d08,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 4099371314352985668, guid: 1727e29579361644b97ee9cc3ad57d08,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 9002232299753001050, guid: 1727e29579361644b97ee9cc3ad57d08,
         type: 3}
@@ -7896,6 +9301,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Flat Rock 2 (17)
       objectReference: {fileID: 0}
+    - target: {fileID: 7375003003565193294, guid: c3debb115e4c4254dad636da90208142,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8061777128693374086, guid: c3debb115e4c4254dad636da90208142,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -7961,6 +9371,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8649423742655370112, guid: c3debb115e4c4254dad636da90208142,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7980,10 +9395,25 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 8760503391116846078}
     m_Modifications:
+    - target: {fileID: 2985359813257958693, guid: ff222c80a2d707042b921c2d5f9565b0,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 4298095927712540669, guid: ff222c80a2d707042b921c2d5f9565b0,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4330854758197314082, guid: ff222c80a2d707042b921c2d5f9565b0,
         type: 3}
       propertyPath: m_Name
       value: ENERGY CRYSTAL 3 (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4330854758197314082, guid: ff222c80a2d707042b921c2d5f9565b0,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 5049763147314345885, guid: ff222c80a2d707042b921c2d5f9565b0,
         type: 3}
@@ -8050,6 +9480,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5261437712620233629, guid: ff222c80a2d707042b921c2d5f9565b0,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 6975245712324643169, guid: ff222c80a2d707042b921c2d5f9565b0,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 9203433578832857373, guid: ff222c80a2d707042b921c2d5f9565b0,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8073,6 +9518,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Obstacle 2-1 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1923482171383341881, guid: 840a2a650e3bb904ab906d5270117f7a,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 2313381097825967600, guid: 840a2a650e3bb904ab906d5270117f7a,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 4461319529430916241, guid: 840a2a650e3bb904ab906d5270117f7a,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 9002232299753001050, guid: 840a2a650e3bb904ab906d5270117f7a,
         type: 3}
@@ -8158,10 +9618,25 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 8760503391116846078}
     m_Modifications:
+    - target: {fileID: 2985359813257958693, guid: 130fc58d62f552846adba477ada218af,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 4298095927712540669, guid: 130fc58d62f552846adba477ada218af,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4330854758197314082, guid: 130fc58d62f552846adba477ada218af,
         type: 3}
       propertyPath: m_Name
       value: ENERGY CRYSTAL 5 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4330854758197314082, guid: 130fc58d62f552846adba477ada218af,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 5049763147314345885, guid: 130fc58d62f552846adba477ada218af,
         type: 3}
@@ -8228,6 +9703,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5261437712620233629, guid: 130fc58d62f552846adba477ada218af,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 5746201539103871667, guid: 130fc58d62f552846adba477ada218af,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 7131546825150320866, guid: 130fc58d62f552846adba477ada218af,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8251,6 +9741,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Obstacle 2-5 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1923482171383341881, guid: 1727e29579361644b97ee9cc3ad57d08,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 3578250088051042280, guid: 1727e29579361644b97ee9cc3ad57d08,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 4099371314352985668, guid: 1727e29579361644b97ee9cc3ad57d08,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 9002232299753001050, guid: 1727e29579361644b97ee9cc3ad57d08,
         type: 3}
@@ -8336,10 +9841,30 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 8760503391116846078}
     m_Modifications:
+    - target: {fileID: 2985359813257958693, guid: 7e918bc0449947c4ba1c14b52deb4ac7,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 4298095927712540669, guid: 7e918bc0449947c4ba1c14b52deb4ac7,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4330854758197314082, guid: 7e918bc0449947c4ba1c14b52deb4ac7,
         type: 3}
       propertyPath: m_Name
       value: ENERGY CRYSTAL 1 (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4330854758197314082, guid: 7e918bc0449947c4ba1c14b52deb4ac7,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 4699278566491505073, guid: 7e918bc0449947c4ba1c14b52deb4ac7,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 5049763147314345885, guid: 7e918bc0449947c4ba1c14b52deb4ac7,
         type: 3}
@@ -8406,10 +9931,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5261437712620233629, guid: 7e918bc0449947c4ba1c14b52deb4ac7,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 7198653176957525201, guid: 7e918bc0449947c4ba1c14b52deb4ac7,
         type: 3}
       propertyPath: m_IsKinematic
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7873604768916350932, guid: 7e918bc0449947c4ba1c14b52deb4ac7,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 7236729420166691809, guid: 7e918bc0449947c4ba1c14b52deb4ac7, type: 3}
@@ -8435,6 +9970,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Obstacle 2-8 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1923482171383341881, guid: dcbda6d876d117b4f8918dc129d751c4,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 3801441329976302360, guid: dcbda6d876d117b4f8918dc129d751c4,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 7852748326233140280, guid: dcbda6d876d117b4f8918dc129d751c4,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 9002232299753001050, guid: dcbda6d876d117b4f8918dc129d751c4,
         type: 3}
@@ -8525,6 +10075,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Flat Rock 2 (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 7375003003565193294, guid: c3debb115e4c4254dad636da90208142,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8061777128693374086, guid: c3debb115e4c4254dad636da90208142,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -8590,6 +10145,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8649423742655370112, guid: c3debb115e4c4254dad636da90208142,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8609,10 +10169,25 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 8760503391116846078}
     m_Modifications:
+    - target: {fileID: 2985359813257958693, guid: a26a2c77a9ab12a4199636df7fe96d3c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 4298095927712540669, guid: a26a2c77a9ab12a4199636df7fe96d3c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4330854758197314082, guid: a26a2c77a9ab12a4199636df7fe96d3c,
         type: 3}
       propertyPath: m_Name
       value: ENERGY CRYSTAL 4 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4330854758197314082, guid: a26a2c77a9ab12a4199636df7fe96d3c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 5049763147314345885, guid: a26a2c77a9ab12a4199636df7fe96d3c,
         type: 3}
@@ -8679,6 +10254,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5261437712620233629, guid: a26a2c77a9ab12a4199636df7fe96d3c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 6379554985375907232, guid: a26a2c77a9ab12a4199636df7fe96d3c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 6789222593289545971, guid: a26a2c77a9ab12a4199636df7fe96d3c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8702,6 +10292,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Rock Arc 2 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 674953126160927719, guid: 42094ecb54fe86644ab9044dd045a7a7,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 2531694605458545285, guid: 42094ecb54fe86644ab9044dd045a7a7,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 7917609454190437098, guid: 42094ecb54fe86644ab9044dd045a7a7,
         type: 3}
@@ -8792,6 +10392,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Flat Rock 2 (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 7375003003565193294, guid: c3debb115e4c4254dad636da90208142,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8061777128693374086, guid: c3debb115e4c4254dad636da90208142,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -8857,6 +10462,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8649423742655370112, guid: c3debb115e4c4254dad636da90208142,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8876,6 +10486,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 3325683047732798042}
     m_Modifications:
+    - target: {fileID: 382419678967422873, guid: 2737c62290e11dc45b4952b390ffbd41,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8185614619543315086, guid: 2737c62290e11dc45b4952b390ffbd41,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -8946,6 +10561,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Mushroom 4 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 8853375944778349915, guid: 2737c62290e11dc45b4952b390ffbd41,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8969,6 +10589,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Mushroom 2 (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1496255025034993729, guid: d78a90563c7722f4082597f077c994a0,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1535137385250967914, guid: d78a90563c7722f4082597f077c994a0,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 9183505082963973792, guid: d78a90563c7722f4082597f077c994a0,
         type: 3}
@@ -9124,6 +10754,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock Base 10 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 4805214118281490554, guid: 6a9011ca2ebf0b147acb86156a776321,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 8106547949055322309, guid: 6a9011ca2ebf0b147acb86156a776321,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9213,6 +10853,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock Base 10 (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 4805214118281490554, guid: 6a9011ca2ebf0b147acb86156a776321,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 8106547949055322309, guid: 6a9011ca2ebf0b147acb86156a776321,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9232,10 +10882,20 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 3325683047732798042}
     m_Modifications:
+    - target: {fileID: 2632341078540794288, guid: d685a50f4563a80449cb5d5e339cfafd,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 2842922812207352285, guid: d685a50f4563a80449cb5d5e339cfafd,
         type: 3}
       propertyPath: m_Name
       value: Mushroom 3 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2842922812207352285, guid: d685a50f4563a80449cb5d5e339cfafd,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 6072540472463910576, guid: d685a50f4563a80449cb5d5e339cfafd,
         type: 3}
@@ -9391,6 +11051,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock Base 10 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 4805214118281490554, guid: 6a9011ca2ebf0b147acb86156a776321,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 8106547949055322309, guid: 6a9011ca2ebf0b147acb86156a776321,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9475,10 +11145,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2681616891374061149, guid: 615d6fd7ff8d00a4bb66c65b126280f3,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 3626348276669770166, guid: 615d6fd7ff8d00a4bb66c65b126280f3,
         type: 3}
       propertyPath: m_Name
       value: Mushroom 7 (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3626348276669770166, guid: 615d6fd7ff8d00a4bb66c65b126280f3,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9503,6 +11183,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Mushroom 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1496255025034993729, guid: d78a90563c7722f4082597f077c994a0,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1535137385250967914, guid: d78a90563c7722f4082597f077c994a0,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 9183505082963973792, guid: d78a90563c7722f4082597f077c994a0,
         type: 3}
@@ -9593,6 +11283,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Mushroom 2 (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 1496255025034993729, guid: d78a90563c7722f4082597f077c994a0,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1535137385250967914, guid: d78a90563c7722f4082597f077c994a0,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 9183505082963973792, guid: d78a90563c7722f4082597f077c994a0,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -9682,6 +11382,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: Obstacle 2-1 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 1923482171383341881, guid: 840a2a650e3bb904ab906d5270117f7a,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 2313381097825967600, guid: 840a2a650e3bb904ab906d5270117f7a,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 4461319529430916241, guid: 840a2a650e3bb904ab906d5270117f7a,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 9002232299753001050, guid: 840a2a650e3bb904ab906d5270117f7a,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -9766,10 +11481,30 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 8760503391116846078}
     m_Modifications:
+    - target: {fileID: 2985359813257958693, guid: 7e918bc0449947c4ba1c14b52deb4ac7,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 4298095927712540669, guid: 7e918bc0449947c4ba1c14b52deb4ac7,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4330854758197314082, guid: 7e918bc0449947c4ba1c14b52deb4ac7,
         type: 3}
       propertyPath: m_Name
       value: ENERGY CRYSTAL 1 (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4330854758197314082, guid: 7e918bc0449947c4ba1c14b52deb4ac7,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 4699278566491505073, guid: 7e918bc0449947c4ba1c14b52deb4ac7,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 5049763147314345885, guid: 7e918bc0449947c4ba1c14b52deb4ac7,
         type: 3}
@@ -9836,10 +11571,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5261437712620233629, guid: 7e918bc0449947c4ba1c14b52deb4ac7,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 7198653176957525201, guid: 7e918bc0449947c4ba1c14b52deb4ac7,
         type: 3}
       propertyPath: m_IsKinematic
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7873604768916350932, guid: 7e918bc0449947c4ba1c14b52deb4ac7,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 7236729420166691809, guid: 7e918bc0449947c4ba1c14b52deb4ac7, type: 3}
@@ -9865,6 +11610,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Obstacle 2-5 (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1923482171383341881, guid: 1727e29579361644b97ee9cc3ad57d08,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 3578250088051042280, guid: 1727e29579361644b97ee9cc3ad57d08,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 4099371314352985668, guid: 1727e29579361644b97ee9cc3ad57d08,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 9002232299753001050, guid: 1727e29579361644b97ee9cc3ad57d08,
         type: 3}
@@ -9955,6 +11715,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: Obstacle 2-5 (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 1923482171383341881, guid: 1727e29579361644b97ee9cc3ad57d08,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 3578250088051042280, guid: 1727e29579361644b97ee9cc3ad57d08,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 4099371314352985668, guid: 1727e29579361644b97ee9cc3ad57d08,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 9002232299753001050, guid: 1727e29579361644b97ee9cc3ad57d08,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -10043,6 +11818,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Rock Base 6 (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5509437723594153752, guid: 71ac8d1595f107b4c8a8e8adc919ff0d,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 6273697801557575716, guid: 71ac8d1595f107b4c8a8e8adc919ff0d,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 6476746267254586637, guid: 71ac8d1595f107b4c8a8e8adc919ff0d,
         type: 3}
@@ -10193,10 +11978,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5783458631199708386, guid: 00266bfc94f88ac42b4c09f7c3fffce2,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 6415769066077037902, guid: 00266bfc94f88ac42b4c09f7c3fffce2,
         type: 3}
       propertyPath: m_Name
       value: Mushroom 8 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6415769066077037902, guid: 00266bfc94f88ac42b4c09f7c3fffce2,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -10217,10 +12012,25 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 5811292734078919144}
     m_Modifications:
+    - target: {fileID: 1332113336996511741, guid: 3a5a37e2553f6bf429590a4cc5a27f81,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 1923482171383341881, guid: 3a5a37e2553f6bf429590a4cc5a27f81,
         type: 3}
       propertyPath: m_Name
       value: Obstacle 2-3 (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1923482171383341881, guid: 3a5a37e2553f6bf429590a4cc5a27f81,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 7921757174924320063, guid: 3a5a37e2553f6bf429590a4cc5a27f81,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 9002232299753001050, guid: 3a5a37e2553f6bf429590a4cc5a27f81,
         type: 3}
@@ -10295,6 +12105,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Rock Base 6 (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5509437723594153752, guid: 71ac8d1595f107b4c8a8e8adc919ff0d,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 6273697801557575716, guid: 71ac8d1595f107b4c8a8e8adc919ff0d,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 6476746267254586637, guid: 71ac8d1595f107b4c8a8e8adc919ff0d,
         type: 3}
@@ -10385,6 +12205,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: Obstacle 2-1 (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 1923482171383341881, guid: 840a2a650e3bb904ab906d5270117f7a,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 2313381097825967600, guid: 840a2a650e3bb904ab906d5270117f7a,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 4461319529430916241, guid: 840a2a650e3bb904ab906d5270117f7a,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 9002232299753001050, guid: 840a2a650e3bb904ab906d5270117f7a,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -10469,10 +12304,25 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 8760503391116846078}
     m_Modifications:
+    - target: {fileID: 2985359813257958693, guid: a26a2c77a9ab12a4199636df7fe96d3c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 4298095927712540669, guid: a26a2c77a9ab12a4199636df7fe96d3c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4330854758197314082, guid: a26a2c77a9ab12a4199636df7fe96d3c,
         type: 3}
       propertyPath: m_Name
       value: ENERGY CRYSTAL 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4330854758197314082, guid: a26a2c77a9ab12a4199636df7fe96d3c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 5049763147314345885, guid: a26a2c77a9ab12a4199636df7fe96d3c,
         type: 3}
@@ -10539,6 +12389,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5261437712620233629, guid: a26a2c77a9ab12a4199636df7fe96d3c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 6379554985375907232, guid: a26a2c77a9ab12a4199636df7fe96d3c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 6789222593289545971, guid: a26a2c77a9ab12a4199636df7fe96d3c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10558,10 +12423,25 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 8760503391116846078}
     m_Modifications:
+    - target: {fileID: 2985359813257958693, guid: ff222c80a2d707042b921c2d5f9565b0,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 4298095927712540669, guid: ff222c80a2d707042b921c2d5f9565b0,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4330854758197314082, guid: ff222c80a2d707042b921c2d5f9565b0,
         type: 3}
       propertyPath: m_Name
       value: ENERGY CRYSTAL 3 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4330854758197314082, guid: ff222c80a2d707042b921c2d5f9565b0,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 5049763147314345885, guid: ff222c80a2d707042b921c2d5f9565b0,
         type: 3}
@@ -10628,6 +12508,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5261437712620233629, guid: ff222c80a2d707042b921c2d5f9565b0,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 6975245712324643169, guid: ff222c80a2d707042b921c2d5f9565b0,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 9203433578832857373, guid: ff222c80a2d707042b921c2d5f9565b0,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10647,10 +12542,25 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 8760503391116846078}
     m_Modifications:
+    - target: {fileID: 2985359813257958693, guid: ff222c80a2d707042b921c2d5f9565b0,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 4298095927712540669, guid: ff222c80a2d707042b921c2d5f9565b0,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4330854758197314082, guid: ff222c80a2d707042b921c2d5f9565b0,
         type: 3}
       propertyPath: m_Name
       value: ENERGY CRYSTAL 3 (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4330854758197314082, guid: ff222c80a2d707042b921c2d5f9565b0,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 5049763147314345885, guid: ff222c80a2d707042b921c2d5f9565b0,
         type: 3}
@@ -10717,6 +12627,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5261437712620233629, guid: ff222c80a2d707042b921c2d5f9565b0,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 6975245712324643169, guid: ff222c80a2d707042b921c2d5f9565b0,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 9203433578832857373, guid: ff222c80a2d707042b921c2d5f9565b0,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10736,6 +12661,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 6185825477036547724}
     m_Modifications:
+    - target: {fileID: 2335629367135069780, guid: f59eb36d3b585a9449ad4a1193de3b7c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4164242182193765840, guid: f59eb36d3b585a9449ad4a1193de3b7c,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -10806,6 +12736,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Planet 4
       objectReference: {fileID: 0}
+    - target: {fileID: 4762759487430925832, guid: f59eb36d3b585a9449ad4a1193de3b7c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10825,6 +12760,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1233868212364562689}
     m_Modifications:
+    - target: {fileID: 643260832498457751, guid: e2af9c9b505ccc94e97e605f64692afd,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 3830431677887703885, guid: e2af9c9b505ccc94e97e605f64692afd,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -10895,6 +12835,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock Base 9
       objectReference: {fileID: 0}
+    - target: {fileID: 4675131790479150250, guid: e2af9c9b505ccc94e97e605f64692afd,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10914,10 +12859,30 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 8760503391116846078}
     m_Modifications:
+    - target: {fileID: 2343630780166331512, guid: 71c01080d5e3bfe44bfc618cbd4ab594,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 2985359813257958693, guid: 71c01080d5e3bfe44bfc618cbd4ab594,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 4298095927712540669, guid: 71c01080d5e3bfe44bfc618cbd4ab594,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4330854758197314082, guid: 71c01080d5e3bfe44bfc618cbd4ab594,
         type: 3}
       propertyPath: m_Name
       value: ENERGY CRYSTAL 2 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4330854758197314082, guid: 71c01080d5e3bfe44bfc618cbd4ab594,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 5049763147314345885, guid: 71c01080d5e3bfe44bfc618cbd4ab594,
         type: 3}
@@ -10983,6 +12948,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5261437712620233629, guid: 71c01080d5e3bfe44bfc618cbd4ab594,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 7995955994360634480, guid: 71c01080d5e3bfe44bfc618cbd4ab594,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -11073,6 +13048,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock Base 10 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 4805214118281490554, guid: 6a9011ca2ebf0b147acb86156a776321,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 8106547949055322309, guid: 6a9011ca2ebf0b147acb86156a776321,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11096,6 +13081,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Flat Rock 2 (14)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7375003003565193294, guid: c3debb115e4c4254dad636da90208142,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8061777128693374086, guid: c3debb115e4c4254dad636da90208142,
         type: 3}
@@ -11162,6 +13152,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8649423742655370112, guid: c3debb115e4c4254dad636da90208142,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11185,6 +13180,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Obstacle 2-6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1923482171383341881, guid: a7eaa9285a5be194a833977e589b6633,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 5767870674096983056, guid: a7eaa9285a5be194a833977e589b6633,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 8542244729451681902, guid: a7eaa9285a5be194a833977e589b6633,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 9002232299753001050, guid: a7eaa9285a5be194a833977e589b6633,
         type: 3}
@@ -11255,10 +13265,30 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 8760503391116846078}
     m_Modifications:
+    - target: {fileID: 2985359813257958693, guid: 7e918bc0449947c4ba1c14b52deb4ac7,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 4298095927712540669, guid: 7e918bc0449947c4ba1c14b52deb4ac7,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4330854758197314082, guid: 7e918bc0449947c4ba1c14b52deb4ac7,
         type: 3}
       propertyPath: m_Name
       value: ENERGY CRYSTAL 1 (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4330854758197314082, guid: 7e918bc0449947c4ba1c14b52deb4ac7,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 4699278566491505073, guid: 7e918bc0449947c4ba1c14b52deb4ac7,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 5049763147314345885, guid: 7e918bc0449947c4ba1c14b52deb4ac7,
         type: 3}
@@ -11325,10 +13355,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5261437712620233629, guid: 7e918bc0449947c4ba1c14b52deb4ac7,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 7198653176957525201, guid: 7e918bc0449947c4ba1c14b52deb4ac7,
         type: 3}
       propertyPath: m_IsKinematic
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7873604768916350932, guid: 7e918bc0449947c4ba1c14b52deb4ac7,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 7236729420166691809, guid: 7e918bc0449947c4ba1c14b52deb4ac7, type: 3}
@@ -11420,6 +13460,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock Base 10 (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 4805214118281490554, guid: 6a9011ca2ebf0b147acb86156a776321,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 8106547949055322309, guid: 6a9011ca2ebf0b147acb86156a776321,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11443,6 +13493,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Obstacle 2-6 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1923482171383341881, guid: a7eaa9285a5be194a833977e589b6633,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 5767870674096983056, guid: a7eaa9285a5be194a833977e589b6633,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 8542244729451681902, guid: a7eaa9285a5be194a833977e589b6633,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 9002232299753001050, guid: a7eaa9285a5be194a833977e589b6633,
         type: 3}
@@ -11528,10 +13593,30 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 8760503391116846078}
     m_Modifications:
+    - target: {fileID: 2985359813257958693, guid: 7e918bc0449947c4ba1c14b52deb4ac7,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 4298095927712540669, guid: 7e918bc0449947c4ba1c14b52deb4ac7,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4330854758197314082, guid: 7e918bc0449947c4ba1c14b52deb4ac7,
         type: 3}
       propertyPath: m_Name
       value: ENERGY CRYSTAL 1 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4330854758197314082, guid: 7e918bc0449947c4ba1c14b52deb4ac7,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 4699278566491505073, guid: 7e918bc0449947c4ba1c14b52deb4ac7,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 5049763147314345885, guid: 7e918bc0449947c4ba1c14b52deb4ac7,
         type: 3}
@@ -11598,10 +13683,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5261437712620233629, guid: 7e918bc0449947c4ba1c14b52deb4ac7,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 7198653176957525201, guid: 7e918bc0449947c4ba1c14b52deb4ac7,
         type: 3}
       propertyPath: m_IsKinematic
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7873604768916350932, guid: 7e918bc0449947c4ba1c14b52deb4ac7,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 7236729420166691809, guid: 7e918bc0449947c4ba1c14b52deb4ac7, type: 3}
@@ -11688,10 +13783,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2681616891374061149, guid: 615d6fd7ff8d00a4bb66c65b126280f3,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 3626348276669770166, guid: 615d6fd7ff8d00a4bb66c65b126280f3,
         type: 3}
       propertyPath: m_Name
       value: Mushroom 7 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3626348276669770166, guid: 615d6fd7ff8d00a4bb66c65b126280f3,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -11716,6 +13821,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Mushroom 2 (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1496255025034993729, guid: d78a90563c7722f4082597f077c994a0,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1535137385250967914, guid: d78a90563c7722f4082597f077c994a0,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 9183505082963973792, guid: d78a90563c7722f4082597f077c994a0,
         type: 3}
@@ -11801,10 +13916,30 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 8760503391116846078}
     m_Modifications:
+    - target: {fileID: 2985359813257958693, guid: 7e918bc0449947c4ba1c14b52deb4ac7,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 4298095927712540669, guid: 7e918bc0449947c4ba1c14b52deb4ac7,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4330854758197314082, guid: 7e918bc0449947c4ba1c14b52deb4ac7,
         type: 3}
       propertyPath: m_Name
       value: ENERGY CRYSTAL 1 (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4330854758197314082, guid: 7e918bc0449947c4ba1c14b52deb4ac7,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 4699278566491505073, guid: 7e918bc0449947c4ba1c14b52deb4ac7,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 5049763147314345885, guid: 7e918bc0449947c4ba1c14b52deb4ac7,
         type: 3}
@@ -11871,10 +14006,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5261437712620233629, guid: 7e918bc0449947c4ba1c14b52deb4ac7,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 7198653176957525201, guid: 7e918bc0449947c4ba1c14b52deb4ac7,
         type: 3}
       propertyPath: m_IsKinematic
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7873604768916350932, guid: 7e918bc0449947c4ba1c14b52deb4ac7,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 7236729420166691809, guid: 7e918bc0449947c4ba1c14b52deb4ac7, type: 3}
@@ -11900,6 +14045,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Obstacle 2-4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1923482171383341881, guid: b9609b77a4ae7ed4dad07a51ceeefa10,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 5487329131851643670, guid: b9609b77a4ae7ed4dad07a51ceeefa10,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 5752516993312197499, guid: b9609b77a4ae7ed4dad07a51ceeefa10,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 9002232299753001050, guid: b9609b77a4ae7ed4dad07a51ceeefa10,
         type: 3}
@@ -11985,10 +14145,25 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 8760503391116846078}
     m_Modifications:
+    - target: {fileID: 2985359813257958693, guid: 130fc58d62f552846adba477ada218af,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 4298095927712540669, guid: 130fc58d62f552846adba477ada218af,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4330854758197314082, guid: 130fc58d62f552846adba477ada218af,
         type: 3}
       propertyPath: m_Name
       value: ENERGY CRYSTAL 5 (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4330854758197314082, guid: 130fc58d62f552846adba477ada218af,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 5049763147314345885, guid: 130fc58d62f552846adba477ada218af,
         type: 3}
@@ -12055,6 +14230,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5261437712620233629, guid: 130fc58d62f552846adba477ada218af,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 5746201539103871667, guid: 130fc58d62f552846adba477ada218af,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 7131546825150320866, guid: 130fc58d62f552846adba477ada218af,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12078,6 +14268,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Mushroom 2 (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1496255025034993729, guid: d78a90563c7722f4082597f077c994a0,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1535137385250967914, guid: d78a90563c7722f4082597f077c994a0,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 9183505082963973792, guid: d78a90563c7722f4082597f077c994a0,
         type: 3}
@@ -12163,10 +14363,30 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 8760503391116846078}
     m_Modifications:
+    - target: {fileID: 2985359813257958693, guid: 7e918bc0449947c4ba1c14b52deb4ac7,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 4298095927712540669, guid: 7e918bc0449947c4ba1c14b52deb4ac7,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4330854758197314082, guid: 7e918bc0449947c4ba1c14b52deb4ac7,
         type: 3}
       propertyPath: m_Name
       value: ENERGY CRYSTAL 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4330854758197314082, guid: 7e918bc0449947c4ba1c14b52deb4ac7,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 4699278566491505073, guid: 7e918bc0449947c4ba1c14b52deb4ac7,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 5049763147314345885, guid: 7e918bc0449947c4ba1c14b52deb4ac7,
         type: 3}
@@ -12233,10 +14453,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5261437712620233629, guid: 7e918bc0449947c4ba1c14b52deb4ac7,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 7198653176957525201, guid: 7e918bc0449947c4ba1c14b52deb4ac7,
         type: 3}
       propertyPath: m_IsKinematic
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7873604768916350932, guid: 7e918bc0449947c4ba1c14b52deb4ac7,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 7236729420166691809, guid: 7e918bc0449947c4ba1c14b52deb4ac7, type: 3}
@@ -12262,6 +14492,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Rock Base 6 (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5509437723594153752, guid: 71ac8d1595f107b4c8a8e8adc919ff0d,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 6273697801557575716, guid: 71ac8d1595f107b4c8a8e8adc919ff0d,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 6476746267254586637, guid: 71ac8d1595f107b4c8a8e8adc919ff0d,
         type: 3}
@@ -12352,6 +14592,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Obstacle 2-2 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 1923482171383341881, guid: 6680d8c4b0ad2274d9a366395f068b03,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 8962964263881040615, guid: 6680d8c4b0ad2274d9a366395f068b03,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 9002232299753001050, guid: 6680d8c4b0ad2274d9a366395f068b03,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -12416,6 +14666,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 6.995
+      objectReference: {fileID: 0}
+    - target: {fileID: 9073904252613727180, guid: 6680d8c4b0ad2274d9a366395f068b03,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -12501,10 +14756,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 62.983
       objectReference: {fileID: 0}
+    - target: {fileID: 3630217150722338610, guid: 3a808bc27f9718144a5eb904ff7c6460,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 5725018129696214952, guid: 3a808bc27f9718144a5eb904ff7c6460,
         type: 3}
       propertyPath: m_Name
       value: Planet 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5725018129696214952, guid: 3a808bc27f9718144a5eb904ff7c6460,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -12529,6 +14794,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Mushroom 2 (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1496255025034993729, guid: d78a90563c7722f4082597f077c994a0,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1535137385250967914, guid: d78a90563c7722f4082597f077c994a0,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 9183505082963973792, guid: d78a90563c7722f4082597f077c994a0,
         type: 3}
@@ -12619,6 +14894,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: Obstacle 2-7 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 1923482171383341881, guid: 9dc4fc4a79094264e9b3a123317d4d01,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 5590683324050113787, guid: 9dc4fc4a79094264e9b3a123317d4d01,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 6553436804286819088, guid: 9dc4fc4a79094264e9b3a123317d4d01,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 9002232299753001050, guid: 9dc4fc4a79094264e9b3a123317d4d01,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -12708,6 +14998,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: Obstacle 2-7 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1923482171383341881, guid: 9dc4fc4a79094264e9b3a123317d4d01,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 5590683324050113787, guid: 9dc4fc4a79094264e9b3a123317d4d01,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 6553436804286819088, guid: 9dc4fc4a79094264e9b3a123317d4d01,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 9002232299753001050, guid: 9dc4fc4a79094264e9b3a123317d4d01,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -12792,10 +15097,25 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 5811292734078919144}
     m_Modifications:
+    - target: {fileID: 1332113336996511741, guid: 3a5a37e2553f6bf429590a4cc5a27f81,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 1923482171383341881, guid: 3a5a37e2553f6bf429590a4cc5a27f81,
         type: 3}
       propertyPath: m_Name
       value: Obstacle 2-3 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1923482171383341881, guid: 3a5a37e2553f6bf429590a4cc5a27f81,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 7921757174924320063, guid: 3a5a37e2553f6bf429590a4cc5a27f81,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 9002232299753001050, guid: 3a5a37e2553f6bf429590a4cc5a27f81,
         type: 3}
@@ -12881,10 +15201,30 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 8760503391116846078}
     m_Modifications:
+    - target: {fileID: 2985359813257958693, guid: 7e918bc0449947c4ba1c14b52deb4ac7,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 4298095927712540669, guid: 7e918bc0449947c4ba1c14b52deb4ac7,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4330854758197314082, guid: 7e918bc0449947c4ba1c14b52deb4ac7,
         type: 3}
       propertyPath: m_Name
       value: ENERGY CRYSTAL 1 (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4330854758197314082, guid: 7e918bc0449947c4ba1c14b52deb4ac7,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 4699278566491505073, guid: 7e918bc0449947c4ba1c14b52deb4ac7,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 5049763147314345885, guid: 7e918bc0449947c4ba1c14b52deb4ac7,
         type: 3}
@@ -12951,10 +15291,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5261437712620233629, guid: 7e918bc0449947c4ba1c14b52deb4ac7,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 7198653176957525201, guid: 7e918bc0449947c4ba1c14b52deb4ac7,
         type: 3}
       propertyPath: m_IsKinematic
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7873604768916350932, guid: 7e918bc0449947c4ba1c14b52deb4ac7,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 7236729420166691809, guid: 7e918bc0449947c4ba1c14b52deb4ac7, type: 3}
@@ -12976,10 +15326,25 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 5811292734078919144}
     m_Modifications:
+    - target: {fileID: 1332113336996511741, guid: 3a5a37e2553f6bf429590a4cc5a27f81,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 1923482171383341881, guid: 3a5a37e2553f6bf429590a4cc5a27f81,
         type: 3}
       propertyPath: m_Name
       value: Obstacle 2-3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1923482171383341881, guid: 3a5a37e2553f6bf429590a4cc5a27f81,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 7921757174924320063, guid: 3a5a37e2553f6bf429590a4cc5a27f81,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 9002232299753001050, guid: 3a5a37e2553f6bf429590a4cc5a27f81,
         type: 3}
@@ -13055,6 +15420,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Flat Rock 2 (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 7375003003565193294, guid: c3debb115e4c4254dad636da90208142,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8061777128693374086, guid: c3debb115e4c4254dad636da90208142,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -13120,6 +15490,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8649423742655370112, guid: c3debb115e4c4254dad636da90208142,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -13139,10 +15514,30 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 8760503391116846078}
     m_Modifications:
+    - target: {fileID: 2985359813257958693, guid: 7e918bc0449947c4ba1c14b52deb4ac7,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 4298095927712540669, guid: 7e918bc0449947c4ba1c14b52deb4ac7,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4330854758197314082, guid: 7e918bc0449947c4ba1c14b52deb4ac7,
         type: 3}
       propertyPath: m_Name
       value: ENERGY CRYSTAL 1 (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4330854758197314082, guid: 7e918bc0449947c4ba1c14b52deb4ac7,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 4699278566491505073, guid: 7e918bc0449947c4ba1c14b52deb4ac7,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 5049763147314345885, guid: 7e918bc0449947c4ba1c14b52deb4ac7,
         type: 3}
@@ -13209,10 +15604,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5261437712620233629, guid: 7e918bc0449947c4ba1c14b52deb4ac7,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 7198653176957525201, guid: 7e918bc0449947c4ba1c14b52deb4ac7,
         type: 3}
       propertyPath: m_IsKinematic
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7873604768916350932, guid: 7e918bc0449947c4ba1c14b52deb4ac7,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 7236729420166691809, guid: 7e918bc0449947c4ba1c14b52deb4ac7, type: 3}
@@ -13238,6 +15643,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Rock Base 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5509437723594153752, guid: 71ac8d1595f107b4c8a8e8adc919ff0d,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 6273697801557575716, guid: 71ac8d1595f107b4c8a8e8adc919ff0d,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 6476746267254586637, guid: 71ac8d1595f107b4c8a8e8adc919ff0d,
         type: 3}
@@ -13328,6 +15743,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Mushroom 2 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 1496255025034993729, guid: d78a90563c7722f4082597f077c994a0,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1535137385250967914, guid: d78a90563c7722f4082597f077c994a0,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 9183505082963973792, guid: d78a90563c7722f4082597f077c994a0,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -13417,6 +15842,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock Base 6 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 5509437723594153752, guid: 71ac8d1595f107b4c8a8e8adc919ff0d,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 6273697801557575716, guid: 71ac8d1595f107b4c8a8e8adc919ff0d,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 6476746267254586637, guid: 71ac8d1595f107b4c8a8e8adc919ff0d,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -13501,10 +15936,30 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 8760503391116846078}
     m_Modifications:
+    - target: {fileID: 2985359813257958693, guid: 7e918bc0449947c4ba1c14b52deb4ac7,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 4298095927712540669, guid: 7e918bc0449947c4ba1c14b52deb4ac7,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4330854758197314082, guid: 7e918bc0449947c4ba1c14b52deb4ac7,
         type: 3}
       propertyPath: m_Name
       value: ENERGY CRYSTAL 1 (17)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4330854758197314082, guid: 7e918bc0449947c4ba1c14b52deb4ac7,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 4699278566491505073, guid: 7e918bc0449947c4ba1c14b52deb4ac7,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 5049763147314345885, guid: 7e918bc0449947c4ba1c14b52deb4ac7,
         type: 3}
@@ -13571,10 +16026,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5261437712620233629, guid: 7e918bc0449947c4ba1c14b52deb4ac7,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 7198653176957525201, guid: 7e918bc0449947c4ba1c14b52deb4ac7,
         type: 3}
       propertyPath: m_IsKinematic
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7873604768916350932, guid: 7e918bc0449947c4ba1c14b52deb4ac7,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 7236729420166691809, guid: 7e918bc0449947c4ba1c14b52deb4ac7, type: 3}
@@ -13600,6 +16065,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Rock Base 6 (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5509437723594153752, guid: 71ac8d1595f107b4c8a8e8adc919ff0d,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 6273697801557575716, guid: 71ac8d1595f107b4c8a8e8adc919ff0d,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 6476746267254586637, guid: 71ac8d1595f107b4c8a8e8adc919ff0d,
         type: 3}
@@ -13685,10 +16160,25 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 8760503391116846078}
     m_Modifications:
+    - target: {fileID: 2985359813257958693, guid: ff222c80a2d707042b921c2d5f9565b0,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 4298095927712540669, guid: ff222c80a2d707042b921c2d5f9565b0,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4330854758197314082, guid: ff222c80a2d707042b921c2d5f9565b0,
         type: 3}
       propertyPath: m_Name
       value: ENERGY CRYSTAL 3 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4330854758197314082, guid: ff222c80a2d707042b921c2d5f9565b0,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 5049763147314345885, guid: ff222c80a2d707042b921c2d5f9565b0,
         type: 3}
@@ -13754,6 +16244,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5261437712620233629, guid: ff222c80a2d707042b921c2d5f9565b0,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 6975245712324643169, guid: ff222c80a2d707042b921c2d5f9565b0,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 9203433578832857373, guid: ff222c80a2d707042b921c2d5f9565b0,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -13839,10 +16344,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5241023779856572246, guid: 040e3002ac384e7498f88942cd6b993f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 6145398084441660983, guid: 040e3002ac384e7498f88942cd6b993f,
         type: 3}
       propertyPath: m_Name
       value: Mushroom 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6145398084441660983, guid: 040e3002ac384e7498f88942cd6b993f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -13863,10 +16378,25 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 5811292734078919144}
     m_Modifications:
+    - target: {fileID: 1332113336996511741, guid: 3a5a37e2553f6bf429590a4cc5a27f81,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 1923482171383341881, guid: 3a5a37e2553f6bf429590a4cc5a27f81,
         type: 3}
       propertyPath: m_Name
       value: Obstacle 2-3 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1923482171383341881, guid: 3a5a37e2553f6bf429590a4cc5a27f81,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 7921757174924320063, guid: 3a5a37e2553f6bf429590a4cc5a27f81,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 9002232299753001050, guid: 3a5a37e2553f6bf429590a4cc5a27f81,
         type: 3}
@@ -14021,6 +16551,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Rock Base 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4805214118281490554, guid: 6a9011ca2ebf0b147acb86156a776321,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 8106547949055322309, guid: 6a9011ca2ebf0b147acb86156a776321,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
