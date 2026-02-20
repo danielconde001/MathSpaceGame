@@ -3576,7 +3576,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &2001570148
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3694,9 +3694,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ImageSwitcher
   targetImage: {fileID: 1419493460}
   sprites:
-  - {fileID: -3800787011636550863, guid: d6e34a48ae651f041896fd615ab33798, type: 3}
-  - {fileID: 1714456673997625542, guid: a2e39e2a4667ecb4e89942a794f3ece4, type: 3}
-  - {fileID: 8486402514992064852, guid: 2c459eb493d0ac646bcb30a34d93bf02, type: 3}
+  - {fileID: -2645050474553366069, guid: 9cbdb641337311e479491d395dcfaf25, type: 3}
+  - {fileID: -6535061216159887078, guid: 59d11aa1eefaff1408efde98c51fcb86, type: 3}
+  - {fileID: 4204284292704615366, guid: aab9c313864529b4a823d725949c0b99, type: 3}
+  - {fileID: -491630882708088005, guid: 86fad7ec713de4a4eb3d789fdf704f0b, type: 3}
+  - {fileID: -5666996480505812442, guid: 502d569f961909a4db00f06b823033a3, type: 3}
+  - {fileID: 6934233696673383967, guid: 0ed0f2f77a8a4a8438edfa88248d9a78, type: 3}
+  - {fileID: 1790191627928547123, guid: 14bde995d7b502342988bd6e1ee27ce6, type: 3}
   backButton: {fileID: 1104502597}
   nextButton: {fileID: 330702650}
   Canvas: {fileID: 2013025521}
