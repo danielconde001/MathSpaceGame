@@ -1,4 +1,3 @@
-using Terresquall;
 using UnityEngine;
 
 public class SpaceshipMovement : MonoBehaviour
@@ -7,6 +6,13 @@ public class SpaceshipMovement : MonoBehaviour
 
     [SerializeField] private float xLimit = 5f;
     [SerializeField] private float yLimit = 5f;
+
+    private Joystick joystick;
+
+    private void Awake()
+    {
+        joystick = FindFirstObjectByType<Joystick>();
+    }
 
     void Update()
     {
@@ -20,8 +26,8 @@ public class SpaceshipMovement : MonoBehaviour
 
         if (Application.isMobilePlatform == true)
         {
-            rightInput = VirtualJoystick.GetAxis("Horizontal");
-            upInput = VirtualJoystick.GetAxis("Vertical");
+            rightInput = joystick.Horizontal;
+            upInput = joystick.Vertical;
         }
         else
         {
