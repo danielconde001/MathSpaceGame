@@ -28,7 +28,7 @@ public class SpaceshipMovement : MonoBehaviour
             rightInput = Input.GetAxis("Horizontal");
             upInput = Input.GetAxis("Vertical");
         }
-            
+
         if (transform.localPosition.x <= -xLimit) 
             transform.localPosition = new Vector3(-xLimit, transform.localPosition.y, transform.localPosition.z);
         if (transform.localPosition.x >= xLimit)

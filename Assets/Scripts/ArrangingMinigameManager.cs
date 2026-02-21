@@ -43,6 +43,8 @@ public class ArrangingMinigameManager : MinigameManager
     {
         base.InitializeMinigame();
 
+        LevelManager.Instance.LevelState = 1;
+
         rounds = p_numberOfRounds;
         roundsPassed = 0;
         panel.enabled = true;
@@ -82,6 +84,7 @@ public class ArrangingMinigameManager : MinigameManager
     public override void EndMinigame()
     {
         base.EndMinigame();
+        LevelManager.Instance.LevelState = 0;
         panel.enabled = false;
     }
 

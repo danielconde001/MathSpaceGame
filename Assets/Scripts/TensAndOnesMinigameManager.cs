@@ -7,8 +7,6 @@ public class TensAndOnesMinigameManager : MinigameManager
 {
     private TensAndOnesMinigameCanvas canvas;
 
-    private uint StateID = 1;
-
     [Header("Asteroids")]
     [SerializeField] private AsteroidScript tens;
     [SerializeField] private AsteroidScript ones;
@@ -69,7 +67,7 @@ public class TensAndOnesMinigameManager : MinigameManager
     {
         base.InitializeMinigame(p_numberOfRounds);
 
-        LevelManager.Instance.LevelState = StateID;
+        LevelManager.Instance.LevelState = 2;
 
         canRegisterBullet = true;
 

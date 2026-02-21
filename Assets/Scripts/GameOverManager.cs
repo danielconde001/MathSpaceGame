@@ -1,6 +1,5 @@
 using DG.Tweening;
 using System.Collections;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class GameOverManager : MonoBehaviour
@@ -24,8 +23,6 @@ public class GameOverManager : MonoBehaviour
     [SerializeField] private GameObject content;
     [SerializeField] private MinigameSequencer minigameSequencer;
 
-    private uint previousLevelState;
-
     private void Awake()
     {
         instance = this;
@@ -41,7 +38,6 @@ public class GameOverManager : MonoBehaviour
 
         PauseManager.Instance.IsPaused = true;
 
-        previousLevelState = LevelManager.Instance.LevelState;
         LevelManager.Instance.LevelState = 3;
 
         content.transform.DOLocalMoveY(1080, 0f, true);
@@ -94,7 +90,7 @@ public class GameOverManager : MonoBehaviour
                 () => 
                 {
                     panel.gameObject.SetActive(false);
-                    LevelManager.Instance.LevelState = previousLevelState;
+                    LevelManager.Instance.LevelState = 1;
                     p_functionAfterHiding?.Invoke();
                 }
             );

@@ -24,8 +24,6 @@ public class AutoShootButton : MonoBehaviour, IPointerDownHandler, IPointerUpHan
         attack = PlayerManager.Instance.GetPlayer().GetAttackScript();
     }
 
-
-
     private void Update()
     {
         if (waitForSeconds > 0 && PauseManager.Instance.IsPaused == false)
@@ -42,7 +40,11 @@ public class AutoShootButton : MonoBehaviour, IPointerDownHandler, IPointerUpHan
     public void DisableButtonForSeconds(float p_seconds)
     {
         waitForSeconds = p_seconds;
-        StartCoroutine(DisableButton());
+
+        if (transform.parent.gameObject.activeSelf == true)
+        {
+            StartCoroutine(DisableButton());
+        }
     }
 
     IEnumerator DisableButton()

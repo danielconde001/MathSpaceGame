@@ -46,8 +46,10 @@ public class SpaceshipAttack : MonoBehaviour
                 MinigameShootingLogic();
                 break;
             default:
-                NormalShootingLogic();
-                Debug.LogWarning("No state exists for index: " + LevelManager.Instance.LevelState.ToString());
+                if (useDebug == true)
+                {
+                    Debug.LogWarning("No state exists for index: " + LevelManager.Instance.LevelState.ToString());
+                }
                 break;
         }
     }

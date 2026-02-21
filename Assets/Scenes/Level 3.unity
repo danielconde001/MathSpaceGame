@@ -2728,6 +2728,96 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6235021202598526480, guid: 3162a0245e86ae047be1ea36afa6ce98,
+        type: 3}
+      propertyPath: radius
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6235021202598526480, guid: 3162a0245e86ae047be1ea36afa6ce98,
+        type: 3}
+      propertyPath: deadzone
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6235021202598526480, guid: 3162a0245e86ae047be1ea36afa6ce98,
+        type: 3}
+      propertyPath: edgeSnap
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6235021202598526480, guid: 3162a0245e86ae047be1ea36afa6ce98,
+        type: 3}
+      propertyPath: directions
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6235021202598526480, guid: 3162a0245e86ae047be1ea36afa6ce98,
+        type: 3}
+      propertyPath: angleOffset
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6235021202598526480, guid: 3162a0245e86ae047be1ea36afa6ce98,
+        type: 3}
+      propertyPath: dragColor.b
+      value: 0.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 6235021202598526480, guid: 3162a0245e86ae047be1ea36afa6ce98,
+        type: 3}
+      propertyPath: dragColor.g
+      value: 0.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 6235021202598526480, guid: 3162a0245e86ae047be1ea36afa6ce98,
+        type: 3}
+      propertyPath: dragColor.r
+      value: 0.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 6235021202598526480, guid: 3162a0245e86ae047be1ea36afa6ce98,
+        type: 3}
+      propertyPath: sensitivity
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6235021202598526480, guid: 3162a0245e86ae047be1ea36afa6ce98,
+        type: 3}
+      propertyPath: boundaries.x
+      value: 250
+      objectReference: {fileID: 0}
+    - target: {fileID: 6235021202598526480, guid: 3162a0245e86ae047be1ea36afa6ce98,
+        type: 3}
+      propertyPath: boundaries.y
+      value: 250
+      objectReference: {fileID: 0}
+    - target: {fileID: 6235021202598526480, guid: 3162a0245e86ae047be1ea36afa6ce98,
+        type: 3}
+      propertyPath: onlyOnMobile
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6235021202598526480, guid: 3162a0245e86ae047be1ea36afa6ce98,
+        type: 3}
+      propertyPath: snapsToTouch
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6235021202598526480, guid: 3162a0245e86ae047be1ea36afa6ce98,
+        type: 3}
+      propertyPath: boundaries.width
+      value: 340
+      objectReference: {fileID: 0}
+    - target: {fileID: 6235021202598526480, guid: 3162a0245e86ae047be1ea36afa6ce98,
+        type: 3}
+      propertyPath: consolePrintAxis
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6235021202598526480, guid: 3162a0245e86ae047be1ea36afa6ce98,
+        type: 3}
+      propertyPath: boundaries.height
+      value: 340
+      objectReference: {fileID: 0}
+    - target: {fileID: 6235021202598526480, guid: 3162a0245e86ae047be1ea36afa6ce98,
+        type: 3}
+      propertyPath: m_EditorClassIdentifier
+      value: Assembly-CSharp::Terresquall.VirtualJoystick
+      objectReference: {fileID: 0}
+    - target: {fileID: 6235021202598526483, guid: 3162a0245e86ae047be1ea36afa6ce98,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 256
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
