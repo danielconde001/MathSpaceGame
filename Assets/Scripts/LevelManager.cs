@@ -34,7 +34,12 @@ public class LevelManager : MonoBehaviour
         return currentSections;
     }
 
-    private uint levelState = 0; // 0 = Normal, 1 = Doing Minigame 1
+    private uint levelState = 0; 
+    // 0 = Normal
+    // 1 = UI Related Minigames / Power Up Screen
+    // 2 = Doing Minigame 1
+    // 3 = Game Over Screen
+
     public uint LevelState
     {
         get => levelState;
@@ -57,11 +62,6 @@ public class LevelManager : MonoBehaviour
         }
 
         remainingCollectSections = collectSectionPrefabs;
-    }
-
-    private void Start()
-    {
-        ScoreManager.Instance.Reset();
     }
 
     public void SpawnNextSection(float p_offset = 0f)

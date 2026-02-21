@@ -102,6 +102,8 @@ public class PowerUpManager : MonoBehaviour
 
         PauseManager.Instance.IsPaused = true;
 
+        LevelManager.Instance.LevelState = 1;
+
         AudioManager.Instance.PlayLevelUpSFX();
 
         rectTransform.DOLocalMoveY(820, 0f, true);
@@ -116,6 +118,7 @@ public class PowerUpManager : MonoBehaviour
                 () => 
                 {
                     panel.gameObject.SetActive(false);
+                    LevelManager.Instance.LevelState = 0;
                     PauseManager.Instance.IsPaused = false;
                 }   
             );

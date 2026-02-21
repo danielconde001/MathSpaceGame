@@ -8,6 +8,19 @@ public class DistanceToPlayer : MonoBehaviour
         get => distance;
     }
 
+    public float zOffset = 10f;
+
+    private bool isMissile;
+    public bool IsMissile { get => isMissile; }
+
+    private void Awake()
+    {
+        if (GetComponent<MissileBehaviour>() == true)
+        {
+            isMissile = true;
+        }
+    }
+
     private void Start()
     {
         PlayerVicinity.Instance.DistancesToPlayer.Add(this);
@@ -21,7 +34,8 @@ public class DistanceToPlayer : MonoBehaviour
             transform.position
             );
 
-        if (transform.position.z < PlayerManager.Instance.GetPlayer().transform.position.z)
+        if ((transform.position.z + zOffset) < 
+            PlayerManager.Instance.GetPlayer().transform.position.z)
         {
             PlayerVicinity.Instance.DistancesToPlayer.Remove(this);
         }

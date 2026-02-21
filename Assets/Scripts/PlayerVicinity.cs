@@ -1,6 +1,5 @@
 using UnityEngine;
 using System.Collections.Generic;
-using System.Linq;
 
 public class PlayerVicinity : MonoBehaviour
 {
@@ -18,7 +17,11 @@ public class PlayerVicinity : MonoBehaviour
         }
     }
 
+    [SerializeField] float range = 50f;
+    [SerializeField] bool useDebug = false; 
+
     public List<DistanceToPlayer> DistancesToPlayer = new List<DistanceToPlayer>();
+
 
     public bool ContainsTransform(Transform p_transform)
     {
@@ -30,51 +33,42 @@ public class PlayerVicinity : MonoBehaviour
         return false;
     }
 
-    public Transform GetNearestTransform()
+    public DistanceToPlayer GetNearest()
     {
         if (DistancesToPlayer.Count > 0)
         {
-            Transform nearestTransform = DistancesToPlayer[0].transform;
-            float nearest = DistancesToPlayer[0].Distance;
+            DistanceToPlayer nearest = DistancesToPlayer[0];
 
             for (int i = 1; i < DistancesToPlayer.Count; i++)
             {
-                if (DistancesToPlayer[i].Distance < nearest)
+                if (DistancesToPlayer[i].Distance < nearest.Distance)
                 {
-                    nearest = DistancesToPlayer[i].Distance;
-                    nearestTransform = DistancesToPlayer[i].transform;
+                    nearest = DistancesToPlayer[i];
                 }
             }
 
-            return nearestTransform;
+            if (nearest.Distance > range)
+            {
+                return null;
+            }
+            else
+            {
+                if (useDebug == true)
+                {
+                    Debug.Log
+                    (
+                        nearest.GetComponent<DistanceToPlayer>().Distance,
+                        nearest.gameObject
+                    );
+                }
+
+                return nearest;
+            }
         }
 
         else
         {
             return null;
-        }
-    }
-
-    public float GetNearestDistance()
-    {
-        if (DistancesToPlayer.Count > 0)
-        {
-            float nearest = DistancesToPlayer[0].Distance;
-
-            for (int i = 1; i < DistancesToPlayer.Count; i++)
-            {
-                if (DistancesToPlayer[i].Distance < nearest)
-                {
-                    nearest = DistancesToPlayer[i].Distance;
-                }
-            }
-
-            return nearest;
-        }
-
-        else
-        {
-            return 0f;
         }
     }
 }

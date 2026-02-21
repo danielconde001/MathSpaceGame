@@ -31,12 +31,6 @@ public class ScoreManager : MonoBehaviour
         UpdateScoreUI();
     }
 
-    public void Reset()
-    {
-        CurrentScore = 0;
-        UpdateScoreUI();
-    }
-
     public void AddScore(int value)
     {
         CurrentScore += value;
@@ -51,7 +45,7 @@ public class ScoreManager : MonoBehaviour
         {
             if (PlayerManager.Instance.GetPlayer().PlayerLevel >= 4) // at max level
             {
-                scoreText.text = "MAX LEVEL REACHED!";
+                scoreText.text = "MAX LEVEL!";
             }
             else
             {

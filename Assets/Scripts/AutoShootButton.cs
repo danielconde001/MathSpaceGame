@@ -1,9 +1,13 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
 public class AutoShootButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 {
-    public bool isPressed = false;
+    bool isPressed = false;
+    bool enableButton = true;
+    float waitForSeconds = 0f;
+    SpaceshipAttack attack;
 
     public void OnPointerDown(PointerEventData eventData)
     {
@@ -20,14 +24,31 @@ public class AutoShootButton : MonoBehaviour, IPointerDownHandler, IPointerUpHan
         attack = PlayerManager.Instance.GetPlayer().GetAttackScript();
     }
 
-    SpaceshipAttack attack;
+
 
     private void Update()
     {
-        if (isPressed)
+        if (waitForSeconds > 0 && PauseManager.Instance.IsPaused == false)
+        {
+            waitForSeconds -= Time.deltaTime;
+        }
+
+        if (isPressed == true && enableButton == true)
         {
             attack.AutoShoot();
         }
     }
 
+    public void DisableButtonForSeconds(float p_seconds)
+    {
+        waitForSeconds = p_seconds;
+        StartCoroutine(DisableButton());
+    }
+
+    IEnumerator DisableButton()
+    {
+        enableButton = false;
+        yield return new WaitUntil( () => (waitForSeconds <= 0) );
+        enableButton = true;
+    }
 }

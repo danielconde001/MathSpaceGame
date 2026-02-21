@@ -25,12 +25,31 @@ public class ImageSwitcher : MonoBehaviour
         if (closeButton != null)
             closeButton.onClick.AddListener(CloseGuide);
     }
+
+    public void OpenGuide()
+    {
+        if (Canvas != null)
+            Canvas.SetActive(true);
+
+        if (LevelManager.Instance.LevelState == 0)
+        {
+            PauseManager.Instance.IsPaused = true;
+        }
+
+    }
+
     public void CloseGuide()
     {
         if (Canvas != null)
             Canvas.SetActive(false);
         if (eduGuideButton != null)
             eduGuideButton.SetActive(true);
+
+        if (LevelManager.Instance.LevelState == 0)
+        {
+            PauseManager.Instance.IsPaused = false;
+        }
+
         currentIndex = 0;
         UpdateImage();
     }
@@ -65,8 +84,6 @@ public class ImageSwitcher : MonoBehaviour
                 nextButton.interactable = false;
             // Reset image to index 0
             currentIndex = 0;
-
-            PauseManager.Instance.IsPaused = false;
 
             UpdateImage();
         }

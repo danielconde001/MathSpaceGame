@@ -24,6 +24,8 @@ public class GameOverManager : MonoBehaviour
     [SerializeField] private GameObject content;
     [SerializeField] private MinigameSequencer minigameSequencer;
 
+    private uint previousLevelState;
+
     private void Awake()
     {
         instance = this;
@@ -38,6 +40,9 @@ public class GameOverManager : MonoBehaviour
         panel.gameObject.SetActive(true);
 
         PauseManager.Instance.IsPaused = true;
+
+        previousLevelState = LevelManager.Instance.LevelState;
+        LevelManager.Instance.LevelState = 3;
 
         content.transform.DOLocalMoveY(1080, 0f, true);
         content.transform.DOLocalMoveY(0, .7f);
@@ -89,6 +94,7 @@ public class GameOverManager : MonoBehaviour
                 () => 
                 {
                     panel.gameObject.SetActive(false);
+                    LevelManager.Instance.LevelState = previousLevelState;
                     p_functionAfterHiding?.Invoke();
                 }
             );

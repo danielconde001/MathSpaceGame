@@ -14,6 +14,7 @@ public class SpaceshipAttack : MonoBehaviour
     [SerializeField] private LayerMask cursorRayMask;
     private float fireCooldown = 0;
     private SpaceshipLookAt spaceshipLookAt;
+    private Transform autoTarget = null;
 
     [Header("Minigame Settings")]
     [SerializeField] private float minigameFireRate = .72f;
@@ -23,7 +24,6 @@ public class SpaceshipAttack : MonoBehaviour
     [Header("Debug")]
     [SerializeField] bool useDebug = false;
 
-    Transform autoTarget = null;
 
     private void Awake()
     {
@@ -42,7 +42,7 @@ public class SpaceshipAttack : MonoBehaviour
             case 0:
                 NormalShootingLogic();
                 break;
-            case 1:
+            case 2:
                 MinigameShootingLogic();
                 break;
             default:
@@ -152,39 +152,59 @@ public class SpaceshipAttack : MonoBehaviour
 
     public void AutoShoot()
     {
-        if (PlayerVicinity.Instance.GetNearestTransform() == null)
+        // To fix that weird bug where you can shoot once while looking a Help Guide
+        if (PauseManager.Instance.IsPaused == true)
         {
             return;
         }
 
+        // If no target is found
         if (autoTarget == null)
         {
-            autoTarget = PlayerVicinity.Instance.GetNearestTransform();
+            // Find one..
+            autoTarget = PlayerVicinity.Instance.GetNearest()?.transform;
+        }
+
+        // If the auto target is now way behind the player..
+        if (PlayerVicinity.Instance.ContainsTransform(autoTarget) == false)
+        {
+            // Remove that as the auto target..
+            autoTarget = null;
+        }
+
+        // Do a special case for missiles, because the kids will cry if I don't
+        if (PlayerVicinity.Instance.GetNearest()?.IsMissile == true)
+        {
+            // Remove that as the auto target..
+            autoTarget = PlayerVicinity.Instance.GetNearest()?.transform;
+        }
+
+        // If you finally found one..
+        if (autoTarget != null)
+        {
+            // Look at target instantly.
+            spaceshipLookAt.LookAtPosition(autoTarget.position);
         }
         else
         {
-            if (Vector3.Distance(autoTarget.position, transform.position) > 75)
-            {
-                autoTarget = null;
-                return;
-            }
-            if (PlayerVicinity.Instance.ContainsTransform(autoTarget) == false)
-            {
-                autoTarget = null;
-                return;
-            }
+            // If you still can't find one..
+            // Do nothing but look at the center...
+            spaceshipLookAt.transform.localRotation = 
+            Quaternion.Slerp(
+                spaceshipLookAt.transform.localRotation, 
+                Quaternion.Euler(0,0,0), 
+                Time.deltaTime * spaceshipLookAt.RotationSpeed);
+
+            return;
         }
 
-        // Look at target instantly
-        spaceshipLookAt.LookAtPosition(autoTarget.position);
-
+        // If you're still waiting on your fire rate..
         if (fireCooldown > 0f)
         {
             return;
         }
 
-        // Set target
-
+        // SHOOT - Startling line
         ProjectileBehaviour projectile;
 
         if (PowerUpManager.Instance.HasDoubleBullets())
@@ -199,6 +219,9 @@ public class SpaceshipAttack : MonoBehaviour
         }
 
         projectile.target = autoTarget;
+        // SHOOT - Ending line
+
+        // Reset fire cooldown. Set it to your Fire Rate..
         fireCooldown = fireRate;
     }
 

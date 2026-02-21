@@ -2,11 +2,9 @@ using UnityEngine;
 using UnityEngine.UI;
 
 [RequireComponent(typeof(Button))]
-public class PauseOnClick : MonoBehaviour
+public class PauseOnButtonClick : MonoBehaviour
 {
     Button button;
-
-    [SerializeField] bool PausesOnClick = true;
 
     private void Awake()
     {
@@ -16,6 +14,6 @@ public class PauseOnClick : MonoBehaviour
 
     private void Pause()
     {
-        PauseManager.Instance.IsPaused = PausesOnClick;
+        PauseManager.Instance.IsPaused = true;
     }
 }

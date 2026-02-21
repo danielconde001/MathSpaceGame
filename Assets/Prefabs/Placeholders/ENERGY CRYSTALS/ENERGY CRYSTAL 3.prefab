@@ -18,6 +18,7 @@ GameObject:
   - component: {fileID: 1621155718352001831}
   - component: {fileID: 8066497886606264474}
   - component: {fileID: 5782263683783108191}
+  - component: {fileID: -8195679992287909939}
   m_Layer: 0
   m_Name: ENERGY CRYSTAL 3
   m_TagString: EnergyCrystal
@@ -120,7 +121,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c08da61e288a78d4696af55a890ddcff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::OnGoodRockDeath
-  gemValue: 1
   scorePopup: {fileID: 5554752485786833717, guid: 4dea4b063998b504d9542259a0c01070,
     type: 3}
 --- !u!54 &7198653176957525201
@@ -200,6 +200,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0820542c67901d24ca91f33cffc6b070, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DistanceToPlayer
+  zOffset: 10
+--- !u!114 &-8195679992287909939
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4330854758197314082}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c95a7a2e6084334fb8c2cb2516ccf0c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Score
+  value: 1
 --- !u!1001 &977269809739046167
 PrefabInstance:
   m_ObjectHideFlags: 0

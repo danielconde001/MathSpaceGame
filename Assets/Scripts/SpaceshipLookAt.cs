@@ -3,8 +3,11 @@ using UnityEngine.EventSystems;
 
 public class SpaceshipLookAt : MonoBehaviour
 {
-    [SerializeField] float rotationSpeed = 45f;
+    [SerializeField] private float rotationSpeed = 45f;
+    public float RotationSpeed { get => rotationSpeed; }
     private Vector3 lookAtPos;
+
+    [SerializeField] bool testingForMobile; // Enable only when you are testing as if you're on mobile
 
     void Update()
     {
@@ -13,7 +16,15 @@ public class SpaceshipLookAt : MonoBehaviour
             return;
         }
 
-        if (Application.isMobilePlatform && LevelManager.Instance.LevelState != 1)
+        if (testingForMobile == true)
+        {
+            if (LevelManager.Instance.LevelState != 2)
+            {
+                return;
+            }
+        }
+
+        else if (Application.isMobilePlatform && LevelManager.Instance.LevelState != 2)
         {
             return;
         }

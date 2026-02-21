@@ -31,8 +31,6 @@ public class EnemyKillable : Killable
             if (scoreComponent != null)
                 scoreValue = scoreComponent.value;
 
-            //LevelManager.Instance.CollectPoints((uint)scoreValue);
-
             Vector3 popupOffset = transform.up + -transform.right; // up and to the left
             GameObject popup = Instantiate(scorePopupPrefab, transform.position + popupOffset, Quaternion.identity);
             ScorePopup popupScript = popup.GetComponent<ScorePopup>();

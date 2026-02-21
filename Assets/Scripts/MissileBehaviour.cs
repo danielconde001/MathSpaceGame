@@ -7,6 +7,7 @@ public class MissileBehaviour : MonoBehaviour
     [SerializeField] float moveSpeed;
     [SerializeField] Vector3 introSpotOffset;
     [SerializeField] int damage;
+    [SerializeField] float minDistToPlayer = 7f;
 
     bool isNowFollowingPlayer = false;
     bool wentNearPlayer = false;
@@ -74,7 +75,7 @@ public class MissileBehaviour : MonoBehaviour
     {
         float distToPlayer = Vector3.Distance(transform.position, target.position);
 
-        if (distToPlayer < 5f && wentNearPlayer == false)
+        if (distToPlayer < minDistToPlayer && wentNearPlayer == false)
         {
             wentNearPlayer = true;
         }

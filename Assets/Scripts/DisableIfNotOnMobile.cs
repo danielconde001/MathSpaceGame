@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class MobileOnlyEnabled : MonoBehaviour
+public class DisableIfNotOnMobile : MonoBehaviour
 {
     void Start()
     {

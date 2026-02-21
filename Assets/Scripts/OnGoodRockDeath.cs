@@ -2,7 +2,6 @@ using UnityEngine;
 
 public class OnGoodRockDeath : MonoBehaviour
 {
-    [SerializeField] uint gemValue = 1;
     [SerializeField] GameObject scorePopup;
 
     SpawnVFXOnDeath SpawnVFXOnDeath;
@@ -14,7 +13,16 @@ public class OnGoodRockDeath : MonoBehaviour
 
     public void OnDeath()
     {
-        LevelManager.Instance.CollectPoints(gemValue);
+        int scoreValue = 0;
+
+        Score scoreComponent = GetComponent<Score>();
+        if (scoreComponent != null)
+            scoreValue = scoreComponent.value;
+
+        if (scoreValue > 0 && ScoreManager.Instance != null)
+        {
+            ScoreManager.Instance.AddScore(scoreValue);
+        }
 
         AudioManager.Instance.PlaySpaceCrystalDeathSFX(transform.position);
 
@@ -24,7 +32,7 @@ public class OnGoodRockDeath : MonoBehaviour
         ScorePopup popupScript = popup.GetComponent<ScorePopup>();
         if (popupScript != null)
         {
-            popupScript.Setup((int)gemValue);
+            popupScript.Setup((int)scoreValue);
         }
         Destroy(popup, 0.5f);
         // Pop up command - Ending line

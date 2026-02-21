@@ -15237,6 +15237,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03d18c75fdd614a40b2c242600c72540, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerVicinity
+  range: 67
+  useDebug: 0
   DistancesToPlayer: []
 --- !u!1 &7802084187537108127
 GameObject:
@@ -15284,3 +15286,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SpaceshipLookAt
   rotationSpeed: 45
+  testingForMobile: 0
