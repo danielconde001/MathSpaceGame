@@ -73,12 +73,8 @@ public class ImageSwitcher : MonoBehaviour
         else if (currentIndex == sprites.Length - 1)
         {
             // Last sprite, so hide tutorial and show buttons
-            if (Canvas != null)
-                Canvas.SetActive(false);
             if (playButton != null)
                 playButton.SetActive(true);
-            if (eduGuideButton != null)
-                eduGuideButton.SetActive(true);
             // Optionally disable nextButton after tutorial is finished
             if (nextButton != null)
                 nextButton.interactable = false;
@@ -86,6 +82,8 @@ public class ImageSwitcher : MonoBehaviour
             currentIndex = 0;
 
             UpdateImage();
+
+            CloseGuide();
         }
     }
 

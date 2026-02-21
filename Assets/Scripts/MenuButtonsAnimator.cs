@@ -84,7 +84,7 @@ public class MenuButtonsAnimator : MonoBehaviour, IPointerEnterHandler, IPointer
     {
         isPointerDown = true;
         transform.DOScale(originalScale * clickScale, animDuration * 0.7f).SetEase(Ease.InOutQuad);
-        AudioManager.Instance.PlayUIInactiveButtonSFX();
+        AudioManager.Instance.PlayUIClickButtonSFX();
     }
 
     public void OnPointerUp(PointerEventData eventData)
