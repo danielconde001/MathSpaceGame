@@ -24,6 +24,8 @@ public class LevelManager : MonoBehaviour
     [SerializeField] private LevelSection minigameSectionPrefab;
     [SerializeField] private LevelSection endSectionPrefab; // change to list later
 
+    [SerializeField] private bool resetScoreOnLevelStart = true;
+
     List<LevelSection> remainingCollectSections = new List<LevelSection>();
     uint timing = 1;
     uint laps = 0;
@@ -46,11 +48,6 @@ public class LevelManager : MonoBehaviour
         set => levelState = value;
     }
 
-    public void CollectPoints(uint p_value)
-    {
-        ScoreManager.Instance.AddScore((int)p_value);
-    }
-
     private void Awake()
     {
         instance = this;
@@ -62,6 +59,14 @@ public class LevelManager : MonoBehaviour
         }
 
         remainingCollectSections = collectSectionPrefabs;
+    }
+
+    private void Start()
+    {
+        if (resetScoreOnLevelStart == true)
+        {
+            ScoreManager.Instance.ResetScore();
+        }
     }
 
     public void SpawnNextSection(float p_offset = 0f)

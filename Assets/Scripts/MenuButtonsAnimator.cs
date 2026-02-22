@@ -15,6 +15,7 @@ public class MenuButtonsAnimator : MonoBehaviour, IPointerEnterHandler, IPointer
     [Header("Image Swap Settings")]
     public Image targetImage; // Optional reference, auto-assigned if not set
     public Sprite hoverSprite; // Sprite to use on hover
+    public bool doHoverAnimation = false;
     private Sprite originalSprite;
 
     private Vector3 originalScale;
@@ -56,6 +57,8 @@ public class MenuButtonsAnimator : MonoBehaviour, IPointerEnterHandler, IPointer
             if (targetImage != null && hoverSprite != null && targetImage.sprite != null)
             {
                 targetImage.sprite = hoverSprite;
+                if (doHoverAnimation)
+                    transform.DOScale(originalScale * hoverScale, animDuration).SetEase(animEase);
             }
             else
             {
@@ -72,6 +75,8 @@ public class MenuButtonsAnimator : MonoBehaviour, IPointerEnterHandler, IPointer
             if (targetImage != null && hoverSprite != null && targetImage.sprite == hoverSprite)
             {
                 targetImage.sprite = originalSprite;
+                if (doHoverAnimation)
+                    transform.DOScale(originalScale, animDuration).SetEase(animEase);
             }
             else
             {

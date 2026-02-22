@@ -48,19 +48,19 @@
         warningBanner.style.display = warningBanner.children.length ? 'block' : 'none';
       }
 
-      var buildUrl = "Build";
-var loaderUrl = buildUrl + "/OttodotBuild.loader.js";
-var config = {
-  arguments: [],
-  dataUrl: buildUrl + "/OttodotBuild.data.unityweb",
-  frameworkUrl: buildUrl + "/OttodotBuild.framework.js.unityweb",
-  codeUrl: buildUrl + "/OttodotBuild.wasm.unityweb",
-  streamingAssetsUrl: "StreamingAssets",
-  companyName: "DefaultCompany",
-  productName: "MathSpaceGame",
-  productVersion: "1.0",
-  showBanner: unityShowBanner,
-      };
+    var buildUrl = "Build";
+    var loaderUrl = buildUrl + "/OttodotBuild.loader.js";
+    var config = {
+    arguments: [],
+    dataUrl: buildUrl + "/OttodotBuild.data.unityweb",
+    frameworkUrl: buildUrl + "/OttodotBuild.framework.js.unityweb",
+    codeUrl: buildUrl + "/OttodotBuild.wasm.unityweb",
+    streamingAssetsUrl: "StreamingAssets",
+    companyName: "DefaultCompany",
+    productName: "MathSpaceGame",
+    productVersion: "1.0",
+    showBanner: unityShowBanner,
+    };
 
       // Ensure viewport meta for responsiveness
       if (!document.querySelector('meta[name="viewport"]')) {
