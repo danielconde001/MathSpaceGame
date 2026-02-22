@@ -1,20 +1,18 @@
 using DG.Tweening;
-using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 public class FillinMinigameManager : MinigameManager, IBeginDragHandler, IDragHandler, IEndDragHandler, IDropHandler{
-    
     public int minNumber = 10;
     public int maxNumber = 30;
     public int minStep = 1;
     public int maxStep = 2;
-    public TMP_InputField inputField1;
-    public TMP_InputField inputField2;
-    public TMP_InputField inputField3;
-    public TMP_InputField inputField4;
-    public TMP_InputField inputField5;
+    public InputField inputField1;
+    public InputField inputField2;
+    public InputField inputField3;
+    public InputField inputField4;
+    public InputField inputField5;
     public UnityEngine.UI.Button submitButton;
     public Image panel;
     public GameObject instructionObject;
@@ -23,12 +21,11 @@ public class FillinMinigameManager : MinigameManager, IBeginDragHandler, IDragHa
     public Transform showTransform;
     public float yOffset = 375f;
     public float animationDuration = 2f;
-    
 
     private int[] numbers = new int[5];
     private int[] blankIndices;
-    private TMP_InputField[] fields;
-    private TMP_InputField draggingField;
+    private InputField[] fields;
+    private InputField draggingField;
     private Vector3 dragStartPos;
 
     private uint rounds = 0;
@@ -36,6 +33,11 @@ public class FillinMinigameManager : MinigameManager, IBeginDragHandler, IDragHa
 
     [SerializeField] bool useDebug = false;
 
+    // // FOR TESTING PURPOSES ONLY
+    // void Start()
+    // {
+    //     InitializeMinigame(3); // Start with 3 rounds for testing
+    // }
     public override void InitializeMinigame(uint p_numberOfRounds = 7)
     {
         base.InitializeMinigame();
@@ -47,7 +49,7 @@ public class FillinMinigameManager : MinigameManager, IBeginDragHandler, IDragHa
         panel.enabled = true;
         submitButton.interactable = true;
 
-        fields = new TMP_InputField[] { inputField1, inputField2, inputField3, inputField4, inputField5 };
+        fields = new InputField[] { inputField1, inputField2, inputField3, inputField4, inputField5 };
         GenerateAndShowNumbers();
         submitButton.onClick.RemoveAllListeners();
         submitButton.onClick.AddListener(OnSubmit);
@@ -63,7 +65,7 @@ public class FillinMinigameManager : MinigameManager, IBeginDragHandler, IDragHa
     // Drag and Drop Implementation
     public void OnBeginDrag(PointerEventData eventData)
     {
-        draggingField = eventData.pointerDrag?.GetComponent<TMP_InputField>();
+        draggingField = eventData.pointerDrag?.GetComponent<InputField>();
         if (draggingField != null)
             dragStartPos = draggingField.transform.position;
     }
@@ -83,8 +85,8 @@ public class FillinMinigameManager : MinigameManager, IBeginDragHandler, IDragHa
 
     public void OnDrop(PointerEventData eventData)
     {
-        var droppedField = eventData.pointerDrag?.GetComponent<TMP_InputField>();
-        var targetField = eventData.pointerEnter?.GetComponent<TMP_InputField>();
+        var droppedField = eventData.pointerDrag?.GetComponent<InputField>();
+        var targetField = eventData.pointerEnter?.GetComponent<InputField>();
         if (droppedField != null && targetField != null && droppedField != targetField)
         {
             // Swap text and interactable state
