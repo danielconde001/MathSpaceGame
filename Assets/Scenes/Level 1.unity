@@ -206,6 +206,7 @@ MonoBehaviour:
     type: 3}
   endSectionPrefab: {fileID: 5973466272069096603, guid: 3222eb6f619e3304eb876fd4998d1559,
     type: 3}
+  resetScoreOnLevelStart: 1
 --- !u!1 &218713922
 GameObject:
   m_ObjectHideFlags: 0

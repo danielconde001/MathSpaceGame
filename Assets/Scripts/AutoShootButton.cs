@@ -5,9 +5,17 @@ using UnityEngine.EventSystems;
 public class AutoShootButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 {
     bool isPressed = false;
-    bool enableButton = true;
+    bool buttonEnabled = true;
     float waitForSeconds = 0f;
     SpaceshipAttack attack;
+
+    [SerializeField] float pressedScale = 1.6f;
+    [SerializeField] float unpressedScale = 1.25f;
+    [SerializeField] float buttonGrowDuration = 1f;
+    [SerializeField] float buttonShrinkDuration = 1f;
+
+    float elapsedTimeForPressing = 0;
+    float elapsedTimeForUnpressing = 0;
 
     public void OnPointerDown(PointerEventData eventData)
     {
@@ -31,9 +39,26 @@ public class AutoShootButton : MonoBehaviour, IPointerDownHandler, IPointerUpHan
             waitForSeconds -= Time.deltaTime;
         }
 
-        if (isPressed == true && enableButton == true)
+        if (isPressed == true && buttonEnabled == true)
         {
+            elapsedTimeForUnpressing = 0;
+            elapsedTimeForPressing += Time.deltaTime;
+            float percentageComplete = elapsedTimeForPressing / buttonGrowDuration;
+            if (percentageComplete >= 1) percentageComplete = 1;
+
+            transform.localScale = Vector3.Lerp
+                (transform.localScale, Vector3.one * pressedScale, percentageComplete) ;
             attack.AutoShoot();
+        }
+        else 
+        {
+            elapsedTimeForPressing = 0;
+            elapsedTimeForUnpressing += Time.deltaTime;
+            float percentageComplete = elapsedTimeForUnpressing / buttonShrinkDuration;
+            if (percentageComplete >= 1) percentageComplete = 1;
+
+            transform.localScale = Vector3.Lerp
+                (transform.localScale, Vector3.one * unpressedScale, percentageComplete);
         }
     }
 
@@ -49,8 +74,8 @@ public class AutoShootButton : MonoBehaviour, IPointerDownHandler, IPointerUpHan
 
     IEnumerator DisableButton()
     {
-        enableButton = false;
+        buttonEnabled = false;
         yield return new WaitUntil( () => (waitForSeconds <= 0) );
-        enableButton = true;
+        buttonEnabled = true;
     }
 }

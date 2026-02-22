@@ -347,6 +347,7 @@ MonoBehaviour:
   animEase: 27
   targetImage: {fileID: 0}
   hoverSprite: {fileID: 0}
+  doHoverAnimation: 0
 --- !u!1 &976534632128035484
 GameObject:
   m_ObjectHideFlags: 0
@@ -487,6 +488,7 @@ MonoBehaviour:
   animEase: 27
   targetImage: {fileID: 0}
   hoverSprite: {fileID: 0}
+  doHoverAnimation: 0
 --- !u!1 &1741273552887396336
 GameObject:
   m_ObjectHideFlags: 0
@@ -593,7 +595,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -4486980501665465209, guid: c3d1f70ac1018be48a54905d607f72c2,
+  m_Sprite: {fileID: -4486980501665465209, guid: 37fd44c48587c94439d1938937b3e5ec,
     type: 3}
   m_Type: 0
   m_PreserveAspect: 0
@@ -690,6 +692,7 @@ MonoBehaviour:
   animEase: 27
   targetImage: {fileID: 0}
   hoverSprite: {fileID: 0}
+  doHoverAnimation: 0
 --- !u!1 &4539323536479784347
 GameObject:
   m_ObjectHideFlags: 0
@@ -956,3 +959,4 @@ MonoBehaviour:
   animEase: 27
   targetImage: {fileID: 0}
   hoverSprite: {fileID: 0}
+  doHoverAnimation: 0
