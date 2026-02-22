@@ -511,6 +511,7 @@ GameObject:
   - component: {fileID: 1105350869204485619}
   - component: {fileID: 836933036158305498}
   - component: {fileID: 2046992577421333257}
+  - component: {fileID: 6415210654178524039}
   m_Layer: 5
   m_Name: InputField (Legacy)2
   m_TagString: Untagged
@@ -534,9 +535,9 @@ RectTransform:
   - {fileID: 8010599993376925246}
   m_Father: {fileID: 3154079950825516474}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -260, y: 50}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: -260, y: 0}
   m_SizeDelta: {x: 190.3984, y: 190.3934}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3507616705974876593
@@ -666,6 +667,18 @@ MonoBehaviour:
   hoverColor: {r: 0.3283019, g: 0.28927734, b: 0.28927734, a: 1}
   dragColor: {r: 0.8, g: 0.9, b: 1, a: 1}
   clickColor: {r: 0.9, g: 0.9, b: 0.9, a: 1}
+--- !u!114 &6415210654178524039
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4192111148559202379}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c499260cd22bbcd4c8503b18350f089b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InputFieldClickHandler
 --- !u!1 &4495520455829216955
 GameObject:
   m_ObjectHideFlags: 0
@@ -1158,6 +1171,7 @@ GameObject:
   - component: {fileID: 2052498806506304728}
   - component: {fileID: 6677249482838792311}
   - component: {fileID: 3385045237135468486}
+  - component: {fileID: 7468518994892804423}
   m_Layer: 5
   m_Name: InputField (Legacy)5
   m_TagString: Untagged
@@ -1181,9 +1195,9 @@ RectTransform:
   - {fileID: 1089381986100646314}
   m_Father: {fileID: 3154079950825516474}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 641, y: 50}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: 641, y: 0}
   m_SizeDelta: {x: 190.3984, y: 190.3934}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &701533196359225267
@@ -1313,6 +1327,18 @@ MonoBehaviour:
   hoverColor: {r: 0.3283019, g: 0.28927734, b: 0.28927734, a: 1}
   dragColor: {r: 0.8, g: 0.9, b: 1, a: 1}
   clickColor: {r: 0.9, g: 0.9, b: 0.9, a: 1}
+--- !u!114 &7468518994892804423
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6524085336623050251}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c499260cd22bbcd4c8503b18350f089b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InputFieldClickHandler
 --- !u!1 &6754337315921311651
 GameObject:
   m_ObjectHideFlags: 0
@@ -1361,6 +1387,7 @@ GameObject:
   - component: {fileID: 6327128480405229001}
   - component: {fileID: 3293829563488165927}
   - component: {fileID: 9169436521548183996}
+  - component: {fileID: 825068547032672001}
   m_Layer: 5
   m_Name: InputField (Legacy)4
   m_TagString: Untagged
@@ -1384,9 +1411,9 @@ RectTransform:
   - {fileID: 1383230085039419931}
   m_Father: {fileID: 3154079950825516474}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 339, y: 50}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: 339, y: 0}
   m_SizeDelta: {x: 190.3984, y: 190.3934}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8919539353641244736
@@ -1516,6 +1543,18 @@ MonoBehaviour:
   hoverColor: {r: 0.3283019, g: 0.28927734, b: 0.28927734, a: 1}
   dragColor: {r: 0.8, g: 0.9, b: 1, a: 1}
   clickColor: {r: 0.9, g: 0.9, b: 0.9, a: 1}
+--- !u!114 &825068547032672001
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6993311181211709358}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c499260cd22bbcd4c8503b18350f089b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InputFieldClickHandler
 --- !u!1 &7206052866589802414
 GameObject:
   m_ObjectHideFlags: 0
@@ -1956,6 +1995,7 @@ GameObject:
   - component: {fileID: 332219992702514380}
   - component: {fileID: 6595579035284546098}
   - component: {fileID: 3234912886583549050}
+  - component: {fileID: 3030780247570436275}
   m_Layer: 5
   m_Name: InputField (Legacy)1
   m_TagString: Untagged
@@ -1979,9 +2019,9 @@ RectTransform:
   - {fileID: 5769427111052554911}
   m_Father: {fileID: 3154079950825516474}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -562, y: 50}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: -562, y: 0}
   m_SizeDelta: {x: 190.3984, y: 190.3934}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4610305711225654933
@@ -2111,6 +2151,18 @@ MonoBehaviour:
   hoverColor: {r: 0.3283019, g: 0.28927734, b: 0.28927734, a: 1}
   dragColor: {r: 0.8, g: 0.9, b: 1, a: 1}
   clickColor: {r: 0.9, g: 0.9, b: 0.9, a: 1}
+--- !u!114 &3030780247570436275
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8070429440763116993}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c499260cd22bbcd4c8503b18350f089b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InputFieldClickHandler
 --- !u!1 &8076281851454314558
 GameObject:
   m_ObjectHideFlags: 0
@@ -2124,6 +2176,7 @@ GameObject:
   - component: {fileID: 7993976505907167104}
   - component: {fileID: 5816780578185912441}
   - component: {fileID: 2707693721867128250}
+  - component: {fileID: 6831810101035491217}
   m_Layer: 5
   m_Name: InputField (Legacy)3
   m_TagString: Untagged
@@ -2147,9 +2200,9 @@ RectTransform:
   - {fileID: 7633692788922403999}
   m_Father: {fileID: 3154079950825516474}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 40, y: 50}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: 40, y: 0}
   m_SizeDelta: {x: 190.3984, y: 190.3934}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7345803559248667202
@@ -2279,6 +2332,18 @@ MonoBehaviour:
   hoverColor: {r: 0.3283019, g: 0.28927734, b: 0.28927734, a: 1}
   dragColor: {r: 0.8, g: 0.9, b: 1, a: 1}
   clickColor: {r: 0.9, g: 0.9, b: 0.9, a: 1}
+--- !u!114 &6831810101035491217
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8076281851454314558}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c499260cd22bbcd4c8503b18350f089b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InputFieldClickHandler
 --- !u!1 &8090686162677384213
 GameObject:
   m_ObjectHideFlags: 0

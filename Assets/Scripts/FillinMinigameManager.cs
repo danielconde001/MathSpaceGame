@@ -3,7 +3,8 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class FillinMinigameManager : MinigameManager, IBeginDragHandler, IDragHandler, IEndDragHandler, IDropHandler{
+public class FillinMinigameManager : MinigameManager {
+ 
     public int minNumber = 10;
     public int maxNumber = 30;
     public int minStep = 1;
@@ -33,7 +34,7 @@ public class FillinMinigameManager : MinigameManager, IBeginDragHandler, IDragHa
 
     [SerializeField] bool useDebug = false;
 
-    // // FOR TESTING PURPOSES ONLY
+    // FOR TESTING PURPOSES ONLY
     // void Start()
     // {
     //     InitializeMinigame(3); // Start with 3 rounds for testing
@@ -60,43 +61,6 @@ public class FillinMinigameManager : MinigameManager, IBeginDragHandler, IDragHa
         base.EndMinigame();
         LevelManager.Instance.LevelState = 0;
         panel.enabled = false;
-    }
-
-    // Drag and Drop Implementation
-    public void OnBeginDrag(PointerEventData eventData)
-    {
-        draggingField = eventData.pointerDrag?.GetComponent<InputField>();
-        if (draggingField != null)
-            dragStartPos = draggingField.transform.position;
-    }
-
-    public void OnDrag(PointerEventData eventData)
-    {
-        if (draggingField != null)
-            draggingField.transform.position = eventData.position;
-    }
-
-    public void OnEndDrag(PointerEventData eventData)
-    {
-        if (draggingField != null)
-            draggingField.transform.position = dragStartPos;
-        draggingField = null;
-    }
-
-    public void OnDrop(PointerEventData eventData)
-    {
-        var droppedField = eventData.pointerDrag?.GetComponent<InputField>();
-        var targetField = eventData.pointerEnter?.GetComponent<InputField>();
-        if (droppedField != null && targetField != null && droppedField != targetField)
-        {
-            // Swap text and interactable state
-            string tempText = droppedField.text;
-            bool tempInteract = droppedField.interactable;
-            droppedField.text = targetField.text;
-            droppedField.interactable = targetField.interactable;
-            targetField.text = tempText;
-            targetField.interactable = tempInteract;
-        }
     }
 
     public void GenerateAndShowNumbers()
@@ -170,6 +134,7 @@ public class FillinMinigameManager : MinigameManager, IBeginDragHandler, IDragHa
             // Optionally re-enable if you want to allow retry on failure:
             submitButton.interactable = true;
         }
+        KeypadManager.Instance.HideKeypad(); // Hide custom keypad
     }
 
     System.Collections.IEnumerator SlideUpAndGenerate()
