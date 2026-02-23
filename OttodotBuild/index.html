@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Unity Web Player | MathSpaceGame</title>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="shortcut icon" href="TemplateData/favicon.ico">
+    <link rel="stylesheet" href="TemplateData/style.css">
+  </head>
+  <body>
+    <div id="landscape-overlay" style="display:none;position:fixed;z-index:9999;top:0;left:0;width:100vw;height:100vh;align-items:center;justify-content:center;background:#231F20;color:white;font-size:2em;text-align:center;">
+      Please rotate your device to landscape mode to play the game.
+    </div>
+    <div id="unity-container" class="unity-desktop">
+      <canvas id="unity-canvas" width=1080 height=720 tabindex="-1"></canvas>
+      <div id="unity-loading-bar">
+        <div id="unity-logo"></div>
+        <div id="unity-progress-bar-empty">
+          <div id="unity-progress-bar-full"></div>
+        </div>
+      </div>
+      <div id="unity-warning"> </div>
+    </div>
+    <script>
+      // Cache DOM elements
+      const canvas = document.getElementById('unity-canvas');
+      const loadingBar = document.getElementById('unity-loading-bar');
+      const progressBarFull = document.getElementById('unity-progress-bar-full');
+      const warningBanner = document.getElementById('unity-warning');
+      const container = document.getElementById('unity-container');
+
+      // Show banner for warnings/errors
+      function unityShowBanner(msg, type) {
+        const div = document.createElement('div');
+        div.innerHTML = msg;
+        if (type === 'error') {
+          div.style = 'background: red; padding: 10px;';
+        } else if (type === 'warning') {
+          div.style = 'background: yellow; padding: 10px;';
+          setTimeout(() => {
+            warningBanner.removeChild(div);
+            warningBanner.style.display = warningBanner.children.length ? 'block' : 'none';
+          }, 5000);
+        }
+        warningBanner.appendChild(div);
+        warningBanner.style.display = warningBanner.children.length ? 'block' : 'none';
+      }
+
+    var buildUrl = "Build";
+    var loaderUrl = buildUrl + "/OttodotBuild.loader.js";
+    var config = {
+    arguments: [],
+    dataUrl: buildUrl + "/OttodotBuild.data.unityweb",
+    frameworkUrl: buildUrl + "/OttodotBuild.framework.js.unityweb",
+    codeUrl: buildUrl + "/OttodotBuild.wasm.unityweb",
+    streamingAssetsUrl: "StreamingAssets",
+    companyName: "DefaultCompany",
+    productName: "MathSpaceGame",
+    productVersion: "1.0",
+    showBanner: unityShowBanner,
+    };
+
+      // Ensure viewport meta for responsiveness
+      if (!document.querySelector('meta[name="viewport"]')) {
+        const meta = document.createElement('meta');
+        meta.name = 'viewport';
+        meta.content = 'width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, shrink-to-fit=yes';
+        document.head.appendChild(meta);
+      }
+
+      // Responsive resizing
+      function resizeUnityCanvas() {
+        const dpr = window.devicePixelRatio || 1;
+        const w = window.innerWidth;
+        const h = window.innerHeight;
+        container.style.width = w + 'px';
+        container.style.height = h + 'px';
+        canvas.width = w * dpr;
+        canvas.height = h * dpr;
+        canvas.style.width = w + 'px';
+        canvas.style.height = h + 'px';
+      }
+      window.addEventListener('resize', resizeUnityCanvas);
+      resizeUnityCanvas();
+
+      loadingBar.style.display = 'block';
+
+      // Load Unity loader script
+      const script = document.createElement('script');
+      script.src = loaderUrl;
+      script.onload = () => {
+        createUnityInstance(canvas, config, (progress) => {
+          progressBarFull.style.width = (100 * progress) + '%';
+        }).then((unityInstance) => {
+          loadingBar.style.display = 'none';
+
+          // Fullscreen helpers
+          const isFullscreen = () => document.fullscreenElement || document.webkitFullscreenElement || document.mozFullScreenElement || document.msFullscreenElement;
+          let fullscreenCooldown = false;
+          const isIOS = () => /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+          function requestFullscreen() {
+            if (fullscreenCooldown || isIOS()) return;
+            if (!isFullscreen()) {
+              fullscreenCooldown = true;
+              setTimeout(() => { fullscreenCooldown = false; }, 1000);
+              let fullscreenPromise = canvas.requestFullscreen?.() || canvas.mozRequestFullScreen?.() || canvas.webkitRequestFullscreen?.() || canvas.msRequestFullscreen?.();
+              if (screen.orientation && screen.orientation.lock) {
+                screen.orientation.lock('landscape').catch(() => {});
+              }
+              if (fullscreenPromise && typeof fullscreenPromise.then === 'function') {
+                fullscreenPromise.then(() => unityInstance.SetFullscreen(1)).catch(() => {});
+              } else {
+                setTimeout(() => unityInstance.SetFullscreen(1), 100);
+              }
+            }
+          }
+          function onFullscreenChange() {
+            unityInstance.SetFullscreen(isFullscreen() ? 1 : 0);
+          }
+          ['fullscreenchange','webkitfullscreenchange','mozfullscreenchange','MSFullscreenChange'].forEach(evt => {
+            document.addEventListener(evt, onFullscreenChange);
+          });
+          document.body.addEventListener('click', requestFullscreen);
+          document.body.addEventListener('touchend', requestFullscreen);
+        }).catch((message) => {
+          alert(message);
+        });
+      };
+      document.body.appendChild(script);
+    </script>
+  </body>
+</html>

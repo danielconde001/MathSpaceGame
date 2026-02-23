@@ -1,0 +1,77 @@
+/* Lock to landscape orientation: hide game and show overlay in portrait */
+@media (orientation: portrait) {
+	#unity-container, #unity-canvas {
+		display: none !important;
+	}
+	#landscape-overlay {
+		display: flex !important;
+	}
+}
+
+@media (orientation: landscape) {
+	#unity-container, #unity-canvas {
+		display: flex !important;
+	}
+	#landscape-overlay {
+		display: none !important;
+	}
+}
+
+html, body {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	overflow: hidden !important;
+}
+
+#unity-container {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background: #231F20;
+}
+
+#unity-canvas {
+	width: 100vw !important;
+	height: 100vh !important;
+	max-width: 100vw;
+	max-height: 100vh;
+	display: block;
+	background: #231F20;
+}
+
+@media (orientation: landscape) {
+	#unity-canvas {
+		width: 100vw !important;
+		height: 100vh !important;
+	}
+}
+
+@media (orientation: portrait) {
+	#unity-canvas {
+		width: 100vw !important;
+		height: 100vh !important;
+	}
+}
+
+#unity-loading-bar {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	display: none;
+}
+#unity-logo { width: 154px; height: 130px; background: url('unity-logo-dark.png') no-repeat center }
+#unity-progress-bar-empty { width: 141px; height: 18px; margin-top: 10px; margin-left: 6.5px; background: url('progress-bar-empty-dark.png') no-repeat center }
+#unity-progress-bar-full { width: 0%; height: 18px; margin-top: 10px; background: url('progress-bar-full-dark.png') no-repeat center }
+#unity-footer { position: relative }
+#unity-logo-title-footer { float:left; width: 102px; height: 38px; background: url('unity-logo-title-footer.png') no-repeat center }
+#unity-build-title { float: right; margin-right: 10px; line-height: 38px; font-family: arial; font-size: 18px }
+#unity-fullscreen-button { cursor:pointer; float: right; width: 38px; height: 38px; background: url('fullscreen-button.png') no-repeat center }
+#unity-warning { position: absolute; left: 50%; top: 5%; transform: translate(-50%); background: white; padding: 10px; display: none }
