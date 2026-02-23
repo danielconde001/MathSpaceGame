@@ -90,7 +90,7 @@ public class CombatEventManager : MonoBehaviour
 
         DialogueManager.Instance.StartAutoDialogue("Get ready! Enemy incoming.");
 
-        autoShootButton?.DisableButtonForSeconds(3.1f);
+        if (autoShootButton.gameObject.activeSelf) autoShootButton?.DisableButtonForSeconds(3.1f);
 
         StationaryEnemyAI enemy1 = SpawnStationaryEnemy(2, 0);
         yield return new WaitUntil( 
@@ -101,7 +101,7 @@ public class CombatEventManager : MonoBehaviour
 
         DialogueManager.Instance.StartAutoDialogue("There's two of them! Watch your back.");
 
-        autoShootButton?.DisableButtonForSeconds(3.1f);
+        if (autoShootButton.gameObject.activeSelf) autoShootButton?.DisableButtonForSeconds(3.1f);
 
         StationaryEnemyAI enemy2 = SpawnStationaryEnemy(2, 0);
         waitForSeconds = 0.5f;
@@ -127,7 +127,7 @@ public class CombatEventManager : MonoBehaviour
 
         DialogueManager.Instance.StartAutoDialogue("Here comes more of them!");
 
-        autoShootButton?.DisableButtonForSeconds(3.1f);
+        if (autoShootButton.gameObject.activeSelf) autoShootButton?.DisableButtonForSeconds(3.1f);
 
         StationaryEnemyAI enemy1 = SpawnStationaryEnemy(2, 0);
         waitForSeconds = 0.5f;
@@ -142,7 +142,7 @@ public class CombatEventManager : MonoBehaviour
 
         DialogueManager.Instance.StartAutoDialogue("There's 3 of them now! Careful.");
 
-        autoShootButton?.DisableButtonForSeconds(3.1f);
+        if (autoShootButton.gameObject.activeSelf) autoShootButton?.DisableButtonForSeconds(3.1f);
 
         StationaryEnemyAI enemy3 = SpawnStationaryEnemy(2, 0);
         waitForSeconds = 0.5f;
@@ -170,7 +170,7 @@ public class CombatEventManager : MonoBehaviour
         AudioManager.Instance.PlayEnemyAlarmSFX();
         AudioManager.Instance.PlayEnemyFlyInSFX();
 
-        autoShootButton?.DisableButtonForSeconds(3.1f);
+        if (autoShootButton.gameObject.activeSelf) autoShootButton?.DisableButtonForSeconds(3.1f);
 
         StationaryEnemyAI enemy1 = SpawnStationaryEnemy(2, 0);
         waitForSeconds = 0.5f;
@@ -189,7 +189,7 @@ public class CombatEventManager : MonoBehaviour
 
         DialogueManager.Instance.StartAutoDialogue("That's a lot ships...");
 
-        autoShootButton?.DisableButtonForSeconds(3.1f);
+        if (autoShootButton.gameObject.activeSelf) autoShootButton?.DisableButtonForSeconds(3.1f);
 
         StationaryEnemyAI enemy4 = SpawnStationaryEnemy(2, 0);
         waitForSeconds = 0.5f;
@@ -276,7 +276,7 @@ public class CombatEventManager : MonoBehaviour
         waitForSeconds = waveInterval;
         yield return new WaitWhile(() => waitForSeconds > 0f);
 
-        autoShootButton?.DisableButtonForSeconds(3.1f);
+        if (autoShootButton.gameObject.activeSelf) autoShootButton?.DisableButtonForSeconds(3.1f);
 
         StationaryEnemyAI sEnemy1 = SpawnStationaryEnemy(2, 0);
         waitForSeconds = 0.5f;
@@ -356,7 +356,7 @@ public class CombatEventManager : MonoBehaviour
 
         AudioManager.Instance.PlayEnemyFlyInSFX();
 
-        autoShootButton?.DisableButtonForSeconds(3.1f);
+        if (autoShootButton.gameObject.activeSelf) autoShootButton?.DisableButtonForSeconds(3.1f);
 
         StationaryEnemyAI sEnemy1 = SpawnStationaryEnemy(2, 0);
         waitForSeconds = 0.5f;
@@ -445,7 +445,7 @@ public class CombatEventManager : MonoBehaviour
         waitForSeconds = waveInterval;
         yield return new WaitWhile(() => waitForSeconds > 0f);
 
-        autoShootButton?.DisableButtonForSeconds(3.1f);
+        if (autoShootButton.gameObject.activeSelf) autoShootButton?.DisableButtonForSeconds(3.1f);
 
         StationaryEnemyAI sEnemy1 = SpawnStationaryEnemy(2, 0);
         waitForSeconds = 0.5f;
@@ -480,7 +480,7 @@ public class CombatEventManager : MonoBehaviour
 
         DialogueManager.Instance.StartAutoDialogue("That's a BIG one!");
 
-        autoShootButton?.DisableButtonForSeconds(3.1f);
+        if (autoShootButton.gameObject.activeSelf) autoShootButton?.DisableButtonForSeconds(3.1f);
 
         GiantEnemyAI enemy = SpawnGiantEnemy(6);
 
@@ -498,7 +498,7 @@ public class CombatEventManager : MonoBehaviour
         AudioManager.Instance.PlayEnemyAlarmSFX();
         AudioManager.Instance.PlayEnemyFlyInSFX();
 
-        autoShootButton?.DisableButtonForSeconds(3.1f);
+        if (autoShootButton.gameObject.activeSelf) if (autoShootButton.gameObject.activeSelf) autoShootButton?.DisableButtonForSeconds(3.1f);
 
         StationaryEnemyAI enemy1 = SpawnStationaryEnemy(2, 0);
         waitForSeconds = 0.5f;
@@ -515,7 +515,7 @@ public class CombatEventManager : MonoBehaviour
 
         AudioManager.Instance.PlayEnemyFlyInSFX();
 
-        autoShootButton?.DisableButtonForSeconds(3.1f);
+        if (autoShootButton.gameObject.activeSelf) autoShootButton?.DisableButtonForSeconds(3.1f);
 
         StationaryEnemyAI enemy4 = SpawnStationaryEnemy(2, 0);
         waitForSeconds = 0.5f;
@@ -542,7 +542,7 @@ public class CombatEventManager : MonoBehaviour
         AudioManager.Instance.PlayEnemyAlarmSFX();
         AudioManager.Instance.PlayEnemyFlyInSFX();
 
-        autoShootButton?.DisableButtonForSeconds(1f);
+        if (autoShootButton.gameObject.activeSelf) autoShootButton?.DisableButtonForSeconds(1f);
 
         StationaryEnemyAI enemy1 = SpawnStationaryEnemy(2, 0);
         waitForSeconds = 0.5f;
