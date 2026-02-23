@@ -65,7 +65,7 @@ public class LevelManager : MonoBehaviour
     {
         if (resetScoreOnLevelStart == true)
         {
-            ScoreManager.Instance.ResetScore();
+            ScoreManager.Instance?.ResetScore();
         }
     }
 
