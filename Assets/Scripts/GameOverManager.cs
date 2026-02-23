@@ -36,7 +36,7 @@ public class GameOverManager : MonoBehaviour
     {
         panel.gameObject.SetActive(true);
 
-        PauseManager.Instance.IsPaused = true;
+        PauseManager.Instance.Pause();
 
         LevelManager.Instance.LevelState = 3;
 
@@ -62,7 +62,7 @@ public class GameOverManager : MonoBehaviour
 
     IEnumerator PlayMinigameCoroutine()
     {
-        PauseManager.Instance.IsPaused = true;
+        PauseManager.Instance.Pause();
 
         if (minigameSequencer == null)
         {
@@ -75,7 +75,7 @@ public class GameOverManager : MonoBehaviour
 
         if (PowerUpManager.Instance.HasAllPowerUps() == true)
         {
-            PauseManager.Instance.IsPaused = false;
+            PauseManager.Instance.Unpause();
             yield break;
         }
 

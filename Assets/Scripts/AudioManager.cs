@@ -26,6 +26,8 @@ public class AudioManager : MonoBehaviour
     [SerializeField] AudioClip uiInactiveButtonSFX;
     [SerializeField] AudioClip uiClickButtonSFX;
     [SerializeField] AudioClip uiDropButtonSFX;
+    [SerializeField] AudioClip uiPauseButtonClickSFX;
+    [SerializeField] AudioClip uiContinueButtonClickSFX;
 
     private static AudioManager instance;
     public static AudioManager Instance
@@ -193,5 +195,15 @@ public class AudioManager : MonoBehaviour
     public void PlayUIDropButtonSFX()
     {
         sfxSource.PlayOneShot(uiDropButtonSFX);
+    }
+
+    public void PlayUIPauseButtonClickSFX()
+    {
+        sfxSource.PlayOneShot(uiPauseButtonClickSFX);
+    }
+
+    public void PlayUIContinueButtonClickSFX()
+    {
+        sfxSource.PlayOneShot(uiContinueButtonClickSFX);
     }
 }

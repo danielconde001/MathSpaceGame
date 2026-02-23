@@ -7,6 +7,8 @@ public class KeypadManager : MonoBehaviour
     public GameObject keypadPanel; // Assign Panel in Inspector
     private InputField activeInputField;
 
+    [SerializeField] bool useDebug = false;
+
     void Awake()
     {
         Instance = this;
@@ -27,7 +29,9 @@ public class KeypadManager : MonoBehaviour
 
     public void AppendToInput(string value)
     {
-        Debug.Log($"AppendToInput called. Active field: {activeInputField?.name}, value: {value}");
+        if (useDebug)
+            Debug.Log($"AppendToInput called. Active field: {activeInputField?.name}, value: {value}");
+        
         if (activeInputField != null)
         {
             string newText = activeInputField.text + value;

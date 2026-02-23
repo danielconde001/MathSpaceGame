@@ -14,6 +14,6 @@ public class PauseOnButtonClick : MonoBehaviour
 
     private void Pause()
     {
-        PauseManager.Instance.IsPaused = true;
+        PauseManager.Instance.Pause();
     }
 }

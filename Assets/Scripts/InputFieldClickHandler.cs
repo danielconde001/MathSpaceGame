@@ -4,6 +4,8 @@ using UnityEngine.UI;
 
 public class InputFieldClickHandler : MonoBehaviour, IPointerDownHandler
 {
+    [SerializeField] bool useDebug = false;
+
     public void OnPointerDown(PointerEventData eventData)
     {
         var inputField = GetComponent<InputField>();
@@ -11,7 +13,9 @@ public class InputFieldClickHandler : MonoBehaviour, IPointerDownHandler
         {
             inputField.ActivateInputField();
             KeypadManager.Instance.ShowKeypad(inputField);
-            Debug.Log($"InputField clicked: {inputField.name}, Keypad shown.");
+            
+            if (useDebug)
+                Debug.Log($"InputField clicked: {inputField.name}, Keypad shown.");
         }
     }
 }

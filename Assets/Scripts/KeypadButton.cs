@@ -4,9 +4,13 @@ public class KeypadButton : MonoBehaviour
 {
     public string keyValue; // Set in Inspector ("1", "2", ..., "Delete")
 
+    [SerializeField] bool useDebug = false;
+
     public void OnButtonPressed()
     {
-        Debug.Log($"Keypad button pressed: {keyValue}");
+        if (useDebug) 
+            Debug.Log($"Keypad button pressed: {keyValue}");
+
         if (keyValue == "Delete")
             KeypadManager.Instance.DeleteLast();
         else

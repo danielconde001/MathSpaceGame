@@ -100,7 +100,7 @@ public class PowerUpManager : MonoBehaviour
     {
         panel.gameObject.SetActive(true);
 
-        PauseManager.Instance.IsPaused = true;
+        PauseManager.Instance.Pause();
 
         LevelManager.Instance.LevelState = 1;
 
@@ -119,7 +119,7 @@ public class PowerUpManager : MonoBehaviour
                 {
                     panel.gameObject.SetActive(false);
                     LevelManager.Instance.LevelState = 0;
-                    PauseManager.Instance.IsPaused = false;
+                    PauseManager.Instance.Unpause();
                 }   
             );
     }

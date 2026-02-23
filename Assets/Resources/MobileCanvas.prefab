@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 1665266575050859151}
   - component: {fileID: 4503587325046538533}
   - component: {fileID: 5947645120806645757}
-  - component: {fileID: 5424178529985908295}
   m_Layer: 5
   m_Name: MobileCanvas
   m_TagString: Untagged
@@ -104,18 +103,6 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &5424178529985908295
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2304600179627796154}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bf168cbcb91a6754fb31c73f3bc90970, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MobileOnlyEnabled
 --- !u!1 &9142454065380693976
 GameObject:
   m_ObjectHideFlags: 0
@@ -129,6 +116,7 @@ GameObject:
   - component: {fileID: 4251650136573998405}
   - component: {fileID: 8210200103437718956}
   - component: {fileID: 1854297236203563436}
+  - component: {fileID: 4668866744158881905}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -258,6 +246,18 @@ MonoBehaviour:
   unpressedScale: 1.25
   buttonGrowDuration: 1
   buttonShrinkDuration: 1
+--- !u!114 &4668866744158881905
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9142454065380693976}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf168cbcb91a6754fb31c73f3bc90970, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MobileOnlyEnabled
 --- !u!1001 &5749366872469061306
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -384,8 +384,30 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8135886326569738825, guid: 56fae09712773584fb63896d473a98ee,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5801215021904386510}
   m_SourcePrefab: {fileID: 100100000, guid: 56fae09712773584fb63896d473a98ee, type: 3}
+--- !u!1 &4549096557803150579 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8135886326569738825, guid: 56fae09712773584fb63896d473a98ee,
+    type: 3}
+  m_PrefabInstance: {fileID: 5749366872469061306}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &5801215021904386510
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4549096557803150579}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf168cbcb91a6754fb31c73f3bc90970, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MobileOnlyEnabled
 --- !u!224 &4549096557803150588 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8135886326569738822, guid: 56fae09712773584fb63896d473a98ee,

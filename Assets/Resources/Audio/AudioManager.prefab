@@ -333,3 +333,7 @@ MonoBehaviour:
   uiInactiveButtonSFX: {fileID: 8300000, guid: 7e40c2706b06e55448e7b7c0654f17eb, type: 3}
   uiClickButtonSFX: {fileID: 8300000, guid: f393a91f34e31e84a8e276e4f86f60c1, type: 3}
   uiDropButtonSFX: {fileID: 8300000, guid: b7c6f6c47b653a942aa165b47b1acdf2, type: 3}
+  uiPauseButtonClickSFX: {fileID: 8300000, guid: 38878e83cf59eea46b439da80e1e7746,
+    type: 3}
+  uiContinueButtonClickSFX: {fileID: 8300000, guid: 095b760c7ea877c40a3e3bbe6e4ebdb1,
+    type: 3}

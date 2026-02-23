@@ -16,14 +16,13 @@ public class ScoreManager : MonoBehaviour
             Destroy(gameObject);
             return;
         }
+
         Instance = this;
 
         if (xpBar == null)
         {
             xpBar = GetComponent<XPBar>();
         }
-
-        DontDestroyOnLoad(gameObject);
     }
 
     private void Start()

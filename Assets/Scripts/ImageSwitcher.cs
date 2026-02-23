@@ -33,7 +33,7 @@ public class ImageSwitcher : MonoBehaviour
 
         if (LevelManager.Instance.LevelState == 0)
         {
-            PauseManager.Instance.IsPaused = true;
+            PauseManager.Instance.Pause();
         }
 
     }
@@ -47,7 +47,7 @@ public class ImageSwitcher : MonoBehaviour
 
         if (LevelManager.Instance.LevelState == 0)
         {
-            PauseManager.Instance.IsPaused = false;
+            PauseManager.Instance.Unpause();
         }
 
         currentIndex = 0;
