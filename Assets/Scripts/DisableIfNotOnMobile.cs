@@ -6,8 +6,6 @@ public class DisableIfNotOnMobile : MonoBehaviour
     {
         if (Application.isMobilePlatform == false)
         {
-            if (DeviceDetector.IsRunningOniPad()) return;
-
             gameObject.SetActive(false);
         }
     }    

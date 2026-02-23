@@ -24,8 +24,7 @@ public class SpaceshipLookAt : MonoBehaviour
             }
         }
 
-        else if ((Application.isMobilePlatform || DeviceDetector.IsRunningOniPad()) 
-            && LevelManager.Instance.LevelState != 2)
+        else if (Application.isMobilePlatform && LevelManager.Instance.LevelState != 2)
         {
             return;
         }

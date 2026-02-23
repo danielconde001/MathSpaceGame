@@ -24,7 +24,7 @@ public class SpaceshipMovement : MonoBehaviour
         float rightInput;
         float upInput;
 
-        if (Application.isMobilePlatform || DeviceDetector.IsRunningOniPad())
+        if (Application.isMobilePlatform == true)
         {
             rightInput = joystick.Horizontal;
             upInput = joystick.Vertical;
