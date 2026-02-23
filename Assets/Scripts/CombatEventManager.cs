@@ -276,6 +276,8 @@ public class CombatEventManager : MonoBehaviour
         waitForSeconds = waveInterval;
         yield return new WaitWhile(() => waitForSeconds > 0f);
 
+        AudioManager.Instance.PlayEnemyFlyInSFX();
+
         if (autoShootButton.gameObject.activeSelf) autoShootButton?.DisableButtonForSeconds(3.1f);
 
         StationaryEnemyAI sEnemy1 = SpawnStationaryEnemy(2, 0);
@@ -444,6 +446,8 @@ public class CombatEventManager : MonoBehaviour
         }
         waitForSeconds = waveInterval;
         yield return new WaitWhile(() => waitForSeconds > 0f);
+
+        AudioManager.Instance.PlayEnemyFlyInSFX();
 
         if (autoShootButton.gameObject.activeSelf) autoShootButton?.DisableButtonForSeconds(3.1f);
 

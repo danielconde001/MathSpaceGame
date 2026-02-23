@@ -473,7 +473,7 @@ MonoBehaviour:
     m_Font: {fileID: 12800000, guid: 4850788bfe49aa0458cd45ca3ff21029, type: 3}
     m_FontSize: 14
     m_FontStyle: 2
-    m_BestFit: 1
+    m_BestFit: 0
     m_MinSize: 10
     m_MaxSize: 40
     m_Alignment: 4
@@ -482,7 +482,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '?'
+  m_Text: Tap to Answer...
 --- !u!114 &2446117085260061074
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -997,7 +997,7 @@ MonoBehaviour:
     m_Font: {fileID: 12800000, guid: 4850788bfe49aa0458cd45ca3ff21029, type: 3}
     m_FontSize: 14
     m_FontStyle: 2
-    m_BestFit: 1
+    m_BestFit: 0
     m_MinSize: 10
     m_MaxSize: 40
     m_Alignment: 4
@@ -1006,7 +1006,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '?'
+  m_Text: Tap to Answer...
 --- !u!114 &7609110565520336257
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1865,7 +1865,7 @@ MonoBehaviour:
     m_Font: {fileID: 12800000, guid: 4850788bfe49aa0458cd45ca3ff21029, type: 3}
     m_FontSize: 14
     m_FontStyle: 2
-    m_BestFit: 1
+    m_BestFit: 0
     m_MinSize: 10
     m_MaxSize: 40
     m_Alignment: 4
@@ -1874,7 +1874,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '?'
+  m_Text: Tap to Answer...
 --- !u!114 &1912901268291870085
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1960,7 +1960,7 @@ MonoBehaviour:
     m_Font: {fileID: 12800000, guid: 4850788bfe49aa0458cd45ca3ff21029, type: 3}
     m_FontSize: 14
     m_FontStyle: 2
-    m_BestFit: 1
+    m_BestFit: 0
     m_MinSize: 10
     m_MaxSize: 40
     m_Alignment: 4
@@ -1969,7 +1969,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '?'
+  m_Text: Tap to Answer...
 --- !u!114 &1136460424915070369
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2514,7 +2514,7 @@ MonoBehaviour:
     m_Font: {fileID: 12800000, guid: 4850788bfe49aa0458cd45ca3ff21029, type: 3}
     m_FontSize: 14
     m_FontStyle: 2
-    m_BestFit: 1
+    m_BestFit: 0
     m_MinSize: 10
     m_MaxSize: 40
     m_Alignment: 4
@@ -2523,7 +2523,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '?'
+  m_Text: Tap to Answer...
 --- !u!114 &5923157767424357398
 MonoBehaviour:
   m_ObjectHideFlags: 0
