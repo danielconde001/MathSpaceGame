@@ -14,6 +14,7 @@ public class ChaseEnemyAI : MonoBehaviour
     Vector3 introSpot;
     Transform target;
     EnemyKillable enemyKillable;
+    float killTimer = 0;
 
     private void Start()
     {
@@ -29,11 +30,21 @@ public class ChaseEnemyAI : MonoBehaviour
 
         target = PlayerManager.Instance.GetPlayer().transform;
 
-        Invoke("Kill", timeBeforeKilled);
+        killTimer = timeBeforeKilled;
     }
 
     private void Update()
     {
+        if (PauseManager.Instance.IsPaused == false)
+        {
+            killTimer -= Time.deltaTime;
+        }
+
+        if (killTimer <= 0)
+        {
+            enemyKillable.Kill();
+        }
+            
         if (isNowFollowingPlayer == false)
         {
             FlyingIntro();
@@ -106,10 +117,5 @@ public class ChaseEnemyAI : MonoBehaviour
         {
             transform.position += transform.forward * moveSpeed * Time.deltaTime;
         }
-    }
-
-    void Kill()
-    {
-        enemyKillable.Kill();
     }
 }

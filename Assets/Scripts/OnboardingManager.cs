@@ -2,15 +2,34 @@ using UnityEngine;
 
 public class OnboardingManager : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    private static OnboardingManager instance;
+    public static OnboardingManager Instance
     {
-        
+        get
+        {
+            if (instance == null)
+            {
+                GameObject newGameObject = new GameObject("OnboardingManager");
+                instance = newGameObject.GetComponent<OnboardingManager>();
+            }
+            return instance;
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Awake()
     {
-        
+        if (instance != null)
+        {
+            Destroy(gameObject);
+        }
+        else
+        {
+            instance = this;
+        }
+
+        DontDestroyOnLoad(gameObject);
     }
+
+    public bool knowsHowToPlay = false;
+    public bool isUsingMobileDevice = false;
 }

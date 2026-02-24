@@ -24,7 +24,8 @@ public class SpaceshipMovement : MonoBehaviour
         float rightInput;
         float upInput;
 
-        if (Application.isMobilePlatform == true)
+        if ((Application.isMobilePlatform ||
+            OnboardingManager.Instance.isUsingMobileDevice == true))
         {
             rightInput = joystick.Horizontal;
             upInput = joystick.Vertical;

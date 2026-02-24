@@ -6,19 +6,6 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance;
     public string SelectedTopic;
 
-    // private void Awake()
-    // {
-    //     if (Instance == null)
-    //     {
-    //         Instance = this;
-    //         DontDestroyOnLoad(gameObject);
-    //     }
-    //     else
-    //     {
-    //         Destroy(gameObject);
-    //     }
-    // }
-
     public void SelectTopicAndLoad(string topicName)
     {
         SelectedTopic = topicName;

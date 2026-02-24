@@ -40,6 +40,8 @@ public class GameOverManager : MonoBehaviour
 
         LevelManager.Instance.LevelState = 3;
 
+        UIActivationManager.Instance.DeactivateOtherUI(gameObject);
+
         content.transform.DOLocalMoveY(1080, 0f, true);
         content.transform.DOLocalMoveY(0, .7f);
     }
@@ -91,6 +93,7 @@ public class GameOverManager : MonoBehaviour
                 {
                     panel.gameObject.SetActive(false);
                     LevelManager.Instance.LevelState = 1;
+                    UIActivationManager.Instance.ActivateOtherUI(gameObject);
                     p_functionAfterHiding?.Invoke();
                 }
             );

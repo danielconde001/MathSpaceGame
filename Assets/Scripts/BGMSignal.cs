@@ -7,6 +7,7 @@ public class BGMSignal : MonoBehaviour
 
     private void Start()
     {
+        // time it
         AudioManager.Instance.PlayBGM(bgm, volume);
     }
 }

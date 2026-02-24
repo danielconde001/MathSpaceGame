@@ -36,6 +36,7 @@ public class ImageSwitcher : MonoBehaviour
             PauseManager.Instance.Pause();
         }
 
+        UIActivationManager.Instance.DeactivateOtherUI(gameObject);
     }
 
     public void CloseGuide()
@@ -52,6 +53,8 @@ public class ImageSwitcher : MonoBehaviour
 
         currentIndex = 0;
         UpdateImage();
+
+        UIActivationManager.Instance.ActivateOtherUI(gameObject);
     }
 
     public void ShowPrevious()

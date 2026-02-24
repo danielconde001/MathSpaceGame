@@ -4,9 +4,18 @@ public class DisableIfNotOnMobile : MonoBehaviour
 {
     void Start()
     {
-        if (Application.isMobilePlatform == false)
+        ShowMobileControlsUI();
+    }
+
+    public void ShowMobileControlsUI()
+    {
+        if (Application.isMobilePlatform) return;
+        else
         {
-            gameObject.SetActive(false);
+            if (OnboardingManager.Instance.isUsingMobileDevice == false)
+            {
+                gameObject.SetActive(false);
+            }
         }
-    }    
+    }
 }

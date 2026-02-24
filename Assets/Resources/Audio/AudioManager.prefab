@@ -337,3 +337,5 @@ MonoBehaviour:
     type: 3}
   uiContinueButtonClickSFX: {fileID: 8300000, guid: 095b760c7ea877c40a3e3bbe6e4ebdb1,
     type: 3}
+  uiSwipeInSFX: {fileID: 8300000, guid: afaa1777eb82b8c43808a5623dbddc87, type: 3}
+  uiSwipeOutSFX: {fileID: 8300000, guid: 537348618c67afb439248db4d7f11789, type: 3}

@@ -45,6 +45,8 @@ public class FillinMinigameManager : MinigameManager {
 
         LevelManager.Instance.LevelState = 1;
 
+        UIActivationManager.Instance.DeactivateOtherUI();
+
         rounds = p_numberOfRounds;
         roundsPassed = 0;
         panel.enabled = true;
@@ -60,6 +62,7 @@ public class FillinMinigameManager : MinigameManager {
     {
         base.EndMinigame();
         LevelManager.Instance.LevelState = 0;
+        UIActivationManager.Instance.ActivateOtherUI();
         panel.enabled = false;
     }
 

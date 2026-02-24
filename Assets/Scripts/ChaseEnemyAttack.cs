@@ -5,7 +5,6 @@ public class ChaseEnemyAttack : MonoBehaviour
     public int damage;
     ChaseEnemyAI owner;
     EnemyKillable enemyKillable;
-    SpawnVFXOnDeath SpawnVFXOnDeath;
 
     private void Awake()
     {

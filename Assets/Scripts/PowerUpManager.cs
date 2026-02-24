@@ -104,6 +104,8 @@ public class PowerUpManager : MonoBehaviour
 
         LevelManager.Instance.LevelState = 1;
 
+        UIActivationManager.Instance.DeactivateOtherUI(gameObject);
+
         AudioManager.Instance.PlayLevelUpSFX();
 
         rectTransform.DOLocalMoveY(820, 0f, true);
@@ -119,6 +121,7 @@ public class PowerUpManager : MonoBehaviour
                 {
                     panel.gameObject.SetActive(false);
                     LevelManager.Instance.LevelState = 0;
+                    UIActivationManager.Instance.ActivateOtherUI(gameObject);
                     PauseManager.Instance.Unpause();
                 }   
             );

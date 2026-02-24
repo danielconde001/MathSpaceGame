@@ -45,6 +45,8 @@ public class ArrangingMinigameManager : MinigameManager
 
         LevelManager.Instance.LevelState = 1;
 
+        UIActivationManager.Instance.DeactivateOtherUI();
+
         rounds = p_numberOfRounds;
         roundsPassed = 0;
         panel.enabled = true;
@@ -85,6 +87,7 @@ public class ArrangingMinigameManager : MinigameManager
     {
         base.EndMinigame();
         LevelManager.Instance.LevelState = 0;
+        UIActivationManager.Instance.ActivateOtherUI();
         panel.enabled = false;
     }
 
@@ -130,14 +133,6 @@ public class ArrangingMinigameManager : MinigameManager
 
     void AnimateFields()
     {
-        //GameObject[] images = { numberImage1, numberImage2, numberImage3, numberImage4, numberImage5 };
-        //foreach (var img in images)
-        //{
-        //    img.transform.DOMoveY(img.transform.position.y - yOffset, animationDuration);
-        //}
-        //submitButton.transform.DOMoveY(submitButton.transform.position.y - yOffset, animationDuration);
-        //instructionObject.transform.DOMoveY(instructionObject.transform.position.y - yOffset, animationDuration);
-        
         anchorObject.transform.DOMove(showTransform.position, animationDuration);
     }
 
@@ -169,8 +164,8 @@ public class ArrangingMinigameManager : MinigameManager
         else
         {
             if (useDebug) Debug.Log("Incorrect!");
-            FeedbackCanvas.Instance.ShowWrong();
             // Add failure logic here
+            FeedbackCanvas.Instance.ShowWrong();
             // Optionally re-enable if you want to allow retry on failure:
             submitButton.interactable = true;
         }
@@ -178,14 +173,6 @@ public class ArrangingMinigameManager : MinigameManager
 
     public System.Collections.IEnumerator SlideUpAndGenerate()
     {
-        //GameObject[] images = { numberImage1, numberImage2, numberImage3, numberImage4, numberImage5 };
-        //foreach (var img in images)
-        //{
-        //    img.transform.DOMoveY(img.transform.position.y + yOffset, animationDuration);
-        //}
-        //submitButton.transform.DOMoveY(submitButton.transform.position.y + yOffset, animationDuration);
-        //instructionObject.transform.DOMoveY(instructionObject.transform.position.y + yOffset, animationDuration);
-
         anchorObject.transform.DOMove(hideTransform.position, animationDuration);
 
         yield return new WaitForSeconds(animationDuration);

@@ -8,6 +8,7 @@ public class MissileBehaviour : MonoBehaviour
     [SerializeField] Vector3 introSpotOffset;
     [SerializeField] int damage;
     [SerializeField] float minDistToPlayer = 7f;
+    [SerializeField] float timeBeforeKilled = 10f;
 
     bool isNowFollowingPlayer = false;
     bool wentNearPlayer = false;
@@ -15,6 +16,7 @@ public class MissileBehaviour : MonoBehaviour
     Vector3 introSpot;
     Transform target;
     EnemyKillable killable;
+    float killTimer;
 
     private void Awake()
     {
@@ -35,11 +37,23 @@ public class MissileBehaviour : MonoBehaviour
             isNowFollowingPlayer = true;
         }
 
+        killTimer = timeBeforeKilled;
+
         target = PlayerManager.Instance.GetPlayer().transform;
     }
 
     private void Update()
     {
+        if (PauseManager.Instance.IsPaused == false)
+        {
+            killTimer -= Time.deltaTime;
+        }
+
+        if (killTimer <= 0)
+        {
+            killable.Kill();
+        }
+
         if (isNowFollowingPlayer == false)
         {
             FlyingIntro();
@@ -112,11 +126,6 @@ public class MissileBehaviour : MonoBehaviour
         {
             transform.position += transform.forward * moveSpeed * Time.deltaTime;
         }
-    }
-
-    private void Kill()
-    {
-        killable.Kill();
     }
 
     private void OnCollisionEnter(Collision other)

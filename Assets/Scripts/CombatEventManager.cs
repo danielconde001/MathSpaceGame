@@ -222,6 +222,8 @@ public class CombatEventManager : MonoBehaviour
 
         DialogueManager.Instance.StartAutoDialogue("Swarm incoming!");
 
+        yield return new WaitForSeconds(3.5f);
+
         float interval = 0.4f;
         float waveInterval = 0.8f;
 
@@ -299,8 +301,6 @@ public class CombatEventManager : MonoBehaviour
         LevelManager.Instance.StopSectionsFromMoving();
 
         AudioManager.Instance.PlayEnemyAlarmSFX();
-
-        DialogueManager.Instance.StartAutoDialogue("Swarm incoming!");
 
         float interval = 0.4f;
         float waveInterval = 0f;
@@ -384,8 +384,6 @@ public class CombatEventManager : MonoBehaviour
         LevelManager.Instance.StopSectionsFromMoving();
 
         AudioManager.Instance.PlayEnemyAlarmSFX();
-
-        DialogueManager.Instance.StartAutoDialogue("Swarm incoming!");
 
         float interval = 0.4f;
         float waveInterval = 0f;

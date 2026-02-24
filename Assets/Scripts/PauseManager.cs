@@ -31,24 +31,9 @@ public class PauseManager : MonoBehaviour
     [SerializeField] private float FadeOutDuration;
     [SerializeField] private Button pauseButton;
 
-    // Other UI
-    PowerUpManager powerUpManager;
-    GameObject mobileCanvas;
-    GameOverManager gameOverCanvas;
-    ScoreManager scoreCanvas;
-    GameObject helpGuideCanvas;
-    DialogueManager dialogBox;
-
     private void Start()
     {
         instance = this;
-
-        powerUpManager = FindAnyObjectByType<PowerUpManager>();
-        mobileCanvas = GameObject.Find("MobileCanvas");
-        gameOverCanvas = FindAnyObjectByType<GameOverManager>();
-        scoreCanvas = FindAnyObjectByType<ScoreManager>();
-        helpGuideCanvas = GameObject.Find("HelpGuideCanvas");
-        dialogBox = FindAnyObjectByType<DialogueManager>();
     }
 
     private bool isPaused = false;
@@ -79,12 +64,7 @@ public class PauseManager : MonoBehaviour
 
         Pause();
 
-        powerUpManager.gameObject.SetActive(false);
-        mobileCanvas.SetActive(false);
-        gameOverCanvas.gameObject.SetActive(false);
-        scoreCanvas.gameObject.SetActive(false);
-        helpGuideCanvas.SetActive(false);
-        dialogBox.gameObject.SetActive(false);
+        UIActivationManager.Instance.DeactivateOtherUI(gameObject);
 
         Background.DOColor(new Color(0, 0, 0, 0.5f) ,FadeInDuration);
         ContinueButton.DOColor(new Color(1, 1, 1, 1), FadeInDuration);
@@ -102,12 +82,7 @@ public class PauseManager : MonoBehaviour
                 Content.SetActive(false);
                 pauseButton.gameObject.SetActive(true);
                 AudioManager.Instance.PlayUIContinueButtonClickSFX();
-                powerUpManager.gameObject.SetActive(true);
-                mobileCanvas.SetActive(true);
-                gameOverCanvas.gameObject.SetActive(true);
-                scoreCanvas.gameObject.SetActive(true);
-                helpGuideCanvas.SetActive(true);
-                dialogBox.gameObject.SetActive(true);
+                UIActivationManager.Instance.ActivateOtherUI(gameObject);
                 Unpause();
             });
     }
