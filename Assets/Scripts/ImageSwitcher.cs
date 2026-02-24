@@ -36,6 +36,8 @@ public class ImageSwitcher : MonoBehaviour
             PauseManager.Instance.Pause();
         }
 
+        eduGuideButton.SetActive(false);
+
         UIActivationManager.Instance.DeactivateOtherUI(gameObject);
     }
 

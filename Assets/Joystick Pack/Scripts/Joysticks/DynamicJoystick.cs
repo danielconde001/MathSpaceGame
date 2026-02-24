@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class DynamicJoystick : Joystick
 {
@@ -7,16 +8,40 @@ public class DynamicJoystick : Joystick
 
     [SerializeField] private float moveThreshold = 1;
 
+    Color initialBackgroundColor;
+    Color initialHandleColor;
+
+    [SerializeField] Image backgroundImg;
+    [SerializeField] Image handleImg;
+
+    private void Awake()
+    {
+        backgroundImg = background.GetComponent<Image>();
+        handleImg = transform.GetChild(0).Find("Handle").GetComponent<Image>();
+        initialBackgroundColor = backgroundImg.color;
+        initialHandleColor = handleImg.color;
+    }
+
     protected override void Start()
     {
         MoveThreshold = moveThreshold;
         base.Start();
         background.gameObject.SetActive(false);
-        
     }
 
     public override void OnPointerDown(PointerEventData eventData)
     {
+        if (LevelManager.Instance.LevelState == 2)
+        {
+            backgroundImg.color = new Color(1, 1, 1, 0);
+            handleImg.color = new Color(1, 1, 1, 0);
+        }
+        else
+        {
+            backgroundImg.color = initialBackgroundColor;
+            handleImg.color = initialHandleColor;
+        }
+
         background.anchoredPosition = ScreenPointToAnchoredPosition(eventData.position);
         background.gameObject.SetActive(true);
         base.OnPointerDown(eventData);

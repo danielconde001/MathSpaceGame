@@ -2643,7 +2643,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BGMSignal
   bgm: {fileID: 8300000, guid: 7c7056e7676267d41b6dd89cd1d04e71, type: 3}
-  volume: 0.6
+  volume: 0.37
 --- !u!4 &1313822961
 Transform:
   m_ObjectHideFlags: 0

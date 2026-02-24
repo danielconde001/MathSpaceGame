@@ -187,9 +187,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 905bf1e90eeaa55458caa2bf7dd8b639, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PauseMenuButton
-  textsToDisableOnHover:
-  - {fileID: 7388963980989028796}
-  - {fileID: 3468040364546127627}
+  textsToDisableOnHover: []
+  underText: {fileID: 5449494303836335463}
   hoverScale: 1.2
   clickScale: 0.95
   animDuration: 0.15
@@ -341,6 +340,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PauseMenuButton
   textsToDisableOnHover: []
+  underText: {fileID: 0}
   hoverScale: 1.2
   clickScale: 0.95
   animDuration: 0.15
@@ -492,9 +492,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 905bf1e90eeaa55458caa2bf7dd8b639, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PauseMenuButton
-  textsToDisableOnHover:
-  - {fileID: 4991046904844882340}
-  - {fileID: 7388963980989028796}
+  textsToDisableOnHover: []
+  underText: {fileID: 3357760133540943333}
   hoverScale: 1.2
   clickScale: 0.95
   animDuration: 0.15
@@ -1409,9 +1408,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 905bf1e90eeaa55458caa2bf7dd8b639, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PauseMenuButton
-  textsToDisableOnHover:
-  - {fileID: 4991046904844882340}
-  - {fileID: 3468040364546127627}
+  textsToDisableOnHover: []
+  underText: {fileID: 2424201430135103546}
   hoverScale: 1.2
   clickScale: 0.95
   animDuration: 0.15

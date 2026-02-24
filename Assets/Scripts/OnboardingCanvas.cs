@@ -32,9 +32,6 @@ public class OnboardingCanvas : MonoBehaviour
     [SerializeField] Button AskMobileNoBtn;
     [SerializeField] TextMeshProUGUI AskMobileNoBtnText;
 
-    [Header("Debug")]
-    [SerializeField] bool useDebug = false;
-
     ImageSwitcher helpGuide;
     List<DisableIfNotOnMobile> mobileUIs = new List<DisableIfNotOnMobile>();
 
@@ -47,14 +44,17 @@ public class OnboardingCanvas : MonoBehaviour
 
     private void Start()
     {
-        if (OnboardingManager.Instance.knowsHowToPlay == false || useDebug)
+        if (OnboardingManager.Instance.knowsHowToPlay == false)
+        {
             OpenDYKWindow();
+        }
     }
 
     public void OpenDYKWindow()
     {
-        PauseManager.Instance.Pause();
         UIActivationManager.Instance.DeactivateOtherUI(gameObject);
+
+        PauseManager.Instance.Pause();
 
         AudioManager.Instance.PlayUISwipeInSFX();
 
@@ -149,6 +149,7 @@ public class OnboardingCanvas : MonoBehaviour
     private void EndOnboarding()
     {
         PauseManager.Instance.Unpause();
+
         UIActivationManager.Instance.ActivateOtherUI(gameObject);
 
         if (OnboardingManager.Instance.knowsHowToPlay == false)

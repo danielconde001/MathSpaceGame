@@ -31,7 +31,7 @@ public class PauseManager : MonoBehaviour
     [SerializeField] private float FadeOutDuration;
     [SerializeField] private Button pauseButton;
 
-    private void Start()
+    private void Awake()
     {
         instance = this;
     }

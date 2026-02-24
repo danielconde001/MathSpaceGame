@@ -2,11 +2,16 @@ using DG.Tweening;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using System.Collections.Generic;
+using TMPro;
+using Unity.VisualScripting;
 
 public class PauseMenuButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerDownHandler, IPointerUpHandler
 {
     [SerializeField]
     private List<GameObject> textsToDisableOnHover = new List<GameObject>();
+
+    [SerializeField]
+    private TextMeshProUGUI underText;
 
     [Header("Animation Settings")]
     public float hoverScale = 1.15f;
@@ -36,6 +41,12 @@ public class PauseMenuButton : MonoBehaviour, IPointerEnterHandler, IPointerExit
                     textsToDisableOnHover[i].SetActive(false);
                 } 
             }
+
+            if (underText != null)
+            {
+                underText.color = Color.yellow;
+            }
+
             AudioManager.Instance.PlayUIHoverSFX();
         }
     }
@@ -52,6 +63,11 @@ public class PauseMenuButton : MonoBehaviour, IPointerEnterHandler, IPointerExit
                 {
                     textsToDisableOnHover[i].SetActive(true);
                 }
+            }
+
+            if (underText != null)
+            {
+                underText.color = Color.white;
             }
         }
     }
