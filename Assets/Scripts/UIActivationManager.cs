@@ -37,15 +37,15 @@ public class UIActivationManager : MonoBehaviour
 
     private void SearchForReferences()
     {
-        powerUpManager = FindAnyObjectByType<PowerUpManager>(FindObjectsInactive.Include).gameObject.GetComponent<Canvas>();
-        mobileCanvas = GameObject.Find("MobileCanvas").GetComponent<Canvas>();
-        gameOverCanvas = FindAnyObjectByType<GameOverManager>(FindObjectsInactive.Include).gameObject.GetComponent<Canvas>();
-        scoreCanvas = FindAnyObjectByType<ScoreManager>(FindObjectsInactive.Include).gameObject.GetComponent<Canvas>();
-        helpGuideCanvas = GameObject.Find("HelpGuideCanvas").GetComponent<Canvas>();
-        dialogBox = FindAnyObjectByType<DialogueManager>(FindObjectsInactive.Include).gameObject.GetComponent<Canvas>();
-        playerHealthCanvas = PlayerManager.Instance.GetPlayer().PlayerHealthBar.gameObject.GetComponent<Canvas>();
-        pauseManager = FindAnyObjectByType<PauseManager>(FindObjectsInactive.Include).gameObject.GetComponent<Canvas>();
-        onboardingCanvas = FindAnyObjectByType<OnboardingCanvas>(FindObjectsInactive.Include).gameObject.GetComponent<Canvas>();
+        powerUpManager = FindAnyObjectByType<PowerUpManager>(FindObjectsInactive.Include)?.gameObject.GetComponent<Canvas>();
+        mobileCanvas = GameObject.Find("MobileCanvas")?.GetComponent<Canvas>();
+        gameOverCanvas = FindAnyObjectByType<GameOverManager>(FindObjectsInactive.Include)?.gameObject.GetComponent<Canvas>();
+        scoreCanvas = FindAnyObjectByType<ScoreManager>(FindObjectsInactive.Include)?.gameObject.GetComponent<Canvas>();
+        helpGuideCanvas = GameObject.Find("HelpGuideCanvas")?.GetComponent<Canvas>();
+        dialogBox = FindAnyObjectByType<DialogueManager>(FindObjectsInactive.Include)?.gameObject.GetComponent<Canvas>();
+        playerHealthCanvas = PlayerManager.Instance.GetPlayer()?.PlayerHealthBar.gameObject.GetComponent<Canvas>();
+        pauseManager = FindAnyObjectByType<PauseManager>(FindObjectsInactive.Include)?.gameObject.GetComponent<Canvas>();
+        onboardingCanvas = FindAnyObjectByType<OnboardingCanvas>(FindObjectsInactive.Include)?.gameObject.GetComponent<Canvas>();
     }
 
     public void DeactivateOtherUI(GameObject p_activator = null)

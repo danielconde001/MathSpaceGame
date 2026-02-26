@@ -60,7 +60,8 @@ public class ScoreManager : MonoBehaviour
 
         if (xpBar == null)
         {
-            Debug.LogWarning("Please attach XPBar component to " + this.gameObject.name, this);
+            if (Instance.gameObject != null)
+                Debug.LogWarning("Please attach XPBar component to " + this.gameObject?.name, this);
         }
 
         xpBar?.UpdateXPBar();

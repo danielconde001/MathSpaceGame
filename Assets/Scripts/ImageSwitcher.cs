@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -15,6 +16,8 @@ public class ImageSwitcher : MonoBehaviour
 
     private int currentIndex = 0;
 
+    [SerializeField] bool usedInMainMenu = false;
+
     void Start()
     {
         UpdateImage();
@@ -31,14 +34,15 @@ public class ImageSwitcher : MonoBehaviour
         if (Canvas != null)
             Canvas.SetActive(true);
 
-        if (LevelManager.Instance.LevelState == 0)
+        if (LevelManager.Instance.LevelState == 0 && usedInMainMenu == false)
         {
             PauseManager.Instance.Pause();
         }
 
         eduGuideButton.SetActive(false);
 
-        UIActivationManager.Instance.DeactivateOtherUI(gameObject);
+        if (usedInMainMenu == false)
+            UIActivationManager.Instance?.DeactivateOtherUI(gameObject);
     }
 
     public void CloseGuide()
@@ -48,7 +52,7 @@ public class ImageSwitcher : MonoBehaviour
         if (eduGuideButton != null)
             eduGuideButton.SetActive(true);
 
-        if (LevelManager.Instance.LevelState == 0)
+        if (LevelManager.Instance.LevelState == 0 && usedInMainMenu == false)
         {
             PauseManager.Instance.Unpause();
         }
@@ -56,7 +60,8 @@ public class ImageSwitcher : MonoBehaviour
         currentIndex = 0;
         UpdateImage();
 
-        UIActivationManager.Instance.ActivateOtherUI(gameObject);
+        if (usedInMainMenu == false)
+            UIActivationManager.Instance?.ActivateOtherUI(gameObject);
     }
 
     public void ShowPrevious()

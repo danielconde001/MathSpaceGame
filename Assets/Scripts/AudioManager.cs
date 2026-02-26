@@ -1,5 +1,6 @@
 using Unity.VisualScripting;
 using UnityEngine;
+using static UnityEngine.Rendering.DebugUI;
 
 public class AudioManager : MonoBehaviour
 {
@@ -30,6 +31,11 @@ public class AudioManager : MonoBehaviour
     [SerializeField] AudioClip uiContinueButtonClickSFX;
     [SerializeField] AudioClip uiSwipeInSFX;
     [SerializeField] AudioClip uiSwipeOutSFX;
+    [SerializeField] AudioClip uiPopSFX;
+    [SerializeField] AudioClip uiPopReverseSFX;
+
+    [SerializeField] private float currentVolume;
+    public float CurrentVolume { get => currentVolume; }
 
     private static AudioManager instance;
     public static AudioManager Instance
@@ -67,6 +73,12 @@ public class AudioManager : MonoBehaviour
         }
 
         DontDestroyOnLoad(this);
+    }
+
+    private void Start()
+    {
+        // Default volume
+        SetVolume(currentVolume);
     }
 
     public void PlayLevelUpSFX()
@@ -217,5 +229,23 @@ public class AudioManager : MonoBehaviour
     public void PlayUISwipeOutSFX()
     {
         sfxSource.PlayOneShot(uiSwipeOutSFX);
+    }
+
+    public void PlayUIPopSFX()
+    {
+        sfxSource.PlayOneShot(uiPopSFX);
+    }
+
+    public void PlayUIReversePopSFX()
+    {
+        sfxSource.PlayOneShot(uiPopReverseSFX);
+    }
+
+    public void SetVolume(float p_value)
+    {
+        currentVolume = p_value;
+
+        bgmSource.outputAudioMixerGroup.audioMixer
+            .SetFloat("Volume", Mathf.Log10(currentVolume) * 20);
     }
 }

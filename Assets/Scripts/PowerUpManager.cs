@@ -78,7 +78,11 @@ public class PowerUpManager : MonoBehaviour
 
     public uint GetCurrentMilestone()
     {
-        uint currentPlayerLevel = PlayerManager.Instance.GetPlayer().PlayerLevel;
+        int currentPlayerLevel = -1;
+
+        if (PlayerManager.Instance.GetPlayer() != null)
+            currentPlayerLevel = (int)PlayerManager.Instance.GetPlayer().PlayerLevel;
+
         switch (currentPlayerLevel)
         {
             case 0:

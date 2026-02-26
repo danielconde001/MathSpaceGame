@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour
 {
@@ -63,6 +64,13 @@ public class LevelManager : MonoBehaviour
 
     private void Start()
     {
+        // if main menu because for some reason it shows up after opening Edu Guide..
+        if (SceneManager.GetActiveScene().buildIndex == 0)
+        {
+            Destroy(gameObject);
+            return;
+        }
+
         if (resetScoreOnLevelStart == true)
         {
             ScoreManager.Instance?.ResetScore();
