@@ -21,8 +21,6 @@ public class MissileBehaviour : MonoBehaviour
     private void Awake()
     {
         killable = GetComponent<EnemyKillable>();
-
-        Invoke("Kill", 10f);
     }
 
     private void Start()

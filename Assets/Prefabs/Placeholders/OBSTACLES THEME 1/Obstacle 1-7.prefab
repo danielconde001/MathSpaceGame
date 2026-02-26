@@ -48,6 +48,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
   Damage: 50
+  hasWeirdShape: 1
   useDebug: 1
 --- !u!54 &1753260288078652706
 Rigidbody:

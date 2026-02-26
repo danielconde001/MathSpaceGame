@@ -228,8 +228,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.25}
   m_AnchorMax: {x: 1, y: 0.75}
-  m_AnchoredPosition: {x: -4.9999847, y: 0}
-  m_SizeDelta: {x: -20, y: 0}
+  m_AnchoredPosition: {x: -2.499998, y: 0}
+  m_SizeDelta: {x: -24.999996, y: -8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &882175089186638589
 GameObject:
@@ -1134,7 +1134,7 @@ GameObject:
   - component: {fileID: 2450651214454463904}
   - component: {fileID: 2113596240527917193}
   m_Layer: 5
-  m_Name: Slider
+  m_Name: VolumeSlider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1159,7 +1159,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 25.8263, y: -118}
+  m_AnchoredPosition: {x: 36, y: -118}
   m_SizeDelta: {x: 332.0562, y: 47.9636}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2450651214454463904
@@ -1206,7 +1206,7 @@ MonoBehaviour:
   m_FillRect: {fileID: 2193663482147633385}
   m_HandleRect: {fileID: 7272717682578061002}
   m_Direction: 0
-  m_MinValue: 0
+  m_MinValue: 0.0001
   m_MaxValue: 1
   m_WholeNumbers: 0
   m_Value: 0.5
@@ -1396,7 +1396,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -180, y: -118}
+  m_AnchoredPosition: {x: -169, y: -118}
   m_SizeDelta: {x: 64, y: 64}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2351856498289178407
@@ -1427,7 +1427,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 8829343873475485625, guid: 0fb2749be1d442049975cd80d981f5ff,
+  m_Sprite: {fileID: 7530756345167472662, guid: 707cd4ed1af314f43b8b7b95a2461c1c,
     type: 3}
   m_Type: 0
   m_PreserveAspect: 0

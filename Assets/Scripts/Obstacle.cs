@@ -3,7 +3,10 @@ using UnityEngine;
 public class Obstacle : MonoBehaviour
 {
     [SerializeField] int Damage = 10;
+    [SerializeField] bool hasWeirdShape = false;
     [SerializeField] bool useDebug = false;
+
+    public bool HasWeirdShape { get => hasWeirdShape; }
 
     private void OnCollisionEnter(Collision col)
     {

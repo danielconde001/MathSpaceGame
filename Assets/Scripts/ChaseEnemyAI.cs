@@ -16,6 +16,11 @@ public class ChaseEnemyAI : MonoBehaviour
     EnemyKillable enemyKillable;
     float killTimer = 0;
 
+    private void Awake()
+    {
+        enemyKillable = GetComponent<EnemyKillable>();
+    }
+
     private void Start()
     {
         if (skipFlyingIntro == false)

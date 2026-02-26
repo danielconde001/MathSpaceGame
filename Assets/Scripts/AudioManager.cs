@@ -245,6 +245,14 @@ public class AudioManager : MonoBehaviour
     {
         currentVolume = p_value;
 
+        if (currentVolume == 0)
+        {
+            bgmSource.outputAudioMixerGroup.audioMixer
+            .SetFloat("Volume", 0);
+
+            return;
+        }
+
         bgmSource.outputAudioMixerGroup.audioMixer
             .SetFloat("Volume", Mathf.Log10(currentVolume) * 20);
     }
