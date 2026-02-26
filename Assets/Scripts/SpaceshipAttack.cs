@@ -117,10 +117,19 @@ public class SpaceshipAttack : MonoBehaviour
 
         if (hitSomething == true)
         {
-            if (hit.collider.name != "Ground" && 
-                hit.collider.GetComponent<Obstacle>()?.HasWeirdShape == false)
+            if (hit.collider.name != "Ground")
             {
-                projectile.target = hit.transform;
+                if (hit.collider.GetComponent<Obstacle>())
+                {
+                    if (hit.collider.GetComponent<Obstacle>().HasWeirdShape == false)
+                    {
+                        projectile.target = hit.transform;
+                    }
+                }
+                else
+                {
+                    projectile.target = hit.transform;
+                }
             }
         }
 

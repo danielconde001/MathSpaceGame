@@ -28,7 +28,7 @@ public class ProjectileBehaviour : MonoBehaviour
             {
                 Destroy(gameObject);
             }
-
+            Debug.Log(name + ". Target is null");
             transform.position += moveDir * projectileSpeed * Time.deltaTime;
         }
         else
