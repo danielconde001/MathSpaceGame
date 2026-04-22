@@ -157,7 +157,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MinigameSequencing
   Minigames:
-  - Type: 2
+  - Type: 1
     Rounds: 4
   - Type: 0
     Rounds: 4
@@ -543,6 +543,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!65 &279446802599383845
 BoxCollider:

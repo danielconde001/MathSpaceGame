@@ -16,6 +16,7 @@ public enum MinigameType
     TensAndOnes,
     Arranging,
     FillIn,
+    TensAndOnesUIVersion,
     Count
 }
 
@@ -25,6 +26,7 @@ public class MinigameSequencer : MonoBehaviour
     public bool SequenceIsOngoing { get; private set; }
 
     TensAndOnesMinigameManager tensAndOnesMinigame;
+    TensAndOnesMinigameUIVersionManager tensAndOnesUIVersionMinigame;
     ArrangingMinigameManager arrangingMinigame;
     FillinMinigameManager fillinMinigame;
 
@@ -37,6 +39,12 @@ public class MinigameSequencer : MonoBehaviour
         {
             GameObject taoMngGameObj = Resources.Load<GameObject>("Minigames/TensAndOneMinigameCanvas");
             tensAndOnesMinigame = Instantiate(taoMngGameObj).GetComponent<TensAndOnesMinigameManager>();
+        }
+
+        if (FindAnyObjectByType<TensAndOnesMinigameUIVersionManager>() == false)
+        {
+            GameObject taoMngUiVerGameObj = Resources.Load<GameObject>("Minigames/TensAndOneMinigameCanvas (UI Version)");
+            tensAndOnesUIVersionMinigame = Instantiate(taoMngUiVerGameObj).GetComponent<TensAndOnesMinigameUIVersionManager>();
         }
 
         if (FindAnyObjectByType<ArrangingMinigameManager>() == false)
@@ -99,6 +107,15 @@ public class MinigameSequencer : MonoBehaviour
                             fillinMinigame = FindAnyObjectByType<FillinMinigameManager>();
                         }
                         minigamesLocalList.Add(fillinMinigame);
+                        break;
+                    }
+                case MinigameType.TensAndOnesUIVersion:
+                    {
+                        if (tensAndOnesUIVersionMinigame == null)
+                        {
+                            tensAndOnesUIVersionMinigame = FindAnyObjectByType<TensAndOnesMinigameUIVersionManager>();
+                        }
+                        minigamesLocalList.Add(tensAndOnesUIVersionMinigame);
                         break;
                     }
 
