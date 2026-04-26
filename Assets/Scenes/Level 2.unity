@@ -2317,6 +2317,11 @@ PrefabInstance:
       propertyPath: Minigames.Array.data[0].Type
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 7329194647708948816, guid: 7ffcdb1c23dd50942920a52fc538cf03,
+        type: 3}
+      propertyPath: Minigames.Array.data[0].Rounds
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7360613204685737880, guid: 7ffcdb1c23dd50942920a52fc538cf03,
         type: 3}
       propertyPath: m_Pivot.x

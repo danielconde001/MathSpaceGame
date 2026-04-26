@@ -85,7 +85,9 @@ MonoBehaviour:
   rotationSpeed: 45
   moveSpeed: 10
   introSpotOffset: {x: 0, y: 10, z: 0}
-  damage: 74
+  damage: 25
+  minDistToPlayer: 7
+  timeBeforeKilled: 10
 --- !u!114 &3601274653607226005
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -175,6 +177,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0820542c67901d24ca91f33cffc6b070, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DistanceToPlayer
+  zOffset: 10
 --- !u!1 &9110794171856277109
 GameObject:
   m_ObjectHideFlags: 0
@@ -4933,7 +4936,7 @@ ParticleSystem:
     vectorLabel1_3: W
 --- !u!199 &3417406993030671928
 ParticleSystemRenderer:
-  serializedVersion: 6
+  serializedVersion: 7
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -4979,6 +4982,7 @@ ParticleSystemRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_RenderMode: 0
   m_MeshDistribution: 0
   m_SortMode: 0
@@ -5010,7 +5014,6 @@ ParticleSystemRenderer:
   m_MeshWeighting1: 1
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
-  m_MaskInteraction: 0
 --- !u!1001 &3431368743575508716
 PrefabInstance:
   m_ObjectHideFlags: 0

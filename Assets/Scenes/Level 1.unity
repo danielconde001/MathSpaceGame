@@ -786,6 +786,11 @@ PrefabInstance:
       propertyPath: Minigames.Array.data[0].Type
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 7329194647708948816, guid: 7ffcdb1c23dd50942920a52fc538cf03,
+        type: 3}
+      propertyPath: Minigames.Array.data[0].Rounds
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7360613204685737880, guid: 7ffcdb1c23dd50942920a52fc538cf03,
         type: 3}
       propertyPath: m_Pivot.x
@@ -2456,11 +2461,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Level Section Collect Area 1-0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8775571151499458272, guid: e4e85ddb1fbf5324ea283bfabdbc5b26,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -4758,7 +4758,7 @@ ParticleSystem:
     vectorLabel1_3: W
 --- !u!199 &4903002672656119930
 ParticleSystemRenderer:
-  serializedVersion: 6
+  serializedVersion: 7
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -4804,6 +4804,7 @@ ParticleSystemRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_RenderMode: 0
   m_MeshDistribution: 0
   m_SortMode: 0
@@ -4835,7 +4836,6 @@ ParticleSystemRenderer:
   m_MeshWeighting1: 1
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
-  m_MaskInteraction: 0
 --- !u!1 &3967333940067946317
 GameObject:
   m_ObjectHideFlags: 0
@@ -4916,6 +4916,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &5402293059203533145
 MeshFilter:
@@ -5100,7 +5101,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f6549c7a711cb9449c42a1da2cdb925, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ChaseEnemyAttack
-  damage: 45
+  damage: 15
 --- !u!114 &2580751938527023316
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5113,3 +5114,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0820542c67901d24ca91f33cffc6b070, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DistanceToPlayer
+  zOffset: 5

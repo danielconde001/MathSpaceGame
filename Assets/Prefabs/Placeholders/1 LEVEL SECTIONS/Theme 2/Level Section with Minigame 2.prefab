@@ -113,9 +113,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::MinigameSequencing
   Minigames:
   - Type: 2
-    Rounds: 4
+    Rounds: 2
   - Type: 0
-    Rounds: 4
+    Rounds: 1
   stopSectionsOnSequenceStart: 1
   moveSectionsOnSequenceEnd: 1
 --- !u!1 &2941507844268469235

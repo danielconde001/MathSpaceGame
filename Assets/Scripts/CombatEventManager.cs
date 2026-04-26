@@ -99,19 +99,20 @@ public class CombatEventManager : MonoBehaviour
 
         AudioManager.Instance.PlayEnemyFlyInSFX();
 
-        DialogueManager.Instance.StartAutoDialogue("There's two of them! Watch your back.");
+        DialogueManager.Instance.StartAutoDialogue("Watch your back!");
 
         if (autoShootButton.gameObject.activeSelf) autoShootButton?.DisableButtonForSeconds(3.1f);
 
-        StationaryEnemyAI enemy2 = SpawnStationaryEnemy(2, 0);
-        waitForSeconds = 0.5f;
-        yield return new WaitWhile( () => waitForSeconds > 0f);
+        //StationaryEnemyAI enemy2 = SpawnStationaryEnemy(2, 0);
+        //waitForSeconds = 0.5f;
+        //yield return new WaitWhile( () => waitForSeconds > 0f);
         StationaryEnemyAI enemy3 = SpawnStationaryEnemy(3, 3);
 
         yield return new WaitUntil(
             () => (
-            enemy2 == null && 
-            enemy3 == null)); // unitl they are dead
+            //enemy2 == null && 
+            enemy3 == null
+            )); // unitl they are dead
 
         DialogueManager.Instance.StartAutoDialogue("You took 'em down! Well Done.");
 
@@ -129,33 +130,34 @@ public class CombatEventManager : MonoBehaviour
 
         if (autoShootButton.gameObject.activeSelf) autoShootButton?.DisableButtonForSeconds(3.1f);
 
-        StationaryEnemyAI enemy1 = SpawnStationaryEnemy(2, 0);
-        waitForSeconds = 0.5f;
-        yield return new WaitWhile(() => waitForSeconds > 0f);
+        //StationaryEnemyAI enemy1 = SpawnStationaryEnemy(2, 0);
+        //waitForSeconds = 0.5f;
+        //yield return new WaitWhile(() => waitForSeconds > 0f);
         StationaryEnemyAI enemy2 = SpawnStationaryEnemy(3, 3);
         yield return new WaitUntil(
             () => (
-            enemy1 == null && 
-            enemy2 == null)); // unitl they are dead
+            //enemy1 == null && 
+            enemy2 == null
+            )); // unitl they are dead
 
         AudioManager.Instance.PlayEnemyFlyInSFX();
 
-        DialogueManager.Instance.StartAutoDialogue("There's 3 of them now! Careful.");
+        DialogueManager.Instance.StartAutoDialogue("Careful. There's more of them!");
 
         if (autoShootButton.gameObject.activeSelf) autoShootButton?.DisableButtonForSeconds(3.1f);
 
-        StationaryEnemyAI enemy3 = SpawnStationaryEnemy(2, 0);
-        waitForSeconds = 0.5f;
-        yield return new WaitWhile(() => waitForSeconds > 0f);
-        StationaryEnemyAI enemy4 = SpawnStationaryEnemy(3, 3);
-        waitForSeconds = 0.5f;
-        yield return new WaitWhile(() => waitForSeconds > 0f);
+        //StationaryEnemyAI enemy3 = SpawnStationaryEnemy(2, 0);
+        //waitForSeconds = 0.5f;
+        //yield return new WaitWhile(() => waitForSeconds > 0f);
+        //StationaryEnemyAI enemy4 = SpawnStationaryEnemy(3, 3);
+        //waitForSeconds = 0.5f;
+        //yield return new WaitWhile(() => waitForSeconds > 0f);
         StationaryEnemyAI enemy5 = SpawnStationaryEnemy(2, 1);
 
         yield return new WaitUntil(
             () => (
-            enemy3 == null && 
-            enemy4 == null && 
+            //enemy3 == null && 
+            //enemy4 == null && 
             enemy5 == null)); // unitl they are dead
 
         DialogueManager.Instance.StartAutoDialogue("Awesome! You're getting the hang of it.");
@@ -172,17 +174,17 @@ public class CombatEventManager : MonoBehaviour
 
         if (autoShootButton.gameObject.activeSelf) autoShootButton?.DisableButtonForSeconds(3.1f);
 
-        StationaryEnemyAI enemy1 = SpawnStationaryEnemy(2, 0);
-        waitForSeconds = 0.5f;
-        yield return new WaitWhile(() => waitForSeconds > 0f);
-        StationaryEnemyAI enemy2 = SpawnStationaryEnemy(3, 3);
-        waitForSeconds = 0.5f;
-        yield return new WaitWhile(() => waitForSeconds > 0f);
+        //StationaryEnemyAI enemy1 = SpawnStationaryEnemy(2, 0);
+        //waitForSeconds = 0.5f;
+        //yield return new WaitWhile(() => waitForSeconds > 0f);
+        //StationaryEnemyAI enemy2 = SpawnStationaryEnemy(3, 3);
+        //waitForSeconds = 0.5f;
+        //yield return new WaitWhile(() => waitForSeconds > 0f);
         StationaryEnemyAI enemy3 = SpawnStationaryEnemy(2, 1);
         yield return new WaitUntil(
             () => (
-            enemy1 == null && 
-            enemy2 == null && 
+            //enemy1 == null && 
+            //enemy2 == null && 
             enemy3 == null)); // unitl they are dead
 
         AudioManager.Instance.PlayEnemyFlyInSFX();
@@ -191,22 +193,22 @@ public class CombatEventManager : MonoBehaviour
 
         if (autoShootButton.gameObject.activeSelf) autoShootButton?.DisableButtonForSeconds(3.1f);
 
-        StationaryEnemyAI enemy4 = SpawnStationaryEnemy(2, 0);
-        waitForSeconds = 0.5f;
-        yield return new WaitWhile(() => waitForSeconds > 0f);
-        StationaryEnemyAI enemy5 = SpawnStationaryEnemy(3, 3);
-        waitForSeconds = 0.5f;
-        yield return new WaitWhile(() => waitForSeconds > 0f);
-        StationaryEnemyAI enemy6 = SpawnStationaryEnemy(2, 1);
-        waitForSeconds = 0.5f;
-        yield return new WaitWhile(() => waitForSeconds > 0f);
+        //StationaryEnemyAI enemy4 = SpawnStationaryEnemy(2, 0);
+        //waitForSeconds = 0.5f;
+        //yield return new WaitWhile(() => waitForSeconds > 0f);
+        //StationaryEnemyAI enemy5 = SpawnStationaryEnemy(3, 3);
+        //waitForSeconds = 0.5f;
+        //yield return new WaitWhile(() => waitForSeconds > 0f);
+        //StationaryEnemyAI enemy6 = SpawnStationaryEnemy(2, 1);
+        //waitForSeconds = 0.5f;
+        //yield return new WaitWhile(() => waitForSeconds > 0f);
         StationaryEnemyAI enemy7 = SpawnStationaryEnemy(2, 2);
 
         yield return new WaitUntil(
             () => (
-            enemy4 == null && 
-            enemy5 == null && 
-            enemy6 == null && 
+            //enemy4 == null && 
+            //enemy5 == null && 
+            //enemy6 == null && 
             enemy7 == null)); // unitl they are dead
 
         DialogueManager.Instance.StartAutoDialogue("You are awesome! They stood no chance.");
@@ -282,15 +284,15 @@ public class CombatEventManager : MonoBehaviour
 
         if (autoShootButton.gameObject.activeSelf) autoShootButton?.DisableButtonForSeconds(3.1f);
 
-        StationaryEnemyAI sEnemy1 = SpawnStationaryEnemy(2, 0);
-        waitForSeconds = 0.5f;
-        yield return new WaitWhile(() => waitForSeconds > 0f);
+        //StationaryEnemyAI sEnemy1 = SpawnStationaryEnemy(2, 0);
+        //waitForSeconds = 0.5f;
+        //yield return new WaitWhile(() => waitForSeconds > 0f);
 
         StationaryEnemyAI sEnemy2 = SpawnStationaryEnemy(3, 3);
 
         yield return new WaitUntil(
             () => (
-            sEnemy1 == null &&
+            //sEnemy1 == null &&
             sEnemy2 == null)); // unitl they are dead
 
         LevelManager.Instance.StartSectionsMovement();
@@ -360,20 +362,20 @@ public class CombatEventManager : MonoBehaviour
 
         if (autoShootButton.gameObject.activeSelf) autoShootButton?.DisableButtonForSeconds(3.1f);
 
-        StationaryEnemyAI sEnemy1 = SpawnStationaryEnemy(2, 0);
-        waitForSeconds = 0.5f;
-        yield return new WaitWhile(() => waitForSeconds > 0f);
+        //StationaryEnemyAI sEnemy1 = SpawnStationaryEnemy(2, 0);
+        //waitForSeconds = 0.5f;
+        //yield return new WaitWhile(() => waitForSeconds > 0f);
 
-        StationaryEnemyAI sEnemy2 = SpawnStationaryEnemy(3, 3);
-        waitForSeconds = 0.5f;
-        yield return new WaitWhile(() => waitForSeconds > 0f);
+        //StationaryEnemyAI sEnemy2 = SpawnStationaryEnemy(3, 3);
+        //waitForSeconds = 0.5f;
+        //yield return new WaitWhile(() => waitForSeconds > 0f);
 
         StationaryEnemyAI sEnemy3 = SpawnStationaryEnemy(2, 1);
 
         yield return new WaitUntil(
             () => (
-            sEnemy1 == null &&
-            sEnemy2 == null &&
+            //sEnemy1 == null &&
+            //sEnemy2 == null &&
             sEnemy3 == null)); // unitl they are dead
 
         LevelManager.Instance.StartSectionsMovement();
@@ -449,25 +451,25 @@ public class CombatEventManager : MonoBehaviour
 
         if (autoShootButton.gameObject.activeSelf) autoShootButton?.DisableButtonForSeconds(3.1f);
 
-        StationaryEnemyAI sEnemy1 = SpawnStationaryEnemy(2, 0);
-        waitForSeconds = 0.5f;
-        yield return new WaitWhile(() => waitForSeconds > 0f);
+        //StationaryEnemyAI sEnemy1 = SpawnStationaryEnemy(2, 0);
+        //waitForSeconds = 0.5f;
+        //yield return new WaitWhile(() => waitForSeconds > 0f);
 
-        StationaryEnemyAI sEnemy2 = SpawnStationaryEnemy(3, 3);
-        waitForSeconds = 0.5f;
-        yield return new WaitWhile(() => waitForSeconds > 0f);
+        //StationaryEnemyAI sEnemy2 = SpawnStationaryEnemy(3, 3);
+        //waitForSeconds = 0.5f;
+        //yield return new WaitWhile(() => waitForSeconds > 0f);
 
-        StationaryEnemyAI sEnemy3 = SpawnStationaryEnemy(2, 1);
-        waitForSeconds = 0.5f;
-        yield return new WaitWhile(() => waitForSeconds > 0f);
+        //StationaryEnemyAI sEnemy3 = SpawnStationaryEnemy(2, 1);
+        //waitForSeconds = 0.5f;
+        //yield return new WaitWhile(() => waitForSeconds > 0f);
 
         StationaryEnemyAI sEnemy4 = SpawnStationaryEnemy(3, 2);
 
         yield return new WaitUntil(
             () => (
-            sEnemy1 == null &&
-            sEnemy2 == null &&
-            sEnemy3 == null &&
+            //sEnemy1 == null &&
+            //sEnemy2 == null &&
+            //sEnemy3 == null &&
             sEnemy4 == null)); // unitl they are dead
 
         LevelManager.Instance.StartSectionsMovement();
@@ -502,17 +504,17 @@ public class CombatEventManager : MonoBehaviour
 
         if (autoShootButton.gameObject.activeSelf) if (autoShootButton.gameObject.activeSelf) autoShootButton?.DisableButtonForSeconds(3.1f);
 
-        StationaryEnemyAI enemy1 = SpawnStationaryEnemy(2, 0);
-        waitForSeconds = 0.5f;
-        yield return new WaitWhile(() => waitForSeconds > 0f);
-        StationaryEnemyAI enemy2 = SpawnStationaryEnemy(3, 3);
-        waitForSeconds = 0.5f;
-        yield return new WaitWhile(() => waitForSeconds > 0f);
+        //StationaryEnemyAI enemy1 = SpawnStationaryEnemy(2, 0);
+        //waitForSeconds = 0.5f;
+        //yield return new WaitWhile(() => waitForSeconds > 0f);
+        //StationaryEnemyAI enemy2 = SpawnStationaryEnemy(3, 3);
+        //waitForSeconds = 0.5f;
+        //yield return new WaitWhile(() => waitForSeconds > 0f);
         StationaryEnemyAI enemy3 = SpawnStationaryEnemy(2, 1);
         yield return new WaitUntil(
             () => (
-            enemy1 == null &&
-            enemy2 == null &&
+            //enemy1 == null &&
+            //enemy2 == null &&
             enemy3 == null)); // unitl they are dead
 
         AudioManager.Instance.PlayEnemyFlyInSFX();
@@ -546,27 +548,27 @@ public class CombatEventManager : MonoBehaviour
 
         if (autoShootButton.gameObject.activeSelf) autoShootButton?.DisableButtonForSeconds(1f);
 
-        StationaryEnemyAI enemy1 = SpawnStationaryEnemy(2, 0);
-        waitForSeconds = 0.5f;
-        yield return new WaitWhile(() => waitForSeconds > 0f);
-        StationaryEnemyAI enemy2 = SpawnStationaryEnemy(3, 3);
+        //StationaryEnemyAI enemy1 = SpawnStationaryEnemy(2, 0);
+        //waitForSeconds = 0.5f;
+        //yield return new WaitWhile(() => waitForSeconds > 0f);
+        //StationaryEnemyAI enemy2 = SpawnStationaryEnemy(3, 3);
 
-        waitForSeconds = 3f;
-        yield return new WaitWhile(() => waitForSeconds > 0f);
+        //waitForSeconds = 3f;
+        //yield return new WaitWhile(() => waitForSeconds > 0f);
 
-        AudioManager.Instance.PlayEnemyAlarmSFX();
-        AudioManager.Instance.PlayEnemyFlyInSFX();
+        //AudioManager.Instance.PlayEnemyAlarmSFX();
+        //AudioManager.Instance.PlayEnemyFlyInSFX();
 
         GiantEnemyAI enemy3 = SpawnGiantEnemy(6);
-        enemy3.health.value = 4000;
+        enemy3.health.value = 2000;
         enemy3.consecutiveFires = 12;
         enemy3.longCooldown = 4f;
         enemy3.fireRate = .1f;
 
         yield return new WaitUntil(() => 
         (
-            enemy1 == null && 
-            enemy2 == null && 
+            //enemy1 == null && 
+            //enemy2 == null && 
             enemy3 == null)
         );
 

@@ -5259,7 +5259,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::StationaryEnemyAI
   rotationSpeed: 20
   moveSpeed: 20
-  damage: 45
+  damage: 15
   respectiveSpot: {fileID: 0}
   minFireRate: 1
   maxFireRate: 1.5
