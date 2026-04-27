@@ -356,10 +356,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ImageSwitcher
   targetImage: {fileID: 1951212690}
   sprites:
-  - {fileID: 21300000, guid: e1cb9b36b875b984fb7c3cee60088cdb, type: 3}
-  - {fileID: 21300000, guid: 4a9d6c8a692cd854f8674daa0ad3383b, type: 3}
-  - {fileID: 21300000, guid: 10941dfb9c39cf54ea76d7c377a9f6db, type: 3}
-  - {fileID: 21300000, guid: e486661487b43d34bbe28c2994987c31, type: 3}
+  - {fileID: 21300000, guid: 24678af7c62ac8445957f0e82a6ae170, type: 3}
+  - {fileID: 21300000, guid: eef5ce54313159145aaa33a5cfc30d3a, type: 3}
+  - {fileID: 21300000, guid: 65e76509a68f4e743baa946ff87c4ac2, type: 3}
+  - {fileID: 21300000, guid: 24b27ded394192c4c83a18bb29f9af34, type: 3}
   backButton: {fileID: 1265938557}
   nextButton: {fileID: 2001148792}
   Canvas: {fileID: 118116644}
